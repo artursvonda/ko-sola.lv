@@ -11,3 +11,10 @@ Paraugs: Jaunā VIENOTĪBA, nodaļas "1. Drošība un aizsardzība" un "3. Finan
 - `parskats.py` → `parskats.html` — avots blakus Solījumiem: zaļš = izrakstīts, sarkans = neizrakstīts, pelēks = nav jāizraksta; citātu burtiskuma pārbaude; atsauksmes pogas + "Kopēt atsauksmi".
 
 Palaist: `python3 parskats.py && open parskats.html` (vajag PyYAML).
+
+## v1 / v1.1 (pēc redaktora atbildēm)
+
+- `metode-v1.1.md` — kopija no `docs/ekstrakcija/metode.md` (galvenā versija ir tur).
+- `izvade-v1/1-drosiba`, `izvade-v1/3-finanses` — v1, divas paralēlas izpildes, visa paplašinātā programma.
+- `izvade-v11/` — v1.1, secīgi: 1. nodaļa (v1) + 3. nodaļa ar v1.1 (papildina esošos Solījumus).
+- Pārskats: `python3 parskats.py izvade-v11 "1. Drošība un aizsardzība" "3. Finanses"` → `izvade-v11/parskats.html`.

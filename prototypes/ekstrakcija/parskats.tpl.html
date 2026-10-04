@@ -38,7 +38,7 @@ details{background:#fff;border:1px solid var(--line);border-radius:6px;padding:6
 </head>
 <body>
 <header>
-  <span class="proto">PROTOTIPS</span><b>JV · 1. un 3. nodaļa</b>
+  <span class="proto">PROTOTIPS</span><b id="ttl"></b>
   <span class="stat" id="stats"></span>
   <div class="f" id="filt"></div>
   <button id="copy">Kopēt atsauksmi</button>
@@ -53,12 +53,12 @@ const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&g
 const byId=Object.fromEntries(D.sol.map(s=>[s.id,s]));
 const fb={};let filter="visi",active=null;
 const kinds=s=>{const v=new Set((s.avoti||[]).map(a=>a.veids));return v.has("cvk")&&v.has("paplasinata")?"abi":v.has("cvk")?"cvk":"pap"};
-const F={visi:["Visi",()=>1],p:["Pārbaudāmi",s=>s.parbaudams],np:["Nepārbaudāmi",s=>!s.parbaudams],abi:["Abos avotos",s=>kinds(s)=="abi"],cvk:["Tikai CVK",s=>kinds(s)=="cvk"],pap:["Tikai paplaš.",s=>kinds(s)=="pap"],j:["Ar jautājumu",s=>(s.jautajums||"").trim()],fb:["Ar atsauksmi",s=>fb[s.id]]};
+const F={visi:["Visi",()=>1],p:["Pārbaudāmi",s=>s.parbaudams],np:["Nepārbaudāmi",s=>!s.parbaudams],abi:["Abos avotos",s=>kinds(s)=="abi"],ns:["Nesakritība",s=>(s.nesakritiba||"").trim()],cvk:["Tikai CVK",s=>kinds(s)=="cvk"],pap:["Tikai paplaš.",s=>kinds(s)=="pap"],j:["Ar jautājumu",s=>(s.jautajums||"").trim()],fb:["Ar atsauksmi",s=>fb[s.id]]};
 function stats(){const n=D.sol.length,np=D.sol.filter(s=>!s.parbaudams).length,abi=D.sol.filter(s=>kinds(s)=="abi").length;
  const miss=[...D.cvk,...D.pap].filter(isMiss).length;
  document.getElementById("stats").innerHTML=`<strong>${n}</strong> Solījumi · <strong>${np}</strong> nepārbaudāmi · <strong>${abi}</strong> abos avotos · <strong style="color:var(--bad)">${miss}</strong> neizrakstīti avota punkti`}
 // Pamatojums, Prioritātes un CVK atkārtojums paplašinātajā nav jāizraksta — tie ir pelēki, ne sarkani
-function isMiss(u){return u.k!="h"&&!u.ids.length&&!["Pamatojums","Prioritātes","10 000 zīmju programmas apsolījums"].includes(u.sect)}
+function isMiss(u){return u.k!="h"&&!u.ids.length&&u.scope!==false&&!["Pamatojums","Prioritātes","10 000 zīmju programmas apsolījums"].includes(u.sect)}
 function unitHTML(u,i,src){if(u.k=="h")return `<div class="u h">${esc(u.t)}</div>`;
  let t=u.t,out="",pos=0;const qs=(u.q||[]).slice().sort((a,b)=>a[0]-b[0]);
  for(const [a,b,id] of qs){if(a<pos)continue;out+=esc(t.slice(pos,a))+`<mark data-id="${id}">`+esc(t.slice(a,b))+"</mark>";pos=b}
@@ -75,7 +75,7 @@ function card(s){const f=fb[s.id]||{};
  const q=(s.avoti||[]).map(a=>`<div class="q"><div class="src">${a.veids=="cvk"?"CVK":"Paplašinātā"} · ${esc(a.vieta)}</div>„${esc(a.citats)}”</div>`).join("");
  const btn=(k,l)=>`<button data-k="${k}" class="${f.k==k?"on":""}">${l}</button>`;
  return `<div class="s${active==s.id?" act":""}" id="s-${s.id}"><div class="id">${esc(s.id)}</div><div class="t">${esc(s.nosaukums)}</div><div>${tags}</div>${q}
- ${s.piezimes?`<div class="note">Piezīmes: ${esc(s.piezimes)}</div>`:""}${(s.jautajums||"").trim()?`<div class="ask">Jautājums: ${esc(s.jautajums)}</div>`:""}
+ ${s.nesakritiba?`<div class="ask" style="color:#8a5a00">Nesakritība: ${esc(s.nesakritiba)}</div>`:""}${s.piezimes?`<div class="note">Piezīmes: ${esc(s.piezimes)}</div>`:""}${(s.jautajums||"").trim()?`<div class="ask">Jautājums: ${esc(s.jautajums)}</div>`:""}
  <div class="fb" data-id="${s.id}">${btn("ok","OK")}${btn("dalit","Dalīt")}${btn("apvienot","Apvienot ar…")}${btn("parbaudamiba","Pārbaudāmība nepareiza")}${btn("tema","Tēma")}${btn("nosaukums","Nosaukums")}${btn("izmest","Nav solījums")}<input placeholder="komentārs" value="${esc(f.c||"")}"></div></div>`}
 function renderList(){const el=document.getElementById("list");const fn=F[filter][1];
  el.innerHTML=`<details><summary>Ekstraktora kopsavilkums</summary><pre>${esc(D.summary)}</pre></details>`+D.sol.filter(fn).map(card).join("");
@@ -93,7 +93,7 @@ function renderFilt(){document.getElementById("filt").innerHTML=Object.entries(F
 document.getElementById("copy").onclick=()=>{const L={ok:"OK",dalit:"Dalīt",apvienot:"Apvienot",parbaudamiba:"Pārbaudāmība nepareiza",tema:"Tēma",nosaukums:"Nosaukums",izmest:"Nav solījums"};
  const t=Object.entries(fb).map(([id,f])=>`- \`${id}\` — ${f.k?L[f.k]:""}${f.c?": "+f.c:""}`).join("\n")||"(nav atsauksmju)";
  navigator.clipboard.writeText(t).then(()=>{const b=document.getElementById("copy");b.textContent="Nokopēts";setTimeout(()=>b.textContent="Kopēt atsauksmi",1500)})};
-stats();renderFilt();renderSrc();renderList();
+document.getElementById("ttl").textContent=D.title||"";stats();renderFilt();renderSrc();renderList();
 </script>
 </body>
 </html>
