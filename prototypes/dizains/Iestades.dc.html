@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="lv">
+<head>
+<meta charset="utf-8">
+<title>B2 · Pa atbildīgajiem</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap">
+<style>
+body{margin:0}
+a{color:var(--accent)}a:hover{color:var(--ink)}
+button,select{font:inherit;color:inherit;cursor:pointer}
+.theme-grafits{--bg:#ffffff;--surface:#f4f5f7;--line:#e2e5e9;--ink:#16191d;--muted:#5a626b;--accent:#2a4a70;--sel:#edf1f6;--iz:#1f3a5c;--izT:#ffffff;--di:#9fb3cc;--diT:#102033;--pr:#ecdcb8;--prT:#3b2c0b;--ni:#8a3f2e;--nv:#9aa1a9}
+.theme-smilts{--bg:#f8f6f1;--surface:#efebe3;--line:#e0dacd;--ink:#23201b;--muted:#665f55;--accent:#3c5a4b;--sel:#ebe5d8;--iz:#2e4d3f;--izT:#ffffff;--di:#a8bfb1;--diT:#14251c;--pr:#ead6a6;--prT:#3a2c0c;--ni:#8e4733;--nv:#a39b8f}
+.theme-ledus{--bg:#f2f5f8;--surface:#ffffff;--line:#d9e0e8;--ink:#122030;--muted:#536273;--accent:#1d4e89;--sel:#e4edf7;--iz:#1d4e89;--izT:#ffffff;--di:#a7c1e2;--diT:#0d2340;--pr:#f0dab8;--prT:#3d2708;--ni:#7b3a4a;--nv:#97a3b1}
+.mono{font-family:'IBM Plex Mono',ui-monospace,monospace}
+.pill{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;padding:3px 10px 3px 8px;border-radius:999px;white-space:nowrap;line-height:1.4}
+.pill::before{content:'';box-sizing:border-box;width:7px;height:7px;border-radius:50%;background:currentColor}
+.st-iz{background:var(--iz);color:var(--izT)}
+.st-di{background:var(--di);color:var(--diT)}
+.st-pr{background:var(--pr);color:var(--prT)}
+.st-ni{color:var(--ni);box-shadow:inset 0 0 0 1.5px var(--ni)}.st-ni::before{border-radius:1px;transform:rotate(45deg)}
+.st-nv{color:var(--muted);box-shadow:inset 0 0 0 1px var(--nv)}.st-nv::before{height:2px;border-radius:0}
+.st-np{color:var(--muted);border:1px dashed var(--nv);font-style:italic}.st-np::before{background:transparent;border:1px dashed currentColor}
+.seg-iz{background:var(--iz)}.seg-di{background:var(--di)}.seg-pr{background:var(--pr)}.seg-ni{background:var(--ni)}.seg-nv{background:var(--line)}
+.seg{background:none;border:0;padding:8px 14px;min-height:40px;border-radius:999px;font-size:14px;font-weight:500;color:var(--muted)}
+.seg.on{background:var(--ink);color:var(--bg)}
+.item{background:none;border:0;width:100%;display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:16px;align-items:center;padding:12px 4px;min-height:52px;text-align:left;border-top:1px solid var(--line)}
+.item:hover .ti{text-decoration:underline;text-underline-offset:3px}
+</style>
+</helmet>
+<div class="theme-{{theme}}" style="font-family: 'IBM Plex Sans', system-ui, sans-serif; background: var(--bg); color: var(--ink); min-height: 100vh">
+  <header style="max-width: 1080px; margin: 0 auto; padding: 18px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+    <span class="mono" style="font-size: 18px; font-weight: 600">ko-sola<span style="color: var(--accent)">.lv</span></span>
+    <nav style="display: flex; gap: 22px; align-items: center; flex-wrap: wrap" aria-label="Galvenā navigācija">
+      <a href="#" style="color: var(--ink); text-decoration: none; font-weight: 500; min-height: 44px; display: inline-flex; align-items: center">Salīdzināt</a>
+      <a href="#" style="color: var(--ink); text-decoration: none; font-weight: 500; min-height: 44px; display: inline-flex; align-items: center">Metodoloģija</a>
+      <span class="mono" style="font-size: 11px; color: var(--muted)">PROTOTIPS · {{statusNote}}</span>
+    </nav>
+  </header>
+
+  <main style="max-width: 1080px; margin: 0 auto; padding: 24px 24px 96px; display: flex; flex-direction: column; gap: 36px">
+    <section style="display: flex; flex-direction: column; gap: 14px" aria-label="Progress">
+      <h1 style="margin: 0; font-size: clamp(36px, 5vw, 56px); font-weight: 600; letter-spacing: -.025em; line-height: 1.05">{{prog.iz}} no {{prog.n}} solījumiem izpildīti</h1>
+      <p style="margin: 0; font-size: 17px; color: var(--muted)">{{prog.di}} daļēji · {{prog.pr}} procesā · {{prog.ni}} nav izpildīti · {{prog.nv}} vēl nav vērtēti</p>
+      <div style="display: flex; height: 6px; border-radius: 3px; overflow: hidden; background: var(--line); gap: 2px; max-width: 720px">
+        <sc-for list="{{segs}}" as="c" hint-placeholder-count="4"><span class="seg-{{c.k}}" style="{{c.w}}"></span></sc-for>
+      </div>
+    </section>
+
+    <section style="display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; justify-content: space-between" aria-label="Filtri">
+      <div style="display: flex; flex-wrap: wrap; gap: 4px; background: var(--surface); border-radius: 999px; padding: 4px">
+        <sc-for list="{{sChips}}" as="c" hint-placeholder-count="7"><button type="button" class="seg {{c.cls}}" onClick="{{c.pick}}" aria-pressed="{{c.on}}" title="{{c.name}}">{{c.short}}</button></sc-for>
+      </div>
+      <label style="display: inline-flex; align-items: center; gap: 10px; font-size: 14px; color: var(--muted)">Tēma
+        <select onChange="{{onTopic}}" value="{{tVal}}" style="min-height: 40px; padding: 0 12px; border-radius: 8px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); font-size: 14px">
+          <sc-for list="{{tOpts}}" as="o" hint-placeholder-count="8"><option value="{{o.v}}">{{o.label}}</option></sc-for>
+        </select>
+      </label>
+    </section>
+
+    <section style="display: flex; flex-direction: column; gap: 32px" aria-label="Pa atbildīgajām iestādēm">
+      <sc-for list="{{groups}}" as="g" hint-placeholder-count="5">
+        <section style="display: flex; flex-direction: column">
+          <header style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 8px 24px; padding-bottom: 10px">
+            <div style="display: flex; flex-direction: column; gap: 2px">
+              <h2 style="margin: 0; font-size: 21px; font-weight: 600">{{g.name}}</h2>
+              <span style="font-size: 13px; color: var(--muted)">[ministrs/-e] · atbildīgais par {{g.n}} solījumiem</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px">
+              <span style="display: flex; width: 140px; height: 6px; border-radius: 3px; overflow: hidden; background: var(--line); gap: 2px">
+                <sc-for list="{{g.segs}}" as="c" hint-placeholder-count="3"><span class="seg-{{c.k}}" style="{{c.w}}"></span></sc-for>
+              </span>
+              <span class="mono" style="font-size: 13px; white-space: nowrap">{{g.iz}}/{{g.ne}} izpildīti</span>
+            </div>
+          </header>
+          <sc-for list="{{g.items}}" as="p" hint-placeholder-count="3">
+            <div style="display: flex; flex-direction: column">
+              <button type="button" class="item" onClick="{{p.toggle}}" aria-expanded="{{p.isSel}}">
+                <span class="ti" style="font-size: 16px; line-height: 1.4">{{p.ti}}</span>
+                <span class="mono" style="font-size: 12px; color: var(--muted)" title="{{p.sName}}">{{p.s}}</span>
+                <span class="pill st-{{p.st}}">{{p.stL}}</span>
+              </button>
+              <sc-if value="{{p.isSel}}" hint-placeholder-val="{{ false }}">
+                <div style="padding: 4px 4px 18px; display: flex; flex-wrap: wrap; gap: 16px 32px">
+                  <div style="flex: 2 1 380px; display: flex; flex-direction: column; gap: 8px">
+                    <p style="margin: 0; font-size: 15px; line-height: 1.6; font-style: italic; color: var(--muted)">„{{p.q}}”</p>
+                    <span style="font-size: 13px">{{p.sName}} · <a href="{{p.srcUrl}}">CVK programma</a> · {{p.t}}</span>
+                  </div>
+                  <div style="flex: 1 1 240px; display: flex; flex-direction: column; gap: 6px; font-size: 13px">
+                    <span class="mono" style="color: var(--muted); font-size: 11px; letter-spacing: .1em">PĒDĒJĀ STATUSA MAIŅA</span>
+                    <span>{{p.lastChange}}</span>
+                    <sc-if value="{{p.hasEv}}" hint-placeholder-val="{{ false }}"><a href="#">[pierādījuma saite]</a></sc-if>
+                  </div>
+                </div>
+              </sc-if>
+            </div>
+          </sc-for>
+        </section>
+      </sc-for>
+      <sc-if value="{{empty}}" hint-placeholder-val="{{ false }}"><p style="color: var(--muted)">Šim filtram paraugdatos solījumu nav.</p></sc-if>
+    </section>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"krasas":{"editor":"enum","options":["Grafīts","Smilts","Ledus"],"default":"Smilts"},"statusi":{"editor":"enum","options":["ilustratīvi","sākuma stāvoklis"],"default":"ilustratīvi"},"$preview":{"width":1360,"height":3200}}'>
+const SAR = [
+  { id: 'AS', nr: 7, name: 'Apvienotais saraksts', seats: 42, url: 'https://www.vestnesis.lv/op/2026/176A.7' },
+  { id: 'LPV', nr: 8, name: 'Latvija pirmajā vietā', seats: 17, url: 'https://www.vestnesis.lv/op/2026/176A.8' },
+  { id: 'SV', nr: 1, name: 'Suverēnā vara', seats: 15, url: 'https://www.vestnesis.lv/op/2026/176A.1' },
+  { id: 'NA', nr: 5, name: 'Nacionālā apvienība', seats: 10, url: 'https://www.vestnesis.lv/op/2026/176A.5' },
+  { id: 'PRO', nr: 14, name: 'Progresīvie', seats: 9, url: 'https://www.vestnesis.lv/op/2026/176A.14' },
+  { id: 'JV', nr: 9, name: 'Jaunā Vienotība', seats: 7, url: 'https://www.vestnesis.lv/op/2026/176A.9' }
+];
+const TEMAS = ['Nodokļi un budžets', 'Ekonomika un darbs', 'Veselība', 'Izglītība un zinātne', 'Ģimenes un demogrāfija', 'Sociālais atbalsts un pensijas', 'Mājokļi', 'Aizsardzība', 'Ārpolitika', 'Iekšējā drošība un tiesiskums', 'Migrācija un diaspora', 'Valoda, kultūra un mediji', 'Enerģētika', 'Vide un klimats', 'Transports', 'Reģioni un pašvaldības', 'Lauksaimniecība un zivsaimniecība', 'Valsts pārvalde', 'Demokrātija un cilvēktiesības'];
+const P = [
+  { id: 'as-vad', s: 'AS', t: 'Aizsardzība', st: 'pr', ti: 'Paplašināt Valsts aizsardzības dienestu ar jauniem dienesta virzieniem', q: 'Paplašināsim Valsts aizsardzības dienestu, piedāvājot papildu dienesta virzienus, kas nepieciešami visaptverošai valsts aizsardzībai.' },
+  { id: 'as-robeza', s: 'AS', t: 'Aizsardzība', st: 'di', ti: 'Pabeigt austrumu robežas aizsardzības līniju', q: 'Pabeigsim austrumu robežas aizsardzības līniju un robežas novērošanas infrastruktūru.' },
+  { id: 'as-patvertnes', s: 'AS', t: 'Iekšējā drošība un tiesiskums', st: 'nv', ti: 'Patvertņu tīkls un reģionālie krīžu plāni', q: 'Civilajā aizsardzībā ieviesīsim reālistiskus krīžu plānus katram reģionam, izveidosim patvertņu tīklu, veiksim valsts rezervju auditu un slēgsim priekšlīgumus ar uzņēmumiem, lai spētu nekavējoties reaģēt krīzes situācijās.' },
+  { id: 'as-deficits', s: 'AS', t: 'Nodokļi un budžets', st: 'pr', ti: 'Bezdeficīta bāzes budžets četru gadu laikā', q: 'Mūsu prioritāte ir ieviest kārtību valsts finansēs, lai sasniegtu bezdeficīta bāzes budžetu četru gadu laikā.' },
+  { id: 'as-mun', s: 'AS', t: 'Nodokļi un budžets', st: 'iz', ti: '10% mikrouzņēmumu nodokļa likme fiziskajām personām', q: 'Panāksim Mikrouzņēmumu nodokļa likuma grozījumu pieņemšanu, lai ieviestu 10% likmi fiziskajām personām.' },
+  { id: 'as-kapitals', s: 'AS', t: 'Nodokļi un budžets', st: 'ni', ti: 'IIN no kapitāla pieauguma samazināt līdz 17%', q: 'Samazināsim IIN par ienākumiem no kapitāla pieauguma līdz 17%.' },
+  { id: 'as-fonds', s: 'AS', t: 'Ekonomika un darbs', st: 'nv', ti: 'Izveidot Latvijas Attīstības fondu valsts aktīvu pārvaldībai', q: 'Izveidosim Latvijas Attīstības fondu, kas pārvaldītu valsts aktīvus caurredzamā veidā, bez politiķu iejaukšanās, lai celtu aktīvu vērtību.' },
+  { id: 'as-rb', s: 'AS', t: 'Transports', st: 'pr', ti: 'Samazināt Rail Baltica apjomu līdz minimālajam realizējamam', q: 'Pārskatīsim "Rail Baltica" apjomu uz minimālo realizējamo, ieviesīsim pilnu finanšu caurredzamību un izmaksu kontroli.' },
+  { id: 'as-majokli', s: 'AS', t: 'Mājokļi', t2: ['Reģioni un pašvaldības'], st: 'nv', ti: 'Valsts garantijas mājokļu būvniecībai reģionos', q: 'Izveidosim valsts garantiju programmu mājokļu būvniecībai reģionos, lai palielinātu kreditēšanu par 2 miljardiem.' },
+  { id: 'as-pieraksts', s: 'AS', t: 'Veselība', st: 'di', ti: 'Vienots pieraksts pie ārstiem un kvotu sistēmas reforma', q: 'Reformēsim kvotu sistēmu, ieviesīsim vienotu pierakstu, samazinot birokrātiju ārstiem un gaidīšanas laiku pacientiem.' },
+  { id: 'as-nvd', s: 'AS', t: 'Veselība', st: 'nv', ti: 'NVD pārveidot par fondu', q: 'NVD pārveidosim par fondu ar ilgtermiņa finanšu plānošanu.' },
+  { id: 'as-kopsana', s: 'AS', t: 'Ģimenes un demogrāfija', st: 'iz', ti: 'Strādāt bērna kopšanas laikā, nezaudējot pabalstu', q: 'Nodrošināsim iespēju strādāt bērna kopšanas laikā, nezaudējot bērna kopšanas pabalstu.' },
+  { id: 'as-reemigr', s: 'AS', t: 'Migrācija un diaspora', t2: ['Nodokļi un budžets'], st: 'ni', ti: 'Nodokļu atvieglojumi reemigrantiem uz četriem gadiem', q: 'Radīsim labvēlīgu nodokļu režīmu reemigrantiem uz četriem gadiem.' },
+  { id: 'as-pedagogi', s: 'AS', t: 'Izglītība un zinātne', st: 'pr', ti: 'Pakāpeniski celt pedagogu atalgojumu', q: 'Pakāpeniski celsim pedagogu atalgojumu, sasaistot to ar slodzes sakārtošanu.' },
+  { id: 'as-celi', s: 'AS', t: 'Transports', st: 'nv', ti: 'Transportlīdzekļu nodokļus novirzīt autoceļiem', q: 'Transportlīdzekļu nodokļus novirzīsim valsts autoceļiem, prioritāri tranzīta maģistrālēm, reģionālo centru savienojumiem un militārajai mobilitātei.' },
+  { id: 'as-birokr', s: 'AS', t: 'Valsts pārvalde', st: 'nv', ti: 'Katrai jaunai prasībai jāaizstāj vai jāvienkāršo esošā', q: 'Birokrātiju samazināsim pēc vienkārša principa: katrai jaunai prasībai jāaizstāj vai jāvienkāršo esošā.' },
+  { id: 'as-budzets', s: 'AS', t: 'Valsts pārvalde', st: 'iz', ti: 'Budžeta dati publiski līdz rēķinu līmenim', q: '… nodrošināsim publisku budžeta datu pieejamību līdz rēķinu līmenim.' },
+  { id: 'as-zalais', s: 'AS', t: 'Vide un klimats', nep: true, ti: 'Pārskatīt zaļā kursa ieviešanu', q: 'Pārskatīsim zaļā kursa ieviešanu.' },
+  { id: 'as-ukraina', s: 'AS', t: 'Ārpolitika', nep: true, ti: 'Nelokāms atbalsts Ukrainai', q: 'Turpināsim nelokāmu atbalstu Ukrainai, vienlaikus stiprinot Latvijas aizsardzības industriju, militāro mobilitāti un noturību pret Krievijas agresiju un hibrīduzbrukumiem.' },
+  { id: 'lpv-pvn', s: 'LPV', t: 'Nodokļi un budžets', st: 'ni', ti: 'PVN 10% apkurei, pārtikai, bērnu precēm, tūrismam un ēdināšanai', q: 'Samazināsim PVN likmi apkurei, plašākam pārtikas produktu klāstam, bērnu higiēnas un zīdaiņu precēm, tūrisma un ēdināšanas nozarēm līdz 10%.' },
+  { id: 'lpv-iin-mates', s: 'LPV', t: 'Nodokļi un budžets', t2: ['Ģimenes un demogrāfija'], st: 'nv', ti: 'Mātes ar vismaz diviem bērniem atbrīvot no IIN', q: 'Māti atbrīvosim no IIN, ja ģimenē aug vismaz divi nepilngadīgi bērni.' },
+  { id: 'lpv-droni', s: 'LPV', t: 'Aizsardzība', st: 'pr', ti: 'Pretdronu aizsardzības sistēma', q: 'Izveidosim modernu aizsardzības sistēmu, lai nepieļautu naidīgu vai neidentificētu dronu nonākšanu Latvijas teritorijā.' },
+  { id: 'sv-nm', s: 'SV', t: 'Nodokļi un budžets', st: 'ni', ti: 'Neapliekamais minimums minimālās algas apmērā', q: 'celt neapliekamo minimumu līdz ar minimālās algas apmēru' },
+  { id: 'sv-vad', s: 'SV', t: 'Aizsardzība', st: 'ni', ti: 'Atcelt jauniešu obligāto iesaukšanu VAD', q: 'atcelt jauniešu obligāto iesaukšanu Valsts aizsardzības dienestā' },
+  { id: 'na-mvu', s: 'NA', t: 'Nodokļi un budžets', t2: ['Ekonomika un darbs'], st: 'nv', ti: 'Atvieglots nodokļu režīms mazajiem un vidējiem uzņēmumiem', q: 'Ieviesīsim atvieglotu nodokļu režīmu mazajiem un vidējiem uzņēmumiem.' },
+  { id: 'na-5', s: 'NA', t: 'Aizsardzība', st: 'di', ti: 'Aizsardzības finansējums virs 5% no IKP', q: 'Aizsardzības finansējumu palielināsim virs 5% no IKP, attīstot vietējo militāro industriju.' },
+  { id: 'pro-nm', s: 'PRO', t: 'Nodokļi un budžets', st: 'iz', ti: 'Lielāks neapliekamais minimums mazajām un vidējām algām', q: 'Samazināsim nodokļu slogu mazajām un vidējām algām, palielinot neapliekamo minimumu.' },
+  { id: 'pro-prog', s: 'PRO', t: 'Nodokļi un budžets', st: 'pr', ti: 'Plašāka ienākuma nodokļa progresivitāte', q: 'Ieviesīsim plašāku progresivitāti, koriģējot ienākumu sliekšņus un likmes, lai samazinātu nodokļus mazajām un vidējām algām.' },
+  { id: 'pro-5', s: 'PRO', t: 'Aizsardzība', st: 'iz', ti: 'Aizsardzības finansējums vismaz 5% apjomā', q: 'Saglabāsim finansējumu aizsardzības nozarei vismaz 5% apjomā.' },
+  { id: 'jv-parads', s: 'JV', t: 'Nodokļi un budžets', st: 'pr', ti: 'Valsts parāds zem 55% no IKP', q: 'Veidosim fiskāli atbildīgu budžetu ar valsts ārējā parāda līmeni zem 55% no IKP, ievērojot eirozonas fiskālos noteikumus.' },
+  { id: 'jv-nm', s: 'JV', t: 'Nodokļi un budžets', st: 'di', ti: 'Neapliekamais minimums 80% no minimālās algas', q: '… palielināsim fiksēto neapliekamo minimumu līdz 80% no minimālās algas, mazinot darbaspēka nodokļu slogu zemāko ienākumu saņēmējiem.' },
+  { id: 'jv-5', s: 'JV', t: 'Aizsardzība', t2: ['Ārpolitika'], st: 'pr', ti: 'Aizsardzībai 5% no IKP un pastāvīga NATO klātbūtne', q: 'Nodrošināsim aizsardzības finansējumu 5% no IKP un attīstīsim NATO sabiedroto pastāvīgu klātbūtni Latvijā.' }
+];
+const AM = 'Aizsardzības ministrija', FM = 'Finanšu ministrija', VM = 'Veselības ministrija', SM = 'Satiksmes ministrija', EM = 'Ekonomikas ministrija';
+const ATB = { 'as-vad': AM, 'as-robeza': AM, 'as-patvertnes': 'Iekšlietu ministrija', 'as-deficits': FM, 'as-mun': FM, 'as-kapitals': FM, 'as-fonds': EM, 'as-rb': SM, 'as-majokli': EM, 'as-pieraksts': VM, 'as-nvd': VM, 'as-kopsana': 'Labklājības ministrija', 'as-reemigr': FM, 'as-pedagogi': 'Izglītības un zinātnes ministrija', 'as-celi': SM, 'as-birokr': 'Valsts kanceleja', 'as-budzets': FM, 'as-zalais': 'Klimata un enerģētikas ministrija', 'as-ukraina': 'Ārlietu ministrija', 'lpv-pvn': FM, 'lpv-iin-mates': FM, 'lpv-droni': AM, 'sv-nm': FM, 'sv-vad': AM, 'na-mvu': FM, 'na-5': AM, 'pro-nm': FM, 'pro-prog': FM, 'pro-5': AM, 'jv-parads': FM, 'jv-nm': FM, 'jv-5': AM };
+const STL = { iz: 'Izpildīts', di: 'Daļēji izpildīts', pr: 'Procesā', ni: 'Nav izpildīts', nv: 'Nav vērtēts', np: 'Nepārbaudāms' };
+const STO = ['iz', 'di', 'pr', 'ni', 'nv'];
+const THEMES = { 'Grafīts': 'grafits', 'Smilts': 'smilts', 'Ledus': 'ledus' };
+
+class Component extends DCLogic {
+  renderVals() {
+    const S = Object.assign({ s: '', t: '', sel: '' }, this.state || {});
+    const set = (patch) => () => this.setState(Object.assign({}, S, patch));
+    const start = (this.props.statusi ?? 'ilustratīvi') === 'sākuma stāvoklis';
+    const sarOf = (id) => SAR.find((x) => x.id === id);
+    const inT = (p, t) => p.t === t || (p.t2 || []).indexOf(t) >= 0;
+    const segsOf = (list) => {
+      const ev = list.filter((p) => p.st !== 'np');
+      return STO.map((k) => ({ k, n: ev.filter((p) => p.st === k).length })).filter((c) => c.n > 0).map((c) => Object.assign(c, { w: 'width:' + (c.n * 100 / ev.length) + '%' }));
+    };
+    const all = P.map((p) => {
+      const st = p.nep ? 'np' : (start ? 'nv' : p.st);
+      const sr = sarOf(p.s);
+      const changed = st !== 'nv' && st !== 'np';
+      return Object.assign({}, p, {
+        st, stL: STL[st], atb: ATB[p.id], sName: sr.name, srcUrl: sr.url,
+        isSel: p.id === S.sel, toggle: set({ sel: p.id === S.sel ? '' : p.id }),
+        lastChange: changed ? '[datums] → ' + STL[st] + ' · [pamatojums]' : (st === 'np' ? 'Deklarācija — netiek vērtēta.' : 'Vēl nav vērtēts.'),
+        hasEv: changed
+      });
+    });
+    const items = all.filter((p) => (!S.s || p.s === S.s) && (!S.t || inT(p, S.t)));
+    const ev = items.filter((p) => p.st !== 'np');
+    const cnt = (k) => ev.filter((p) => p.st === k).length;
+    const names = Array.from(new Set(items.map((p) => p.atb)));
+    const groups = names.map((name) => {
+      const its = items.filter((p) => p.atb === name);
+      const e = its.filter((p) => p.st !== 'np');
+      return { name, items: its, n: its.length, ne: e.length, iz: e.filter((p) => p.st === 'iz').length, segs: segsOf(its) };
+    }).sort((a, b) => b.n - a.n);
+    const sChips = [{ id: '', name: 'Visi saraksti' }].concat(SAR).map((sr) => ({ short: sr.id || 'Visi', name: sr.name, on: S.s === sr.id, cls: S.s === sr.id ? 'on' : '', pick: set({ s: sr.id, sel: '' }) }));
+    const byS = all.filter((p) => !S.s || p.s === S.s);
+    const tOpts = [{ v: '', label: 'Visas tēmas' }].concat(TEMAS.filter((t) => byS.some((p) => inT(p, t))).map((t) => ({ v: t, label: t })));
+    return {
+      theme: THEMES[this.props.krasas ?? 'Smilts'] || 'smilts',
+      statusNote: start ? 'sākuma stāvoklis' : 'statusi un atbildīgie ilustratīvi',
+      prog: { iz: cnt('iz'), di: cnt('di'), pr: cnt('pr'), ni: cnt('ni'), nv: cnt('nv'), n: ev.length },
+      segs: segsOf(items), groups, empty: items.length === 0,
+      sChips, tOpts, tVal: S.t,
+      onTopic: (e) => this.setState(Object.assign({}, S, { t: e.target.value, sel: '' }))
+    };
+  }
+}
+</script>
+</body>
+</html>
