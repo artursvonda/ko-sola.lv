@@ -40,3 +40,13 @@ Solījuma izpildes vērtējums: Nav vērtēts, Procesā, Izpildīts, Daļēji iz
 
 **Statusa maiņa**:
 Ieraksts statusa vēsturē ar datumu un pierādījuma saiti; AI sagatavo melnrakstu, redaktors apstiprina.
+
+**Tēma**:
+Politikas joma no lasītāja skata (piem., Veselība, Mājokļi), pēc kuras grupē un filtrē Solījumus. Tēmu saraksts ir plakans.
+_Avoid_: kategorija, nozare, ministrija
+
+**Galvenā tēma**:
+Solījuma vienīgā Tēma, pēc kuras to grupē un skaita; katram Solījumam ir tieši viena.
+
+**Papildu tēma**:
+Solījuma otrā vai trešā Tēma (0–2), kas ietekmē tikai filtrēšanu, ne skaitīšanu.
