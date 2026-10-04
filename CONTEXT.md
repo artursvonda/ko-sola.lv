@@ -32,14 +32,22 @@ _Avoid_: partija (modelī)
 Viena atsevišķi izvērtējama saraksta apņemšanās; var būt ar vairākiem avotiem (piem., gan CVK, gan paplašinātajā programmā).
 
 **Nepārbaudāms solījums**:
-Solījums, kas ir deklarācija bez izmērāma iznākuma (piem., "stiprināsim drošību"); tiek uzskaitīts, bet statuss netiek vērtēts.
+Solījums, kas ir deklarācija bez izmērāma iznākuma (piem., "stiprināsim drošību"); tiek uzskaitīts un tam tiek uzskaitīti Notikumi, bet Statuss netiek vērtēts.
 _Avoid_: deklarācija, tukšs solījums
 
 **Statuss**:
 Solījuma izpildes vērtējums: Nav vērtēts, Procesā, Izpildīts, Daļēji izpildīts vai Nav izpildīts.
 
 **Statusa maiņa**:
-Ieraksts statusa vēsturē ar datumu un pierādījuma saiti; AI sagatavo melnrakstu, redaktors apstiprina.
+Ieraksts statusa vēsturē ar datumu un pierādījuma saiti, kas balstās uz Notikumiem; AI sagatavo melnrakstu, redaktors apstiprina.
+
+**Notikums**:
+Datēts, ar pierādījumu apliecināts fakts (piem., pieņemts likums, budžeta lēmums, balsojums), kas liecina par rīcību **par** vai **pret** vienu vai vairākiem Solījumiem, arī dažādu Sarakstu.
+_Avoid_: pierādījums, ziņa
+
+**Nesakritība**:
+Būtiska atšķirība starp viena Solījuma citātiem — dažādos avotos vai vienā avotā (piem., CVK programmā "celsim līdz 50%", paplašinātajā "virzoties uz 50%", vai cits rādītājs). Tiek fiksēta un rādīta; Statusu vērtē pēc CVK programmas.
+_Avoid_: pretruna, konflikts
 
 **Tēma**:
 Politikas joma no lasītāja skata (piem., Veselība, Mājokļi), pēc kuras grupē un filtrē Solījumus. Tēmu saraksts ir plakans.
