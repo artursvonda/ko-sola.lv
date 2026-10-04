@@ -1,0 +1,14 @@
+id: jv-nodoklu-ienemumu-sadale-valsts-pasvaldibas
+saraksts: jv
+nosaukums: "Nodokļu ieņēmumu sadales starp valsti un pašvaldībām pārskatīšana"
+parbaudams: false
+temas:
+  galvena: nodokli-un-budzets
+  papildu: [regioni-un-pasvaldibas]
+avoti:
+  - veids: cvk
+    vieta: "3. Finanses"
+    citats: "Veidosim taisnīgu un uzņēmējdarbību veicinošu nodokļu ieņēmumu sadali starp pašvaldībām un valsti"
+piezimes: "Tikai CVK. Nav apvienots ar jv-iin-sadale-80-20, jo CVK runā par sadali starp valsti un pašvaldībām, paplašinātā — par IIN sadali starp pašvaldībām. Nepārbaudāms: 'taisnīgu' bez mēra."
+jautajums: "Vai paplašinātās programmas IIN 80/20 sadale ir šī CVK teikuma konkretizācija (tad apvienot)?"
+statusi: []

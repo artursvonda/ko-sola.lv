@@ -1,0 +1,17 @@
+id: jv-drosibas-investicijas-5-ikp
+saraksts: jv
+nosaukums: "Iekšējās un ārējās drošības investīcijas vismaz 5% no IKP"
+parbaudams: true
+temas:
+  galvena: aizsardziba
+  papildu: [nodokli-un-budzets, iekseja-drosiba-un-tiesiskums]
+avoti:
+  - veids: cvk
+    vieta: "3. Finanses"
+    citats: "Rūpējoties par valsts nākotni, drošību finansēsim atbildīgi"
+  - veids: paplasinata
+    vieta: "3. Finanses › Apņemšanās un uzdevumi"
+    citats: "Nodrošināsim finansējumu iekšējās un ārējās drošības investīcijām vismaz 5% apmērā no iekšzemes kopprodukta"
+piezimes: "Apvienots: CVK teikums atbilst paplašinātās programmas punktam (tāda pati secība Prioritātēs). CVK formulējumam mēra nav, tāpēc nosaukumā paplašinātās programmas mērs. Pārbaudāmība no paplašinātās (5%)."
+jautajums: "CVK 'drošību finansēsim atbildīgi' pats par sevi ir Nepārbaudāms; vai pareizi to apvienot ar paplašinātās 5% punktu? Un vai šis nedublē jv-aizsardzibas-finansejums-5-ikp?"
+statusi: []

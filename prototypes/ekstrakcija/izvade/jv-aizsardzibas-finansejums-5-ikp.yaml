@@ -1,0 +1,17 @@
+id: jv-aizsardzibas-finansejums-5-ikp
+saraksts: jv
+nosaukums: "Aizsardzības finansējums 5% no IKP"
+parbaudams: true
+temas:
+  galvena: aizsardziba
+  papildu: [nodokli-un-budzets]
+avoti:
+  - veids: cvk
+    vieta: "1. Drošība un aizsardzība"
+    citats: "Nodrošināsim aizsardzības finansējumu 5% no IKP"
+  - veids: paplasinata
+    vieta: "1. Drošība un aizsardzība › Apņemšanās un uzdevumi › Latvijas aizsardzība, inovācijas un partnerība"
+    citats: "ik gadu ieguldot aizsardzībā 5% no iekšzemes kopprodukta"
+piezimes: "Apvienots: CVK un paplašinātā sola to pašu mēru. Paplašinātā piebilst 'ik gadu', CVK ne — nosaukumā CVK mērs."
+jautajums: "Vai šis jāapvieno ar jv-drosibas-investicijas-5-ikp (3. nodaļa: 'iekšējās un ārējās drošības investīcijām vismaz 5%')? Joma atšķiras (aizsardzība vs iekšējā+ārējā drošība), tāpēc atstāts atsevišķi."
+statusi: []

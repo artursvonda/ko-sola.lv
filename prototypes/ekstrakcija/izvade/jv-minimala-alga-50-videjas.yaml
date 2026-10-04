@@ -1,0 +1,17 @@
+id: jv-minimala-alga-50-videjas
+saraksts: jv
+nosaukums: "Minimālā alga 50% no vidējās bruto darba samaksas"
+parbaudams: true
+temas:
+  galvena: ekonomika-un-darbs
+  papildu: [socialais-atbalsts-un-pensijas]
+avoti:
+  - veids: cvk
+    vieta: "3. Finanses"
+    citats: "Celsim minimālo algu līdz 50% no vidējās bruto darba samaksas"
+  - veids: paplasinata
+    vieta: "3. Finanses › Apņemšanās un uzdevumi"
+    citats: "Paaugstināsim minimālās darba algas līmeni, virzoties uz mērķi sasniegt 50% no vidējās bruto darba samaksas valstī"
+piezimes: "Apvienots. Atšķirība stiprumā: CVK 'celsim līdz 50%', paplašinātā 'virzoties uz mērķi sasniegt 50%' — nosaukumā CVK mērs."
+jautajums: ""
+statusi: []
