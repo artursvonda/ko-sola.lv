@@ -56,11 +56,24 @@ const josla = (s) => html`<dl class="josla">
   </div>
 </dl>`;
 
-/** Frakcijas rindas virsraksts: šīs Saeimas balsojumā — Saraksts (kā citur lapā); citādi — kods, kā Saeimas datos. */
-function frakcija(b, kods, saraksti) {
-  if (kods === "bez_frakcijas") return "Bez frakcijas";
-  const sr = frakcijasSaraksts(b, kods, saraksti);
-  return sr ? html`<abbr title="${sr.nosaukums}">${sr.saisinajums}</abbr> · ${sr.isais_nosaukums}` : kods;
+const BEZ_FRAKCIJAS = "bez_frakcijas";
+
+/**
+ * Balsojuma rindas: { kods, saraksts (šīs Saeimas balsojumā, ja kartēts), balsis }.
+ * Šīs Saeimas balsojumā — Sarakstu CVK secībā, tad nekartētie kodi (datu secībā), „Bez frakcijas” pēdējā; citādi — datu secībā.
+ */
+function balsojumaRindas(b, saraksti) {
+  const rindas = Object.entries(b.frakcijas).map(([kods, balsis]) => ({ kods, saraksts: frakcijasSaraksts(b, kods, saraksti), balsis }));
+  if (!sisSaeimasBalsojums(b)) return rindas;
+  const vieta = (r) => (r.kods === BEZ_FRAKCIJAS ? Infinity : (r.saraksts?.nr ?? Number.MAX_SAFE_INTEGER));
+  return rindas.toSorted((a, c) => vieta(a) - vieta(c));
+}
+
+/** Rindas virsraksts: kartēts — tikai Saraksts (kā citur lapā), Frakcijas kods — `title`; citādi — kods, kā Saeimas datos. */
+function frakcija({ kods, saraksts }) {
+  if (kods === BEZ_FRAKCIJAS) return html`<th scope="row">Bez frakcijas</th>`;
+  if (!saraksts) return html`<th scope="row">${kods}</th>`;
+  return html`<th scope="row" title="${kods}"><abbr title="${saraksts.nosaukums}">${saraksts.saisinajums}</abbr> · ${saraksts.isais_nosaukums}</th>`;
 }
 
 const balsojums = (b, saraksti) => html`
@@ -68,11 +81,11 @@ const balsojums = (b, saraksti) => html`
   <summary>Frakciju balsojums (${b.saeima}. Saeima): par ${b.kopa.par}, pret ${b.kopa.pret}, atturas ${b.kopa.atturas}</summary>
   <table>
     <thead><tr><th scope="col">Frakcija</th><th scope="col">Par</th><th scope="col">Pret</th><th scope="col">Atturas</th><th scope="col">Nebalsoja</th></tr></thead>
-    <tbody>${Object.entries(b.frakcijas).map(
-      ([f, x]) => html`<tr><th scope="row">${frakcija(b, f, saraksti)}</th><td>${x.par}</td><td>${x.pret}</td><td>${x.atturas}</td><td>${x.nebalsoja ?? ""}</td></tr>`,
+    <tbody>${balsojumaRindas(b, saraksti).map(
+      (r) => html`<tr>${frakcija(r)}<td>${r.balsis.par}</td><td>${r.balsis.pret}</td><td>${r.balsis.atturas}</td><td>${r.balsis.nebalsoja ?? ""}</td></tr>`,
     )}</tbody>
   </table>
-  ${!sisSaeimasBalsojums(b) && html`<p class="vajs">${b.saeima}. Saeimas frakcijas; uz šo vēlēšanu Sarakstiem netiek attiecinātas.</p>`}
+  ${!sisSaeimasBalsojums(b) && html`<p class="vajs">Balsojums ${b.saeima}. Saeimā. Tās frakcijas nav tas pats, kas 2026. gada vēlēšanu Saraksti.</p>`}
   <p><a href="${b.datu_avots}">Saeimas atvērtie dati</a>${b.komentars && html` · ${b.komentars}`}</p>
 </details>`;
 

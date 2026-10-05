@@ -2,7 +2,7 @@
 // komponents rāda filtrus, glabā stāvokli query parametros, slēpj rindas un pārrēķina skaitus.
 // Platā ekrānā rindas klikšķis atver detaļu paneli ar pushState uz /solijumi/<id>/; citādi — parasta saite.
 import "./parskats.css";
-import { GRUPAS, nolasitFiltrus, atbilst, skaiti, progress, ierakstsNoDatiem, izvelesSaite } from "./filtri.js";
+import { GRUPAS, nolasitFiltrus, grupa, skaiti, progress, ierakstsNoDatiem, izvelesSaite } from "./filtri.js";
 import { parskatsSaite } from "../lapas/saites.js";
 import { ieladetPaneli } from "./panelis.js";
 import { parastsKlikskis, iezimetAktualo } from "./dom.js";
@@ -14,6 +14,7 @@ const STAVOKLIS = "ko-parskats";
 class KoParskats extends HTMLElement {
   connectedCallback() {
     this.rindas = [...this.querySelectorAll("tbody tr[data-id]")].map((tr) => ({ tr, ieraksts: ierakstsNoDatiem(tr.dataset) }));
+    this.tbody = { galvena: this.dala("galvena"), papildu: this.dala("papildu") };
     this.izveles = [...this.querySelectorAll("a[data-grupa]")];
     this.derigas = Object.fromEntries(
       GRUPAS.map((g) => [g, new Set(this.izveles.filter((a) => a.dataset.grupa === g && a.dataset.vertiba).map((a) => a.dataset.vertiba))]),
@@ -67,6 +68,12 @@ class KoParskats extends HTMLElement {
       return this.izveleties(izvele.dataset.grupa, izvele.dataset.vertiba || null);
     }
     if (e.target.closest('[data-k="aizvert"]')) return this.aizvert();
+    // Saite uz pārskatu (/?…) panelī vai „Notīrīt filtrus”: aizver paneli un piemēro filtrus uz vietas.
+    const uzParskatu = e.target.closest("a[href]");
+    if (uzParskatu && uzParskatu.origin === location.origin && uzParskatu.pathname === "/") {
+      e.preventDefault();
+      return this.piemerot(nolasitFiltrus(uzParskatu.search, this.derigas));
+    }
     const tr = e.target.closest("tbody tr[data-id]");
     if (!tr) return;
     const saite = tr.querySelector(".t-sol a");
@@ -92,18 +99,35 @@ class KoParskats extends HTMLElement {
     if (!this.sanu.matches) this.dala("atvere").open = false;
   }
 
-  /** Atjauno rindas, progresu un skaitus pēc filtriem. */
+  /** Jauni filtri no saites: jauns vēstures ieraksts; fokuss uz virsrakstu (saite pazūd — panelis aizveras vai tukšais stāvoklis paslēpjas). */
+  piemerot(filtri) {
+    this.slegtPaneli();
+    this.atjaunot(filtri);
+    history.pushState(this.stavoklis(null), "", parskatsSaite(filtri));
+    if (!this.sanu.matches) this.dala("atvere").open = false;
+    const h1 = this.dala("nosaukums");
+    h1.tabIndex = -1;
+    h1.focus();
+  }
+
+  /** Atjauno rindas (galvenā grupa, zem tās „Saistīti arī (papildu)”), progresu un skaitus pēc filtriem. */
   atjaunot(filtri) {
     this.filtri = filtri;
-    const redzamas = [];
+    const pec = { galvena: [], papildu: [] };
     for (const { tr, ieraksts } of this.rindas) {
-      const ir = atbilst(ieraksts, filtri);
-      tr.hidden = !ir;
-      if (ir) redzamas.push(ieraksts);
+      const g = grupa(ieraksts, filtri);
+      tr.hidden = !g;
+      if (!g) continue;
+      pec[g].push(ieraksts);
+      // Sākotnējā secībā: katru rindu pievieno savas grupas beigās.
+      this.tbody[g].append(tr);
     }
-    this.dala("tukss").hidden = redzamas.length > 0;
+    this.tbody.papildu.hidden = pec.papildu.length === 0;
+    this.dala("papildu-n").textContent = pec.papildu.length;
+    this.dala("tukss").hidden = pec.galvena.length + pec.papildu.length > 0;
 
-    const p = progress(redzamas);
+    // Progress un skaiti — tikai galvenajai grupai (papildu Tēma/iestāde neskaitās, GLOSSARY.md).
+    const p = progress(pec.galvena);
     this.dala("izpilditi").textContent = p.izpilditi;
     this.dala("n").textContent = p.n;
     for (const el of this.querySelectorAll(".progress [data-statuss]")) {
@@ -123,7 +147,8 @@ class KoParskats extends HTMLElement {
       const n = skaitiPec[grupa][vertiba] ?? 0;
       const izveleta = (filtri[grupa] ?? "") === vertiba;
       a.querySelector('[data-k="skaits"]').textContent = n;
-      a.classList.toggle("nulle", n === 0);
+      // Izvēli ar 0 nerāda; tās slug paliek derīgs URL, nosaukums — virsrakstā.
+      a.parentElement.hidden = vertiba !== "" && n === 0;
       a.href = izvelesSaite(filtri, grupa, vertiba || null);
       iezimetAktualo(a, izveleta);
       if (izveleta && (vertiba || grupa === "saraksts")) nosaukumi.push(a.dataset.nosaukums);

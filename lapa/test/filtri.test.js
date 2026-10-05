@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { nolasitFiltrus, atbilst, skaiti, progress, izvelesSaite } from "../klients/filtri.js";
+import { nolasitFiltrus, atbilst, grupa, skaiti, progress, izvelesSaite } from "../klients/filtri.js";
 
 const VISI = { saraksts: null, atbildigais: null, tema: null };
 // Ieraksts: galvenā vērtība pirmā, tad papildu.
@@ -25,6 +25,16 @@ test("atbilst: papildu Tēma un papildu iestāde arī atbilst filtram", () => {
   assert.equal(atbilst(jvAizs, { ...VISI, tema: "veseliba" }), false);
 });
 
+test("grupa: galvenā — atbilst ar galvenajām vērtībām; papildu — tikai ar papildu; citādi null", () => {
+  // jvAizs: galvenā Tēma aizsardziba, papildu arpolitika; galvenā iestāde am, papildu arm.
+  assert.equal(grupa(jvAizs, VISI), "galvena");
+  assert.equal(grupa(jvAizs, { ...VISI, saraksts: "jv", tema: "aizsardziba" }), "galvena");
+  assert.equal(grupa(jvAizs, { ...VISI, tema: "arpolitika" }), "papildu");
+  assert.equal(grupa(jvAizs, { ...VISI, tema: "aizsardziba", atbildigais: "arm" }), "papildu");
+  assert.equal(grupa(jvAizs, { ...VISI, saraksts: "as" }), null);
+  assert.equal(grupa(jvAizs, { ...VISI, tema: "veseliba" }), null);
+});
+
 const PARAUGS = [
   { saraksts: "jv", iestades: ["fm"], tema: ["nodokli"], statuss: "izpildits" },
   { saraksts: "jv", iestades: ["am", "fm"], tema: ["aizsardziba", "nodokli"], statuss: "procesa" },
@@ -32,13 +42,23 @@ const PARAUGS = [
   { saraksts: "as", iestades: ["vm"], tema: ["veseliba"], statuss: "nav-vertets" },
 ];
 
-test("skaiti: katra grupa ņem vērā pārējo grupu filtrus, skaita pēc galvenās vērtības", () => {
+test("skaiti: katra grupa ņem vērā pārējo grupu filtrus pēc galvenās vērtības (= galvenās grupas lielums)", () => {
   const sk = skaiti(PARAUGS, { ...VISI, tema: "nodokli" });
-  assert.deepEqual(sk.saraksts, { "": 3, jv: 2, as: 1 });
-  // Otrajam ierakstam FM ir papildu iestāde: filtrē, bet neskaita.
-  assert.deepEqual(sk.atbildigais, { "": 3, fm: 2, am: 1 });
+  // Otrajam ierakstam nodokļi ir papildu Tēma: tas ir „Saistīti arī”, ne skaitā.
+  assert.deepEqual(sk.saraksts, { "": 2, jv: 1, as: 1 });
+  assert.deepEqual(sk.atbildigais, { "": 2, fm: 2 });
   // Tēmas grupa neņem vērā pašas Tēmas filtru.
   assert.deepEqual(sk.tema, { "": 4, nodokli: 2, aizsardziba: 1, veseliba: 1 });
+  // Otrajam ierakstam FM ir papildu iestāde.
+  assert.deepEqual(skaiti(PARAUGS, { ...VISI, atbildigais: "fm" }).tema, { "": 2, nodokli: 2 });
+});
+
+test("skaiti: izvēles skaits = galvenās grupas rindu skaits pēc tās izvēles", () => {
+  const filtri = { ...VISI, tema: "nodokli" };
+  for (const [g, vertiba] of [["saraksts", "jv"], ["saraksts", "as"], ["atbildigais", "fm"], ["tema", "nodokli"]]) {
+    const izvelets = { ...filtri, [g]: vertiba };
+    assert.equal(skaiti(PARAUGS, filtri)[g][vertiba], PARAUGS.filter((x) => grupa(x, izvelets) === "galvena").length, `${g}=${vertiba}`);
+  }
 });
 
 test("progress: N bez Nepārbaudāmajiem; skaiti B1 leģendas secībā", () => {

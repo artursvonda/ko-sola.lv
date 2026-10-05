@@ -79,6 +79,17 @@ test("lapa: Solījums ar papildu tēmu redzams arī tajā tēmā, ar norādi uz 
   assert.match(a, /Galvenā tēma: <a href="\/salidzinajums\/\?tema=aizsardziba#aizsardziba">Aizsardzība<\/a>/);
 });
 
+test("lapa: papildu Solījumi zem virsraksta „Saistīti arī (papildu): N” (kā pārskatā), pēc galvenajiem", () => {
+  const jv = sadala("arpolitika").match(/<div class="blakus-saraksts">\s*<h3><abbr [^>]*>JV<\/abbr>[\s\S]*?<\/div>/)[0];
+  assert.match(jv, /<p class="lbl[^"]*">Saistīti arī \(papildu\): 1<\/p>\s*<ul>[\s\S]*jv-aizsardzibai-5-nato-klatbutne/);
+  // Bez papildu Solījumiem virsraksta nav.
+  assert.doesNotMatch(sadala("aizsardziba"), /Saistīti arī/);
+});
+
+test("lapa: „Rādīt visas tēmas” — saite uz /salidzinajums/, statiskajā HTML paslēpta (bez JS visas tēmas jau redzamas)", () => {
+  assert.match(lapa, /<p class="visas-temas" data-k="visas" hidden><a href="\/salidzinajums\/">Rādīt visas tēmas<\/a><\/p>/);
+});
+
 test("Solījuma lapa: saite uz salīdzinājumu ved uz tēmas enkuru (arī bez JS)", async () => {
   const { solijums } = await import("../lapas/solijums.js");
   const s = m.solijumi.find((x) => x.id === "jv-aizsardzibai-5-nato-klatbutne");

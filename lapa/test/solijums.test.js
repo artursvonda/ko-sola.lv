@@ -7,12 +7,36 @@ const m = ieladetModeli({ sakne: ".", datuSakne: "fixtures", sodien: "2026-10-05
 const atrast = (id) => m.solijumi.find((x) => x.id === id);
 const lapa = (s, modelis = m) => String(solijums(s, modelis));
 /** Frakciju balsojuma tabulas rindu virsraksti (`<th scope="row">…</th>`). */
-const frakcijuRindas = (h) => [...h.matchAll(/<th scope="row">(.*?)<\/th>/g)].map((x) => x[1]);
+const frakcijuRindas = (h) => [...h.matchAll(/<th scope="row"[^>]*>(.*?)<\/th>/g)].map((x) => x[1]);
+/** Rindu virsrakstu `title` (frakcijas kods); bez tā — null. */
+const frakcijuKodi = (h) => [...h.matchAll(/<th scope="row"(?: title="([^"]*)")?>/g)].map((x) => x[1] ?? null);
 
-test("Frakciju balsojums 14. Saeimā: frakciju kodi, nevis Saraksti, ar paskaidrojumu", () => {
+test("Frakciju balsojums 14. Saeimā: frakciju kodi datu secībā, nevis Saraksti, ar paskaidrojumu", () => {
   const h = lapa(atrast("as-mun-likme-10-fiziskam-personam"));
   assert.deepEqual(frakcijuRindas(h), ["JV", "ZZS", "NA", "AS", "LPV", "PRO", "Bez frakcijas"]);
-  assert.match(h, /14\. Saeimas frakcijas; uz šo vēlēšanu Sarakstiem netiek attiecinātas\./);
+  assert.match(h, /<p class="vajs">Balsojums 14\. Saeimā\. Tās frakcijas nav tas pats, kas 2026\. gada vēlēšanu Saraksti\.<\/p>/);
+});
+
+test("Frakciju balsojums 15. Saeimā: tikai Saraksts CVK secībā, kods — title; nezināmie pēc tiem, „Bez frakcijas” pēdējā", () => {
+  const kodi = { jv: "JVF", na: "NAF", sv: "SVF" };
+  const m15 = { ...m, saraksti: m.saraksti.map((sr) => ({ ...sr, frakcija: kodi[sr.slug] })) };
+  const s = atrast("as-mun-likme-10-fiziskam-personam");
+  const balss = { par: 1, pret: 0, atturas: 0 };
+  const s15 = {
+    ...s,
+    notikumi: s.notikumi.map((n) => ({
+      ...n,
+      balsojums: n.balsojums && {
+        ...n.balsojums,
+        saeima: 15,
+        frakcijas: { JVF: balss, bez_frakcijas: balss, XYZ: balss, NAF: balss, SVF: balss },
+      },
+    })),
+  };
+  const h = lapa(s15, m15);
+  assert.deepEqual(frakcijuRindas(h).map((x) => x.replace(/<abbr [^>]*>(\w+)<\/abbr>.*/, "$1")), ["SV", "NA", "JV", "XYZ", "Bez frakcijas"]);
+  assert.deepEqual(frakcijuKodi(h), ["SVF", "NAF", "JVF", null, null]);
+  assert.doesNotMatch(h, /Tās frakcijas nav tas pats/);
 });
 
 test("Frakciju balsojums 15. Saeimā: frakcija → Saraksts pēc data/saraksti.yaml `frakcija`", () => {
@@ -41,7 +65,7 @@ test("Frakciju balsojums 15. Saeimā: frakcija → Saraksts pēc data/saraksti.y
     '<abbr title="Jaunā VIENOTĪBA">JV</abbr> · Jaunā VIENOTĪBA',
     "Bez frakcijas",
   ]);
-  assert.doesNotMatch(h, /netiek attiecinātas/);
+  assert.doesNotMatch(h, /Tās frakcijas nav tas pats/);
 });
 
 test("saites uz filtrētu pārskatu: Saraksts ceļā, Atbildīgais un Tēma joslā — arī papildu", () => {
