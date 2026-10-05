@@ -1,7 +1,9 @@
-// npm run balsojums -- <YYYY-MM-DD> [meklējums]
+// npm run --silent balsojums -- <YYYY-MM-DD> [meklējums] [--visi]
 // → Notikuma `balsojums` YAML no Saeimas sēžu atvērtajiem datiem (data.gov.lv `saeimas-sedes`).
-// meklējums: VOTING_ID vai teksta daļa no balsojuma motīva (piem., "1065/Lp14), 3.lasījums").
+// meklējums: VOTING_ID vai teksta daļa no balsojuma motīva (piem., "1065/Lp14").
+// Procedūras balsojumus (priekšlikumi, steidzamība) izlaiž, ja nav --visi vai VOTING_ID.
 // Bez meklējuma vai ar vairākiem atbilstošiem — saraksts; YAML tikai, ja atbilst tieši viens.
+import { parseArgs } from "node:util";
 import { Document } from "yaml";
 import { parsetBalsojumus, saeimaNoNosaukuma } from "./lib/balsojums.js";
 
@@ -10,9 +12,12 @@ const UA = { "User-Agent": "ko-sola.lv (+https://github.com/artursvonda/ko-sola.
 // Fails parādās dažas dienas pēc sēdes; logs ar rezervi.
 const LOGS_DIENAS = 30;
 
-const [datums, meklejums = ""] = process.argv.slice(2);
+const PROCEDURA = /^Par (priekšlikumu|likumprojekta atzīšanu par steidzamu)\b/;
+
+const { values: opc, positionals } = parseArgs({ allowPositionals: true, options: { visi: { type: "boolean" } } });
+const [datums, meklejums = ""] = positionals;
 if (!/^\d{4}-\d{2}-\d{2}$/.test(datums ?? "")) {
-  console.error("Lietošana: npm run balsojums -- <YYYY-MM-DD> [VOTING_ID | motīva daļa]");
+  console.error("Lietošana: npm run --silent balsojums -- <YYYY-MM-DD> [VOTING_ID | motīva daļa] [--visi]");
   process.exit(2);
 }
 
@@ -29,12 +34,14 @@ const faili = result.resources
   .sort((a, b) => (a.created < b.created ? -1 : 1));
 
 const q = meklejums.toLowerCase();
+const pecId = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(meklejums);
 const atrasti = [];
 for (const f of faili) {
   const saeima = saeimaNoNosaukuma(f.name);
   for (const b of parsetBalsojumus(await lejupieladet(f.url))) {
     if (b.laiks.slice(0, 10) !== datums) continue;
-    if (q && b.id !== meklejums && !b.motivs.toLowerCase().includes(q)) continue;
+    if (pecId ? b.id !== meklejums : !b.motivs.toLowerCase().includes(q)) continue;
+    if (!pecId && !opc.visi && PROCEDURA.test(b.motivs)) continue;
     atrasti.push({ saeima, ...b, datu_avots: f.url });
   }
 }

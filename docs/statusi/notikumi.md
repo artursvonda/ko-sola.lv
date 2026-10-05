@@ -18,12 +18,12 @@ apraksts: >-
   Īss neitrāls fakta apraksts: kas notika, kas mainās, kad stājas spēkā.
 avoti:
   - url: https://…
-    veids: saeima          # saeima | mk | likumi | vestnesis | csp | kase | zinas | cits
+    veids: saeima          # saeima (arī Saeimas atvērtie dati data.gov.lv) | mk (arī TAP) | likumi | vestnesis | csp | kase | zinas | cits
 solijumi:
   - id: jv-…               # Solījuma id (data/solijumi/)
     virziens: par          # par | pret — ietekme uz iznākumu
     pamatojums: Kāpēc šis fakts tuvina vai attālina tieši šo iznākumu.
-balsojums:                 # tikai Saeimas balsojumam; `npm run balsojums -- <datums> <meklējums>`
+balsojums:                 # tikai Saeimas balsojumam; `npm run --silent balsojums -- <datums> <meklējums>`
   saeima: 14
   id: 827a2c9a-1251-4e0f-9eb7-4e01e166a61c   # VOTING_ID
   laiks: 2026-09-17T10:02:12
@@ -38,7 +38,7 @@ jautajums: ""              # neskaidrība redaktoram; pirms merge jābūt tukša
 ```
 
 - `avoti`: ≥1 oficiāls (ne `zinas`). Ziņa — tikai norāde uz oficiālo dokumentu.
-- `balsojums`: no Saeimas sēžu atvērtajiem datiem, nekad ar roku. `nebalsoja` = reģistrējies, bet nebalsoja; neklātesošie nav skaitīti. `komentars` — deputātu paziņojumi par kļūdu balsojumā (oficiālo rezultātu nemaina). 15. Saeimas Frakcijas kods ↔ Saraksts: `data/saraksti.yaml` `frakcija`; deputāts bez frakcijas nevienam Sarakstam netiek pieskaitīts.
+- `balsojums`: no Saeimas sēžu atvērtajiem datiem, nekad ar roku. Rīks meklē visos tās dienas balsojumu failos (vienā dienā var būt vairākas sēdes) un izlaiž procedūras balsojumus (priekšlikumi, steidzamība), ja nav `--visi`. `nebalsoja` = reģistrējies, bet nebalsoja; neklātesošie nav skaitīti. `komentars` — deputātu paziņojumi par kļūdu balsojumā (oficiālo rezultātu nemaina). 15. Saeimas Frakcijas kods ↔ Saraksts: `data/saraksti.yaml` `frakcija`; deputāts bez frakcijas nevienam Sarakstam netiek pieskaitīts. 14. Saeimas kodi (piem., "LPV") uz Sarakstiem **netiek** kartēti, arī ja nosaukums sakrīt.
 
 ## Statusa maiņa
 

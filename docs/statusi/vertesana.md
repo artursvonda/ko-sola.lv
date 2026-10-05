@@ -24,12 +24,15 @@ Pierādījuma standarts katram Statusam (lēmums: "Statusa maiņas plūsma", #10
 
 - **Oficiāls avots** (`avoti[].veids` ≠ `zinas`): Saeima, MK/TAP, likumi.lv, Latvijas Vēstnesis, CSP, Valsts kase u. c. Ziņa drīkst būt tikai norāde uz oficiālo dokumentu.
 - `virziens` = ietekme uz **iznākumu**, katram Solījumam atsevišķi: `par` — tuvina solīto, `pret` — attālina. Frakcijas balsojums rādīts blakus un virzienu nemaina (likums izpilda JV Solījumu → `par`, arī ja JV balsoja pret).
-- Saeimā ieraksta: likumprojekta **iesniegšanu** (parasti → Procesā) un **galīgo lasījumu**. Citus lasījumus — tikai, ja būtiski grozījumi vai noraidījums.
+- Saeimā ieraksta: likumprojekta **iesniegšanu** (parasti → Procesā) un **galīgo lasījumu** (parasti 3. lasījums; steidzamam likumprojektam — "2.lasījums, steidzams"). Citus lasījumus — tikai, ja būtiski grozījumi vai noraidījums.
+- **Izsludināšana** (Latvijas Vēstnesis) ir atsevišķs Notikums, ja tā maina Statusu uz Izpildīts vai Daļēji izpildīts: galīgais lasījums pats par sevi to nedara.
 - `datums` = kad fakts notika (balsojuma diena, izsludināšanas diena, statistikas publicēšanas diena). Statusa maiņas `datums` = noteicošā Notikuma datums; apstiprināšanas datums = git merge.
 
 ## Robežgadījumi
 
 - **Pieņemts, bet stājas spēkā vēlāk**: izsludināts → Izpildīts; spēkā stāšanās datumu min `pamatojums`.
-- **Iznākums pirms 15. Saeimas sanākšanas** vai iepriekšējās valdības lēmums: nav izlemts (sk. kartes "Not yet specified"); redaktors ieraksta `jautajums`.
+- **Likums, kas atļauj, bet neliek** (piem., MK "var lemt" par finansējumu): tas ir solis, ne iznākums; iznākums ir MK lēmums — atsevišķs Notikums.
+- **Fakts pirms 15. Saeimas sanākšanas** (14. Saeima, iepriekšējā valdība, arī pirms vēlēšanām): vēl nav izlemts — [Notikumi pirms 15. Saeimas sanākšanas](https://github.com/artursvonda/ko-sola.lv/issues/31). Līdz lēmumam: Notikumu var sagatavot, Statusu nemaina, `jautajums` (bloķē merge).
+- **Netieša ietekme** (fakts var ietekmēt iznākumu tikai caur citiem, vēl nenotikušiem soļiem): Solījumu neiekļauj; PR aprakstā "Meklēts, bet neiekļauts" ar iemeslu.
 - **Vairāki Solījumi vienā Notikumā** (arī dažādu Sarakstu): katram savs `virziens` un `pamatojums`; Statusa maiņas — katrā Solījuma failā, vienā PR.
 - **Nav skaidrs, vai standarts izpildīts**: Statusu nemaini; pievieno Notikumu un `jautajums` redaktoram.
