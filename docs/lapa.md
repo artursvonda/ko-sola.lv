@@ -26,7 +26,7 @@ Filtru stāvoklis — query parametros. Saraksta, Tēmas un Notikuma lapu nav.
 
 - **Filtri** — `?saraksts=<saraksts.slug>&atbildigais=<iestade.slug>&tema=<tema.slug>` (pa vienai vērtībai; saite — `parskatsSaite()` `lapa/lapas/saites.js`). Loģika bez DOM — `lapa/klients/filtri.js` (lieto serveris un klients).
   - Princips: skaitlis vienmēr sakrīt ar to, ko lasītājs redz. Skaits blakus izvēlei = galvenās grupas rindu skaits pēc tās izvēles: tikai pēc galvenās Tēmas/iestādes, arī pārējo grupu filtriem (`skaiti()`).
-  - Izvēles ar 0 nerāda (`<li hidden>`), bet tās paliek DOM: slug derīgs URL (saites no Solījuma lapas uz tikai-papildu vērtību strādā), izvēli rāda virsraksts.
+  - Izvēles ar 0 nerāda (`<li hidden>`), bet tās paliek DOM: slug derīgs URL (saites no Solījuma lapas uz tikai-papildu vērtību strādā), izvēli rāda virsraksts. Izvēlēto opciju rāda arī ar 0.
   - Secība: Atbildīgie un Tēmas — pēc nosaukuma latviešu alfabētā (`Intl.Collator("lv")`), Saraksti — pēc CVK numura.
 - **Rindu grupas** (`grupa()`): ar filtru tabulā augšā galvenā grupa (atbilst ar galvenajām vērtībām), zem tās virsraksts „Saistīti arī (papildu): N” un Solījumi, kas atbilst tikai ar papildu Tēmu vai iestādi. Bez filtra — viens saraksts. Rindās „arī …” piezīmju nav (grupa tās aizstāj).
 - **Progress** — „X no N solījumiem izpildīti”, statusu josla un skaiti tikai galvenajai grupai; N bez Nepārbaudāmajiem. Josla ir dekoratīva (`aria-hidden`): tieši zem tās — leģenda tajā pašā Statusu secībā ar vārdu, formu un skaitu (Colour Is Never Alone).

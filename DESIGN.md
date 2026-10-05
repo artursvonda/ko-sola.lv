@@ -249,7 +249,7 @@ Full-width, collapsed; uppercase 11px tracked sans headers on the surface tint; 
 The one page wider than the table column: `main` widens to 90rem.
 - **Breakpoints:** from 64rem the filters are a 15rem sticky sidebar (hairline right rule), always open; from 75rem a row opens a 24rem sticky detail panel beside the table (ink top rule, no box).
 - **Narrow filters:** one collapsed disclosure row, „Filtri · <selection>”: Label + current selection, ink top rule, hairline bottom, the CSS chevron of the vote details.
-- **Selected filter:** selection wash (`--sel`), weight 600, 2px accent left border. Options with 0 are not listed.
+- **Selected filter:** selection wash (`--sel`), weight 600, 2px accent left border. Options with 0 are not listed, except the selected one.
 - **Navigation-style links (exception to Links):** filter options and matrix headers/cells are navigation, not prose links: ink or muted, no underline; underline on hover and `:focus-visible` (plus the focus outline).
 - **Stacked rows on phone** (below 48rem): each row is a two-tier grid, Saraksts + title on top, Atbildīgais and pill below, hairline between rows; the header row is visually hidden.
 - **Papildu group:** under a filter, matches by a papildu Tēma or iestāde follow the galvenā rows under a 1px ink rule and the Label „Saistīti arī (papildu): N”. Counts and progress cover the galvenā rows only, so a number always matches the rows it sits above. The Salīdzinājums tēma sections use the same Label.

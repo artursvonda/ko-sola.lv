@@ -85,6 +85,9 @@ export function skaiti(ieraksti, filtri) {
 /** Saite uz izvēli grupā (null — „Visi”), pārējo grupu filtrus saglabājot. */
 export const izvelesSaite = (filtri, grupa, vertiba) => parskatsSaite({ ...filtri, [grupa]: vertiba });
 
+/** Izvēli ar 0 nerāda; „Visi…” (vertiba "") un izvēlēto rāda vienmēr, lai izvēle paliek redzama sānjoslā. */
+export const raditIzveli = ({ vertiba, skaits, izveleta }) => vertiba === "" || izveleta || skaits > 0;
+
 /** „X no N izpildīti”: N — bez Nepārbaudāmajiem; `skaits` pa Statusiem STATUSU_SECIBA secībā. */
 export function progress(ieraksti) {
   const skaits = Object.fromEntries(STATUSU_SECIBA.map((k) => [k, 0]));

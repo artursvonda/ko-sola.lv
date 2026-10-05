@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { nolasitFiltrus, atbilst, grupa, skaiti, progress, izvelesSaite } from "../klients/filtri.js";
+import { nolasitFiltrus, atbilst, grupa, skaiti, progress, izvelesSaite, raditIzveli } from "../klients/filtri.js";
 
 const VISI = { saraksts: null, atbildigais: null, tema: null };
 // Ieraksts: galvenā vērtība pirmā, tad papildu.
@@ -81,4 +81,11 @@ test("izvelesSaite: maina vienu grupu, pārējās saglabā; null — „Visi”"
   const f = { saraksts: "jv", atbildigais: null, tema: "aizsardziba" };
   assert.equal(izvelesSaite(f, "saraksts", "as"), "/?saraksts=as&tema=aizsardziba");
   assert.equal(izvelesSaite(f, "tema", null), "/?saraksts=jv");
+});
+
+test("raditIzveli: izvēle ar 0 paslēpta, izņemot izvēlēto un „Visi…”", () => {
+  assert.equal(raditIzveli({ vertiba: "na", skaits: 0, izveleta: false }), false);
+  assert.equal(raditIzveli({ vertiba: "na", skaits: 0, izveleta: true }), true);
+  assert.equal(raditIzveli({ vertiba: "na", skaits: 3, izveleta: false }), true);
+  assert.equal(raditIzveli({ vertiba: "", skaits: 0, izveleta: false }), true);
 });

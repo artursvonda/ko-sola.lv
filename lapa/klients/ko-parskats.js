@@ -2,7 +2,7 @@
 // komponents rāda filtrus, glabā stāvokli query parametros, slēpj rindas un pārrēķina skaitus.
 // Platā ekrānā rindas klikšķis atver detaļu paneli ar pushState uz /solijumi/<id>/; citādi — parasta saite.
 import "./parskats.css";
-import { GRUPAS, nolasitFiltrus, grupa, skaiti, progress, ierakstsNoDatiem, izvelesSaite } from "./filtri.js";
+import { GRUPAS, nolasitFiltrus, grupa, skaiti, progress, ierakstsNoDatiem, izvelesSaite, raditIzveli } from "./filtri.js";
 import { parskatsSaite } from "../lapas/saites.js";
 import { ieladetPaneli } from "./panelis.js";
 import { parastsKlikskis, iezimetAktualo } from "./dom.js";
@@ -147,8 +147,8 @@ class KoParskats extends HTMLElement {
       const n = skaitiPec[grupa][vertiba] ?? 0;
       const izveleta = (filtri[grupa] ?? "") === vertiba;
       a.querySelector('[data-k="skaits"]').textContent = n;
-      // Izvēli ar 0 nerāda; tās slug paliek derīgs URL, nosaukums — virsrakstā.
-      a.parentElement.hidden = vertiba !== "" && n === 0;
+      // Izvēli ar 0 nerāda (izņemot izvēlēto); tās slug paliek derīgs URL.
+      a.parentElement.hidden = !raditIzveli({ vertiba, skaits: n, izveleta });
       a.href = izvelesSaite(filtri, grupa, vertiba || null);
       iezimetAktualo(a, izveleta);
       if (izveleta && (vertiba || grupa === "saraksts")) nosaukumi.push(a.dataset.nosaukums);
