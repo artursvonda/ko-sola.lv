@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "saraksti.schema.json",
+  "title": "Saraksti",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["slug", "nosaukums", "isais_nosaukums", "saisinajums", "nr", "avoti"],
+    "additionalProperties": false,
+    "properties": {
+      "slug": { "type": "string", "pattern": "^[a-z0-9]+$" },
+      "nosaukums": { "type": "string", "minLength": 1 },
+      "isais_nosaukums": { "type": "string", "minLength": 1 },
+      "saisinajums": { "type": "string", "minLength": 1 },
+      "nr": { "type": "integer", "minimum": 1 },
+      "avoti": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "object",
+          "required": ["veids", "url"],
+          "additionalProperties": false,
+          "properties": {
+            "veids": { "enum": ["cvk", "paplasinata"] },
+            "url": { "type": "string", "pattern": "^https?://" },
+            "fails": { "type": "string", "pattern": "^sources/.+\\.md$" },
+            "nodalas": { "$ref": "#/$defs/virsraksti" },
+            "neizrakstit": { "$ref": "#/$defs/virsraksti" },
+            "izlaist": { "$ref": "#/$defs/virsraksti" },
+            "nav_jaizraksta": { "$ref": "#/$defs/virsraksti" },
+            "atbilst_cvk": { "type": "object", "additionalProperties": { "type": "string" } }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "virsraksti": { "type": "array", "uniqueItems": true, "items": { "type": "string", "minLength": 1 } }
+  }
+}

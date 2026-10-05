@@ -1,6 +1,6 @@
 # Solījumu ekstrakcijas metode
 
-Ekstraktora (AI) prompts. Vārdnīca: `CONTEXT.md`. Redaktora pārbaude: `parbaude.md`.
+Ekstraktora (AI) prompts. Vārdnīca: `CONTEXT.md`. Redaktora pārbaude: `parbaude.md`. Palaišana: `izpilde.md`.
 
 ## 0. Process
 
@@ -15,7 +15,7 @@ Ekstraktora (AI) prompts. Vārdnīca: `CONTEXT.md`. Redaktora pārbaude: `parbau
 - Paplašinātās programmas iekļauto CVK teksta kopiju (piem., JV "10 000 zīmju programmas apsolījums") **ignorē**: tas nav atsevišķs avots.
 - Viena izpilde = viens PR, ko redaktors pārbauda.
 
-Ievade izpildei: Saraksta slug, CVK nodaļas nosaukums, CVK programmas fails, paplašinātās programmas fails(-i), esošie `data/solijumi/<saraksts>/*.yaml`.
+Ievade izpildei: Saraksta slug, CVK nodaļas nosaukums, CVK programmas fails, paplašinātās programmas fails(-i), esošie `data/solijumi/<saraksts>/*.yaml`. Nodaļas un paplašinātās nodaļu atbilsme (`atbilst_cvk`) — `data/saraksti.yaml`.
 
 ## 1. Kas ir Solījums (granularitāte)
 
@@ -64,7 +64,7 @@ Izraksti **abus**: Nepārbaudāmi tiek uzskaitīti un saņems Notikumus, tikai n
 
 ## 6. Tēmas
 
-`galvena`: tieši viena; `papildu`: 0–2. Tikai no šī saraksta (slug):
+`galvena`: tieši viena; `papildu`: 0–2. Tikai no šī saraksta (slug; nosaukumi un saturs — `data/temas.yaml`):
 
 nodokli-un-budzets, ekonomika-un-darbs, veseliba, izglitiba-un-zinatne, gimenes-un-demografija, socialais-atbalsts-un-pensijas, majokli, aizsardziba, arpolitika, iekseja-drosiba-un-tiesiskums, migracija-un-diaspora, valoda-kultura-un-mediji, energetika, vide-un-klimats, transports, regioni-un-pasvaldibas, lauksaimnieciba-un-zivsaimnieciba, valsts-parvalde, demokratija-un-cilvektiesibas
 
@@ -111,7 +111,7 @@ piezimes: ""      # ekstraktora lēmumu iemesli (granularitāte, pārbaudāmība
 jautajums: ""     # neskaidrība redaktoram; pirms merge jābūt tukšam
 ```
 
-Avota URL ir Saraksta avotu konfigurācijā, ne katrā failā. Statusi un Notikumi šeit netiek aizpildīti. Amatpersonas Solījuma failā nav: tās atvasina no `data/iestades.yaml` pēc datuma.
+Avota URL ir `data/saraksti.yaml`, ne katrā failā. `vieta` sākas ar nodaļas virsrakstu tieši kā avotā (CVK — kā `data/saraksti.yaml` `nodalas`), sadaļas atdala ar " › ". Shēma: `schemas/solijums.schema.json`; `npm run parbaude` pārbauda arī citātu burtiskumu un `vieta` nodaļu. Statusi un Notikumi šeit netiek aizpildīti. Amatpersonas Solījuma failā nav: tās atvasina no `data/iestades.yaml` pēc datuma.
 
 ## 9. Kopsavilkums
 

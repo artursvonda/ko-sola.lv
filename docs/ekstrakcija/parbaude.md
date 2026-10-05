@@ -1,6 +1,6 @@
 # Redaktora pārbaude
 
-Viena izpilde (viena CVK nodaļa) = viens PR ar `data/solijumi/<saraksts>/*.yaml`. Pārbaudi pārskatā (avots blakus Solījumiem) un pret `_kopsavilkums.md`.
+Viena izpilde (viena CVK nodaļa) = viens PR ar `data/solijumi/<saraksts>/*.yaml`. Pārbaudi pārskatā (`npm run parskats`, sk. `izpilde.md`: avots blakus Solījumiem) un pret kopsavilkumu PR aprakstā.
 
 1. **Pārklājums.** Katrs nodaļas CVK teikums un katrs atbilstošais paplašinātās programmas "Apņemšanās un uzdevumi" punkts ir vai nu izrakstīts, vai kopsavilkumā ar iemeslu.
 2. **Citāti.** Automātiska pārbaude: katrs citāts burtiski ir avotā (pēc atstarpju normalizācijas). PR nevar merge, ja nav.
