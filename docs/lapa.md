@@ -9,7 +9,7 @@ Statisks HTML no repo datiem, Vite + Web Components + Open Props, Cloudflare Wor
 - **Šabloni** — JS funkcijas ar `html` tagged template (`lapa/html.js`: vērtības escapētas; `raw()` — bez escapēšanas). Lapas: `lapa/lapas/`, visu lapu saraksts `lapa/lapas/index.js`.
 - **Modelis** — `lapa/dati.js`: `data/` + Solījumi un Notikumi ar atvasināto Statusu, Amatpersonu (build dienā) un Notikumu saitēm.
 - **Vite plugin** — `lapa/vite-plugin.js`: dev serverī renderē lapu pēc pieprasījuma (datu/šablonu izmaiņas → pārlāde); build laikā bundlē `lapa/klients/main.js` un izdod katru lapu kā `dist/<ceļš>/index.html` ar hešotajām saitēm.
-- **Klients** — `lapa/klients/`: stili (Grafīts tokeni + Open Props) un Web Components tikai kā progresīvais uzlabojums (light DOM). Saturs pilnībā strādā bez JS.
+- **Klients** — `lapa/klients/`: stili (Grafīts tokeni + Open Props) un Web Components tikai kā progresīvais uzlabojums (light DOM). Bez JS viss saturs ir redzams un saites strādā; nestrādā tikai pārskata filtri (`/` rāda visus Solījumus, arī ar filtra query parametriem — to saka `<noscript>` paziņojums) un detaļu panelis.
 - **Fonti** — IBM Plex Sans/Mono pašhostēti (`@fontsource`, latin + latin-ext).
 
 ## URL
@@ -25,8 +25,9 @@ Filtru stāvoklis — query parametros. Saraksta, Tēmas un Notikuma lapu nav.
 ## Pārskats (`/`)
 
 - **Filtri** — `?saraksts=<saraksts.slug>&atbildigais=<iestade.slug>&tema=<tema.slug>` (pa vienai vērtībai; saite — `parskatsSaite()` `lapa/lapas/saites.js`). Papildu Tēma un papildu iestāde atbilst filtram, bet skaitu blakus izvēlei rēķina tikai pēc galvenās; katras grupas skaiti ņem vērā pārējo grupu filtrus. Loģika bez DOM — `lapa/klients/filtri.js` (lieto serveris un klients).
-- **Progress** — „X no N solījumiem izpildīti”, statusu josla un skaiti filtrētajām rindām; N bez Nepārbaudāmajiem.
-- **Bez JS** — redzamas visas rindas un sākotnējie skaiti, filtrus nerāda (`ko-parskats:not(:defined)`), rindas virsraksts ir saite uz Solījuma lapu.
+- **Progress** — „X no N solījumiem izpildīti”, statusu josla un skaiti filtrētajām rindām; N bez Nepārbaudāmajiem. Josla ir dekoratīva (`aria-hidden`): tieši zem tās — leģenda tajā pašā Statusu secībā ar vārdu, formu un skaitu (Colour Is Never Alone).
+- **Bez JS** — redzamas visas rindas un sākotnējie skaiti, filtrus nerāda (`ko-parskats:not(:defined)`), rindas virsraksts ir saite uz Solījuma lapu. Filtra query parametrus (piem., saite no Solījuma lapas) bez JS nevar piemērot — `<noscript>`: „Filtri darbojas tikai ar JavaScript — redzami visi solījumi.”
+- **Navigācijas saites** — filtru izvēles un matricas (`/salidzinajums/`) galvenes/šūnas ir navigācija, ne teksta saites: izņēmums no DESIGN.md Links (bez pasvītrojuma; hover un `:focus-visible` — pasvītro, fokusam arī 2px accent outline). Izvēlētais filtrs — selection wash + 2px accent `border-left`.
 - **`<ko-parskats>`** (`lapa/klients/ko-parskats.js`) — nolasa query, slēpj rindas (`hidden`), pārrēķina skaitus, filtra maiņa — `pushState`. No 64rem filtri sānos, šaurāk — atverama rinda „Filtri”.
 - **Detaļu panelis** — no 75rem rindas klikšķis atver paneli blakus tabulai ar `pushState` uz `/solijumi/<id>/`; saturu ņem no pašas Solījuma lapas HTML (`lapa/klients/panelis.js`: citāts ar avotu, josla ar Atbildīgo un Amatpersonu, 3 jaunākie laika ass ieraksti, saite uz pilno lapu). Šaurāk — parasta saite. Esc / × / „Atpakaļ” aizver.
 
@@ -48,6 +49,6 @@ Workers Builds (Cloudflare panelī): build `npm run build`, deploy `npx wrangler
 
 - **Matrica** — rindas: Saraksti (CVK numuru secībā), kolonnas: 19 Tēmas (taksonomijas secībā, vertikālas galvenes); skaits pēc galvenās tēmas, 0 → „·”. Tēmas galvene un šūna ar skaitu — saite uz tēmu. Telefonā matrica ritinās savā konteinerā, saraksta kolonna paliek redzama.
 - **Tēmas sadaļa** — „<Tēma> — visi saraksti blakus”: visi 6 Saraksti (arī bez solījumiem tēmā), Solījums = nosaukums (saite uz Solījuma lapu), Statuss, Atbildīgā iestāde. Solījumi ar šo papildu tēmu ir sarakstā pēc galvenajiem ar norādi „Galvenā tēma: …” (papildu tēma ietekmē atrašanu, ne skaitu — matricas skaitlis var būt mazāks par sarakstā redzamo).
-- **Bez JS: visas tēmas vienā statiskā lapā.** Katra tēma ir `<section id="<slug>">`; saites ir `/salidzinajums/?tema=<slug>#<slug>` (`temaSaite()` `lapa/lapas/salidzinajums.js`), tāpēc bez JS pārlūks pāriet uz enkuru. Ar JS `<ko-salidzinajums>` (`lapa/klients/ko-salidzinajums.js`) pēc `?tema=` rāda tikai izvēlēto tēmu, iezīmē tās kolonnu un, klikšķinot matricā, maina URL ar `pushState` (atpakaļ poga strādā). Bez `?tema=` (vai ar nezināmu) — visas tēmas.
+- **Bez JS: visas tēmas vienā statiskā lapā.** Katra tēma ir `<section id="<slug>">`; saites ir `/salidzinajums/?tema=<slug>#<slug>` (`temaSaite()` `lapa/lapas/saites.js`), tāpēc bez JS pārlūks pāriet uz enkuru. Ar JS `<ko-salidzinajums>` (`lapa/klients/ko-salidzinajums.js`) pēc `?tema=` rāda tikai izvēlēto tēmu, iezīmē tās kolonnu un, klikšķinot matricā, maina URL ar `pushState` (atpakaļ poga strādā). Bez `?tema=` (vai ar nezināmu) — visas tēmas.
   - Kāpēc ne lapa katrai tēmai (`/salidzinajums/<slug>/`): `?tema=` jau ir lēmums (#13) un saites no Solījuma lapas to lieto; Tēmu lapas SEO nolūkā ir atliktas (#1 „Not yet specified”); Worker ir tikai statiskie faili, tāpēc `?tema=` bez JS nevar novirzīt uz citu lapu. Viena lapa = viens URL ar un bez JS.
   - Cena: lapas izmērs aug ar Solījumu skaitu (katrs Solījums 1–3 reizes). Ar 50 JV Solījumiem — 78 kB (gzip ~6 kB). Ja pēc pilnās ekstrakcijas lapa kļūst pārāk smaga telefonā, var pāriet uz lapu katrai tēmai, saglabājot `?tema=` ar JS novirzi.
