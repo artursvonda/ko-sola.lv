@@ -14,6 +14,10 @@ avoti:
   - veids: cvk
     vieta: 1. Drošība un aizsardzība
     citats: Nodrošināsim aizsardzības finansējumu 5% no IKP un attīstīsim NATO sabiedroto pastāvīgu klātbūtni Latvijā.
+  - veids: cvk
+    vieta: 3. Finanses
+    citats: Rūpējoties par valsts nākotni, drošību finansēsim atbildīgi.
+nesakritiba: "CVK programmas 1. nodaļā „aizsardzības finansējumu 5% no IKP“, bet 3. nodaļā tikai „drošību finansēsim atbildīgi“ bez mēra."
 statusa_mainas:
   - datums: 2026-12-10
     statuss: procesa

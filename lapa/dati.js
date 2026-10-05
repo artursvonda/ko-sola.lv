@@ -1,6 +1,8 @@
 // Lapas datu modelis: data/*.yaml + Solījumi un Notikumi, ar atvasinātu Statusu un Amatpersonu.
 // Solījumus un Notikumus var ņemt no citas saknes (KO_DATI=fixtures izstrādei), pārējo — vienmēr no data/.
-import { lasitYaml, solijumuFaili, notikumuFaili } from "../tools/lib/dati.js";
+import { existsSync, readFileSync } from "node:fs";
+import { join } from "node:path";
+import { lasitYaml, frontmatter, solijumuFaili, notikumuFaili } from "../tools/lib/dati.js";
 
 export const STATUSI = {
   "nav-vertets": "Nav vērtēts",
@@ -29,6 +31,12 @@ export function progress(solijumi) {
   return { n: solijumi.length - skaits.neparbaudams, skaits };
 }
 
+/** Avota publikācija no tā teksta frontmatter (piem., "Latvijas Vēstnesis, Nr. 176A, 14.09.2026"). */
+function publikacija(sakne, avots) {
+  if (!avots?.fails || !existsSync(join(sakne, avots.fails))) return null;
+  return frontmatter(readFileSync(join(sakne, avots.fails), "utf8"))?.publikacija ?? null;
+}
+
 export function ieladetModeli({ sakne, datuSakne = sakne, sodien = new Date().toISOString().slice(0, 10) }) {
   const saraksti = lasitYaml(sakne, "data/saraksti.yaml").sort((a, b) => a.nr - b.nr);
   const temas = lasitYaml(sakne, "data/temas.yaml");
@@ -55,7 +63,10 @@ export function ieladetModeli({ sakne, datuSakne = sakne, sodien = new Date().to
       iestade,
       papildu_iestades: (s.iestades.papildu ?? []).map((i) => iestadePec.get(i)),
       amatpersona: ap && { ...ap, saraksts: ap.saraksts && sarakstsPec.get(ap.saraksts) },
-      avoti: s.avoti.map((a) => ({ ...a, url: sarakstsPec.get(s.saraksts).avoti.find((x) => x.veids === a.veids)?.url })),
+      avoti: s.avoti.map((a) => {
+        const avots = sarakstsPec.get(s.saraksts).avoti.find((x) => x.veids === a.veids);
+        return { ...a, url: avots?.url, publikacija: publikacija(sakne, avots) };
+      }),
       notikumi: notikumi.flatMap((n) =>
         n.solijumi.filter((x) => x.id === s.id).map((x) => ({ ...n, virziens: x.virziens, pamatojums: x.pamatojums })),
       ),
@@ -63,6 +74,12 @@ export function ieladetModeli({ sakne, datuSakne = sakne, sodien = new Date().to
     };
   });
   solijumi.sort((a, b) => a.saraksts.nr - b.saraksts.nr || a.id.localeCompare(b.id));
+
+  // Notikuma citi Solījumi ("attiecas arī uz") — pēc tam, kad visi Solījumi ielādēti.
+  const solijumsPec = new Map(solijumi.map((s) => [s.id, s]));
+  for (const s of solijumi)
+    for (const n of s.notikumi)
+      n.citi = n.solijumi.filter((x) => x.id !== s.id).map((x) => solijumsPec.get(x.id)).filter(Boolean);
 
   return { saraksti, temas, iestades, solijumi, notikumi, sodien };
 }

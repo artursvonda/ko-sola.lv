@@ -3,3 +3,5 @@ node_modules/
 parskats/
 dist/
 .wrangler/
+.impeccable/review/
+.impeccable/questions/
