@@ -1,6 +1,6 @@
 # Notikumi un Statusa maiņas
 
-Formāts un manuālā plūsma (lēmums: "Statusa maiņas plūsma", #10). Pierādījuma standarts: `vertesana.md`. Vārdnīca: `CONTEXT.md`.
+Formāts un manuālā plūsma (lēmums: "Statusa maiņas plūsma", #10). Pierādījuma standarts: `vertesana.md`. Vārdnīca: `GLOSSARY.md`.
 
 ## Plūsma (manuālais režīms)
 
