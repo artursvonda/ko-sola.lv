@@ -76,6 +76,26 @@ const SOLIJUMS = {
   jautajums: "",
 };
 
+const IESTADES = [
+  {
+    slug: "lm",
+    nosaukums: "Labklājības ministrija",
+    isais_nosaukums: "LM",
+    avots: "https://www.mk.gov.lv/lv/ministrijas",
+    amatpersonas: [
+      { vards: "A A", amats: "labklājības ministrs", partija: "ZZS", no: "2023-09-15", lidz: "2026-10-10", avots: "https://x.lv" },
+      { vards: "B B", amats: "labklājības ministrs", saraksts: "jv", no: "2026-10-10", avots: "https://x.lv" },
+    ],
+  },
+  {
+    slug: "fm",
+    nosaukums: "Finanšu ministrija",
+    isais_nosaukums: "FM",
+    avots: "https://www.mk.gov.lv/lv/ministrijas",
+    amatpersonas: [{ vards: "C C", amats: "finanšu ministrs", partija: "bezpartejisks", no: "2023-09-15", avots: "https://x.lv" }],
+  },
+];
+
 // Minimāls repo pagaidu mapē; `izmainas` pārraksta vai izdzēš (null) failus.
 function repo(izmainas = {}) {
   const sakne = mkdtempSync(join(tmpdir(), "ko-sola-"));
@@ -84,7 +104,7 @@ function repo(izmainas = {}) {
       { slug: "ekonomika-un-darbs", nosaukums: "Ekonomika un darbs", ietver: "" },
       { slug: "nodokli-un-budzets", nosaukums: "Nodokļi un budžets", ietver: "" },
     ]),
-    "data/iestades.yaml": stringify([{ slug: "lm" }, { slug: "fm" }]),
+    "data/iestades.yaml": stringify(IESTADES),
     "data/saraksti.yaml": stringify(SARAKSTI),
     "sources/cvk/09-jv.md": CVK,
     "sources/paplasinata/jv.md": PAP,
@@ -147,6 +167,33 @@ test("bez data/iestades.yaml Solījumu nevar pārbaudīt", () => {
   assert.deepEqual(zinojumi(repo({ "data/iestades.yaml": null })), [
     `${F}: data/iestades.yaml nav — Atbildīgo iestādi nevar pārbaudīt`,
   ]);
+});
+
+test("iestādes: Amatpersonas laika secībā, bez pārklāšanās, no vēlēšanu dienas; saraksts un pecteces_no zināmi", () => {
+  const iestades = structuredClone(IESTADES);
+  const [a, b] = iestades[0].amatpersonas;
+  a.lidz = "2026-10-01";
+  b.no = "2026-09-30";
+  b.saraksts = "xx";
+  iestades[1].pecteces_no = ["fm", "vm"];
+  iestades[1].amatpersonas.push({ ...b, saraksts: "jv", partija: "Jaunā VIENOTĪBA", jautajums: "Vai p.i.?" });
+  assert.deepEqual(zinojumi(repo({ "data/iestades.yaml": stringify(iestades) })), [
+    `data/iestades.yaml: lm: amatpersonas[0] A A: amatā tikai līdz 2026-10-01, pirms vēlēšanu dienas 2026-10-03`,
+    `data/iestades.yaml: lm: amatpersonas[1] B B: saraksts "xx" nav data/saraksti.yaml`,
+    `data/iestades.yaml: lm: amatpersonas[1] B B: no 2026-09-30 pārklājas ar iepriekšējo (lidz 2026-10-01)`,
+    `data/iestades.yaml: fm: pecteces_no "fm" nav cita iestāde`,
+    `data/iestades.yaml: fm: pecteces_no "vm" nav cita iestāde`,
+    `data/iestades.yaml: fm: amatpersonas[1] B B: jābūt tieši vienam no saraksts / partija`,
+    `data/iestades.yaml: fm: amatpersonas[1] B B: iepriekšējai Amatpersonai nav lidz`,
+    `data/iestades.yaml: fm: amatpersonas[1] B B: neatbildēts jautājums redaktoram: Vai p.i.?`,
+  ]);
+});
+
+test("iestādes: shēma — Amatpersonai vajag avotu", () => {
+  const iestades = structuredClone(IESTADES);
+  delete iestades[1].amatpersonas[0].avots;
+  assert.deepEqual(zinojumi(repo({ "data/iestades.yaml": stringify(iestades) }))[0],
+    `data/iestades.yaml: shēma: /1/amatpersonas/0 must have required property 'avots'`);
 });
 
 test("neatbildēts `jautajums` bloķē merge", () => {

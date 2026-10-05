@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "iestades.schema.json",
+  "title": "Atbildīgās iestādes un Amatpersonas",
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "type": "object",
+    "required": ["slug", "nosaukums", "isais_nosaukums", "avots", "amatpersonas"],
+    "additionalProperties": false,
+    "properties": {
+      "slug": { "type": "string", "pattern": "^[a-z0-9]+$" },
+      "nosaukums": { "type": "string", "minLength": 1 },
+      "isais_nosaukums": { "type": "string", "minLength": 1 },
+      "avots": { "$ref": "#/$defs/url" },
+      "pecteces_no": { "type": "array", "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+      "amatpersonas": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "object",
+          "required": ["vards", "amats", "no", "avots"],
+          "additionalProperties": false,
+          "properties": {
+            "vards": { "type": "string", "minLength": 1 },
+            "amats": { "type": "string", "minLength": 1 },
+            "partija": { "type": "string", "minLength": 1 },
+            "partijas_avots": { "$ref": "#/$defs/url" },
+            "saraksts": { "type": "string", "minLength": 1 },
+            "no": { "$ref": "#/$defs/datums" },
+            "lidz": { "$ref": "#/$defs/datums" },
+            "pi": { "const": true },
+            "avots": { "$ref": "#/$defs/url" },
+            "piezimes": { "type": "string" },
+            "jautajums": { "type": "string" }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "datums": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "url": { "type": "string", "pattern": "^https?://" }
+  }
+}

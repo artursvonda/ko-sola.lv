@@ -1,0 +1,219 @@
+# Atbildīgās iestādes un to Amatpersonas (lēmums: "Atbildīgais: iestāde, persona un opozīcijas solījumi", #12).
+# Slēgts saraksts: jaunu iestādi — tikai ar PR. Slug nemainās pēc publicēšanas (ir Solījumu failos).
+#
+# Ministrijas: Ministru kabineta iekārtas likuma 5. panta 1. daļa (14 ministrijas). Nosaukums — kā ministrijas mājaslapā.
+# isais_nosaukums: FM, ĀM, KEM, LM, VARAM redzēti oficiālās lapās; pārējie — vispārpieņemtie saīsinājumi.
+# pecteces_no: iestādes, kuru Amatpersonas meklē, ja datums ir pirms šīs iestādes izveides (ministriju pārveide).
+#
+# amatpersonas — politiski atbildīgais (ministrs / Ministru prezidents / Saeimas priekšsēdētājs), laika secībā,
+#   tikai tie, kas amatā vēlēšanu dienā (2026-10-03) vai vēlāk:
+#   no / lidz: amatā šajā iestādē bez pārtraukuma (lidz nav = joprojām amatā); avots — oficiāls.
+#   pi: true — pienākumu izpildītājs (vakance).
+#   Politiskais spēks — tieši viens: saraksts (ievēlēts Saraksts, data/saraksti.yaml) vai partija (teksts, ja
+#   tas nav ievēlēts, piem., ZZS; "bezpartejisks", ja neviens). Partiju apvienība = viena vienība (startēja kopā):
+#   arī bezpartejiskais, kas startēja tās sarakstā vai ko tā izvirzīja. partijas_avots — kur tas redzams.
+#   Ja fakts nav pārbaudīts oficiālā avotā — jautajums (bloķē merge), nevis minējums.
+# Kulberga valdība apstiprināta 2026-05-28 (https://www.mk.gov.lv/lv/ministru-kabineta-sastavs).
+
+- slug: vk
+  nosaukums: Valsts kanceleja
+  isais_nosaukums: VK
+  avots: https://www.mk.gov.lv/lv/ministru-kabineta-sastavs
+  amatpersonas:
+    - vards: Andris Kulbergs
+      amats: Ministru prezidents
+      saraksts: as
+      partijas_avots: https://dati.cvk.lv/SV2026/kandidati/92490-andris-kulbergs/
+      no: 2026-05-28
+      avots: https://www.mk.gov.lv/lv/darbinieks/andris-kulbergs
+
+- slug: saeima
+  nosaukums: Saeima
+  isais_nosaukums: Saeima
+  avots: https://likumi.lv/ta/id/57980
+  amatpersonas:
+    - vards: Daiga Mieriņa
+      amats: Saeimas priekšsēdētāja
+      partija: Zaļo un Zemnieku savienība
+      partijas_avots: https://dati.cvk.lv/SV2026/kandidati/83950-daiga-mierina/
+      no: 2023-09-20
+      avots: https://www.saeima.lv/lv/14-saeima/saeimas-priekssedetaja
+      piezimes: 14. Saeimas priekšsēdētāja līdz 15. Saeimas pirmajai sēdei (Satversmes 12. p. — novembra pirmā otrdiena, 2026-11-03).
+
+- slug: am
+  nosaukums: Aizsardzības ministrija
+  isais_nosaukums: AM
+  avots: https://likumi.lv/ta/id/175919
+  amatpersonas:
+    - vards: Raivis Melnis
+      amats: aizsardzības ministrs
+      saraksts: jv
+      partijas_avots: https://www.lsm.lv/raksts/zinas/latvija/28.05.2026-atzime-par-valdibas-darbu-bus-velesanu-rezultati-saeima-lemj-par-kulberga-valdibas-apstiprinasanu.a649140/
+      no: 2026-05-28
+      avots: https://www.mk.gov.lv/lv/darbinieks/raivis-melnis
+      piezimes: >-
+        Profilā sākuma datuma nav; 2026-05-28 — Kulberga valdības apstiprināšana
+        (https://www.mk.gov.lv/lv/media/26553/download?attachment). 2026. gadā nekandidēja; izvirzīja Jaunā VIENOTĪBA
+        (oficiālā avotā nav atrasts, tikai LSM).
+
+- slug: arm
+  nosaukums: Ārlietu ministrija
+  isais_nosaukums: ĀM
+  avots: https://likumi.lv/ta/id/175919
+  amatpersonas:
+    - vards: Baiba Braže
+      amats: ārlietu ministre
+      saraksts: jv
+      partijas_avots: https://dati.cvk.lv/SV2026/kandidati/78220-baiba-braze/
+      no: 2024-04-19
+      avots: https://www.mk.gov.lv/lv/darbinieks/baiba-braze
+      piezimes: Amatā kopš Siliņas valdības; Kulberga valdībā kopš 2026-05-28.
+
+- slug: em
+  nosaukums: Ekonomikas ministrija
+  isais_nosaukums: EM
+  avots: https://likumi.lv/ta/id/175919
+  amatpersonas:
+    - vards: Viktors Valainis
+      amats: ekonomikas ministrs
+      partija: Zaļo un Zemnieku savienība
+      partijas_avots: https://dati.cvk.lv/SV2026/kandidati/83870-viktors-valainis/
+      no: 2023-09-15
+      avots: https://www.mk.gov.lv/lv/darbinieks/viktors-valainis
+      piezimes: Amatā kopš Siliņas valdības; Kulberga valdībā kopš 2026-05-28.
+
+- slug: fm
+  nosaukums: Finanšu ministrija
+  isais_nosaukums: FM
+  avots: https://likumi.lv/ta/id/175919
+  amatpersonas:
+    - vards: Māris Kučinskis
+      amats: finanšu ministrs
+      partijas_avots: https://dati.cvk.lv/SV2026/kandidati/87940-maris-kucinskis/
+      saraksts: as
+      no: 2026-05-28
+      avots: https://www.mk.gov.lv/lv/darbinieks/maris-kucinskis
+
+- slug: iem
+  nosaukums: Iekšlietu ministrija
+  isais_nosaukums: IeM
+  avots: https://likumi.lv/ta/id/175919
+  amatpersonas:
+    - vards: Jānis Dombrava
+      amats: iekšlietu ministrs
+      partijas_avots: https://dati.cvk.lv/SV2026/kandidati/82680-janis-dombrava/
+      saraksts: na
+      no: 2026-05-28
+      avots: https://www.mk.gov.lv/lv/darbinieks/janis-dombrava
+
+- slug: izm
+  nosaukums: Izglītības un zinātnes ministrija
+  isais_nosaukums: IZM
+  avots: https://likumi.lv/ta/id/175919
+  amatpersonas:
+    - vards: Ilze Indriksone
+      amats: izglītības un zinātnes ministre
+      partijas_avots: https://dati.cvk.lv/SV2026/kandidati/82800-ilze-indriksone/
+      saraksts: na
+      no: 2026-05-28
+      avots: https://www.mk.gov.lv/lv/darbinieks/ilze-indriksone
+
+- slug: kem
+  nosaukums: Klimata un enerģētikas ministrija
+  isais_nosaukums: KEM
+  avots: https://likumi.lv/ta/id/175919
+  amatpersonas:
+    - vards: Jānis Vitenbergs
+      amats: klimata un enerģētikas ministrs
+      partijas_avots: https://dati.cvk.lv/SV2026/kandidati/81820-janis-vitenbergs/
+      saraksts: na
+      no: 2026-05-28
+      avots: https://www.mk.gov.lv/lv/darbinieks/janis-vitenbergs
+
+- slug: km
+  nosaukums: Kultūras ministrija
+  isais_nosaukums: KM
+  avots: https://likumi.lv/ta/id/175919
+  amatpersonas:
+    - vards: Nauris Puntulis
+      amats: kultūras ministrs
+      partijas_avots: https://dati.cvk.lv/SV2026/kandidati/81300-nauris-puntulis/
+      saraksts: na
+      no: 2026-05-28
+      avots: https://www.mk.gov.lv/lv/darbinieks/nauris-puntulis
+
+- slug: lm
+  nosaukums: Labklājības ministrija
+  isais_nosaukums: LM
+  avots: https://likumi.lv/ta/id/175919
+  amatpersonas:
+    - vards: Uldis Augulis
+      amats: labklājības ministra pienākumu izpildītājs
+      partija: Zaļo un Zemnieku savienība
+      partijas_avots: https://dati.cvk.lv/SV2026/kandidati/83830-uldis-augulis/
+      no: 2026-09-14
+      pi: true
+      avots: https://likumi.lv/ta/id/370908
+      piezimes: Zemkopības ministrs; R. Uzulnieks atbrīvots 13.09.2026 (MP rīkojums Nr. 2026/1.2.1.-286).
+
+- slug: sm
+  nosaukums: Satiksmes ministrija
+  isais_nosaukums: SM
+  avots: https://likumi.lv/ta/id/175919
+  amatpersonas:
+    - vards: Rihards Kozlovskis
+      amats: satiksmes ministrs
+      partijas_avots: https://dati.cvk.lv/SV2026/kandidati/78180-rihards-kozlovskis/
+      saraksts: jv
+      no: 2026-05-28
+      avots: https://www.mk.gov.lv/lv/darbinieks/rihards-kozlovskis
+
+- slug: tm
+  nosaukums: Tieslietu ministrija
+  isais_nosaukums: TM
+  avots: https://likumi.lv/ta/id/175919
+  amatpersonas:
+    - vards: Edvards Smiltēns
+      amats: tieslietu ministrs
+      partijas_avots: https://dati.cvk.lv/SV2026/kandidati/87690-edvards-smiltens/
+      saraksts: as
+      no: 2026-05-28
+      avots: https://www.mk.gov.lv/lv/darbinieks/edvards-smiltens
+      piezimes: Profilā sākuma datuma nav; 2026-05-28 — Kulberga valdības apstiprināšana (https://www.mk.gov.lv/lv/media/26553/download?attachment).
+
+- slug: vm
+  nosaukums: Veselības ministrija
+  isais_nosaukums: VM
+  avots: https://likumi.lv/ta/id/175919
+  amatpersonas:
+    - vards: Hosams Abu Meri
+      amats: veselības ministrs
+      partijas_avots: https://dati.cvk.lv/SV2026/kandidati/78590-hosams-abu-meri/
+      saraksts: jv
+      no: 2023-09-15
+      avots: https://www.mk.gov.lv/lv/darbinieks/hosams-abu-meri
+      piezimes: Amatā kopš Siliņas valdības; Kulberga valdībā kopš 2026-05-28.
+
+- slug: varam
+  nosaukums: Viedās administrācijas un reģionālās attīstības ministrija
+  isais_nosaukums: VARAM
+  avots: https://likumi.lv/ta/id/352749
+  amatpersonas:
+    - vards: Edgars Tavars
+      amats: viedās administrācijas un reģionālās attīstības ministrs
+      partijas_avots: https://dati.cvk.lv/SV2026/kandidati/87670-edgars-tavars/
+      saraksts: as
+      no: 2026-05-28
+      avots: https://www.mk.gov.lv/lv/darbinieks/edgars-tavars
+
+- slug: zm
+  nosaukums: Zemkopības ministrija
+  isais_nosaukums: ZM
+  avots: https://likumi.lv/ta/id/175919
+  amatpersonas:
+    - vards: Uldis Augulis
+      amats: zemkopības ministrs
+      partija: Zaļo un Zemnieku savienība
+      partijas_avots: https://dati.cvk.lv/SV2026/kandidati/83830-uldis-augulis/
+      no: 2026-05-28
+      avots: https://www.mk.gov.lv/lv/darbinieks/uldis-augulis

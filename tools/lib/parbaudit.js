@@ -13,6 +13,7 @@ const shema = (vards) => ajv.compile(JSON.parse(readFileSync(join(SHEMAS, vards)
 const validet = {
   saraksti: shema("saraksti.schema.json"),
   temas: shema("temas.schema.json"),
+  iestades: shema("iestades.schema.json"),
   solijums: shema("solijums.schema.json"),
   notikums: shema("notikums.schema.json"),
 };
@@ -20,6 +21,7 @@ const validet = {
 const VIETAS_ATDALITAJS = " › ";
 const ID_VARDI_MAX = 6;
 const BEZ_FRAKCIJAS = "bez_frakcijas";
+const VELESANU_DIENA = "2026-10-03";
 
 /** @returns {{ fails: string, zinojums: string }[]} */
 export function parbaudit(sakne) {
@@ -47,15 +49,17 @@ export function parbaudit(sakne) {
 
   const temas = ielasit("data/temas.yaml", validet.temas) ?? [];
   const saraksti = ielasit("data/saraksti.yaml", validet.saraksti) ?? [];
-  // data/iestades.yaml pilno shēmu nosaka "Iestāžu un amatpersonu dati" (#28); te vajag tikai slugus.
-  const iestades = existsSync(join(sakne, "data/iestades.yaml")) ? ielasit("data/iestades.yaml") : null;
+  const iestades = existsSync(join(sakne, "data/iestades.yaml"))
+    ? (ielasit("data/iestades.yaml", validet.iestades) ?? [])
+    : null;
 
   const temuSlugi = new Set(temas.map((t) => t.slug));
-  const iestazuSlugi = new Set((Array.isArray(iestades) ? iestades : []).map((i) => i?.slug).filter(Boolean));
+  const iestazuSlugi = new Set((iestades ?? []).map((i) => i.slug));
   const avots = avotuLasitajs(sakne);
   const sarakstiPecSluga = new Map(saraksti.map((s) => [s.slug, s]));
 
   parbauditSarakstus(saraksti, avots, k);
+  if (iestades) parbauditIestades(iestades, new Set(saraksti.map((s) => s.slug)), k);
 
   const solijumi = solijumuFaili(sakne);
   const notikumi = parbauditNotikumus(sakne, ielasit, new Set(solijumi.map((f) => f.vards)), saraksti, k);
@@ -166,6 +170,30 @@ function parbauditSlugus(lauks, atlautie, ko, kur, kf) {
   const visi = [lauks.galvena, ...(lauks.papildu ?? [])];
   for (const slug of visi) if (!atlautie.has(slug)) kf(`${ko} "${slug}" nav ${kur}`);
   if ((lauks.papildu ?? []).includes(lauks.galvena)) kf(`galvenā ${ko} "${lauks.galvena}" atkārtota papildu`);
+}
+
+// Amatpersonas: laika secībā, nepārklājas, tikai tās, kas amatā vēlēšanu dienā vai vēlāk (#12).
+function parbauditIestades(iestades, sarakstuSlugi, k) {
+  const F = "data/iestades.yaml";
+  const slugi = new Set(iestades.map((i) => i.slug));
+  const redzeti = new Set();
+  for (const i of iestades) {
+    if (redzeti.has(i.slug)) k(F, `iestāde "${i.slug}" atkārtojas`);
+    redzeti.add(i.slug);
+    for (const p of i.pecteces_no ?? [])
+      if (p === i.slug || !slugi.has(p)) k(F, `${i.slug}: pecteces_no "${p}" nav cita iestāde`);
+    i.amatpersonas.forEach((a, j) => {
+      const ka = (zinojums) => k(F, `${i.slug}: amatpersonas[${j}] ${a.vards}: ${zinojums}`);
+      if (!a.saraksts === !a.partija) ka("jābūt tieši vienam no saraksts / partija");
+      if (a.saraksts && !sarakstuSlugi.has(a.saraksts)) ka(`saraksts "${a.saraksts}" nav data/saraksti.yaml`);
+      if (a.lidz && a.lidz < a.no) ka(`lidz ${a.lidz} agrāks par no ${a.no}`);
+      if (a.lidz && a.lidz < VELESANU_DIENA) ka(`amatā tikai līdz ${a.lidz}, pirms vēlēšanu dienas ${VELESANU_DIENA}`);
+      const ieprieks = i.amatpersonas[j - 1];
+      if (ieprieks && !ieprieks.lidz) ka(`iepriekšējai Amatpersonai nav lidz`);
+      else if (ieprieks && a.no < ieprieks.lidz) ka(`no ${a.no} pārklājas ar iepriekšējo (lidz ${ieprieks.lidz})`);
+      if ((a.jautajums ?? "").trim()) ka(`neatbildēts jautājums redaktoram: ${a.jautajums.trim()}`);
+    });
+  }
 }
 
 function parbauditSarakstus(saraksti, avots, k) {
