@@ -1,0 +1,17 @@
+id: as-vienots-pieraksts-kvotu-reforma
+saraksts: as
+nosaukums: Vienots pieraksts pie ārstiem un kvotu sistēmas reforma
+parbaudams: true
+temas:
+  galvena: veseliba
+iestades:
+  galvena: vm
+avoti:
+  - veids: cvk
+    vieta: Veselības un sociālajai aprūpei
+    citats: Reformēsim kvotu sistēmu, ieviesīsim vienotu pierakstu, samazinot birokrātiju ārstiem un gaidīšanas laiku pacientiem.
+statusa_mainas:
+  - datums: 2026-11-26
+    statuss: daleji-izpildits
+    notikumi: [2026-11-26-paraugs-vienotais-pieraksts]
+    pamatojums: "PARAUGS: vienotais pieraksts ieviests, kvotu reforma nav."

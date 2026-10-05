@@ -1,0 +1,21 @@
+id: jv-aizsardzibai-5-nato-klatbutne
+saraksts: jv
+nosaukums: Aizsardzībai 5% no IKP un pastāvīga NATO klātbūtne
+parbaudams: true
+temas:
+  galvena: aizsardziba
+  papildu:
+    - arpolitika
+iestades:
+  galvena: am
+  papildu:
+    - arm
+avoti:
+  - veids: cvk
+    vieta: 1. Drošība un aizsardzība
+    citats: Nodrošināsim aizsardzības finansējumu 5% no IKP un attīstīsim NATO sabiedroto pastāvīgu klātbūtni Latvijā.
+statusa_mainas:
+  - datums: 2026-12-10
+    statuss: procesa
+    notikumi: [2026-12-10-paraugs-budzeta-likums-2027]
+    pamatojums: "PARAUGS: finansējums nodrošināts, NATO klātbūtnes daļa vēl nav."

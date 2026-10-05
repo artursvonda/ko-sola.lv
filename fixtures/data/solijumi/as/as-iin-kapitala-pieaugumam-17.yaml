@@ -1,0 +1,17 @@
+id: as-iin-kapitala-pieaugumam-17
+saraksts: as
+nosaukums: IIN no kapitāla pieauguma samazināt līdz 17%
+parbaudams: true
+temas:
+  galvena: nodokli-un-budzets
+iestades:
+  galvena: fm
+avoti:
+  - veids: cvk
+    vieta: Ekonomikas izrāvienam
+    citats: Samazināsim IIN par ienākumiem no kapitāla pieauguma līdz 17%.
+statusa_mainas:
+  - datums: 2026-12-10
+    statuss: nav-izpildits
+    notikumi: [2026-12-10-paraugs-budzeta-likums-2027]
+    pamatojums: "PARAUGS: likme nav samazināta un pamatnostādnes to neparedz."
