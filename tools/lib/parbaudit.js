@@ -184,7 +184,7 @@ function parbauditIestades(iestades, sarakstuSlugi, k) {
       if (p === i.slug || !slugi.has(p)) k(F, `${i.slug}: pecteces_no "${p}" nav cita iestāde`);
     i.amatpersonas.forEach((a, j) => {
       const ka = (zinojums) => k(F, `${i.slug}: amatpersonas[${j}] ${a.vards}: ${zinojums}`);
-      if (!a.partija && !(a.jautajums ?? "").trim()) ka("nav partijas (ja nav zināma — jautajums)");
+      if (!a.saraksts === !a.partija) ka("jābūt tieši vienam no saraksts / partija");
       if (a.saraksts && !sarakstuSlugi.has(a.saraksts)) ka(`saraksts "${a.saraksts}" nav data/saraksti.yaml`);
       if (a.lidz && a.lidz < a.no) ka(`lidz ${a.lidz} agrāks par no ${a.no}`);
       if (a.lidz && a.lidz < VELESANU_DIENA) ka(`amatā tikai līdz ${a.lidz}, pirms vēlēšanu dienas ${VELESANU_DIENA}`);

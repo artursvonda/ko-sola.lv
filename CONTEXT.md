@@ -37,7 +37,7 @@ Solījuma vienīgā Atbildīgā iestāde, pēc kuras to rāda un skaita; katram 
 Solījuma otrā vai trešā Atbildīgā iestāde (0–2) starpnozaru Solījumam; ietekmē tikai filtrēšanu, ne skaitīšanu.
 
 **Amatpersona**:
-Politiķis, kas noteiktā laika posmā vada Atbildīgo iestādi: ministrs, Ministru prezidents (Valsts kanceleja) vai Saeimas priekšsēdētājs. Ietver arī iepriekšējās valdības ministrus, kamēr tie ir amatā, un pienākumu izpildītājus. Tiek rādīta ar savu partiju, kas var arī nebūt neviena ievēlētā Saraksta daļa.
+Politiķis, kas noteiktā laika posmā vada Atbildīgo iestādi: ministrs, Ministru prezidents (Valsts kanceleja) vai Saeimas priekšsēdētājs. Ietver arī iepriekšējās valdības ministrus, kamēr tie ir amatā, un pienākumu izpildītājus. Tiek rādīta ar politisko spēku, ko pārstāv: Sarakstu (partiju apvienību kā vienu vienību, arī bezpartejiskam, kas startēja vai izvirzīts no tā) vai, ja tas nav ievēlēts, tā nosaukumu tekstā (piem., ZZS).
 _Avoid_: atbildīgais (modelī), valsts sekretārs
 
 **Frakcija**:

@@ -83,8 +83,8 @@ const IESTADES = [
     isais_nosaukums: "LM",
     avots: "https://www.mk.gov.lv/lv/ministrijas",
     amatpersonas: [
-      { vards: "A A", amats: "labklājības ministrs", partija: "P", no: "2023-09-15", lidz: "2026-10-10", avots: "https://x.lv" },
-      { vards: "B B", amats: "labklājības ministrs", partija: "Jaunā VIENOTĪBA", saraksts: "jv", no: "2026-10-10", avots: "https://x.lv" },
+      { vards: "A A", amats: "labklājības ministrs", partija: "ZZS", no: "2023-09-15", lidz: "2026-10-10", avots: "https://x.lv" },
+      { vards: "B B", amats: "labklājības ministrs", saraksts: "jv", no: "2026-10-10", avots: "https://x.lv" },
     ],
   },
   {
@@ -92,7 +92,7 @@ const IESTADES = [
     nosaukums: "Finanšu ministrija",
     isais_nosaukums: "FM",
     avots: "https://www.mk.gov.lv/lv/ministrijas",
-    amatpersonas: [{ vards: "C C", amats: "finanšu ministrs", partija: "P", no: "2023-09-15", avots: "https://x.lv" }],
+    amatpersonas: [{ vards: "C C", amats: "finanšu ministrs", partija: "bezpartejisks", no: "2023-09-15", avots: "https://x.lv" }],
   },
 ];
 
@@ -176,13 +176,14 @@ test("iestādes: Amatpersonas laika secībā, bez pārklāšanās, no vēlēšan
   b.no = "2026-09-30";
   b.saraksts = "xx";
   iestades[1].pecteces_no = ["fm", "vm"];
-  iestades[1].amatpersonas.push({ ...b, saraksts: "jv", jautajums: "Vai p.i.?" });
+  iestades[1].amatpersonas.push({ ...b, saraksts: "jv", partija: "Jaunā VIENOTĪBA", jautajums: "Vai p.i.?" });
   assert.deepEqual(zinojumi(repo({ "data/iestades.yaml": stringify(iestades) })), [
     `data/iestades.yaml: lm: amatpersonas[0] A A: amatā tikai līdz 2026-10-01, pirms vēlēšanu dienas 2026-10-03`,
     `data/iestades.yaml: lm: amatpersonas[1] B B: saraksts "xx" nav data/saraksti.yaml`,
     `data/iestades.yaml: lm: amatpersonas[1] B B: no 2026-09-30 pārklājas ar iepriekšējo (lidz 2026-10-01)`,
     `data/iestades.yaml: fm: pecteces_no "fm" nav cita iestāde`,
     `data/iestades.yaml: fm: pecteces_no "vm" nav cita iestāde`,
+    `data/iestades.yaml: fm: amatpersonas[1] B B: jābūt tieši vienam no saraksts / partija`,
     `data/iestades.yaml: fm: amatpersonas[1] B B: iepriekšējai Amatpersonai nav lidz`,
     `data/iestades.yaml: fm: amatpersonas[1] B B: neatbildēts jautājums redaktoram: Vai p.i.?`,
   ]);
