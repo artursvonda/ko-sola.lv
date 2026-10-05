@@ -11,7 +11,7 @@ Saraksta oficiālā priekšvēlēšanu programma (līdz 10 000 iespiedzīmēm, S
 _Avoid_: īsā programma
 
 **Paplašinātā programma**:
-Garāka programma, ko saraksts publicējis pats, piemēram, savā tīmekļa vietnē.
+Programma (pilna vai tematiska), ko Saraksts pats vai tā vārdā publicējis 15. Saeimas vēlēšanām līdz vēlēšanu dienai papildus CVK programmai. Neskaitās: vienas Sarakstā ietilpstošas partijas dokuments, vispārīga partijas programma, kas nav sagatavota šīm vēlēšanām, un Publiski izteikumi. Pēc vēlēšanām atrasta programma, kas atbilst šiem nosacījumiem, arī tiek iekļauta.
 _Avoid_: pilnā programma
 
 **Publisks izteikums**:
