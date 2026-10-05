@@ -72,7 +72,9 @@ Tēmu izvēlas pēc tā, **ko solījums maina lasītājam**, nevis pēc programm
 
 ## 6a. Atbildīgā iestāde
 
-`iestades.galvena`: tieši viena; `iestades.papildu`: 0–2 (tikai starpnozaru Solījumiem). Tikai slug no `data/iestades.yaml` (ministrijas, Valsts kanceleja, Saeima).
+`iestades.galvena`: tieši viena; `iestades.papildu`: 0–2 (tikai starpnozaru Solījumiem). Tikai no šī saraksta (slug; nosaukumi un Amatpersonas — `data/iestades.yaml`):
+
+vk (Valsts kanceleja), saeima, am (Aizsardzības), arm (Ārlietu), em (Ekonomikas), fm (Finanšu), iem (Iekšlietu), izm (Izglītības un zinātnes), kem (Klimata un enerģētikas), km (Kultūras), lm (Labklājības), sm (Satiksmes), tm (Tieslietu), vm (Veselības), varam (Viedās administrācijas un reģionālās attīstības), zm (Zemkopības)
 
 - Izvēlas iestādi, kuras **kompetencē ir iznākums**, nevis to, kurš Saraksts solīja vai kura Saraksta ministrs to vada. Opozīcijas Solījumam — tāpat.
 - Valdības kopējā vai Ministru prezidenta kompetence (piem., valsts pārvaldes reforma) → Valsts kanceleja. Iznākums tikai Saeimas rokās (piem., Kārtības rullis, deputātu skaits) → Saeima.
