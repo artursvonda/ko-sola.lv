@@ -118,7 +118,24 @@
         - MŪSU REDZĒJUMS
     - veids: paplasinata
       url: https://jaunavienotiba.lv/wp-content/uploads/2026/08/Jaunas-VIENOTIBAS-programma_gara_20072026.pdf
-      # fails, atbilst_cvk, izlaist, nav_jaizraksta — pievieno "Ekstrakcija: Jaunā VIENOTĪBA" (#17).
+      fails: sources/paplasinata/jv.md
+      # Nodaļas sakrīt ar CVK nodaļām; nodaļu ārpus CVK nav.
+      atbilst_cvk:
+        1. Drošība un aizsardzība: 1. Drošība un aizsardzība
+        2. Ārpolitika un latvieši pasaulē: 2. Ārpolitika un latvieši pasaulē
+        3. Finanses: 3. Finanses
+        4. Ekonomika, enerģētika un uzņēmējdarbība: 4. Ekonomika, enerģētika un uzņēmējdarbība
+        5. Veselība, labklājība un demogrāfija: 5. Veselība, labklājība un demogrāfija
+        6. Valsts pārvalde: 6. Valsts pārvalde
+        7. Zinātne, inovācijas un tehnoloģijas: 7. Zinātne, inovācijas un tehnoloģijas
+        8. Izglītība, latviešu valoda, kultūra un pilsoniskā sabiedrība: 8. Izglītība, latviešu valoda, kultūra un pilsoniskā sabiedrība
+        9. Vide, reģioni un infrastruktūra: 9. Vide, reģioni un infrastruktūra
+        10. Tiesiskums: 10. Tiesiskums
+      izlaist:
+        - 10 000 zīmju programmas apsolījums
+      nav_jaizraksta:
+        - Prioritātes
+        - Pamatojums
 
 - slug: pro
   nosaukums: PROGRESĪVIE
