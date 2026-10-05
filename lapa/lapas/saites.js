@@ -1,9 +1,9 @@
-// Kopīgās saites starp lapām. Pārskata filtri — query parametros (docs/lapa.md).
+// Saites uz filtrētu pārskatu (`/`). Parametru vārdi un vērtības (slug no data/*.yaml) — kopīgi ar pārskata filtriem.
 
-/** Filtrēts pārskats: `/?saraksts=jv&tema=aizsardziba` (tukšos izlaiž; secība saraksts, atbildigais, tema). */
+/** `/?saraksts=<slug>&atbildigais=<iestādes slug>&tema=<slug>`; tukšos izlaiž, secība nemainīga. */
 export function parskatsSaite({ saraksts, atbildigais, tema } = {}) {
-  const q = new URLSearchParams();
-  for (const [k, v] of Object.entries({ saraksts, atbildigais, tema })) if (v) q.set(k, v);
-  const s = q.toString();
-  return s ? `/?${s}` : "/";
+  const p = new URLSearchParams();
+  for (const [k, v] of Object.entries({ saraksts, atbildigais, tema })) if (v) p.set(k, v);
+  const q = p.toString();
+  return q ? `/?${q}` : "/";
 }

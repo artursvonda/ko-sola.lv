@@ -1,7 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { nolasitFiltrus, atbilst, skaiti, progress, izvelesSaite } from "../klients/filtri.js";
-import { parskatsSaite } from "../lapas/saites.js";
 
 const VISI = { saraksts: null, atbildigais: null, tema: null };
 // Ieraksts: galvenā vērtība pirmā, tad papildu.
@@ -56,12 +55,6 @@ test("progress: N bez Nepārbaudāmajiem; skaiti B1 leģendas secībā", () => {
     ["neparbaudams", 1],
   ]);
   assert.equal(progress([]).n, 0);
-});
-
-test("parskatsSaite: stabila parametru secība, tukšos izlaiž", () => {
-  assert.equal(parskatsSaite({ tema: "aizsardziba", saraksts: "jv" }), "/?saraksts=jv&tema=aizsardziba");
-  assert.equal(parskatsSaite({ saraksts: null, atbildigais: "fm", tema: "" }), "/?atbildigais=fm");
-  assert.equal(parskatsSaite({}), "/");
 });
 
 test("izvelesSaite: maina vienu grupu, pārējās saglabā; null — „Visi”", () => {

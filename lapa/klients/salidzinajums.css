@@ -1,0 +1,35 @@
+/* Salīdzinājums: matrica saraksts × galvenā tēma (rindas — saraksti, kolonnas — tēmas), zem tās tēmas sadaļas. */
+.salidzinajums { display: block; }
+.salidzinajums h1 { font-size: 1.125rem; line-height: 1.35; font-weight: 600; margin: 0 0 var(--size-2); text-wrap: balance; }
+.salidzinajums h1 + p { margin: 0 0 var(--size-4); font-size: 14px; }
+.nav-redzams { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+/* Matrica: mono, hairline režģis, centrēta; tēmu galvenes vertikāli, saraksta kolonna paliek redzama ritinot. */
+.matrica { font-size: 13px; }
+.matrica th, .matrica td { padding: 0; }
+.matrica thead td { border: 0; }
+.matrica thead th { vertical-align: bottom; padding: var(--size-2) 2px; font-family: var(--sans); font-weight: 400; }
+.matrica thead a { display: inline-block; writing-mode: vertical-rl; transform: rotate(180deg); max-inline-size: 10rem; text-align: start; font-size: 12px; line-height: 1.25; color: var(--muted); text-decoration: none; padding: 2px 0; }
+.matrica thead a:hover { color: var(--ink); text-decoration: underline; }
+.matrica thead a[aria-current] { color: var(--ink); font-weight: 600; }
+.matrica tbody th { position: sticky; left: 0; z-index: 1; background: var(--bg); font-family: var(--mono); font-weight: 600; text-align: left; padding: 0 var(--size-3) 0 var(--size-2); }
+.matrica td { min-width: 38px; height: 38px; color: var(--nv); }
+.matrica td a { display: flex; align-items: center; justify-content: center; min-height: 38px; font-weight: 600; text-decoration: none; }
+.matrica td a:hover { text-decoration: underline; }
+.matrica .izvelets { background: var(--sel); }
+
+/* Tēmas sadaļa: saraksti blakus kā rindotas kolonnas (ink līnija augšā), ne kartītes; telefonā viens zem otra. */
+.temas { margin-top: var(--size-9); }
+.tema-sadala + .tema-sadala { margin-top: var(--size-9); }
+.tema-sadala:focus { outline: none; }
+.tema-sadala h2 { font-size: 1.125rem; line-height: 1.3; font-weight: 600; margin: 0 0 var(--size-4); text-wrap: balance; }
+.tema-sadala h2 .vajs { font-weight: 400; }
+.blakus { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(10.5rem, 100%), 1fr)); gap: var(--size-6) var(--size-4); }
+.blakus-saraksts { min-width: 0; border-top: 1px solid var(--ink); padding-top: var(--size-2); }
+.blakus-saraksts h3 { font-family: var(--mono); font-size: 13px; font-weight: 600; margin: 0 0 var(--size-1); }
+.blakus-saraksts ul { list-style: none; margin: 0; padding: 0; }
+.blakus-saraksts li { display: flex; flex-direction: column; align-items: flex-start; gap: var(--size-1); padding: var(--size-2) 0; border-bottom: 1px solid var(--line); font-size: 15px; line-height: 1.4; }
+.blakus-meta { display: flex; flex-wrap: wrap; align-items: center; gap: var(--size-2); font-size: 13px; }
+.blakus-galvena { font-size: 13px; }
+.blakus-saraksts > p { margin: var(--size-2) 0 0; font-size: 14px; }
+.uz-matricu { margin: var(--size-4) 0 0; font-size: 14px; }
