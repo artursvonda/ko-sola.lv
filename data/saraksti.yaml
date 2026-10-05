@@ -26,7 +26,9 @@
         - IZGLĪTĪBA, ZINĀTNE, KULTŪRA UN SPORTS
         - VESELĪBAS APRŪPE
         - VALSTS PĀRVALDE UN TAUTAS VARA
-    # Paplašinātā programma — pēc lēmuma "LPV ekonomiskā un SV partijas programma — vai paplašinātā programma?" (#16).
+    # Paplašinātās programmas nav. https://suverenavara.lv/partijas-programma-15-saeima/ netiek skaitīta (#16):
+    # vispārīga partijas "Suverēnā vara" programma (teksts sakrīt ar /partijas-programma/, Wayback 29.05.2023),
+    # nav sagatavota šīm vēlēšanām un nav Saraksta (SV/AJ) vārdā.
 
 - slug: na
   nosaukums: Nacionālā apvienība "Visu Latvijai!"–"Tēvzemei un Brīvībai/LNNK"
@@ -83,7 +85,10 @@
         - VESELĪBA UN LABKLĀJĪBA
         - IZGLĪTĪBA
         - EFEKTĪVA VALSTS PĀRVALDE
-    # Paplašinātā programma — pēc lēmuma #16.
+    - veids: paplasinata
+      url: https://latvijapirmajavieta.lv/latvija-pirmaja-vieta-ekonomiska-programma-2026/
+      # Tematiska (ekonomika), publicēta 28.09.2026; skaitās pēc #16.
+      # fails, atbilst_cvk, izlaist, nav_jaizraksta — pievieno "Ekstrakcija: Latvija pirmajā vietā" (#21).
 
 - slug: jv
   nosaukums: Jaunā VIENOTĪBA
