@@ -1,10 +1,11 @@
-// Repo datu ielāde: data/*.yaml, Solījumi un avotu teksti (sources/).
+// Repo datu ielāde: data/*.yaml, Solījumi, Notikumi un avotu teksti (sources/).
 import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import { parse } from "yaml";
 import { sadalitAvotu } from "./avots.js";
 
 export const SOLIJUMI = "data/solijumi";
+export const NOTIKUMI = "data/notikumi";
 
 export function lasitYaml(sakne, cels) {
   return parse(readFileSync(join(sakne, cels), "utf8"));
@@ -30,6 +31,16 @@ export function solijumuFaili(sakne) {
         vards: dalas.at(-1).replace(/\.yaml$/, ""),
       };
     });
+}
+
+/** Visi Notikumu faili: [{ cels, vards (bez .yaml) }]. */
+export function notikumuFaili(sakne) {
+  const dir = join(sakne, NOTIKUMI);
+  if (!existsSync(dir)) return [];
+  return readdirSync(dir)
+    .filter((f) => f.endsWith(".yaml"))
+    .sort()
+    .map((f) => ({ cels: `${NOTIKUMI}/${f}`, vards: f.replace(/\.yaml$/, "") }));
 }
 
 /** Saraksta avota teksts, sadalīts vienībās (kešots pēc faila). */

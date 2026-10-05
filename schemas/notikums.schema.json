@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "notikums.schema.json",
+  "title": "Notikums",
+  "description": "data/notikumi/<YYYY-MM-DD>-<slug>.yaml — sk. docs/statusi/notikumi.md",
+  "type": "object",
+  "required": ["id", "datums", "nosaukums", "apraksts", "avoti", "solijumi"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}(-[a-z0-9]+)+$" },
+    "datums": { "$ref": "#/$defs/datums" },
+    "nosaukums": { "type": "string", "minLength": 1, "maxLength": 120 },
+    "apraksts": { "type": "string", "minLength": 1 },
+    "avoti": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["url", "veids"],
+        "additionalProperties": false,
+        "properties": {
+          "url": { "type": "string", "pattern": "^https?://" },
+          "veids": { "enum": ["saeima", "mk", "likumi", "vestnesis", "csp", "kase", "zinas", "cits"] }
+        }
+      }
+    },
+    "solijumi": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "virziens", "pamatojums"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string" },
+          "virziens": { "enum": ["par", "pret"] },
+          "pamatojums": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "balsojums": {
+      "type": "object",
+      "required": ["saeima", "id", "laiks", "motivs", "datu_avots", "kopa", "frakcijas"],
+      "additionalProperties": false,
+      "properties": {
+        "saeima": { "type": "integer", "minimum": 14 },
+        "id": { "type": "string", "minLength": 1 },
+        "laiks": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}$" },
+        "motivs": { "type": "string", "minLength": 1 },
+        "datu_avots": { "type": "string", "pattern": "^https://data\\.gov\\.lv/" },
+        "kopa": { "$ref": "#/$defs/skaits" },
+        "frakcijas": {
+          "type": "object",
+          "minProperties": 1,
+          "propertyNames": { "pattern": "^(bez_frakcijas|[A-ZĀČĒĢĪĶĻŅŠŪŽ!]+)$" },
+          "additionalProperties": { "$ref": "#/$defs/skaits" }
+        },
+        "komentars": { "type": "string" }
+      }
+    },
+    "piezimes": { "type": "string" },
+    "jautajums": { "type": "string" }
+  },
+  "$defs": {
+    "datums": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "skaits": {
+      "type": "object",
+      "required": ["par", "pret", "atturas"],
+      "additionalProperties": false,
+      "properties": {
+        "par": { "type": "integer", "minimum": 0 },
+        "pret": { "type": "integer", "minimum": 0 },
+        "atturas": { "type": "integer", "minimum": 0 },
+        "nebalsoja": { "type": "integer", "minimum": 0 }
+      }
+    }
+  }
+}
