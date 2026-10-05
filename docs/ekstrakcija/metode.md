@@ -70,6 +70,16 @@ nodokli-un-budzets, ekonomika-un-darbs, veseliba, izglitiba-un-zinatne, gimenes-
 
 Tēmu izvēlas pēc tā, **ko solījums maina lasītājam**, nevis pēc programmas nodaļas (uzturēšanās atļaujas nodaļā "Drošība" → `migracija-un-diaspora`). Civilā aizsardzība, robeža, iekšlietu dienesti → `iekseja-drosiba-un-tiesiskums`.
 
+## 6a. Atbildīgā iestāde
+
+`iestades.galvena`: tieši viena; `iestades.papildu`: 0–2 (tikai starpnozaru Solījumiem). Tikai slug no `data/iestades.yaml` (ministrijas, Valsts kanceleja, Saeima).
+
+- Izvēlas iestādi, kuras **kompetencē ir iznākums**, nevis to, kurš Saraksts solīja vai kura Saraksta ministrs to vada. Opozīcijas Solījumam — tāpat.
+- Valdības kopējā vai Ministru prezidenta kompetence (piem., valsts pārvaldes reforma) → Valsts kanceleja. Iznākums tikai Saeimas rokās (piem., Kārtības rullis, deputātu skaits) → Saeima.
+- ES līmeņa solījums ("iestāsimies ES par X") → nozares ministrija, kas gatavo Latvijas pozīciju par X, ne Ārlietu ministrija (ja vien X nav ārpolitika).
+- Iznākums pašvaldību vai neatkarīgas iestādes kompetencē → ministrija vai Saeima, kas var mainīt attiecīgo regulējumu.
+- Neskaidrā gadījumā ieraksti iemeslu `piezimes`.
+
 ## 7. ID
 
 `<saraksts>-<slug>`, slug no nosaukuma: mazie latīņu burti bez diakritikas, ≤ 6 vārdi. Pēc publicēšanas nemainās. Faila vārds `<id>.yaml`.
@@ -86,6 +96,9 @@ parbaudams: true
 temas:
   galvena: ekonomika-un-darbs
   papildu: [nodokli-un-budzets]
+iestades:
+  galvena: <iestāde>  # slug no data/iestades.yaml
+  papildu: []
 avoti:
   - veids: cvk
     vieta: "3. Finanses"
@@ -98,7 +111,7 @@ piezimes: ""      # ekstraktora lēmumu iemesli (granularitāte, pārbaudāmība
 jautajums: ""     # neskaidrība redaktoram; pirms merge jābūt tukšam
 ```
 
-Avota URL ir Saraksta avotu konfigurācijā, ne katrā failā. Statusi, Notikumi un Atbildīgais šeit netiek aizpildīti.
+Avota URL ir Saraksta avotu konfigurācijā, ne katrā failā. Statusi un Notikumi šeit netiek aizpildīti. Amatpersonas Solījuma failā nav: tās atvasina no `data/iestades.yaml` pēc datuma.
 
 ## 9. Kopsavilkums
 

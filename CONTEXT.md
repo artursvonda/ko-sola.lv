@@ -26,6 +26,20 @@ Kandidātu saraksts, kas pārvarēja 5% barjeru 15. Saeimas vēlēšanās.
 Kandidātu saraksts, kā tas reģistrēts CVK; solījumu devējs. Var apvienot vairākas partijas (piem., Apvienotais saraksts). Lapā lasītājam drīkst saukt par "partiju".
 _Avoid_: partija (modelī)
 
+**Atbildīgā iestāde**:
+Valsts iestāde, kuras kompetencē ir Solījuma iznākums: ministrija, Valsts kanceleja vai Saeima. Nav atkarīga no tā, kurš Saraksts solīja, tāpēc opozīcijas un koalīcijas Solījumiem tā tiek noteikta vienādi. Arī Nepārbaudāmam solījumam ir Atbildīgā iestāde. Lasītājam lapā drīkst saukt "Atbildīgais".
+_Avoid_: ministrija (modelī), atbildīgā persona
+
+**Galvenā atbildīgā iestāde**:
+Solījuma vienīgā Atbildīgā iestāde, pēc kuras to rāda un skaita; katram Solījumam ir tieši viena.
+
+**Papildu atbildīgā iestāde**:
+Solījuma otrā vai trešā Atbildīgā iestāde (0–2) starpnozaru Solījumam; ietekmē tikai filtrēšanu, ne skaitīšanu.
+
+**Amatpersona**:
+Politiķis, kas noteiktā laika posmā vada Atbildīgo iestādi: ministrs, Ministru prezidents (Valsts kanceleja) vai Saeimas priekšsēdētājs. Ietver arī iepriekšējās valdības ministrus, kamēr tie ir amatā, un pienākumu izpildītājus. Tiek rādīta ar savu partiju, kas var arī nebūt neviena ievēlētā Saraksta daļa.
+_Avoid_: atbildīgais (modelī), valsts sekretārs
+
 **Frakcija**:
 Saraksta ievēlētie deputāti, kas Saeimā darbojas kopā un balso kā grupa; sastāvs var atšķirties no ievēlētā Saraksta (deputāti izstājas vai pāriet). Deputāts bez frakcijas nevienam Sarakstam netiek pieskaitīts.
 
