@@ -1,6 +1,7 @@
 import { html } from "../html.js";
 import { STATUSI } from "../dati.js";
 import { izkartojums, statussPill, datums, amatpersonaRindas } from "./izkartojums.js";
+import { temaSaite } from "./salidzinajums.js";
 
 const AVOTI = { cvk: "CVK programma", paplasinata: "Paplašinātā programma" };
 const NOTIKUMA_AVOTI = {
@@ -115,11 +116,11 @@ function citiSaraksti(s, m) {
     ({ sr, visi }) => html`<div class="cits-saraksts">
       <h3><abbr title="${sr.nosaukums}">${sr.saisinajums}</abbr> · ${sr.isais_nosaukums}</h3>
       ${solijumuSaraksts(visi.slice(0, CITU_MAX))}
-      ${visi.length > CITU_MAX && html`<p><a href="/salidzinajums/?tema=${tema.slug}">Visi ${sr.saisinajums} solījumi šajā tēmā (${visi.length})</a></p>`}
+      ${visi.length > CITU_MAX && html`<p><a href="${temaSaite(tema.slug)}">Visi ${sr.saisinajums} solījumi šajā tēmā (${visi.length})</a></p>`}
     </div>`,
   )}
   ${bez.length > 0 && html`<p class="vajs">Šajā tēmā solījumu nav: ${bez.map(({ sr }, i) => html`${i > 0 && ", "}<abbr title="${sr.nosaukums}">${sr.saisinajums}</abbr>`)}.</p>`}
-  <p><a href="/salidzinajums/?tema=${tema.slug}">Salīdzināt visus sarakstus tēmā „${tema.nosaukums}”</a></p>
+  <p><a href="${temaSaite(tema.slug)}">Salīdzināt visus sarakstus tēmā „${tema.nosaukums}”</a></p>
 </section>`;
 }
 
