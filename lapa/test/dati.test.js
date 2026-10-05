@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { statuss, amatpersona, progress, ieladetModeli } from "../dati.js";
+import { statuss, amatpersona, progress, frakcijasSaraksts, ieladetModeli } from "../dati.js";
 
 test("statuss: pēdējā Statusa maiņa, citādi Nav vērtēts; Nepārbaudāmam — neparbaudams", () => {
   assert.equal(statuss({ parbaudams: true }), "nav-vertets");
@@ -36,4 +36,15 @@ test("modelis no fixtures: saites starp Solījumiem, Notikumiem un iestādēm", 
   assert.equal(s.notikumi[0].virziens, "par");
   assert.equal(s.statusa_mainas[0].notikumi[0].id, "2026-10-22-paraugs-mun-likuma-grozijumi");
   assert.match(s.avoti[0].url, /^https:\/\/www\.vestnesis\.lv\//);
+});
+
+test("frakcijasSaraksts: 15. Saeimā kods → Saraksts pēc `frakcija`; 14. Saeimā un bez frakcijas — neviens", () => {
+  const jv = { slug: "jv", saisinajums: "JV", frakcija: "JV" };
+  const na = { slug: "na", saisinajums: "NA", frakcija: "NA!" };
+  const saraksti = [jv, na, { slug: "sv", saisinajums: "SV" }];
+  assert.equal(frakcijasSaraksts({ saeima: 15 }, "NA!", saraksti), na);
+  assert.equal(frakcijasSaraksts({ saeima: 15 }, "JV", saraksti), jv);
+  assert.equal(frakcijasSaraksts({ saeima: 15 }, "bez_frakcijas", saraksti), null);
+  assert.equal(frakcijasSaraksts({ saeima: 15 }, "ZZS", saraksti), null);
+  assert.equal(frakcijasSaraksts({ saeima: 14 }, "JV", saraksti), null);
 });
