@@ -1,6 +1,7 @@
 import { html } from "../html.js";
 import { STATUSI, frakcijasSaraksts } from "../dati.js";
 import { izkartojums, statussPill, datums, amatpersonaRindas } from "./izkartojums.js";
+import { temaSaite } from "./salidzinajums.js";
 import { parskatsSaite } from "./saites.js";
 
 const AVOTI = { cvk: "CVK programma", paplasinata: "Paplašinātā programma" };
@@ -133,7 +134,7 @@ function citiSaraksti(s, m) {
     </div>`,
   )}
   ${bez.length > 0 && html`<p class="vajs">Šajā tēmā solījumu nav: ${bez.map(({ sr }, i) => html`${i > 0 && ", "}<abbr title="${sr.nosaukums}">${sr.saisinajums}</abbr>`)}.</p>`}
-  <p><a href="/salidzinajums/?tema=${tema.slug}">Salīdzināt visus sarakstus tēmā „${tema.nosaukums}”</a></p>
+  <p><a href="${temaSaite(tema.slug)}">Salīdzināt visus sarakstus tēmā „${tema.nosaukums}”</a></p>
 </section>`;
 }
 
