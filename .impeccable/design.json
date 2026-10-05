@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-05T00:00:00Z",
+  "title": "Design System: ko-sola.lv",
+  "extensions": {
+    "colorMeta": {
+      "accent": { "role": "primary", "displayName": "Slate Ledger Blue", "canonical": "oklch(40.3% 0.075 254)", "tonalRamp": ["#000829", "#042447", "#214166", "#3f6087", "#5e80a9", "#7ea1cd", "#a3c7f4", "#d3f2ff"] },
+      "paper": { "role": "neutral", "displayName": "Paper", "canonical": "#ffffff", "tonalRamp": ["#0b0b0b", "#242424", "#404040", "#5d5d5d", "#7d7d7d", "#9e9e9e", "#c4c4c4", "#eeeeee"] },
+      "surface": { "role": "neutral", "displayName": "Ledger Surface", "canonical": "oklch(97.0% 0.003 265)", "tonalRamp": ["#0b0b0c", "#232425", "#3f4041", "#5d5e5f", "#7c7d7f", "#9d9ea0", "#c3c4c6", "#edeef0"] },
+      "hairline": { "role": "neutral", "displayName": "Hairline", "canonical": "oklch(92.1% 0.006 255)", "tonalRamp": ["#090b0e", "#222427", "#3e4043", "#5b5e61", "#7b7d81", "#9c9fa2", "#c1c4c8", "#eceff3"] },
+      "ink": { "role": "neutral", "displayName": "Graphite Ink", "canonical": "oklch(21.2% 0.009 256)", "tonalRamp": ["#090b0f", "#212428", "#3d4045", "#5a5e63", "#7a7e83", "#9b9fa4", "#c0c4ca", "#eaeff5"] },
+      "muted": { "role": "neutral", "displayName": "Pencil Grey", "canonical": "oklch(49.2% 0.018 251)", "tonalRamp": ["#060c12", "#1e252c", "#394149", "#575f67", "#767e88", "#979fa9", "#bcc5cf", "#e6f0fa"] },
+      "selection-wash": { "role": "neutral", "displayName": "Selection Wash", "canonical": "oklch(95.7% 0.008 254)", "tonalRamp": ["#090b0f", "#212428", "#3d4044", "#5b5e62", "#7a7e82", "#9b9fa3", "#c1c4c9", "#ebeff4"] },
+      "status-done": { "role": "status", "displayName": "Izpildīts Navy", "canonical": "oklch(34.5% 0.069 255)", "tonalRamp": ["#000927", "#092444", "#254163", "#435f84", "#627fa6", "#82a1c9", "#a7c7f1", "#d4f1ff"] },
+      "status-done-text": { "role": "status", "displayName": "Izpildīts Text", "canonical": "#ffffff" },
+      "status-partial": { "role": "status", "displayName": "Daļēji Slate", "canonical": "oklch(76.0% 0.042 254)", "tonalRamp": ["#010b1c", "#152538", "#304156", "#4d5f75", "#6c7f96", "#8da0b9", "#b2c6e0", "#dcf1ff"] },
+      "status-partial-text": { "role": "status", "displayName": "Daļēji Text", "canonical": "oklch(24.0% 0.043 254)" },
+      "status-progress": { "role": "status", "displayName": "Procesā Parchment", "canonical": "oklch(89.8% 0.051 87)", "tonalRamp": ["#140900", "#2f2202", "#4b3e1f", "#6a5c3c", "#8a7c5b", "#ac9d7b", "#d2c39f", "#fdedc9"] },
+      "status-progress-line": { "role": "status", "displayName": "Procesā Line", "canonical": "oklch(77.6% 0.068 87)" },
+      "status-progress-text": { "role": "status", "displayName": "Procesā Text", "canonical": "oklch(30.3% 0.052 84)" },
+      "status-failed": { "role": "status", "displayName": "Nav izpildīts Brick", "canonical": "oklch(46.2% 0.107 34)", "tonalRamp": ["#2a0000", "#4b0100", "#6d2514", "#904433", "#b36452", "#d88572", "#ffab96", "#ffe1d4"] },
+      "status-neutral-line": { "role": "status", "displayName": "Unrated Grey", "canonical": "oklch(70.6% 0.014 252)", "tonalRamp": ["#070c11", "#1f252b", "#3a4047", "#585e66", "#777e86", "#989fa7", "#bec5cd", "#e8eff8"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Quote L", "purpose": "Lead quote up to 90 characters." },
+      "display-medium": { "displayName": "Quote M", "purpose": "Lead quote 91–180 characters." },
+      "display-small": { "displayName": "Quote S", "purpose": "Lead quote over 180 characters; never truncated." },
+      "title": { "displayName": "Title", "purpose": "Page h1 (editor title) and section h2s; smaller than the lead quote." },
+      "body": { "displayName": "Body", "purpose": "Reading text, timeline entries, band values, related rows." },
+      "body-small": { "displayName": "Body Small", "purpose": "kopš lines, Amatpersona rows, sources, vote details." },
+      "citation": { "displayName": "Citation", "purpose": "Citation line, timeline dates, breadcrumb (13px)." },
+      "label": { "displayName": "Field Label", "purpose": "Uppercase mono labels for data fields (dt) and the Nesakritība note." },
+      "pill": { "displayName": "Pill", "purpose": "Statuss pill word." }
+    },
+    "shadows": [
+      { "name": "pill-outline-failed", "value": "inset 0 0 0 1.5px var(--ni)", "purpose": "Outline of the Nav izpildīts pill (not elevation)." },
+      { "name": "pill-outline-unrated", "value": "inset 0 0 0 1px var(--nv)", "purpose": "Outline of the Nav vērtēts pill (not elevation)." }
+    ],
+    "motion": [
+      { "name": "ease-out-settle", "value": "cubic-bezier(.16, 1, .3, 1)", "purpose": "All transitions: :target wash fade, disclosure chevron." },
+      { "name": "target-wash", "value": "2.4s", "purpose": "Selection-wash fade on a linked timeline entry; static wash under reduced motion." },
+      { "name": "chevron", "value": ".2s", "purpose": "Vote-details disclosure chevron rotation." }
+    ],
+    "breakpoints": [
+      { "name": "band-wide", "value": "48rem", "purpose": "Statuss band columns go from 1:1 to 1:1.4." }
+    ],
+    "shareCard": {
+      "size": "1200x630",
+      "padding": "56px 72px 60px",
+      "quoteSizes": "64px (≤60 chars) / 50px (≤120 chars); title fallback 56px/600 over 120 chars",
+      "pill": "28px/600, padding 10px 26px 10px 20px, 14px marker",
+      "rule": "2px hairline above the Statuss / Atbildīgais row"
+    }
+  },
+  "components": [
+    {
+      "name": "Statuss pill (filled)",
+      "kind": "chip",
+      "refersTo": "pill-izpildits",
+      "description": "Filled Statuss pills: Izpildīts, Daļēji izpildīts, Procesā; round marker.",
+      "html": "<span class=\"ds-pill ds-iz\">Izpildīts</span> <span class=\"ds-pill ds-di\">Daļēji izpildīts</span> <span class=\"ds-pill ds-pr\">Procesā</span>",
+      "css": ".ds-pill { display: inline-flex; align-items: center; gap: 6px; font-family: 'IBM Plex Sans', system-ui, sans-serif; font-size: 12px; font-weight: 600; line-height: 1.4; padding: 3px 10px 3px 8px; border-radius: 1e5px; white-space: nowrap; } .ds-pill::before { content: ''; box-sizing: border-box; width: 7px; height: 7px; border-radius: 50%; background: currentColor; } .ds-iz { background: #1f3a5c; color: #ffffff; } .ds-di { background: #9fb3cc; color: #102033; } .ds-pr { background: #ecdcb8; color: #3b2c0b; }"
+    },
+    {
+      "name": "Statuss pill (outlined)",
+      "kind": "chip",
+      "refersTo": "pill-nav-izpildits",
+      "description": "Outlined Statuss pills, shape-coded: diamond, dash, dashed ring.",
+      "html": "<span class=\"ds-pill ds-ni\">Nav izpildīts</span> <span class=\"ds-pill ds-nv\">Nav vērtēts</span> <span class=\"ds-pill ds-np\">Nepārbaudāms</span>",
+      "css": ".ds-pill { display: inline-flex; align-items: center; gap: 6px; font-family: 'IBM Plex Sans', system-ui, sans-serif; font-size: 12px; font-weight: 600; line-height: 1.4; padding: 3px 10px 3px 8px; border-radius: 1e5px; white-space: nowrap; } .ds-pill::before { content: ''; box-sizing: border-box; width: 7px; height: 7px; border-radius: 50%; background: currentColor; } .ds-ni { color: #8a3f2e; box-shadow: inset 0 0 0 1.5px #8a3f2e; } .ds-ni::before { border-radius: 1px; transform: rotate(45deg); } .ds-nv { color: #5a626b; box-shadow: inset 0 0 0 1px #9aa1a9; } .ds-nv::before { height: 2px; border-radius: 0; } .ds-np { color: #5a626b; border: 1px dashed #9aa1a9; font-style: italic; } .ds-np::before { background: transparent; border: 1px dashed currentColor; }"
+    },
+    {
+      "name": "Quote with citation line",
+      "kind": "custom",
+      "refersTo": "citation-line",
+      "description": "Signature: quote as headline with hanging accent „, then a hairline and mono citation segments.",
+      "html": "<figure class=\"ds-quote\"><blockquote><p><span class=\"ds-open\" aria-hidden=\"true\">„</span>Nodrošināsim aizsardzības finansējumu 5% no IKP.<span aria-hidden=\"true\">”</span></p></blockquote><figcaption class=\"ds-cite\"><a href=\"#\">CVK programma</a><span>1. Drošība un aizsardzība</span><span>Latvijas Vēstnesis, Nr. 176A, 14.09.2026</span></figcaption></figure>",
+      "css": ".ds-quote { margin: 0 0 0 1rem; font-family: 'IBM Plex Sans', system-ui, sans-serif; color: #16191d; } .ds-quote blockquote { margin: 0; } .ds-quote p { margin: 0; position: relative; font-size: clamp(1.75rem, 1.2rem + 2.4vw, 2.375rem); font-weight: 500; line-height: 1.22; letter-spacing: -.012em; text-wrap: pretty; } .ds-open { position: absolute; right: 100%; padding-right: .06em; color: #2a4a70; } .ds-cite { display: flex; flex-wrap: wrap; gap: 2px 0; margin-top: 1rem; padding-top: .5rem; border-top: 1px solid #e2e5e9; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; line-height: 1.5; color: #5a626b; } .ds-cite > :not(:last-child)::after { content: '·'; display: inline-block; padding: 0 .6em; color: #9aa1a9; } .ds-cite > :first-child { font-weight: 600; text-transform: uppercase; letter-spacing: .06em; } .ds-cite a { color: #2a4a70; text-underline-offset: .18em; } .ds-cite a:hover { color: #16191d; text-decoration-thickness: 2px; } .ds-cite a:focus-visible { outline: 2px solid #2a4a70; outline-offset: 2px; border-radius: 2px; }"
+    },
+    {
+      "name": "Statuss band",
+      "kind": "card",
+      "description": "Ruled two-cell definition list (Statuss | Atbildīgais) with a full-width Tēma row; not a card.",
+      "html": "<dl class=\"ds-band\"><div><dt class=\"ds-lbl\">Statuss</dt><dd><span class=\"ds-pill ds-pr\">Procesā</span><span class=\"ds-sub\">kopš <span class=\"ds-mono\">10.12.2026</span></span></dd></div><div><dt class=\"ds-lbl\">Atbildīgais</dt><dd><strong>Aizsardzības ministrija</strong><span class=\"ds-sub\">Raivis Melnis (JV)</span></dd></div><div class=\"ds-full\"><dt class=\"ds-lbl\">Tēma</dt><dd>Aizsardzība</dd></div></dl>",
+      "css": ".ds-band { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); margin: 0; border-top: 1px solid #16191d; border-bottom: 1px solid #e2e5e9; font-family: 'IBM Plex Sans', system-ui, sans-serif; color: #16191d; } .ds-band > div { padding: 1rem 1rem 1rem 0; min-width: 0; } .ds-band > div + div:not(.ds-full) { padding-left: 1rem; border-left: 1px solid #e2e5e9; } .ds-full { grid-column: 1 / -1; border-top: 1px solid #e2e5e9; display: flex; gap: 0 1rem; align-items: baseline; padding-block: .5rem !important; } .ds-band dd { margin: 0; display: flex; flex-direction: column; align-items: flex-start; gap: .25rem; font-size: 16px; line-height: 1.4; } .ds-full dd { display: block; } .ds-lbl { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #5a626b; font-weight: 600; margin: 0 0 .5rem; } .ds-full .ds-lbl { margin: 0; } .ds-sub { font-size: 14px; color: #5a626b; } .ds-mono { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-variant-numeric: tabular-nums; } .ds-pill { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; line-height: 1.4; padding: 3px 10px 3px 8px; border-radius: 1e5px; } .ds-pill::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: currentColor; } .ds-pr { background: #ecdcb8; color: #3b2c0b; }"
+    },
+    {
+      "name": "Header navigation",
+      "kind": "nav",
+      "refersTo": "nav-tab",
+      "description": "Mono wordmark plus sans tabs; current tab in ink with accent underline.",
+      "html": "<header class=\"ds-head\"><a class=\"ds-logo\" href=\"#\">ko-sola<span>.lv</span></a><nav><a class=\"ds-tab\" href=\"#\" aria-current=\"page\">Solījumi</a><a class=\"ds-tab\" href=\"#\">Salīdzināt</a></nav></header>",
+      "css": ".ds-head { display: flex; flex-wrap: wrap; align-items: center; gap: 1.75rem; padding: 0 1.5rem; border-bottom: 1px solid #e2e5e9; font-family: 'IBM Plex Sans', system-ui, sans-serif; } .ds-logo { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 18px; font-weight: 600; padding: 1rem 0; color: #16191d; text-decoration: none; } .ds-logo span { color: #2a4a70; } .ds-head nav { display: flex; gap: 1.5rem; } .ds-tab { display: inline-flex; align-items: center; min-height: 52px; color: #5a626b; text-decoration: none; font-weight: 500; border-bottom: 2px solid transparent; } .ds-tab:hover { color: #16191d; } .ds-tab[aria-current='page'] { color: #16191d; border-bottom-color: #2a4a70; } .ds-tab:focus-visible, .ds-logo:focus-visible { outline: 2px solid #2a4a70; outline-offset: 2px; border-radius: 2px; }"
+    },
+    {
+      "name": "Timeline",
+      "kind": "custom",
+      "description": "Hairline spine; node shape encodes Statusa maiņa (status shape), Notikums par/pret (triangles), origin (hollow square).",
+      "html": "<ol class=\"ds-tl\"><li class=\"ds-pr\"><p class=\"ds-date\">10.12.2026 · Statusa maiņa</p><p>Finansējums nodrošināts.</p></li><li class=\"ds-par\"><p class=\"ds-date\">10.12.2026 · Notikums · <b>par solīto</b></p><p>Saeima pieņem budžetu.</p></li><li class=\"ds-pret\"><p class=\"ds-date\">01.11.2026 · Notikums · <b style=\"color:#8a3f2e\">pret solīto</b></p><p>Grozījumi noraidīti.</p></li><li class=\"ds-origin\"><p class=\"ds-date\">Solīts</p><p class=\"ds-date\">CVK programma · Latvijas Vēstnesis, Nr. 176A, 14.09.2026</p></li></ol>",
+      "css": ".ds-tl { list-style: none; margin: 0; padding: 0; font-family: 'IBM Plex Sans', system-ui, sans-serif; color: #16191d; font-size: 16px; } .ds-tl > li { position: relative; padding: 0 0 1.75rem 1.75rem; } .ds-tl > li::before { content: ''; position: absolute; left: 5px; top: 0; bottom: 0; width: 1px; background: #e2e5e9; } .ds-tl > li:last-child { padding-bottom: 0; } .ds-tl > li:last-child::before { bottom: auto; height: 10px; } .ds-tl > li::after { content: ''; position: absolute; left: 0; top: 5px; width: 11px; height: 11px; box-sizing: border-box; background: #fff; border: 1px solid #9aa1a9; border-radius: 50%; } .ds-tl p { margin: 0 0 .25rem; } .ds-date { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: #5a626b; font-variant-numeric: tabular-nums; } .ds-tl > .ds-pr::after { background: #ecdcb8; border-color: #c9b484; } .ds-tl > .ds-par::after, .ds-tl > .ds-pret::after { border: 0; border-radius: 0; width: 12px; height: 11px; } .ds-tl > .ds-par::after { background: #16191d; clip-path: polygon(50% 0, 100% 100%, 0 100%); } .ds-tl > .ds-pret::after { background: #8a3f2e; clip-path: polygon(0 0, 100% 0, 50% 100%); } .ds-tl > .ds-origin::after { border-radius: 1px; border-color: #16191d; } .ds-tl > li:target { animation: ds-wash 2.4s cubic-bezier(.16, 1, .3, 1); } @keyframes ds-wash { from { background: #edf1f6; box-shadow: -8px 0 0 #edf1f6, 8px 0 0 #edf1f6; } to { background: transparent; box-shadow: none; } } @media (prefers-reduced-motion: reduce) { .ds-tl > li:target { animation: none; background: #edf1f6; } }"
+    },
+    {
+      "name": "Related Solījumi rows",
+      "kind": "custom",
+      "description": "Hairline-ruled rows: linked title left, Statuss pill right.",
+      "html": "<ul class=\"ds-rows\"><li><a href=\"#\">Aizsardzības finansējums virs 5% no IKP</a><span class=\"ds-pill ds-iz\">Izpildīts</span></li><li><a href=\"#\">Pretdronu aizsardzības sistēma</a><span class=\"ds-pill ds-nv\">Nav vērtēts</span></li></ul>",
+      "css": ".ds-rows { list-style: none; margin: 0; padding: 0; border-top: 1px solid #e2e5e9; font-family: 'IBM Plex Sans', system-ui, sans-serif; } .ds-rows li { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding: .5rem 0; border-bottom: 1px solid #e2e5e9; font-size: 16px; line-height: 1.4; } .ds-rows a { color: #2a4a70; text-underline-offset: .18em; text-decoration-thickness: 1px; } .ds-rows a:hover { color: #16191d; text-decoration-thickness: 2px; } .ds-rows a:focus-visible { outline: 2px solid #2a4a70; outline-offset: 2px; border-radius: 2px; } .ds-pill { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; line-height: 1.4; padding: 3px 10px 3px 8px; border-radius: 1e5px; white-space: nowrap; } .ds-pill::before { content: ''; box-sizing: border-box; width: 7px; height: 7px; border-radius: 50%; background: currentColor; } .ds-iz { background: #1f3a5c; color: #fff; } .ds-nv { color: #5a626b; box-shadow: inset 0 0 0 1px #9aa1a9; } .ds-nv::before { height: 2px; border-radius: 0; }"
+    },
+    {
+      "name": "Data table",
+      "kind": "custom",
+      "description": "Collapsed table with tracked uppercase headers on the surface tint and hairline rows.",
+      "html": "<table class=\"ds-table\"><thead><tr><th>Solījums</th><th>Statuss</th></tr></thead><tbody><tr><td><a href=\"#\">Aizsardzībai 5% no IKP</a></td><td>Procesā</td></tr></tbody></table>",
+      "css": ".ds-table { border-collapse: collapse; width: 100%; font-family: 'IBM Plex Sans', system-ui, sans-serif; color: #16191d; } .ds-table th { text-align: left; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #5a626b; background: #f4f5f7; font-weight: 400; } .ds-table th, .ds-table td { padding: 10px 14px; border-bottom: 1px solid #e2e5e9; vertical-align: top; } .ds-table a { color: #2a4a70; } .ds-table a:hover { color: #16191d; } .ds-table a:focus-visible { outline: 2px solid #2a4a70; outline-offset: 2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Cited Record",
+    "overview": "Every page reads like an annotated public record: the list's own words set large, then a hairline and a monospace citation, then the ruled facts beside them. Paper-white ground, near-black ink, one dark slate-blue accent, and a monochrome rhythm of 1px rules do the structural work that cards and shadows do elsewhere. Density is that of a reference document, not a dashboard: one left-anchored reading column (44rem on the Solījums page, 1200px for tables), generous vertical gaps between sections, compact lines inside them.\n\nTwo typefaces from one family carry the whole system. IBM Plex Sans reads and speaks (body, titles, the quote as headline); IBM Plex Mono only cites (sources, dates, field labels, list abbreviations, the wordmark). Statuss is the only place the palette warms or saturates, and every Statuss also carries its own shape, so the record stays legible without colour. Lists are shown neutrally: abbreviation and name, never party colours.\n\nThe 1200×630 share card (OG image) is the same world at poster scale: same palette, same two faces, the pill with its shape, a hairline above the footer row.",
+    "keyCharacteristics": [
+      "Quote as headline: the source text, upright in ink at weight 500, is the largest type on the page.",
+      "Hairline-ruled structure; no cards, no shadows for elevation.",
+      "Mono is reserved for citation material.",
+      "Statuss = colour + shape + word, always all three.",
+      "One accent, used for links, focus, the hanging opening „ and the \".lv\" in the wordmark."
+    ],
+    "rules": [
+      { "name": "The One Accent Rule", "body": "Slate Ledger Blue is the only non-Statuss hue. It marks what is clickable or quoted, nothing else.", "section": "colors" },
+      { "name": "The Neutral Lists Rule", "body": "Saraksti never get a colour. They are identified by abbreviation and name in mono.", "section": "colors" },
+      { "name": "The Colour Is Never Alone Rule", "body": "Every Statuss pill and timeline node pairs its colour with a distinct shape (circle, diamond, dash, dashed ring) and its word.", "section": "colors" },
+      { "name": "The Mono Cites Rule", "body": "Plex Mono is for sources, dates, numbers, abbreviations and field labels. Never set reading prose or a quote in mono.", "section": "typography" },
+      { "name": "The Quote Outranks The Title Rule", "body": "Where a quote leads a page it is upright, ink, weight 500 and larger than the h1; never italic, never grey, never shrunk to a caption.", "section": "typography" },
+      { "name": "The Ruled, Not Carded Rule", "body": "Groupings are bands between rules. No boxes, no rounded containers, no drop shadows; a note (Nesakritība) is a ruled band, not an alert box.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do set the source quote as the headline: Plex Sans 500, ink, upright, sized by length, with the hanging accent „.",
+      "Do put a citation line under every quote: hairline, mono 12px, source · vieta · publikācija.",
+      "Do group facts into bands between 1px rules (ink rule on top for a primary band, hairlines elsewhere).",
+      "Do show every Statuss as colour + shape + word, in pills and in timeline nodes alike.",
+      "Do keep Plex Mono for dates, sources, numbers, abbreviations and field labels, with tabular numerals.",
+      "Do keep motion to state feedback (the :target wash, the disclosure chevron) and honour prefers-reduced-motion."
+    ],
+    "donts": [
+      "Don't give Saraksti colours or rank them visually; abbreviation + name only.",
+      "Don't wrap content in cards, rounded containers or drop shadows; use rules.",
+      "Don't set a source quote as a small grey italic caption; quotes stay upright, ink, Plex Sans.",
+      "Don't introduce a second accent hue outside the Statuss scale.",
+      "Don't convey Statuss by colour alone."
+    ]
+  }
+}

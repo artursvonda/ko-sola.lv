@@ -9,13 +9,28 @@ const NAV = [
   ["/salidzinajums/", "Salīdzināt"],
 ];
 
-export function izkartojums({ virsraksts, apraksts, cels, saturs }) {
+// Absolūtas saites OG metadatiem; domēns vēl nav reģistrēts (#4).
+const SAITE = process.env.KO_SAITE ?? "https://ko-sola.lv";
+
+export function izkartojums({ virsraksts, apraksts, cels, og, saturs }) {
+  const nosaukums = virsraksts ? `${virsraksts} · ko-sola.lv` : "ko-sola.lv — ko solīja 15. Saeimā ievēlētie saraksti";
   return `<!doctype html>${html`<html lang="lv">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${virsraksts ? `${virsraksts} · ko-sola.lv` : "ko-sola.lv — ko solīja 15. Saeimā ievēlētie saraksti"}</title>
+<title>${nosaukums}</title>
 <meta name="description" content="${apraksts}">
+<meta property="og:site_name" content="ko-sola.lv">
+<meta property="og:locale" content="lv_LV">
+<meta property="og:title" content="${nosaukums}">
+<meta property="og:description" content="${apraksts}">
+${cels && html`<meta property="og:url" content="${SAITE}${cels}">`}
+${og && html`<meta property="og:type" content="article">
+<meta property="og:image" content="${SAITE}${og}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="${apraksts}">
+<meta name="twitter:card" content="summary_large_image">`}
 ${raw(RESURSI)}
 </head>
 <body>
@@ -34,8 +49,10 @@ export const datums = (d) => d.split("-").reverse().join(".");
 
 export const statussPill = (statuss) => html`<span class="pill st-${statuss}">${STATUSI[statuss]}</span>`;
 
-export function amatpersonaTeksts(a) {
-  if (!a) return "Amatpersona nav norādīta";
+/** Amatpersona divās rindās (vārds + politiskais spēks; amats + kopš), lai šaurā šūnā rindas nelūzt pa vidu. */
+export function amatpersonaRindas(a, klase) {
+  if (!a) return html`<span class="${klase}">Amatpersona nav norādīta</span>`;
   const speks = a.saraksts ? a.saraksts.saisinajums : a.partija;
-  return `${a.vards}${speks ? ` (${speks})` : ""} · ${a.amats}${a.pi ? " p. i." : ""} kopš ${datums(a.no)}`;
+  return html`<span class="${klase}">${a.vards}${speks ? ` (${speks})` : ""}</span>
+    <span class="${klase}">${a.amats}${a.pi ? " p. i." : ""} kopš <time class="mono" datetime="${a.no}">${datums(a.no)}</time></span>`;
 }

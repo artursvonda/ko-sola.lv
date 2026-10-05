@@ -1,74 +1,167 @@
 import { html } from "../html.js";
-import { izkartojums, statussPill, datums, amatpersonaTeksts } from "./izkartojums.js";
+import { STATUSI } from "../dati.js";
+import { izkartojums, statussPill, datums, amatpersonaRindas } from "./izkartojums.js";
 
 const AVOTI = { cvk: "CVK programma", paplasinata: "Paplašinātā programma" };
+const NOTIKUMA_AVOTI = {
+  saeima: "Saeima",
+  mk: "Ministru kabinets",
+  likumi: "likumi.lv",
+  vestnesis: "Latvijas Vēstnesis",
+  csp: "CSP",
+  kase: "Valsts kase",
+  zinas: "Ziņa",
+};
+const CITU_MAX = 3;
+
+/** Citāta izmēra pakāpe pēc garuma: īss citāts — lielāks burts. Citātu nekad negriež. */
+const citataPakape = (t) => (t.length <= 90 ? "c-l" : t.length <= 180 ? "c-m" : "c-s");
+
+const avotaRinda = (a) => html`<p class="avota-rinda">
+  ${a.url ? html`<a href="${a.url}">${AVOTI[a.veids]}</a>` : html`<span>${AVOTI[a.veids]}</span>`}
+  <span>${a.vieta}</span>
+  ${a.publikacija && html`<span>${a.publikacija}</span>`}
+</p>`;
+
+const citats = (a, klase) => html`<figure class="citats ${klase}">
+  <blockquote><p><span class="atv" aria-hidden="true">„</span>${a.citats}<span aria-hidden="true">”</span></p></blockquote>
+  <figcaption>${avotaRinda(a)}</figcaption>
+</figure>`;
+
+function statussTeksts(s) {
+  if (s.statuss === "neparbaudams") return "Deklarācija bez izmērāma iznākuma, tāpēc Statusu nevērtē.";
+  const pedeja = s.statusa_mainas.at(-1);
+  return pedeja ? html`kopš <time class="mono" datetime="${pedeja.datums}">${datums(pedeja.datums)}</time>` : "Notikumu, kas mainītu Statusu, vēl nav.";
+}
+
+const josla = (s) => html`<dl class="josla">
+  <div>
+    <dt class="lbl">Statuss</dt>
+    <dd>${statussPill(s.statuss)}<span class="josla-sik">${statussTeksts(s)}</span></dd>
+  </div>
+  <div>
+    <dt class="lbl">Atbildīgais</dt>
+    <dd><strong>${s.iestade.nosaukums}</strong>${amatpersonaRindas(s.amatpersona, "josla-sik")}
+    ${s.papildu_iestades.length > 0 && html`<span class="josla-sik">Arī: ${s.papildu_iestades.map((i) => i.nosaukums).join(", ")}</span>`}</dd>
+  </div>
+  <div class="josla-pilna">
+    <dt class="lbl">Tēma</dt>
+    <dd>${s.tema.nosaukums}${s.papildu_temas.length > 0 && html`<span class="vajs"> · arī ${s.papildu_temas.map((t) => t.nosaukums).join(", ")}</span>`}</dd>
+  </div>
+</dl>`;
 
 const balsojums = (b) => html`
 <details class="balsojums">
   <summary>Frakciju balsojums (${b.saeima}. Saeima): par ${b.kopa.par}, pret ${b.kopa.pret}, atturas ${b.kopa.atturas}</summary>
-  <table class="mono">
-    <thead><tr><th>Frakcija</th><th>Par</th><th>Pret</th><th>Atturas</th><th>Nebalsoja</th></tr></thead>
+  <table>
+    <thead><tr><th scope="col">Frakcija</th><th scope="col">Par</th><th scope="col">Pret</th><th scope="col">Atturas</th><th scope="col">Nebalsoja</th></tr></thead>
     <tbody>${Object.entries(b.frakcijas).map(
-      ([f, x]) => html`<tr><td>${f === "bez_frakcijas" ? "Bez frakcijas" : f}</td><td>${x.par}</td><td>${x.pret}</td><td>${x.atturas}</td><td>${x.nebalsoja ?? ""}</td></tr>`,
+      ([f, x]) => html`<tr><th scope="row">${f === "bez_frakcijas" ? "Bez frakcijas" : f}</th><td>${x.par}</td><td>${x.pret}</td><td>${x.atturas}</td><td>${x.nebalsoja ?? ""}</td></tr>`,
     )}</tbody>
   </table>
-  <a href="${b.datu_avots}">Saeimas atvērtie dati</a>
+  <p><a href="${b.datu_avots}">Saeimas atvērtie dati</a>${b.komentars && html` · ${b.komentars}`}</p>
 </details>`;
 
-export function solijums(s) {
+const solijumaSaite = (x) => html`<a href="/solijumi/${x.id}/"><abbr title="${x.saraksts.nosaukums}">${x.saraksts.saisinajums}</abbr>: ${x.nosaukums}</a>`;
+
+const notikumaAvots = (a) => html`<a href="${a.url}">${NOTIKUMA_AVOTI[a.veids] ?? new URL(a.url).hostname}</a>`;
+
+const maina = (m) => html`<li class="la-maina la-${m.statuss}">
+  <p class="la-datums"><time datetime="${m.datums}">${datums(m.datums)}</time> · Statusa maiņa</p>
+  <p>${statussPill(m.statuss)}</p>
+  <p>${m.pamatojums}</p>
+  <p class="vajs">Pamatā: ${m.notikumi.map((n, i) => html`${i > 0 && ", "}<a href="#${n.id}">${n.nosaukums}</a>`)}</p>
+</li>`;
+
+const notikums = (n) => html`<li class="la-notikums la-${n.virziens}" id="${n.id}">
+  <p class="la-datums"><time datetime="${n.datums}">${datums(n.datums)}</time> · Notikums · <span class="virziens virziens-${n.virziens}">${n.virziens === "par" ? "par" : "pret"} solīto</span></p>
+  <h3>${n.nosaukums}</h3>
+  <p>${n.pamatojums}</p>
+  <p class="vajs">${n.apraksts}</p>
+  <p class="la-avoti">Avots: ${n.avoti.map((a, i) => html`${i > 0 && ", "}${notikumaAvots(a)}`)}</p>
+  ${n.balsojums && balsojums(n.balsojums)}
+  ${n.citi.length > 0 && html`<div class="la-citi"><p class="vajs">Attiecas arī uz:</p><ul>${n.citi.map((x) => html`<li>${solijumaSaite(x)}</li>`)}</ul></div>`}
+</li>`;
+
+function laikaAss(s) {
+  // Jaunākais augšā; vienā datumā Statusa maiņa pirms Notikuma, kas to pamato.
+  const ieraksti = [
+    ...s.statusa_mainas.map((m) => ({ datums: m.datums, k: 0, html: maina(m) })),
+    ...s.notikumi.map((n) => ({ datums: n.datums, k: 1, html: notikums(n) })),
+  ].sort((a, b) => b.datums.localeCompare(a.datums) || a.k - b.k);
+  const sakums = s.avoti[0];
+  return html`<ol class="laika-ass">
+    ${ieraksti.map((i) => i.html)}
+    ${ieraksti.length === 0 && html`<li class="la-tukss"><p>Notikumu vēl nav. ${s.parbaudams ? "Statuss mainās tikai ar Notikumu, kam ir oficiāls avots." : ""}</p></li>`}
+    ${sakums.publikacija && html`<li class="la-sakums"><p class="la-datums">Solīts</p><p class="mono">${AVOTI[sakums.veids]} · ${sakums.publikacija}</p></li>`}
+  </ol>`;
+}
+
+const solijumuSaraksts = (solijumi) => html`<ul class="saistitie">${solijumi.map(
+  (x) => html`<li><a href="/solijumi/${x.id}/">${x.nosaukums}</a>${statussPill(x.statuss)}</li>`,
+)}</ul>`;
+
+function citiSaraksti(s, m) {
+  const tema = s.tema;
+  // Visi pārējie saraksti CVK numuru secībā; bez solījumiem tēmā — vienā rindā.
+  const visi = m.saraksti
+    .filter((sr) => sr.slug !== s.saraksts.slug)
+    .map((sr) => ({ sr, visi: m.solijumi.filter((x) => x.saraksts.slug === sr.slug && x.tema.slug === tema.slug) }));
+  const ar = visi.filter((x) => x.visi.length > 0);
+  const bez = visi.filter((x) => x.visi.length === 0);
+  return html`<section class="sadala" aria-labelledby="citi-saraksti">
+  <h2 id="citi-saraksti">Ko par tēmu „${tema.nosaukums}” sola citi</h2>
+  ${ar.map(
+    ({ sr, visi }) => html`<div class="cits-saraksts">
+      <h3><abbr title="${sr.nosaukums}">${sr.saisinajums}</abbr> · ${sr.isais_nosaukums}</h3>
+      ${solijumuSaraksts(visi.slice(0, CITU_MAX))}
+      ${visi.length > CITU_MAX && html`<p><a href="/salidzinajums/?tema=${tema.slug}">Visi ${sr.saisinajums} solījumi šajā tēmā (${visi.length})</a></p>`}
+    </div>`,
+  )}
+  ${bez.length > 0 && html`<p class="vajs">Šajā tēmā solījumu nav: ${bez.map(({ sr }, i) => html`${i > 0 && ", "}<abbr title="${sr.nosaukums}">${sr.saisinajums}</abbr>`)}.</p>`}
+  <p><a href="/salidzinajums/?tema=${tema.slug}">Salīdzināt visus sarakstus tēmā „${tema.nosaukums}”</a></p>
+</section>`;
+}
+
+export function solijums(s, m) {
+  const [galvenais, ...citi] = s.avoti;
+  const tasPats = m.solijumi.filter((x) => x.id !== s.id && x.saraksts.slug === s.saraksts.slug && x.tema.slug === s.tema.slug);
+
   const saturs = html`
 <article class="solijums">
-  <p class="mono vajs"><abbr title="${s.saraksts.nosaukums}">${s.saraksts.saisinajums}</abbr> · ${s.saraksts.isais_nosaukums}</p>
+  <nav class="cels" aria-label="Atrašanās vieta"><a href="/">Solījumi</a> <span aria-hidden="true">›</span> <abbr title="${s.saraksts.nosaukums}">${s.saraksts.saisinajums}</abbr> · ${s.saraksts.isais_nosaukums}</nav>
   <h1>${s.nosaukums}</h1>
-  <p>${statussPill(s.statuss)} <span class="vajs">${[s.tema, ...s.papildu_temas].map((t) => t.nosaukums).join(" · ")}</span></p>
+  ${citats(galvenais, `galvenais ${citataPakape(galvenais.citats)}`)}
+  ${josla(s)}
 
-  ${s.avoti.map(
-    (a) => html`<figure class="citats">
-    <blockquote>„${a.citats}”</blockquote>
-    <figcaption>${a.url ? html`<a href="${a.url}">${AVOTI[a.veids]}</a>` : AVOTI[a.veids]} · ${a.vieta}</figcaption>
-  </figure>`,
-  )}
-  ${s.nesakritiba && html`<p class="nesakritiba"><strong>Programmas nesakrīt:</strong> ${s.nesakritiba} Statuss vērtēts pēc CVK programmas.</p>`}
-
-  <section class="karte" aria-labelledby="atb">
-    <h2 id="atb" class="lbl">Atbildīgais</h2>
-    <p><strong>${s.iestade.nosaukums}</strong><br><span class="vajs">${amatpersonaTeksts(s.amatpersona)}</span></p>
-    ${s.papildu_iestades.length > 0 && html`<p class="vajs">Arī: ${s.papildu_iestades.map((i) => i.nosaukums).join(", ")}</p>`}
-  </section>
-
-  ${s.parbaudams && html`<section aria-labelledby="vesture">
-    <h2 id="vesture" class="lbl">Statusa vēsture</h2>
-    ${
-      s.statusa_mainas.length
-        ? html`<ol class="vesture">${s.statusa_mainas.toReversed().map(
-            (m) => html`<li><span class="mono vajs">${datums(m.datums)}</span>
-            <div>${statussPill(m.statuss)}<p>${m.pamatojums}</p>
-            ${m.notikumi.map((n) => html`<a href="#${n.id}">${n.nosaukums}</a>`)}</div></li>`,
-          )}</ol>`
-        : html`<p class="vajs">Nav vērtēts — vēl nav Notikumu, kas mainītu Statusu.</p>`
-    }
+  ${citi.length > 0 && html`<section class="sadala" aria-labelledby="citati">
+    <h2 id="citati">Citi citāti no programmām</h2>
+    ${s.nesakritiba && html`<aside class="nesakritiba" aria-labelledby="nesakritiba">
+      <p class="lbl" id="nesakritiba">Nesakritība starp citātiem</p>
+      <p>${s.nesakritiba}</p>
+      <p class="vajs">Statusu vērtē pēc CVK programmas.</p>
+    </aside>`}
+    ${citi.map((a) => citats(a, "papildu"))}
   </section>`}
 
-  <section aria-labelledby="notikumi">
-    <h2 id="notikumi" class="lbl">Notikumi</h2>
-    ${
-      s.notikumi.length
-        ? html`<ol class="notikumi">${s.notikumi.toReversed().map(
-            (n) => html`<li id="${n.id}"><span class="mono vajs">${datums(n.datums)}</span>
-            <div><span class="virziens virziens-${n.virziens}">${n.virziens === "par" ? "Par" : "Pret"}</span>
-            <strong>${n.nosaukums}</strong><p>${n.pamatojums}</p>
-            <p class="vajs">${n.avoti.map((a) => html`<a href="${a.url}">${new URL(a.url).hostname}</a> `)}</p>
-            ${n.balsojums && balsojums(n.balsojums)}</div></li>`,
-          )}</ol>`
-        : html`<p class="vajs">Vēl nav Notikumu.</p>`
-    }
+  <section class="sadala" aria-labelledby="laika-ass">
+    <h2 id="laika-ass">${s.parbaudams ? "Statusa vēsture un Notikumi" : "Notikumi"}</h2>
+    ${laikaAss(s)}
   </section>
+
+  <section class="sadala" aria-labelledby="tas-pats">
+    <h2 id="tas-pats">Citi ${s.saraksts.saisinajums} solījumi tēmā „${s.tema.nosaukums}”</h2>
+    ${tasPats.length ? solijumuSaraksts(tasPats) : html`<p class="vajs">Citu ${s.saraksts.saisinajums} solījumu šajā tēmā nav.</p>`}
+  </section>
+
+  ${citiSaraksti(s, m)}
 </article>`;
 
   return izkartojums({
     cels: `/solijumi/${s.id}/`,
     virsraksts: `${s.saraksts.saisinajums}: ${s.nosaukums}`,
-    apraksts: `${s.saraksts.isais_nosaukums} solīja: „${s.avoti[0].citats}”`,
+    apraksts: `${s.saraksts.isais_nosaukums} solīja: „${galvenais.citats}” Statuss: ${STATUSI[s.statuss]}.`,
+    og: `/solijumi/${s.id}/og.png`,
     saturs,
   });
 }
