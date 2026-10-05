@@ -1,6 +1,6 @@
 id: jv-krievijas-atbildiba-un-izolacija
 saraksts: jv
-nosaukums: Krievijas atbildība, vājināšana un izolācija
+nosaukums: Starptautiskais spiediens uz Krieviju, tās vājināšana un izolācija
 parbaudams: false
 temas:
   galvena: arpolitika
@@ -9,12 +9,15 @@ iestades:
   galvena: arm
   papildu: []
 avoti:
+  - veids: cvk
+    vieta: "2. Ārpolitika un latvieši pasaulē"
+    citats: "Uzturēsim starptautisko spiedienu pret Krieviju"
   - veids: paplasinata
     vieta: "1. Drošība un aizsardzība › Apņemšanās un uzdevumi › Latvijas aizsardzība, inovācijas un partnerība"
-    citats: "Konsekventi uzturēsim prasību, lai agresors maksātu pilnu cenu par pastrādātajiem noziegumiem – iestājoties par Krievijas vājināšanu un izolāciju, starptautisko taisnīgumu"
+    citats: "Konsekventi uzturēsim prasību, lai agresors maksātu pilnu cenu par pastrādātajiem noziegumiem – iestājoties par Krievijas vājināšanu un izolāciju, starptautisko taisnīgumu, pastiprinot starptautisko spiedienu"
   - veids: paplasinata
     vieta: "2. Ārpolitika un latvieši pasaulē › Apņemšanās un uzdevumi › Ārējā drošība"
-    citats: "Turpināsim visaptverošu atbalstu Ukrainai, tostarp Krievijas vājināšanu un izolāciju"
-nesakritiba: ""
-piezimes: "Nepārbaudāms: prasības uzturēšana un iestāšanās par vājināšanu/izolāciju bez konkrēta iznākuma. Sankciju pastiprināšana („pastiprinot … sankcijas”) — atsevišķs Solījums jv-sankciju-pret-krieviju-pastiprinasana."
+    citats: "Turpināsim visaptverošu atbalstu Ukrainai, tostarp Krievijas vājināšanu un izolāciju, pastiprinot starptautisko spiedienu"
+nesakritiba: "CVK programma sola „Uzturēsim starptautisko spiedienu pret Krieviju”, bet paplašinātā programma — „pastiprinot starptautisko spiedienu” (stiprāka apņemšanās)."
+piezimes: "Vērtēšanas avots — CVK programma (pievienota 2. nodaļas izpildē). CVK teikumā trīs atsevišķi darbības vārdi — dalīts: starptautiskais spiediens (šeit), sankcijas (jv-sankciju-pret-krieviju-pastiprinasana), ekonomiskās ietekmējamības pārtraukšana (jv-tirdzniecibas-partrauksana-ar-krieviju-baltkrieviju). Paplašinātās programmas citāti pagarināti līdz „pastiprinot starptautisko spiedienu” — tas pats iznākums kā CVK „starptautiskais spiediens”; nosaukums pielāgots CVK. Nepārbaudāms: spiediens, vājināšana un izolācija bez konkrēta iznākuma; Nesakritība (uzturēt ↔ pastiprināt) fiksēta, Statuss netiek vērtēts. Sankciju pastiprināšana — atsevišķs Solījums."
 jautajums: ""
