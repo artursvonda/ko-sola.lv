@@ -1,6 +1,6 @@
 # Statusa vērtēšana
 
-Pierādījuma standarts katram Statusam (lēmums: "Statusa maiņas plūsma", #10). Vārdnīca: `CONTEXT.md`. Faili un plūsma: `notikumi.md`.
+Pierādījuma standarts katram Statusam (lēmums: "Statusa maiņas plūsma", #10). Vārdnīca: `GLOSSARY.md`. Faili un plūsma: `notikumi.md`.
 
 ## Ko vērtē
 

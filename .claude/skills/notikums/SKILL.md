@@ -8,7 +8,7 @@ argument-hint: <url>
 
 Viens izsaukums = viens Notikums = viens PR. Tu sagatavo melnrakstu; redaktors apstiprina ar merge. **Neko neizdomā**: katrs fakts no avota; ja nav pārliecības — `jautajums`, nevis minējums.
 
-Vispirms izlasi: `CONTEXT.md`, `docs/statusi/vertesana.md` (pierādījuma standarts), `docs/statusi/notikumi.md` (formāts).
+Vispirms izlasi: `GLOSSARY.md`, `docs/statusi/vertesana.md` (pierādījuma standarts), `docs/statusi/notikumi.md` (formāts).
 
 ## 1. Sagatavošana
 

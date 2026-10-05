@@ -14,7 +14,7 @@ Vienreiz: `npm ci` (Node ≥ 24).
 
 1. Zars no `main`: `ekstrakcija/<saraksts>-<nodaļas nr>`, piem., `ekstrakcija/jv-03`.
 2. Ekstraktors — atsevišķs aģents (jauna sesija vai subagent), kas redz tikai:
-   - `docs/ekstrakcija/metode.md`, `CONTEXT.md`;
+   - `docs/ekstrakcija/metode.md`, `GLOSSARY.md`;
    - CVK programmas failu un paplašinātās programmas failu(-s) no `data/saraksti.yaml`;
    - esošos `data/solijumi/<saraksts>/*.yaml`;
    - `data/temas.yaml`, `data/iestades.yaml`.

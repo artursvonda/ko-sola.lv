@@ -1,6 +1,6 @@
 # Solījumu ekstrakcijas metode
 
-Ekstraktora (AI) prompts. Vārdnīca: `CONTEXT.md`. Redaktora pārbaude: `parbaude.md`. Palaišana: `izpilde.md`.
+Ekstraktora (AI) prompts. Vārdnīca: `GLOSSARY.md`. Redaktora pārbaude: `parbaude.md`. Palaišana: `izpilde.md`.
 
 ## 0. Process
 
