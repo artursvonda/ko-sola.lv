@@ -1,0 +1,111 @@
+/* Pārskats (/): filtri, progress, tabula, detaļu panelis (B1). Rindots, ne kartītes. */
+
+/* Ar paneli tabulai vajag vairāk vietas nekā 1200px kolonnai. */
+main:has(> ko-parskats) { max-width: 90rem; }
+ko-parskats { display: block; }
+/* Bez JS filtri nestrādā (statiskais HTML neko nefiltrē) — tos nerāda; visas rindas redzamas. */
+ko-parskats:not(:defined) .filtri { display: none; }
+
+.parskats { display: grid; gap: var(--size-5); }
+.parskats-saturs { min-width: 0; }
+
+/* Filtri: šaurā ekrānā — viena atverama rinda virs satura; sānos — vienmēr atvērti. */
+.filtri-atvere > summary { display: flex; align-items: baseline; gap: var(--size-3); min-height: 44px; padding: var(--size-2) 0; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--line); cursor: pointer; list-style: none; }
+.filtri-atvere > summary::-webkit-details-marker { display: none; }
+.filtri-atvere > summary .lbl { margin: 0; }
+.filtri-atvere > summary .filtra-nosaukums { flex: 1; font-size: 14px; min-width: 0; }
+.filtri-atvere > summary::after { content: ""; width: 7px; height: 7px; border-right: 1.5px solid var(--muted); border-bottom: 1.5px solid var(--muted); transform: translateY(-3px) rotate(45deg); transition: transform .2s cubic-bezier(.16, 1, .3, 1); flex: none; align-self: center; }
+.filtri-atvere[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.filtri-atvere[open] > summary { margin-bottom: var(--size-4); }
+
+.filtra-grupa + .filtra-grupa { margin-top: var(--size-5); }
+.filtra-grupa ul { list-style: none; margin: 0; padding: 0; }
+.filtra-grupa a { display: flex; justify-content: space-between; align-items: center; gap: var(--size-3); min-height: 40px; padding: 6px var(--size-2); color: var(--ink); text-decoration: none; font-size: 14px; line-height: 1.3; }
+.filtra-grupa a:hover { background: var(--surface); color: var(--ink); }
+.filtra-grupa a[aria-current="true"] { background: var(--sel); font-weight: 600; box-shadow: inset 2px 0 0 var(--accent); }
+.filtra-grupa .skaits { font-size: 12px; color: var(--muted); font-weight: 400; }
+.filtra-grupa a.nulle { color: var(--muted); }
+
+/* Progress: „X no N solījumiem izpildīti”, statusu josla, skaiti. */
+.progress { display: flex; flex-direction: column; gap: var(--size-2); margin-bottom: var(--size-5); }
+.progress p { margin: 0; }
+.progress h1.filtra-nosaukums { font-size: 14px; font-weight: 400; line-height: 1.4; color: var(--muted); margin: 0; }
+.progress .liels { line-height: 1.1; }
+.progress .liels strong { font-weight: 700; }
+.progress .liels > .vajs { font-size: 40px; letter-spacing: -.02em; }
+.statusu-josla { display: flex; gap: 2px; height: 10px; }
+.statusu-josla .seg { flex-basis: 0; min-width: 2px; }
+.statusu-josla .seg[hidden] { display: none; }
+.seg-izpildits { background: var(--iz); }
+.seg-daleji-izpildits { background: var(--di); }
+.seg-procesa { background: var(--pr); }
+.seg-nav-izpildits { background: var(--ni); }
+.seg-nav-vertets { background: var(--line); }
+.progress .skaiti { margin: var(--size-1) 0 0; }
+.progress .skaiti li { display: inline-flex; align-items: center; gap: var(--size-2); }
+.progress .neparbaudami { font-size: 13px; }
+
+/* Tabula: Saraksts · Solījums (+ tēma) · Atbildīgais · Statuss. */
+.parskata-tabula tbody tr[hidden] { display: none; }
+.parskata-tabula .t-sar { font-size: 13px; font-weight: 600; width: 4rem; }
+.parskata-tabula .t-sol a { font-size: 15px; line-height: 1.35; }
+.parskata-tabula .t-tema, .parskata-tabula .t-ari { display: block; margin-top: 2px; font-size: 12px; line-height: 1.4; }
+.parskata-tabula .t-atb { font-size: 13px; line-height: 1.35; width: 13rem; }
+.parskata-tabula .t-st { width: 9.5rem; }
+ko-parskats:defined .parskata-tabula tbody tr { cursor: pointer; }
+.parskata-tabula tbody tr:hover { background: var(--surface); }
+.parskata-tabula tbody tr.izvelets { background: var(--sel); }
+.parskats-tabula > .tukss { padding: var(--size-4) 14px; margin: 0; }
+
+/* Šaurā ekrānā rinda divos stāvos: saraksts + Solījums, zem tā Atbildīgais un Statuss. */
+@media (max-width: 47.99rem) {
+  .parskata-tabula, .parskata-tabula tbody { display: block; }
+  .parskata-tabula thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .parskata-tabula tbody tr { display: grid; grid-template-columns: 2.75rem minmax(0, 1fr) auto; grid-template-areas: "sar sol sol" ". atb st"; gap: var(--size-2) var(--size-2); padding: var(--size-3) 0; border-bottom: 1px solid var(--line); }
+  .parskata-tabula tbody td { padding: 0; border: 0; }
+  .parskata-tabula .t-sar, .parskata-tabula .t-atb, .parskata-tabula .t-st { width: auto; }
+  .parskata-tabula .t-sar { grid-area: sar; padding-top: 2px; }
+  .parskata-tabula .t-sol { grid-area: sol; }
+  .parskata-tabula .t-atb { grid-area: atb; }
+  .parskata-tabula .t-st { grid-area: st; justify-self: end; }
+}
+
+/* Detaļu panelis: rindota josla blakus tabulai (tikai platā ekrānā ar JS). */
+.panelis { border-top: 1px solid var(--ink); padding-top: var(--size-2); }
+.panelis[hidden] { display: none; }
+.panelis:focus { outline: none; }
+.panelis-galva { display: flex; justify-content: space-between; align-items: center; gap: var(--size-3); }
+.panelis-galva p { margin: 0; font-size: 12px; }
+.panelis-aizvert { display: inline-grid; place-items: center; width: 40px; height: 40px; margin-right: -10px; border: 0; background: transparent; color: var(--muted); font: inherit; font-size: 22px; line-height: 1; cursor: pointer; }
+.panelis-aizvert:hover { color: var(--ink); background: var(--surface); }
+.panelis-virsraksts { font-size: 1rem; line-height: 1.35; font-weight: 600; margin: var(--size-1) 0 var(--size-4); text-wrap: balance; }
+.panelis-virsraksts:focus { outline: none; }
+.panelis-virsraksts a { color: var(--ink); text-decoration: none; }
+.panelis-virsraksts a:hover { text-decoration: underline; }
+/* Citāts paliek virsraksts (Quote Outranks The Title), tikai šaurākai kolonnai mērogots. */
+.panelis .galvenais blockquote p { font-size: 1.25rem; line-height: 1.3; }
+.panelis .galvenais.c-s blockquote p { font-size: 1.125rem; line-height: 1.35; }
+.panelis .josla { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: var(--size-5); }
+.panelis .josla dd { font-size: 15px; }
+.panelis h3.lbl { margin: var(--size-6) 0 var(--size-3); }
+.panelis .laika-ass > li { font-size: 14px; padding-bottom: var(--size-4); }
+.panelis .laika-ass h3 { font-size: 14px; }
+.panelis .la-vel p, .panelis .la-vel a { font-size: 14px; }
+.panelis .laika-ass > .la-vel::after { border-style: dotted; }
+.panelis-pilna { margin: var(--size-5) 0 0; font-size: 14px; }
+
+@media (min-width: 64rem) {
+  .parskats { grid-template-columns: 15rem minmax(0, 1fr); gap: var(--size-7); align-items: start; }
+  .filtri { position: sticky; top: 0; max-height: 100vh; overflow-y: auto; padding: var(--size-2) var(--size-4) var(--size-6) 0; border-right: 1px solid var(--line); }
+  .filtri-atvere > summary { display: none; }
+  ko-parskats:not(:defined) .parskats { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (min-width: 75rem) {
+  .parskats-zona.ar-paneli { display: grid; grid-template-columns: minmax(0, 1fr) 24rem; gap: var(--size-7); align-items: start; }
+  .panelis { position: sticky; top: var(--size-3); max-height: calc(100vh - var(--size-6)); overflow-y: auto; padding-left: var(--size-4); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .filtri-atvere > summary::after { transition: none; }
+}
