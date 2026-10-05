@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "solijums.schema.json",
+  "title": "Solījums",
+  "description": "data/solijumi/<saraksts>/<id>.yaml — sk. docs/ekstrakcija/metode.md §8",
+  "type": "object",
+  "required": ["id", "saraksts", "nosaukums", "parbaudams", "temas", "iestades", "avoti"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)+$" },
+    "saraksts": { "type": "string" },
+    "nosaukums": { "type": "string", "minLength": 1, "maxLength": 80 },
+    "parbaudams": { "type": "boolean" },
+    "temas": { "$ref": "#/$defs/galvenaUnPapildu" },
+    "iestades": { "$ref": "#/$defs/galvenaUnPapildu" },
+    "avoti": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["veids", "vieta", "citats"],
+        "additionalProperties": false,
+        "properties": {
+          "veids": { "enum": ["cvk", "paplasinata"] },
+          "vieta": { "type": "string", "minLength": 1 },
+          "citats": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "nesakritiba": { "type": "string" },
+    "piezimes": { "type": "string" },
+    "jautajums": { "type": "string" }
+  },
+  "$defs": {
+    "galvenaUnPapildu": {
+      "type": "object",
+      "required": ["galvena"],
+      "additionalProperties": false,
+      "properties": {
+        "galvena": { "type": "string" },
+        "papildu": { "type": "array", "maxItems": 2, "uniqueItems": true, "items": { "type": "string" } }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "ko-sola",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "parbaude": "node tools/parbaudit.js",
+    "parskats": "node tools/parskats.js",
+    "test": "node --test \"tools/test/*.test.js\""
+  },
+  "devDependencies": {
+    "ajv": "^8.20.0",
+    "yaml": "^2.9.1"
+  }
+}

@@ -26,6 +26,23 @@ Kandidātu saraksts, kas pārvarēja 5% barjeru 15. Saeimas vēlēšanās.
 Kandidātu saraksts, kā tas reģistrēts CVK; solījumu devējs. Var apvienot vairākas partijas (piem., Apvienotais saraksts). Lapā lasītājam drīkst saukt par "partiju".
 _Avoid_: partija (modelī)
 
+**Atbildīgā iestāde**:
+Valsts iestāde, kuras kompetencē ir Solījuma iznākums: ministrija, Valsts kanceleja vai Saeima. Nav atkarīga no tā, kurš Saraksts solīja, tāpēc opozīcijas un koalīcijas Solījumiem tā tiek noteikta vienādi. Arī Nepārbaudāmam solījumam ir Atbildīgā iestāde. Lasītājam lapā drīkst saukt "Atbildīgais".
+_Avoid_: ministrija (modelī), atbildīgā persona
+
+**Galvenā atbildīgā iestāde**:
+Solījuma vienīgā Atbildīgā iestāde, pēc kuras to rāda un skaita; katram Solījumam ir tieši viena.
+
+**Papildu atbildīgā iestāde**:
+Solījuma otrā vai trešā Atbildīgā iestāde (0–2) starpnozaru Solījumam; ietekmē tikai filtrēšanu, ne skaitīšanu.
+
+**Amatpersona**:
+Politiķis, kas noteiktā laika posmā vada Atbildīgo iestādi: ministrs, Ministru prezidents (Valsts kanceleja) vai Saeimas priekšsēdētājs. Ietver arī iepriekšējās valdības ministrus, kamēr tie ir amatā, un pienākumu izpildītājus. Tiek rādīta ar savu partiju, kas var arī nebūt neviena ievēlētā Saraksta daļa.
+_Avoid_: atbildīgais (modelī), valsts sekretārs
+
+**Frakcija**:
+Saraksta ievēlētie deputāti, kas Saeimā darbojas kopā un balso kā grupa; sastāvs var atšķirties no ievēlētā Saraksta (deputāti izstājas vai pāriet). Deputāts bez frakcijas nevienam Sarakstam netiek pieskaitīts.
+
 ### Solījumi
 
 **Solījums**:
@@ -36,13 +53,13 @@ Solījums, kas ir deklarācija bez izmērāma iznākuma (piem., "stiprināsim dr
 _Avoid_: deklarācija, tukšs solījums
 
 **Statuss**:
-Solījuma izpildes vērtējums: Nav vērtēts, Procesā, Izpildīts, Daļēji izpildīts vai Nav izpildīts.
+Solījuma izpildes vērtējums: Nav vērtēts, Procesā, Izpildīts, Daļēji izpildīts vai Nav izpildīts. Vērtē iznākumu — vai solītais notika —, nevis Saraksta paša rīcību, tāpēc koalīcijas un opozīcijas Sarakstiem skala ir vienāda.
 
 **Statusa maiņa**:
-Ieraksts statusa vēsturē ar datumu un pierādījuma saiti, kas balstās uz Notikumiem; AI sagatavo melnrakstu, redaktors apstiprina.
+Ieraksts Solījuma statusa vēsturē: datums, jaunais Statuss un pamatojums, kas atsaucas uz vienu vai vairākiem šī Solījuma Notikumiem. AI sagatavo melnrakstu, redaktors apstiprina. Statuss var mainīties jebkurā virzienā, bet ne atpakaļ uz Nav vērtēts.
 
 **Notikums**:
-Datēts, ar pierādījumu apliecināts fakts (piem., pieņemts likums, budžeta lēmums, balsojums), kas liecina par rīcību **par** vai **pret** vienu vai vairākiem Solījumiem, arī dažādu Sarakstu.
+Datēts, ar pierādījumu apliecināts fakts (piem., pieņemts likums, budžeta lēmums, balsojums), kas liecina par rīcību **par** vai **pret** vienu vai vairākiem Solījumiem, arī dažādu Sarakstu; virziens var atšķirties katram Solījumam. Pierādījums ir oficiāls dokuments; ziņa var būt tikai norāde uz to.
 _Avoid_: pierādījums, ziņa
 
 **Nesakritība**:

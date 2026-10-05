@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "temas.schema.json",
+  "title": "Tēmas",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["slug", "nosaukums", "ietver"],
+    "additionalProperties": false,
+    "properties": {
+      "slug": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+      "nosaukums": { "type": "string", "minLength": 1 },
+      "ietver": { "type": "string" }
+    }
+  }
+}

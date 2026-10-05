@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="lv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ekstrakcijas pārskats</title>
+<!-- Redaktora rīks (npm run parskats), nav publiskās lapas daļa. -->
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--ink:#1c2430;--mut:#6b7686;--line:#dde2e8;--acc:#2a4a70;--hi:#fff1b8;--hi2:#ffd94d;--bad:#c8372d;--ok:#2f7d4f;--nv:#8a5a00}
+*{box-sizing:border-box}body{margin:0;font:14px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink)}
+header{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--line);padding:10px 16px;display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center}
+header b{font-size:15px}
+.stat{color:var(--mut)}.stat strong{color:var(--ink)}
+.f{display:flex;gap:6px;flex-wrap:wrap}.f button{border:1px solid var(--line);background:#fff;border-radius:14px;padding:3px 10px;cursor:pointer;font:inherit;font-size:12px}.f button.on{background:var(--acc);color:#fff;border-color:var(--acc)}
+main{display:grid;grid-template-columns:1fr 1fr;height:calc(100vh - 54px)}
+@media(max-width:900px){main{grid-template-columns:1fr;height:auto}.col{height:auto!important}}
+.col{overflow:auto;height:100%;padding:12px 16px}.col+.col{border-left:1px solid var(--line)}
+h2{font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--mut);margin:18px 0 6px;overflow-wrap:anywhere}
+.u{padding:4px 8px;margin:2px 0;border-left:3px solid transparent;border-radius:2px;cursor:pointer}
+.u.h{font-weight:600;margin-top:10px;cursor:default}.u.b::before{content:"• ";color:var(--mut)}
+.u.miss{border-left-color:var(--bad);background:#fff5f4}.u.skip{color:var(--mut)}
+.u.cov{border-left-color:var(--ok)}.u.act{background:var(--hi)}
+mark{background:var(--hi);padding:0 1px}.u.act mark.me{background:var(--hi2)}
+.chips{display:inline-flex;flex-wrap:wrap;gap:3px;margin-left:4px}.chip{font:11px ui-monospace,monospace;background:#e9eef5;color:var(--acc);border-radius:3px;padding:0 4px}
+.s{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:10px 12px;margin:0 0 10px}
+.s.act{outline:2px solid var(--hi2)}
+.s .t{font-weight:600;font-size:15px}.s .id{font:11px ui-monospace,monospace;color:var(--mut)}
+.tag{display:inline-block;font-size:11px;border-radius:3px;padding:1px 6px;margin-right:4px;border:1px solid var(--line)}
+.tag.p{color:var(--ok);border-color:#b8dcc6}.tag.np{color:var(--nv);border-color:#e8d2a6;background:#fff8ea}
+.tag.gal{background:#e9eef5;border-color:#e9eef5;color:var(--acc)}.tag.new{background:var(--acc);border-color:var(--acc);color:#fff}
+.q{margin:6px 0 0;padding-left:8px;border-left:2px solid var(--line);font-size:13px}.q .src{font-size:11px;color:var(--mut)}
+.note{font-size:12px;color:var(--mut);margin-top:6px}.ask{font-size:12px;color:var(--bad);margin-top:6px}.ns{font-size:12px;color:var(--nv);margin-top:6px}
+.fb{margin-top:8px;display:flex;gap:4px;flex-wrap:wrap;align-items:center}.fb button{font-size:11px;border:1px solid var(--line);background:#fff;border-radius:3px;padding:2px 6px;cursor:pointer}
+.fb button.on{background:var(--ink);color:#fff}.fb input{flex:1;min-width:120px;font:inherit;font-size:12px;border:1px solid var(--line);border-radius:3px;padding:2px 6px}
+details{background:#fff;border:1px solid var(--line);border-radius:6px;padding:6px 10px;margin-bottom:10px}pre{white-space:pre-wrap;font-size:12px}
+.bad{background:#ffe3e0;color:var(--bad);padding:6px 10px;border-radius:6px;margin-bottom:10px;overflow-wrap:anywhere}
+#copy{margin-left:auto;background:var(--acc);color:#fff;border:0;border-radius:4px;padding:5px 10px;cursor:pointer}
+</style>
+</head>
+<body>
+<header>
+  <b id="ttl"></b>
+  <span class="stat" id="stats"></span>
+  <div class="f" id="filt"></div>
+  <button id="copy">Kopēt atsauksmi</button>
+</header>
+<main>
+  <section class="col" id="src"></section>
+  <section class="col" id="list"></section>
+</main>
+<script>
+const D=/*DATI*/null;
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"})[c]);
+const fb={};let filter="visi",active=null;
+const kinds=s=>{const v=new Set((s.avoti||[]).map(a=>a.veids));return v.has("cvk")&&v.has("paplasinata")?"abi":v.has("cvk")?"cvk":"pap"};
+const F={visi:["Visi",()=>1],zara:["Šajā zarā",s=>s.zara],p:["Pārbaudāmi",s=>s.parbaudams],np:["Nepārbaudāmi",s=>!s.parbaudams],abi:["Abos avotos",s=>kinds(s)=="abi"],ns:["Nesakritība",s=>(s.nesakritiba||"").trim()],cvk:["Tikai CVK",s=>kinds(s)=="cvk"],pap:["Tikai paplaš.",s=>kinds(s)=="pap"],j:["Ar jautājumu",s=>(s.jautajums||"").trim()],fb:["Ar atsauksmi",s=>fb[s.id]]};
+// Neizrakstīts = nav neviena Solījuma citāta un sadaļa nav "nav jāizraksta" (Pamatojums u.c. — pelēki).
+const isMiss=u=>u.k!="h"&&!u.ids.length&&!u.pelecs;
+const units=()=>D.avoti.flatMap(a=>a.vienibas);
+function stats(){const n=D.sol.length,np=D.sol.filter(s=>!s.parbaudams).length,abi=D.sol.filter(s=>kinds(s)=="abi").length,miss=units().filter(isMiss).length;
+ document.getElementById("stats").innerHTML=`<strong>${n}</strong> Solījumi · <strong>${np}</strong> nepārbaudāmi · <strong>${abi}</strong> abos avotos · <strong style="color:var(--bad)">${miss}</strong> neizrakstīti avota punkti`}
+function unitHTML(u){if(u.k=="h")return `<div class="u h">${esc(u.t)}</div>`;
+ let t=u.t,out="",pos=0;const qs=u.q.slice().sort((a,b)=>a[0]-b[0]);
+ for(const [a,b,id] of qs){if(a<pos)continue;out+=esc(t.slice(pos,a))+`<mark data-id="${id}">`+esc(t.slice(a,b))+"</mark>";pos=b}
+ out+=esc(t.slice(pos));
+ const cls=["u",u.k,u.ids.length?"cov":isMiss(u)?"miss":"skip"].join(" ");
+ const ch=u.ids.map(id=>`<span class="chip">${esc(id.replace(D.prefikss,""))}</span>`).join("");
+ return `<div class="${cls}" data-ids="${u.ids.join(" ")}">${out}${ch?`<span class="chips">${ch}</span>`:""}</div>`}
+function renderSrc(){const el=document.getElementById("src");
+ el.innerHTML=(D.kludas.length?`<div class="bad"><b>${D.kludas.length} kļūdas (npm run parbaude):</b><br>${D.kludas.map(esc).join("<br>")}</div>`:"")+
+ D.avoti.map(a=>`<h2>${esc(a.virsraksts)}</h2>`+(a.vienibas.length?a.vienibas.map(unitHTML).join(""):`<div class="u skip">(šajā izpildē nav)</div>`)).join("");
+ el.querySelectorAll(".u[data-ids]").forEach(u=>u.onclick=()=>{const ids=u.dataset.ids.split(" ").filter(Boolean);if(ids[0])activate(ids[0],true)})}
+function card(s){const f=fb[s.id]||{};
+ const tags=`${s.zara?`<span class="tag new">Šajā zarā</span>`:""}<span class="tag ${s.parbaudams?"p":"np"}">${s.parbaudams?"Pārbaudāms":"Nepārbaudāms"}</span><span class="tag gal">${esc(s.temas?.galvena)}</span>${(s.temas?.papildu||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}<span class="tag gal">${esc(s.iestades?.galvena)}</span>${(s.iestades?.papildu||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}`;
+ const q=(s.avoti||[]).map(a=>`<div class="q"><div class="src">${a.veids=="cvk"?"CVK":"Paplašinātā"} · ${esc(a.vieta)}</div>„${esc(a.citats)}”</div>`).join("");
+ const btn=(k,l)=>`<button data-k="${k}" class="${f.k==k?"on":""}">${l}</button>`;
+ return `<div class="s${active==s.id?" act":""}" id="s-${s.id}"><div class="id">${esc(s.id)}</div><div class="t">${esc(s.nosaukums)}</div><div>${tags}</div>${q}
+ ${(s.nesakritiba||"").trim()?`<div class="ns">Nesakritība: ${esc(s.nesakritiba)}</div>`:""}${(s.piezimes||"").trim()?`<div class="note">Piezīmes: ${esc(s.piezimes)}</div>`:""}${(s.jautajums||"").trim()?`<div class="ask">Jautājums: ${esc(s.jautajums)}</div>`:""}
+ <div class="fb" data-id="${s.id}">${btn("ok","OK")}${btn("dalit","Dalīt")}${btn("apvienot","Apvienot ar…")}${btn("parbaudamiba","Pārbaudāmība nepareiza")}${btn("tema","Tēma")}${btn("iestade","Iestāde")}${btn("nosaukums","Nosaukums")}${btn("izmest","Nav solījums")}<input placeholder="komentārs" value="${esc(f.c||"")}"></div></div>`}
+function renderList(){const el=document.getElementById("list");const fn=F[filter][1];
+ el.innerHTML=(D.summary?`<details><summary>Ekstraktora kopsavilkums</summary><pre>${esc(D.summary)}</pre></details>`:"")+D.sol.filter(fn).map(card).join("");
+ el.querySelectorAll(".s").forEach(c=>c.onmouseenter=()=>activate(c.id.slice(2),false));
+ el.querySelectorAll(".fb").forEach(b=>{const id=b.dataset.id;
+  b.querySelectorAll("button").forEach(x=>x.onclick=()=>{const f=fb[id]||(fb[id]={});f.k=f.k==x.dataset.k?null:x.dataset.k;if(!f.k&&!f.c)delete fb[id];renderList();renderFilt()});
+  b.querySelector("input").onchange=e=>{const f=fb[id]||(fb[id]={});f.c=e.target.value;if(!f.k&&!f.c)delete fb[id];renderFilt()}})}
+function activate(id,scroll){active=id;document.querySelectorAll(".u.act,.s.act").forEach(e=>e.classList.remove("act"));document.querySelectorAll("mark.me").forEach(m=>m.classList.remove("me"));
+ let first=null;document.querySelectorAll(".u[data-ids]").forEach(u=>{if(u.dataset.ids.split(" ").includes(id)){u.classList.add("act");first??=u}});
+ document.querySelectorAll(`mark[data-id="${id}"]`).forEach(m=>m.classList.add("me"));
+ const c=document.getElementById("s-"+id);c?.classList.add("act");
+ if(scroll){c?.scrollIntoView({block:"center",behavior:"smooth"})}else{first?.scrollIntoView({block:"nearest",behavior:"smooth"})}}
+function renderFilt(){document.getElementById("filt").innerHTML=Object.entries(F).map(([k,[l,fn]])=>`<button data-k="${k}" class="${filter==k?"on":""}">${l} (${D.sol.filter(fn).length})</button>`).join("");
+ document.querySelectorAll("#filt button").forEach(b=>b.onclick=()=>{filter=b.dataset.k;renderFilt();renderList()})}
+document.getElementById("copy").onclick=()=>{const L={ok:"OK",dalit:"Dalīt",apvienot:"Apvienot",parbaudamiba:"Pārbaudāmība nepareiza",tema:"Tēma",iestade:"Iestāde",nosaukums:"Nosaukums",izmest:"Nav solījums"};
+ const t=Object.entries(fb).map(([id,f])=>`- \`${id}\` — ${f.k?L[f.k]:""}${f.c?": "+f.c:""}`).join("\n")||"(nav atsauksmju)";
+ navigator.clipboard.writeText(t).then(()=>{const b=document.getElementById("copy");b.textContent="Nokopēts";setTimeout(()=>b.textContent="Kopēt atsauksmi",1500)})};
+document.title=`Pārskats · ${D.title}`;document.getElementById("ttl").textContent=D.title;stats();renderFilt();renderSrc();renderList();
+</script>
+</body>
+</html>

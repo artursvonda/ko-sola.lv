@@ -1,0 +1,58 @@
+# Tēmas — plakans saraksts (lēmums: "Tēmu taksonomija", #6). Slug nemainās pēc publicēšanas.
+- slug: nodokli-un-budzets
+  nosaukums: Nodokļi un budžets
+  ietver: IIN, PVN, NĪN, parāds, budžeta disciplīna
+- slug: ekonomika-un-darbs
+  nosaukums: Ekonomika un darbs
+  ietver: uzņēmējdarbība, investīcijas, valsts kapitālsabiedrības, finanšu sektors, minimālā alga
+- slug: veseliba
+  nosaukums: Veselība
+  ietver: veselības aprūpe, zāles, finansējums
+- slug: izglitiba-un-zinatne
+  nosaukums: Izglītība un zinātne
+  ietver: skolas, augstskolas, zinātne, inovācijas
+- slug: gimenes-un-demografija
+  nosaukums: Ģimenes un demogrāfija
+  ietver: bērni, atbalsts ģimenēm, dzimstība
+- slug: socialais-atbalsts-un-pensijas
+  nosaukums: Sociālais atbalsts un pensijas
+  ietver: seniori, invaliditāte, pabalsti, vardarbības upuri
+- slug: majokli
+  nosaukums: Mājokļi
+  ietver: mājokļu pieejamība un būvniecība
+- slug: aizsardziba
+  nosaukums: Aizsardzība
+  ietver: armija, VAD, aizsardzības budžets
+- slug: arpolitika
+  nosaukums: Ārpolitika
+  ietver: NATO, ES, Ukraina, Krievija, starptautiskās attiecības
+- slug: iekseja-drosiba-un-tiesiskums
+  nosaukums: Iekšējā drošība un tiesiskums
+  ietver: policija, civilā aizsardzība, tiesas, korupcija
+- slug: migracija-un-diaspora
+  nosaukums: Migrācija un diaspora
+  ietver: imigrācija, uzturēšanās atļaujas, remigrācija, pilsonība
+- slug: valoda-kultura-un-mediji
+  nosaukums: Valoda, kultūra un mediji
+  ietver: latviešu valoda, identitāte, kultūra, mediji, sports
+- slug: energetika
+  nosaukums: Enerģētika
+  ietver: energoapgāde, energoneatkarība, enerģijas cenas
+- slug: vide-un-klimats
+  nosaukums: Vide un klimats
+  ietver: klimats, meži, daba, atkritumi
+- slug: transports
+  nosaukums: Transports
+  ietver: ceļi, dzelzceļš, Rail Baltica, airBaltic, ostas
+- slug: regioni-un-pasvaldibas
+  nosaukums: Reģioni un pašvaldības
+  ietver: reģionālā attīstība, pašvaldību finansēšana
+- slug: lauksaimnieciba-un-zivsaimnieciba
+  nosaukums: Lauksaimniecība un zivsaimniecība
+  ietver: lauksaimniecība, zivsaimniecība, zeme
+- slug: valsts-parvalde
+  nosaukums: Valsts pārvalde
+  ietver: birokrātija, efektivitāte, e-pārvalde
+- slug: demokratija-un-cilvektiesibas
+  nosaukums: Demokrātija un cilvēktiesības
+  ietver: vēlēšanas, referendumi, pilsoniskā sabiedrība, cilvēktiesības, vērtību solījumi

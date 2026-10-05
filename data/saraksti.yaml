@@ -1,0 +1,137 @@
+# Ievēlētie Saraksti un to avoti. Slug nemainās pēc publicēšanas (ir Solījumu ID sākumā).
+#
+# avoti[].veids: cvk | paplasinata
+# avoti[].fails: teksts repo (sources/); citātus pārbauda pret to. Bez faila no avota citēt nevar.
+# CVK avotam:
+#   nodalas — CVK nodaļu virsraksti (viena nodaļa = viena ekstrakcijas izpilde = viens PR);
+#   neizrakstit — virsraksti, ar kuriem sākas teksts ārpus nodaļām (noslēgums).
+# Paplašinātajam avotam (sk. sources/README.md):
+#   atbilst_cvk — paplašinātās nodaļa → CVK nodaļa, kuras izpildē to apstrādā;
+#                 nodaļas, kuru te nav, apstrādā pēdējā izpildē "Ārpus CVK nodaļām";
+#   izlaist — sadaļas, kas nav šī avota teksts (piem., iekļauta CVK programmas kopija);
+#   nav_jaizraksta — sadaļas, kuras metode neizraksta (pārskatā pelēkas).
+
+- slug: sv
+  nosaukums: SUVERĒNĀ VARA / APVIENĪBA JAUNLATVIEŠI
+  isais_nosaukums: Suverēnā vara
+  saisinajums: SV
+  nr: 1
+  avoti:
+    - veids: cvk
+      url: https://www.vestnesis.lv/op/2026/176A.1
+      fails: sources/cvk/01-suverena-vara.md
+      nodalas:
+        - DEMOGRĀFIJA
+        - EKONOMIKA
+        - IZGLĪTĪBA, ZINĀTNE, KULTŪRA UN SPORTS
+        - VESELĪBAS APRŪPE
+        - VALSTS PĀRVALDE UN TAUTAS VARA
+    # Paplašinātā programma — pēc lēmuma "LPV ekonomiskā un SV partijas programma — vai paplašinātā programma?" (#16).
+
+- slug: na
+  nosaukums: Nacionālā apvienība "Visu Latvijai!"–"Tēvzemei un Brīvībai/LNNK"
+  isais_nosaukums: Nacionālā apvienība
+  saisinajums: NA
+  nr: 5
+  avoti:
+    - veids: cvk
+      url: https://www.vestnesis.lv/op/2026/176A.5
+      fails: sources/cvk/05-nacionala-apvieniba.md
+      nodalas:
+        - LATVISKA LATVIJA
+        - DROŠA LATVIJA
+        - AUGOŠA LATVIJA
+        - LATVIJA ĢIMENĒM
+      neizrakstit:
+        - AICINĀJUMS
+
+- slug: as
+  nosaukums: "APVIENOTAIS SARAKSTS – Latvijas Zaļā partija, Latvijas Reģionu Apvienība, Liepājas partija"
+  isais_nosaukums: Apvienotais saraksts
+  saisinajums: AS
+  nr: 7
+  avoti:
+    - veids: cvk
+      url: https://www.vestnesis.lv/op/2026/176A.7
+      fails: sources/cvk/07-apvienotais-saraksts.md
+      nodalas:
+        - Iekšējai un ārējai drošībai
+        - Atbildīgām investīcijām sabiedrības labumam
+        - Ekonomikas izrāvienam
+        - Veselības un sociālajai aprūpei
+        - Reģionu, infrastruktūras un lauksaimniecības attīstībai
+        - Demogrāfijas, ģimeņu un sociālās drošības veicināšanai
+        - Izglītībai, kultūrai, jaunatnei un sportam
+        - Enerģētikas un dabas drošībai
+        - Jaunai valsts pārvaldei
+        - Latvijas vārdam Eiropā un pasaulē
+
+- slug: lpv
+  nosaukums: LATVIJA PIRMAJĀ VIETĀ
+  isais_nosaukums: Latvija pirmajā vietā
+  saisinajums: LPV
+  nr: 8
+  avoti:
+    - veids: cvk
+      url: https://www.vestnesis.lv/op/2026/176A.8
+      fails: sources/cvk/08-latvija-pirmaja-vieta.md
+      nodalas:
+        - STIPRA UN NEATKARĪGA LATVIJA
+        - VALSTS ATTĪSTĪBA
+        - ĢIMEŅU ATBALSTS UN KRISTĪGĀS VĒRTĪBAS
+        - DROŠĪBA
+        - VESELĪBA UN LABKLĀJĪBA
+        - IZGLĪTĪBA
+        - EFEKTĪVA VALSTS PĀRVALDE
+    # Paplašinātā programma — pēc lēmuma #16.
+
+- slug: jv
+  nosaukums: Jaunā VIENOTĪBA
+  isais_nosaukums: Jaunā VIENOTĪBA
+  saisinajums: JV
+  nr: 9
+  avoti:
+    - veids: cvk
+      url: https://www.vestnesis.lv/op/2026/176A.9
+      fails: sources/cvk/09-jauna-vienotiba.md
+      nodalas:
+        - 1. Drošība un aizsardzība
+        - 2. Ārpolitika un latvieši pasaulē
+        - 3. Finanses
+        - 4. Ekonomika, enerģētika un uzņēmējdarbība
+        - 5. Veselība, labklājība un demogrāfija
+        - 6. Valsts pārvalde
+        - 7. Zinātne, inovācijas un tehnoloģijas
+        - 8. Izglītība, latviešu valoda, kultūra un pilsoniskā sabiedrība
+        - 9. Vide, reģioni un infrastruktūra
+        - 10. Tiesiskums
+      neizrakstit:
+        - MŪSU REDZĒJUMS
+    - veids: paplasinata
+      url: https://jaunavienotiba.lv/wp-content/uploads/2026/08/Jaunas-VIENOTIBAS-programma_gara_20072026.pdf
+      # fails, atbilst_cvk, izlaist, nav_jaizraksta — pievieno "Ekstrakcija: Jaunā VIENOTĪBA" (#17).
+
+- slug: pro
+  nosaukums: PROGRESĪVIE
+  isais_nosaukums: Progresīvie
+  saisinajums: PRO
+  nr: 14
+  avoti:
+    - veids: cvk
+      url: https://www.vestnesis.lv/op/2026/176A.14
+      fails: sources/cvk/14-progresivie.md
+      nodalas:
+        - EKONOMIKA UN ENERGONEATKARĪBA
+        - DZĪVES DĀRDZĪBAS MAZINĀŠANA
+        - PRETKORUPCIJA UN VALSTS PĀRVALDE
+        - DEMOKRĀTIJA UN CILVĒKTIESĪBAS
+        - VESELĪGA SABIEDRĪBA UN PIEEJAMA APRŪPE
+        - MEŽI
+        - KLIMATS UN VIDE
+        - IZGLĪTĪBA UN ZINĀTNE
+        - DROŠĪBA UN ĀRPOLITIKA
+        - KULTŪRA, KAS STIPRINA DEMOKRĀTIJU
+        - REĢIONI
+    - veids: paplasinata
+      url: https://progresivie.lv/velesanas/programma#gara-programma
+      # fails, atbilst_cvk — pievieno "Ekstrakcija: Progresīvie" (#18).
