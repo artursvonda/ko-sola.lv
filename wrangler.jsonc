@@ -1,0 +1,12 @@
+// Cloudflare Worker ar statiskajiem failiem (lēmums: "Datu glabāšana un hostings", #5).
+// Pagaidām bez servera koda (`main`); to pievieno, kad vajadzīgi dinamiski maršruti.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ko-sola",
+  "compatibility_date": "2026-10-05",
+  "assets": {
+    "directory": "./dist",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}

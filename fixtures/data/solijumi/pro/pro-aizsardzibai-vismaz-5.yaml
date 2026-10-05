@@ -1,0 +1,19 @@
+id: pro-aizsardzibai-vismaz-5
+saraksts: pro
+nosaukums: Aizsardzības finansējums vismaz 5% apjomā
+parbaudams: true
+temas:
+  galvena: aizsardziba
+iestades:
+  galvena: am
+  papildu:
+    - fm
+avoti:
+  - veids: cvk
+    vieta: DROŠĪBA UN ĀRPOLITIKA
+    citats: Saglabāsim finansējumu aizsardzības nozarei vismaz 5% apjomā.
+statusa_mainas:
+  - datums: 2026-12-10
+    statuss: izpildits
+    notikumi: [2026-12-10-paraugs-budzeta-likums-2027]
+    pamatojums: "PARAUGS: 2027. gada budžetā aizsardzībai 5,1% no IKP."

@@ -1,0 +1,23 @@
+id: 2026-12-10-paraugs-budzeta-likums-2027
+datums: 2026-12-10
+nosaukums: "PARAUGS: Saeima pieņem 2027. gada valsts budžeta likumu"
+apraksts: Izdomāts Notikums lapas izstrādei. Budžets paredz deficītu 2,1% no IKP, aizsardzībai 5,1% no IKP; IIN no kapitāla pieauguma likme nemainās.
+avoti:
+  - url: https://example.com/paraugs/likumi/budzets-2027
+    veids: likumi
+solijumi:
+  - id: as-bezdeficita-bazes-budzets
+    virziens: par
+    pamatojums: Deficīts samazināts salīdzinājumā ar 2026. gadu.
+  - id: as-iin-kapitala-pieaugumam-17
+    virziens: pret
+    pamatojums: Budžeta paketē likme nav samazināta, un nodokļu politikas pamatnostādnes to neparedz līdz 2030. gadam.
+  - id: na-aizsardzibai-virs-5-no-ikp
+    virziens: par
+    pamatojums: Aizsardzības finansējums 5,1% no IKP.
+  - id: pro-aizsardzibai-vismaz-5
+    virziens: par
+    pamatojums: Aizsardzības finansējums 5,1% no IKP.
+  - id: jv-aizsardzibai-5-nato-klatbutne
+    virziens: par
+    pamatojums: Aizsardzības finansējums 5,1% no IKP; par NATO klātbūtni budžets neko nenosaka.

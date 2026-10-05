@@ -1,0 +1,21 @@
+id: na-aizsardzibai-virs-5-no-ikp
+saraksts: na
+nosaukums: Aizsardzības finansējums virs 5% no IKP
+parbaudams: true
+temas:
+  galvena: aizsardziba
+  papildu:
+    - ekonomika-un-darbs
+iestades:
+  galvena: am
+  papildu:
+    - fm
+avoti:
+  - veids: cvk
+    vieta: DROŠA LATVIJA
+    citats: Aizsardzības finansējumu palielināsim virs 5% no IKP, attīstot vietējo militāro industriju.
+statusa_mainas:
+  - datums: 2026-12-10
+    statuss: izpildits
+    notikumi: [2026-12-10-paraugs-budzeta-likums-2027]
+    pamatojums: "PARAUGS: 2027. gada budžetā aizsardzībai 5,1% no IKP."

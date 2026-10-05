@@ -1,0 +1,12 @@
+id: sv-atcelt-obligato-iesauksanu-vad
+saraksts: sv
+nosaukums: Atcelt jauniešu obligāto iesaukšanu VAD
+parbaudams: true
+temas:
+  galvena: aizsardziba
+iestades:
+  galvena: am
+avoti:
+  - veids: cvk
+    vieta: VALSTS PĀRVALDE UN TAUTAS VARA
+    citats: atcelt jauniešu obligāto iesaukšanu Valsts aizsardzības dienestā

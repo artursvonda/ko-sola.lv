@@ -1,0 +1,17 @@
+id: as-bezdeficita-bazes-budzets
+saraksts: as
+nosaukums: Bezdeficīta bāzes budžets četru gadu laikā
+parbaudams: true
+temas:
+  galvena: nodokli-un-budzets
+iestades:
+  galvena: fm
+avoti:
+  - veids: cvk
+    vieta: Atbildīgām investīcijām sabiedrības labumam
+    citats: Mūsu prioritāte ir ieviest kārtību valsts finansēs, lai sasniegtu bezdeficīta bāzes budžetu četru gadu laikā.
+statusa_mainas:
+  - datums: 2026-12-10
+    statuss: procesa
+    notikumi: [2026-12-10-paraugs-budzeta-likums-2027]
+    pamatojums: "PARAUGS: deficīts samazinās, bet bāzes budžets vēl nav bezdeficīta."

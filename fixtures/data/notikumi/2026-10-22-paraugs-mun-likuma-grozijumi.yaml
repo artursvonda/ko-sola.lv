@@ -1,0 +1,26 @@
+id: 2026-10-22-paraugs-mun-likuma-grozijumi
+datums: 2026-10-22
+nosaukums: "PARAUGS: Saeima galīgajā lasījumā pieņem grozījumus Mikrouzņēmumu nodokļa likumā"
+apraksts: Izdomāts Notikums lapas izstrādei. Grozījumi nosaka 10% likmi fiziskajām personām no 2027. gada.
+avoti:
+  - url: https://example.com/paraugs/saeima/mun-grozijumi
+    veids: saeima
+solijumi:
+  - id: as-mun-likme-10-fiziskam-personam
+    virziens: par
+    pamatojums: Pieņemtie grozījumi ievieš tieši solīto 10% likmi fiziskajām personām.
+balsojums:
+  saeima: 14
+  id: 00000000-0000-0000-0000-000000000001
+  laiks: 2026-10-22T10:15:00
+  motivs: "PARAUGS: Grozījumi Mikrouzņēmumu nodokļa likumā, 3.lasījums"
+  datu_avots: https://data.gov.lv/paraugs
+  kopa: { par: 61, pret: 20, atturas: 3 }
+  frakcijas:
+    JV: { par: 22, pret: 0, atturas: 0, nebalsoja: 1 }
+    ZZS: { par: 14, pret: 0, atturas: 1 }
+    NA: { par: 11, pret: 0, atturas: 0 }
+    AS: { par: 14, pret: 0, atturas: 0 }
+    LPV: { par: 0, pret: 8, atturas: 0 }
+    PRO: { par: 0, pret: 9, atturas: 0 }
+    bez_frakcijas: { par: 0, pret: 3, atturas: 2 }

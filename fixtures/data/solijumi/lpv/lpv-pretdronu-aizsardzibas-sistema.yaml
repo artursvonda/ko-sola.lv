@@ -1,0 +1,12 @@
+id: lpv-pretdronu-aizsardzibas-sistema
+saraksts: lpv
+nosaukums: Pretdronu aizsardzības sistēma
+parbaudams: true
+temas:
+  galvena: aizsardziba
+iestades:
+  galvena: am
+avoti:
+  - veids: cvk
+    vieta: DROŠĪBA
+    citats: Izveidosim modernu aizsardzības sistēmu, lai nepieļautu naidīgu vai neidentificētu dronu nonākšanu Latvijas teritorijā.

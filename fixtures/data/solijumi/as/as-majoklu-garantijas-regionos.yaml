@@ -1,0 +1,16 @@
+id: as-majoklu-garantijas-regionos
+saraksts: as
+nosaukums: Valsts garantijas mājokļu būvniecībai reģionos
+parbaudams: true
+temas:
+  galvena: majokli
+  papildu:
+    - regioni-un-pasvaldibas
+iestades:
+  galvena: em
+  papildu:
+    - varam
+avoti:
+  - veids: cvk
+    vieta: Ekonomikas izrāvienam
+    citats: Izveidosim valsts garantiju programmu mājokļu būvniecībai reģionos, lai palielinātu kreditēšanu par 2 miljardiem.

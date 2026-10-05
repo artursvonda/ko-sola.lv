@@ -1,0 +1,11 @@
+id: 2026-11-26-paraugs-vienotais-pieraksts
+datums: 2026-11-26
+nosaukums: "PARAUGS: Ministru kabinets apstiprina vienotā pieraksta sistēmas noteikumus"
+apraksts: Izdomāts Notikums lapas izstrādei. Vienotais pieraksts ieviests valsts apmaksātiem speciālistiem; kvotu sistēma nav mainīta.
+avoti:
+  - url: https://example.com/paraugs/tap/vienotais-pieraksts
+    veids: mk
+solijumi:
+  - id: as-vienots-pieraksts-kvotu-reforma
+    virziens: par
+    pamatojums: Vienotais pieraksts ieviests, kvotu sistēmas reforma — nē.

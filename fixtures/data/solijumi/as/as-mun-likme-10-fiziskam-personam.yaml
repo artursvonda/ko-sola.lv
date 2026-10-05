@@ -1,0 +1,17 @@
+id: as-mun-likme-10-fiziskam-personam
+saraksts: as
+nosaukums: 10% mikrouzņēmumu nodokļa likme fiziskajām personām
+parbaudams: true
+temas:
+  galvena: nodokli-un-budzets
+iestades:
+  galvena: fm
+avoti:
+  - veids: cvk
+    vieta: Ekonomikas izrāvienam
+    citats: Panāksim Mikrouzņēmumu nodokļa likuma grozījumu pieņemšanu, lai ieviestu 10% likmi fiziskajām personām.
+statusa_mainas:
+  - datums: 2026-10-22
+    statuss: izpildits
+    notikumi: [2026-10-22-paraugs-mun-likuma-grozijumi]
+    pamatojums: "PARAUGS: likums pieņemts, likme 10% fiziskajām personām."
