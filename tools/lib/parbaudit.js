@@ -1,9 +1,10 @@
-// Datu pārbaude (CI): shēmas, tēmu un iestāžu slugi, citātu burtiskums pret sources/.
+// Datu pārbaude (CI): shēmas, tēmu un iestāžu slugi, citātu burtiskums pret sources/,
+// Notikumi un Statusa maiņas (docs/statusi/notikumi.md).
 import { existsSync, readFileSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import Ajv2020 from "ajv/dist/2020.js";
-import { lasitYaml, solijumuFaili, avotuLasitajs } from "./dati.js";
+import { lasitYaml, solijumuFaili, notikumuFaili, avotuLasitajs } from "./dati.js";
 import { atrastCitatu } from "./avots.js";
 
 const SHEMAS = join(dirname(fileURLToPath(import.meta.url)), "../../schemas");
@@ -13,10 +14,12 @@ const validet = {
   saraksti: shema("saraksti.schema.json"),
   temas: shema("temas.schema.json"),
   solijums: shema("solijums.schema.json"),
+  notikums: shema("notikums.schema.json"),
 };
 
 const VIETAS_ATDALITAJS = " › ";
 const ID_VARDI_MAX = 6;
+const BEZ_FRAKCIJAS = "bez_frakcijas";
 
 /** @returns {{ fails: string, zinojums: string }[]} */
 export function parbaudit(sakne) {
@@ -54,7 +57,10 @@ export function parbaudit(sakne) {
 
   parbauditSarakstus(saraksti, avots, k);
 
-  for (const f of solijumuFaili(sakne)) {
+  const solijumi = solijumuFaili(sakne);
+  const notikumi = parbauditNotikumus(sakne, ielasit, new Set(solijumi.map((f) => f.vards)), saraksti, k);
+
+  for (const f of solijumi) {
     const s = ielasit(f.cels, validet.solijums);
     if (!s) continue;
     const kf = (zinojums) => k(f.cels, zinojums);
@@ -75,6 +81,7 @@ export function parbaudit(sakne) {
     else parbauditSlugus(s.iestades, iestazuSlugi, "iestāde", "data/iestades.yaml", kf);
 
     if ((s.jautajums ?? "").trim()) kf(`neatbildēts jautājums redaktoram: ${s.jautajums.trim()}`);
+    parbauditStatusaMainas(s, notikumi, kf);
 
     const pirmaisCvk = s.avoti.findIndex((a) => a.veids === "cvk");
     if (pirmaisCvk > 0) kf("CVK citātam jābūt pirmajam avotos");
@@ -93,6 +100,64 @@ export function parbaudit(sakne) {
     });
   }
   return kludas;
+}
+
+/** @returns {Map<string, object>} derīgie Notikumi pēc id */
+function parbauditNotikumus(sakne, ielasit, solijumuId, saraksti, k) {
+  const notikumi = new Map();
+  const frakcijas = new Set(saraksti.map((s) => s.frakcija).filter(Boolean));
+  const balsojumi = new Map();
+  for (const f of notikumuFaili(sakne)) {
+    const n = ielasit(f.cels, validet.notikums);
+    if (!n) continue;
+    const kf = (zinojums) => k(f.cels, zinojums);
+    notikumi.set(n.id, n);
+
+    if (n.id !== f.vards) kf(`id "${n.id}" nesakrīt ar faila vārdu "${f.vards}.yaml"`);
+    if (!n.id.startsWith(`${n.datums}-`)) kf(`id jāsākas ar datumu "${n.datums}-"`);
+    if (!n.avoti.some((a) => a.veids !== "zinas")) kf("vajag vismaz vienu oficiālu avotu (ne zinas)");
+
+    const redzeti = new Set();
+    for (const { id } of n.solijumi) {
+      if (redzeti.has(id)) kf(`Solījums "${id}" atkārtojas`);
+      redzeti.add(id);
+      if (!solijumuId.has(id)) kf(`Solījums "${id}" nav data/solijumi/`);
+    }
+
+    const b = n.balsojums;
+    if (b) {
+      if (b.laiks.slice(0, 10) !== n.datums) kf(`balsojuma datums ${b.laiks.slice(0, 10)} nesakrīt ar datums ${n.datums}`);
+      if (balsojumi.has(b.id)) kf(`balsojums ${b.id} jau ir Notikumā "${balsojumi.get(b.id)}"`);
+      balsojumi.set(b.id, n.id);
+      // Frakcija ↔ Saraksts tikai 15. Saeimā; nezināms kods = jāpapildina data/saraksti.yaml `frakcija`.
+      if (b.saeima === 15)
+        for (const kods of Object.keys(b.frakcijas))
+          if (kods !== BEZ_FRAKCIJAS && !frakcijas.has(kods)) kf(`frakcija "${kods}" nav data/saraksti.yaml`);
+    }
+
+    if ((n.jautajums ?? "").trim()) kf(`neatbildēts jautājums redaktoram: ${n.jautajums.trim()}`);
+  }
+  return notikumi;
+}
+
+function parbauditStatusaMainas(s, notikumi, kf) {
+  const mainas = s.statusa_mainas ?? [];
+  if (mainas.length && !s.parbaudams) kf("Nepārbaudāmam solījumam nav Statusa maiņu");
+  mainas.forEach((m, i) => {
+    const km = (zinojums) => kf(`statusa_mainas[${i}]: ${zinojums}`);
+    const datumi = [];
+    for (const id of m.notikumi) {
+      const n = notikumi.get(id);
+      if (!n) km(`Notikums "${id}" nav data/notikumi/`);
+      else if (!n.solijumi.some((x) => x.id === s.id)) km(`Notikums "${id}" neattiecas uz šo Solījumu`);
+      else datumi.push(n.datums);
+    }
+    if (datumi.length === m.notikumi.length && !datumi.includes(m.datums))
+      km(`datums ${m.datums} nav neviena tā Notikuma datums`);
+    const ieprieks = mainas[i - 1];
+    if (ieprieks && m.datums < ieprieks.datums) km(`datums ${m.datums} agrāks par iepriekšējo (${ieprieks.datums})`);
+    if (ieprieks && m.statuss === ieprieks.statuss) km(`Statuss "${m.statuss}" nemainās`);
+  });
 }
 
 const arNodalam = (avots) => avots.vienibas.some((u) => u.nodala !== null);

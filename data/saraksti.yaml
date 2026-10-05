@@ -10,6 +10,10 @@
 #                 nodaļas, kuru te nav, apstrādā pēdējā izpildē "Ārpus CVK nodaļām";
 #   izlaist — sadaļas, kas nav šī avota teksts (piem., iekļauta CVK programmas kopija);
 #   nav_jaizraksta — sadaļas, kuras metode neizraksta (pārskatā pelēkas).
+#
+# frakcija: Saraksta Frakcijas kods 15. Saeimā tieši kā Saeimas balsojumu datos (data.gov.lv `saeimas-sedes`,
+#   lauks FRACTION; sk. `npm run balsojums`). Pievieno, kad 15. Saeimas frakcijas izveidotas — kodus ņem no
+#   pirmā 15. Saeimas balsojumu faila, neuzmin. 14. Saeimas kodi (JV, NA, AS, LPV, PRO, ZZS) uz Sarakstiem netiek kartēti.
 
 - slug: sv
   nosaukums: SUVERĒNĀ VARA / APVIENĪBA JAUNLATVIEŠI

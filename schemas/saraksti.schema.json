@@ -13,6 +13,7 @@
       "isais_nosaukums": { "type": "string", "minLength": 1 },
       "saisinajums": { "type": "string", "minLength": 1 },
       "nr": { "type": "integer", "minimum": 1 },
+      "frakcija": { "type": "string", "pattern": "^[A-ZĀČĒĢĪĶĻŅŠŪŽ!]+$" },
       "avoti": {
         "type": "array",
         "minItems": 1,

@@ -194,3 +194,112 @@ test("avots bez teksta faila — no tā citēt nevar", () => {
     `${F}: avoti[1] (paplasinata): Sarakstam nav paplasinata avota teksta sources/`,
   ]);
 });
+
+// Notikumi un Statusa maiņas
+
+const NOTIKUMS = {
+  id: "2027-03-12-minimala-alga-likums-pienemts",
+  datums: "2027-03-12",
+  nosaukums: "Saeima galīgajā lasījumā pieņem minimālās algas likumu",
+  apraksts: "Minimālā alga no 2028. gada — 50% no vidējās bruto darba samaksas.",
+  avoti: [
+    { url: "https://www.saeima.lv/lv/likumprojekti/123", veids: "saeima" },
+    { url: "https://www.lsm.lv/raksts/1", veids: "zinas" },
+  ],
+  solijumi: [{ id: SOLIJUMS.id, virziens: "par", pamatojums: "Likums nosaka solīto 50%." }],
+  balsojums: {
+    saeima: 15,
+    id: "4aebc7bc-8f18-4a64-9d01-910d22f4fe36",
+    laiks: "2027-03-12T10:15:00",
+    motivs: "Minimālās algas likums (12/Lp15), 3.lasījums",
+    datu_avots: "https://data.gov.lv/dati/dataset/x/resource/y/download/15-vote.xml",
+    kopa: { par: 52, pret: 30, atturas: 3 },
+    frakcijas: {
+      JV: { par: 25, pret: 0, atturas: 0, nebalsoja: 0 },
+      bez_frakcijas: { par: 1, pret: 0, atturas: 0, nebalsoja: 1 },
+    },
+  },
+};
+const NF = `data/notikumi/${NOTIKUMS.id}.yaml`;
+const SARAKSTI_AR_FRAKCIJU = stringify([{ ...SARAKSTI[0], frakcija: "JV" }]);
+const MAINA = {
+  datums: "2027-03-12",
+  statuss: "izpildits",
+  notikumi: [NOTIKUMS.id],
+  pamatojums: "Likums pieņemts un izsludināts.",
+};
+
+const notikums = (izmainas, cels = NF) => ({ [cels]: stringify({ ...NOTIKUMS, ...izmainas }) });
+const arNotikumu = (izmainas = {}) =>
+  repo({ "data/saraksti.yaml": SARAKSTI_AR_FRAKCIJU, ...notikums({}), ...izmainas });
+
+test("derīgs Notikums ar Statusa maiņu — nav kļūdu", () => {
+  assert.deepEqual(zinojumi(arNotikumu(solijums({ statusa_mainas: [MAINA] }))), []);
+});
+
+test("Notikums: id = faila vārds, sākas ar datumu; vismaz viens oficiāls avots", () => {
+  const cels = "data/notikumi/2027-03-12-cits.yaml";
+  const avoti = [{ url: "https://www.lsm.lv/raksts/1", veids: "zinas" }];
+  assert.deepEqual(zinojumi(arNotikumu({ [NF]: null, ...notikums({ datums: "2027-03-11", avoti }, cels) })), [
+    `${cels}: id "${NOTIKUMS.id}" nesakrīt ar faila vārdu "2027-03-12-cits.yaml"`,
+    `${cels}: id jāsākas ar datumu "2027-03-11-"`,
+    `${cels}: vajag vismaz vienu oficiālu avotu (ne zinas)`,
+    `${cels}: balsojuma datums 2027-03-12 nesakrīt ar datums 2027-03-11`,
+  ]);
+});
+
+test("Notikums: Solījumam jāeksistē un neatkārtojas", () => {
+  const p = NOTIKUMS.solijumi[0];
+  const solijumi = [p, p, { id: "jv-nav", virziens: "pret", pamatojums: "x" }];
+  assert.deepEqual(zinojumi(arNotikumu(notikums({ solijumi }))), [
+    `${NF}: Solījums "${SOLIJUMS.id}" atkārtojas`,
+    `${NF}: Solījums "jv-nav" nav data/solijumi/`,
+  ]);
+});
+
+test("balsojums: 15. Saeimas frakcijai jābūt data/saraksti.yaml; viens balsojums — viens Notikums", () => {
+  const cits = "data/notikumi/2027-03-12-otrs.yaml";
+  const balsojums = { ...NOTIKUMS.balsojums, frakcijas: { SV: { par: 1, pret: 0, atturas: 0 } } };
+  assert.deepEqual(zinojumi(arNotikumu({ ...notikums({ id: "2027-03-12-otrs", balsojums }, cits) })), [
+    `${cits}: balsojums ${balsojums.id} jau ir Notikumā "${NOTIKUMS.id}"`,
+    `${cits}: frakcija "SV" nav data/saraksti.yaml`,
+  ]);
+});
+
+test("balsojums: 14. Saeimas frakcijas netiek kartētas uz Sarakstiem", () => {
+  const balsojums = { ...NOTIKUMS.balsojums, saeima: 14, frakcijas: { ZZS: { par: 9, pret: 0, atturas: 0 } } };
+  assert.deepEqual(zinojumi(arNotikumu(notikums({ balsojums }))), []);
+});
+
+test("Statusa maiņa: Notikumam jāeksistē un jāattiecas uz Solījumu, datums = Notikuma datums", () => {
+  const { balsojums, ...bezBalsojuma } = NOTIKUMS;
+  const cits = { ...bezBalsojuma, id: "2027-04-01-cits", datums: "2027-04-01" };
+  cits.solijumi = [{ id: "jv-cits", virziens: "par", pamatojums: "x" }];
+  const mainas = [
+    { ...MAINA, notikumi: ["2027-01-01-nav"] },
+    { ...MAINA, datums: "2027-04-01", statuss: "daleji-izpildits", notikumi: [cits.id] },
+    { ...MAINA, datums: "2027-03-01", statuss: "izpildits" },
+  ];
+  const sakne = arNotikumu({
+    ...solijums({ id: "jv-cits" }, "data/solijumi/jv/jv-cits.yaml"),
+    [`data/notikumi/${cits.id}.yaml`]: stringify(cits),
+    ...solijums({ statusa_mainas: mainas }),
+  });
+  assert.deepEqual(zinojumi(sakne), [
+    `${F}: statusa_mainas[0]: Notikums "2027-01-01-nav" nav data/notikumi/`,
+    `${F}: statusa_mainas[1]: Notikums "${cits.id}" neattiecas uz šo Solījumu`,
+    `${F}: statusa_mainas[2]: datums 2027-03-01 nav neviena tā Notikuma datums`,
+    `${F}: statusa_mainas[2]: datums 2027-03-01 agrāks par iepriekšējo (2027-04-01)`,
+  ]);
+});
+
+test("Statusa maiņa: Statuss mainās; Nepārbaudāmam — nav; atpakaļ uz Nav vērtēts nevar", () => {
+  const mainas = [MAINA, { ...MAINA }, { ...MAINA, statuss: "nav-vertets" }];
+  assert.deepEqual(zinojumi(arNotikumu(solijums({ parbaudams: false, statusa_mainas: mainas }))), [
+    `${F}: shēma: /statusa_mainas/2/statuss must be equal to one of the allowed values`,
+  ]);
+  assert.deepEqual(zinojumi(arNotikumu(solijums({ parbaudams: false, statusa_mainas: mainas.slice(0, 2) }))), [
+    `${F}: Nepārbaudāmam solījumam nav Statusa maiņu`,
+    `${F}: statusa_mainas[1]: Statuss "izpildits" nemainās`,
+  ]);
+});

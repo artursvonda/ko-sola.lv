@@ -8,6 +8,7 @@
   "scripts": {
     "parbaude": "node tools/parbaudit.js",
     "parskats": "node tools/parskats.js",
+    "balsojums": "node tools/balsojums.js",
     "test": "node --test \"tools/test/*.test.js\""
   },
   "devDependencies": {
