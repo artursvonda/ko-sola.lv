@@ -31,6 +31,15 @@ export function progress(solijumi) {
   return { n: solijumi.length - skaits.neparbaudams, skaits };
 }
 
+/**
+ * Saraksts, kura Frakcija balsojumā ir `kods` (data/saraksti.yaml `frakcija`); null, ja nav.
+ * Kartē tikai 15. Saeimu: 14. Saeimas frakcijas nav šo Sarakstu frakcijas; bez frakcijas — nevienam.
+ */
+export function frakcijasSaraksts(balsojums, kods, saraksti) {
+  if (balsojums.saeima !== 15) return null;
+  return saraksti.find((s) => s.frakcija === kods) ?? null;
+}
+
 /** Avota publikācija no tā teksta frontmatter (piem., "Latvijas Vēstnesis, Nr. 176A, 14.09.2026"). */
 function publikacija(sakne, avots) {
   if (!avots?.fails || !existsSync(join(sakne, avots.fails))) return null;

@@ -31,6 +31,11 @@ Filtru stāvoklis — query parametros. Saraksta, Tēmas un Notikuma lapu nav.
 
 Workers Builds (Cloudflare panelī): build `npm run build`, deploy `npx wrangler deploy` (`main`), citi zari — `npx wrangler versions upload` (preview URL). `lapa/public/_headers` pagaidām aizliedz indeksēšanu (`X-Robots-Tag: noindex`) — noņemt palaišanā.
 
+## Solījuma lapa: saites un Frakciju balsojums (#36)
+
+- **Saites uz filtrētu pārskatu** — tikai caur `parskatsSaite({ saraksts, atbildigais, tema })` (`lapa/lapas/saites.js`): `/?saraksts=<slug>&atbildigais=<iestādes slug>&tema=<slug>`, tukšos izlaiž, secība nemainīga. Saraksts ceļā, Atbildīgais un Tēma joslā (arī papildu — tās filtrē, bet neskaita), „Visi … solījumi šajā tēmā” citu Sarakstu blokā.
+- **Frakciju balsojums** — 15. Saeimā frakcijas kods → Saraksts pēc `data/saraksti.yaml` `frakcija` (`frakcijasSaraksts`, `lapa/dati.js`); bez frakcijas — nevienam. 14. Saeimā rāda kodus kā Saeimas datos ar piezīmi, ka tie nav šo vēlēšanu Saraksti.
+
 ## Salīdzinājums (`/salidzinajums/`, #37)
 
 - **Matrica** — rindas: Saraksti (CVK numuru secībā), kolonnas: 19 Tēmas (taksonomijas secībā, vertikālas galvenes); skaits pēc galvenās tēmas, 0 → „·”. Tēmas galvene un šūna ar skaitu — saite uz tēmu. Telefonā matrica ritinās savā konteinerā, saraksta kolonna paliek redzama.
