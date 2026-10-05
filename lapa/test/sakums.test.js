@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { ieladetModeli } from "../dati.js";
 import { sakums } from "../lapas/sakums.js";
 import { solijums } from "../lapas/solijums.js";
-import { ierakstsNoDatiem } from "../klients/filtri.js";
+import { ierakstsNoDatiem, nolasitFiltrus, grupa, skaiti } from "../klients/filtri.js";
 import { PANELA_DALAS } from "../klients/panelis.js";
 
 // Paraugdati: 17 Solījumi, 1 Nepārbaudāms; izpildīti 3, daļēji 1, procesā 2, nav izpildīts 1, nav vērtēti 9.
@@ -40,7 +40,7 @@ test("tabula: bez JS redzamas visas rindas, katrā saite uz Solījuma lapu", () 
   for (const r of rindas) assert.match(r.saturs, new RegExp(`<a href="/solijumi/${r.id}/"`));
 });
 
-test("tabula: rinda nes filtra datus ar papildu vērtībām; papildu rāda kā „arī”", () => {
+test("tabula: rinda nes filtra datus ar papildu vērtībām, bet papildu nerāda („Saistīti arī” grupa to aizstāj)", () => {
   const r = rindas.find((x) => x.id === "jv-aizsardzibai-5-nato-klatbutne");
   assert.deepEqual(ierakstsNoDatiem(atributi(r.attr)), {
     saraksts: "jv",
@@ -48,14 +48,54 @@ test("tabula: rinda nes filtra datus ar papildu vērtībām; papildu rāda kā �
     tema: ["aizsardziba", "arpolitika"],
     statuss: "procesa",
   });
-  assert.match(teksts(r.saturs), /Aizsardzība · arī Ārpolitika/);
-  assert.match(teksts(r.saturs), /Aizsardzības ministrija arī: ĀM/);
+  assert.equal(teksts(r.saturs.match(/<td role="cell" class="t-sol">[\s\S]*?<\/td>/)[0]).trim(), "Aizsardzībai 5% no IKP un pastāvīga NATO klātbūtne Aizsardzība");
+  assert.equal(teksts(r.saturs.match(/<td role="cell" class="t-atb">[\s\S]*?<\/td>/)[0]).trim(), "Aizsardzības ministrija");
+  assert.doesNotMatch(r.saturs, /arī/);
+});
+
+test("tabula: „Saistīti arī (papildu)” — otra rindu grupa, statiskajā HTML tukša un paslēpta", () => {
+  const papildu = lapa.match(/<tbody [^>]*data-k="papildu"[^>]*>([\s\S]*?)<\/tbody>/);
+  assert.ok(papildu);
+  assert.match(papildu[0], /^<tbody [^>]*\bhidden\b/);
+  assert.match(teksts(papildu[1]), /Saistīti arī \(papildu\): 0/);
+  assert.doesNotMatch(papildu[1], /data-id=/);
+});
+
+test("tukšs filtrs: „Ar šiem filtriem solījumu nav.” un saite „Notīrīt filtrus” uz /", () => {
+  const tukss = lapa.match(/<p class="tukss" data-k="tukss" hidden>([\s\S]*?)<\/p>/);
+  assert.ok(tukss);
+  assert.equal(teksts(tukss[1]).trim(), "Ar šiem filtriem solījumu nav. Notīrīt filtrus");
+  assert.match(tukss[1], /<a href="\/">Notīrīt filtrus<\/a>/);
 });
 
 const izvele = (grupa, vertiba) => {
-  const a = lapa.match(new RegExp(`<a [^>]*data-grupa="${grupa}" data-vertiba="${vertiba}"[^>]*>[\\s\\S]*?</a>`));
-  return a && { a: a[0], teksts: teksts(a[0]).trim() };
+  const a = lapa.match(new RegExp(`<li\\b([^>]*)><a [^>]*data-grupa="${grupa}" data-vertiba="${vertiba}"[^>]*>[\\s\\S]*?</a>`));
+  return a && { a: a[0], teksts: teksts(a[0]).trim(), paslepta: /\bhidden\b/.test(a[1]) };
 };
+const redzamas = (grupa) =>
+  [...lapa.matchAll(new RegExp(`<li>(<a [^>]*data-grupa="${grupa}" data-vertiba="[^"]+"[^>]*>[\\s\\S]*?</a>)`, "g"))].map((x) => teksts(x[1]).replace(/ \d+$/, "").trim());
+
+test("filtri: Atbildīgie un Tēmas pēc nosaukuma (latviešu alfabēts), Saraksti pēc CVK numura", () => {
+  assert.deepEqual(redzamas("saraksts"), ["Suverēnā vara", "Nacionālā apvienība", "Apvienotais saraksts", "Latvija pirmajā vietā", "Jaunā VIENOTĪBA", "Progresīvie"]);
+  assert.deepEqual(redzamas("atbildigais"), [
+    "Aizsardzības ministrija",
+    "Ekonomikas ministrija",
+    "Finanšu ministrija",
+    "Iekšlietu ministrija",
+    "Klimata un enerģētikas ministrija",
+    "Labklājības ministrija",
+    "Veselības ministrija",
+  ]);
+  assert.deepEqual(redzamas("tema"), [
+    "Aizsardzība",
+    "Ģimenes un demogrāfija",
+    "Iekšējā drošība un tiesiskums",
+    "Mājokļi",
+    "Nodokļi un budžets",
+    "Veselība",
+    "Vide un klimats",
+  ]);
+});
 
 test("filtri: Saraksts / Atbildīgais / Tēma — saites ar skaitiem; sākumā izvēlēts „Visi”", () => {
   assert.match(lapa, /<ko-parskats>[\s\S]*<\/ko-parskats>/);
@@ -68,13 +108,17 @@ test("filtri: Saraksts / Atbildīgais / Tēma — saites ar skaitiem; sākumā i
   assert.equal(izvele("tema", "").teksts, "Visas tēmas 17");
 });
 
-test("filtri: skaita pēc galvenās; tikai papildu vērtība ir izvēle ar 0; Tēmas bez Solījumiem nerāda", () => {
+test("filtri: skaita pēc galvenās; tikai papildu vērtība — paslēpta izvēle (derīga saitēs); Tēmas bez Solījumiem nav", () => {
   // FM: 7 galvenā, vēl 2 Solījumiem papildu iestāde.
   assert.equal(izvele("atbildigais", "fm").teksts, "Finanšu ministrija 7");
+  assert.equal(izvele("atbildigais", "fm").paslepta, false);
   assert.match(izvele("atbildigais", "fm").a, /href="\/\?atbildigais=fm"/);
   assert.equal(izvele("atbildigais", "arm").teksts, "Ārlietu ministrija 0");
+  assert.equal(izvele("atbildigais", "arm").paslepta, true);
   assert.equal(izvele("tema", "arpolitika").teksts, "Ārpolitika 0");
+  assert.equal(izvele("tema", "arpolitika").paslepta, true);
   assert.equal(izvele("tema", "aizsardziba").teksts, "Aizsardzība 5");
+  assert.equal(izvele("saraksts", "").paslepta, false);
   assert.equal(izvele("tema", "transports"), null);
 });
 
@@ -106,4 +150,27 @@ test("Solījuma lapa satur daļas, ko panelis ņem no tās: virsraksts, citāts 
       : new RegExp(`<${el}\\b`);
     assert.match(h, re, selektors);
   }
+});
+
+test("Solījuma lapa „Visi … solījumi šajā tēmā (N)”: N = galvenās grupas rindas un izvēles skaits pārskatā", () => {
+  // Fixtures nevienam Sarakstam nav vairāk par 3 solījumiem vienā tēmā — ceturto (ar papildu tēmām) pieliek tikai šim testam.
+  const as = m.solijumi.find((x) => x.saraksts.slug === "as" && x.tema.slug === "nodokli-un-budzets");
+  const ceturtais = { ...as, id: "as-papildu-tests" };
+  // Šis AS Solījums tēmā nodokļi ir tikai papildu: pārskatā tas ir „Saistīti arī”, ne N.
+  const papildu = { ...as, id: "as-papildu-tema", tema: m.temas[1], papildu_temas: [as.tema] };
+  const m4 = { ...m, solijumi: [...m.solijumi, ceturtais, papildu] };
+  const parskats = sakums(m4);
+  const ieraksti = [...parskats.matchAll(/<tr [^>]*?data-id="[^"]+"([^>]*)>/g)].map((x) => ierakstsNoDatiem(atributi(x[1])));
+  let saites = 0;
+  for (const s of m4.solijumi) {
+    for (const [, href, n] of solijums(s, m4).matchAll(/<a href="([^"]+)">Visi \w+ solījumi šajā tēmā \((\d+)\)<\/a>/g)) {
+      saites++;
+      const filtri = nolasitFiltrus(new URL(href.replaceAll("&amp;", "&"), "https://x").search);
+      const galvena = ieraksti.filter((x) => grupa(x, filtri) === "galvena");
+      assert.equal(galvena.length, Number(n), href);
+      assert.equal(skaiti(ieraksti, filtri).tema[filtri.tema], Number(n), href);
+      assert.ok(ieraksti.some((x) => grupa(x, filtri) === "papildu"), "papildu Solījums ir otrajā grupā");
+    }
+  }
+  assert.ok(saites > 0);
 });

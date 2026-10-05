@@ -22,6 +22,8 @@
 /* Tēmas sadaļa: saraksti blakus kā rindotas kolonnas (ink līnija augšā), ne kartītes; telefonā viens zem otra. */
 .temas { margin-top: var(--size-9); }
 .tema-sadala + .tema-sadala { margin-top: var(--size-9); }
+/* Viena tēma (pārējās hidden): blakus esošo sadaļu atstarpe neattiecas. */
+.temas:has(> .tema-sadala[hidden]) .tema-sadala { margin-top: 0; }
 .tema-sadala h2 { font-size: 1.125rem; line-height: 1.3; font-weight: 600; margin: 0 0 var(--size-4); text-wrap: balance; }
 .tema-sadala h2 .vajs { font-weight: 400; }
 .blakus { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(10.5rem, 100%), 1fr)); gap: var(--size-6) var(--size-4); }
@@ -32,4 +34,9 @@
 .blakus-meta { display: flex; flex-wrap: wrap; align-items: center; gap: var(--size-2); font-size: 13px; }
 .blakus-galvena { font-size: 13px; }
 .blakus-saraksts > p { margin: var(--size-2) 0 0; font-size: 14px; }
+/* „Saistīti arī (papildu): N” — Label virs papildu Solījumiem (tas pats, kas pārskatā). */
+.blakus-saraksts > .blakus-papildu { margin: var(--size-4) 0 0; font-size: 11px; }
+/* Ar JS, kad redzama viena tēma: atpakaļ uz visām. */
+.visas-temas { margin: 0 0 var(--size-4); font-size: 14px; }
+.visas-temas[hidden] { display: none; }
 .uz-matricu { margin: var(--size-4) 0 0; font-size: 14px; }

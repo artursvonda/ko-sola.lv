@@ -21,6 +21,14 @@ class KoSalidzinajums extends HTMLElement {
     if (e.defaultPrevented || !parastsKlikskis(e)) return;
     const a = e.target.closest("a[href]");
     if (!a || a.origin !== location.origin || a.pathname !== location.pathname) return;
+    if (a.closest('[data-k="visas"]')) {
+      // „Rādīt visas tēmas”: visas sadaļas; fokuss paliek pie līdz šim izvēlētās tēmas (saite pati paslēpjas).
+      e.preventDefault();
+      const bija = this.tema;
+      history.pushState(null, "", a.href);
+      this.radit(null, { ritinat: false });
+      return this.uzSadalu(bija, { ritinat: true, fokuss: true });
+    }
     const tema = izveletaTema(a.search, this.slugi);
     if (!tema) return;
     e.preventDefault();
@@ -29,9 +37,16 @@ class KoSalidzinajums extends HTMLElement {
   }
 
   radit(tema, { ritinat, fokuss = false }) {
+    this.tema = tema;
     for (const s of this.sadalas) s.hidden = tema !== null && s.dataset.tema !== tema;
+    this.querySelector('[data-k="visas"]').hidden = tema === null;
     for (const el of this.querySelectorAll(".matrica [data-tema]")) el.classList.toggle("izvelets", el.dataset.tema === tema);
     for (const a of this.querySelectorAll(".matrica thead a")) iezimetAktualo(a, a.closest("[data-tema]").dataset.tema === tema);
+    this.uzSadalu(tema, { ritinat, fokuss });
+  }
+
+  /** Ritina līdz tēmas sadaļai, ja tā nav redzama, un (ja `fokuss`) fokusē tās virsrakstu. */
+  uzSadalu(tema, { ritinat, fokuss }) {
     const sadala = tema && this.sadalas.find((s) => s.dataset.tema === tema);
     if (!sadala) return;
     if (fokuss) {

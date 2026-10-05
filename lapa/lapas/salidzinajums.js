@@ -19,9 +19,10 @@ const sadala = (m, t) => html`<section class="tema-sadala" id="${t.slug}" data-t
   <div class="blakus">${temasSaraksti(m, t.slug).map(
     ({ saraksts, galvenie, papildu }) => html`<div class="blakus-saraksts">
     <h3><abbr title="${saraksts.nosaukums}">${saraksts.saisinajums}</abbr> · ${saraksts.isais_nosaukums}</h3>
-    ${galvenie.length + papildu.length === 0
-      ? html`<p class="vajs">Šajā tēmā solījumu nav.</p>`
-      : html`<ul>${galvenie.map((s) => rinda(s, false))}${papildu.map((s) => rinda(s, true))}</ul>`}
+    ${galvenie.length + papildu.length === 0 && html`<p class="vajs">Šajā tēmā solījumu nav.</p>`}
+    ${galvenie.length > 0 && html`<ul>${galvenie.map((s) => rinda(s, false))}</ul>`}
+    ${papildu.length > 0 && html`<p class="lbl blakus-papildu">Saistīti arī (papildu): ${papildu.length}</p>
+    <ul>${papildu.map((s) => rinda(s, true))}</ul>`}
   </div>`,
   )}</div>
   <p class="uz-matricu"><a href="#matrica">Uz matricu</a></p>
@@ -43,7 +44,9 @@ export function salidzinajums(m) {
   )}</tbody>
 </table>
 </div>
-<div class="temas">${m.temas.map((t) => sadala(m, t))}</div>
+<div class="temas">
+<p class="visas-temas" data-k="visas" hidden><a href="/salidzinajums/">Rādīt visas tēmas</a></p>
+${m.temas.map((t) => sadala(m, t))}</div>
 </ko-salidzinajums>`;
   return izkartojums({
     cels: "/salidzinajums/",

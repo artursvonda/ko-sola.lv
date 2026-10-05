@@ -49,16 +49,30 @@ export function atbilst(ieraksts, filtri, izlaist = null) {
   return GRUPAS.every((g) => g === izlaist || !filtri[g] || vertibas(ieraksts, g).includes(filtri[g]));
 }
 
+/** Vai ieraksts atbilst filtriem tikai ar galvenajām vērtībām (galvenā Tēma, galvenā iestāde). */
+const atbilstGalvena = (ieraksts, filtri, izlaist = null) =>
+  GRUPAS.every((g) => g === izlaist || !filtri[g] || vertibas(ieraksts, g)[0] === filtri[g]);
+
+/**
+ * Rindas grupa filtrētajā tabulā: "galvena" — atbilst ar galvenajām vērtībām (skaitās progresā un blakus izvēlei);
+ * "papildu" — atbilst tikai ar papildu Tēmu vai iestādi („Saistīti arī (papildu)”); null — neatbilst.
+ */
+export function grupa(ieraksts, filtri) {
+  if (atbilstGalvena(ieraksts, filtri)) return "galvena";
+  return atbilst(ieraksts, filtri) ? "papildu" : null;
+}
+
 /**
  * Skaits blakus katrai filtra izvēlei: grupa ņem vērā pārējo grupu filtrus, ne savu.
- * Skaita pēc galvenās vērtības (papildu ietekmē tikai filtrēšanu, ne skaitīšanu); "" — „Visi”.
+ * Viss pēc galvenās vērtības (papildu ietekmē tikai filtrēšanu, ne skaitīšanu), tāpēc skaits = galvenās grupas
+ * rindu skaits pēc izvēles; "" — „Visi”.
  */
 export function skaiti(ieraksti, filtri) {
   return Object.fromEntries(
     GRUPAS.map((g) => {
       const skaits = { "": 0 };
       for (const ieraksts of ieraksti) {
-        if (!atbilst(ieraksts, filtri, g)) continue;
+        if (!atbilstGalvena(ieraksts, filtri, g)) continue;
         const galvena = vertibas(ieraksts, g)[0];
         skaits[""]++;
         skaits[galvena] = (skaits[galvena] ?? 0) + 1;
