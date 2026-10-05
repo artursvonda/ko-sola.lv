@@ -2,7 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { ieladetModeli } from "../dati.js";
 import { matrica, temasSaraksti } from "../lapas/salidzinajums-dati.js";
-import { salidzinajums, temaSaite } from "../lapas/salidzinajums.js";
+import { salidzinajums } from "../lapas/salidzinajums.js";
 
 const m = ieladetModeli({ sakne: ".", datuSakne: "fixtures", sodien: "2026-10-05" });
 
@@ -45,10 +45,6 @@ test("temasSaraksti: Solījumi ar šo papildu tēmu — atsevišķi no galvenaji
   assert.deepEqual(jv.papildu.map((s) => s.id), ["jv-aizsardzibai-5-nato-klatbutne"]);
   const na = temasSaraksti(m, "aizsardziba").find((x) => x.saraksts.saisinajums === "NA");
   assert.deepEqual(na.papildu, []);
-});
-
-test("temaSaite: ?tema= (Web Component) + #enkurs (bez JS)", () => {
-  assert.equal(temaSaite("aizsardziba"), "/salidzinajums/?tema=aizsardziba#aizsardziba");
 });
 
 const lapa = salidzinajums(m);

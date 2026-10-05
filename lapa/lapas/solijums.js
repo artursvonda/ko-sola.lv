@@ -1,8 +1,7 @@
 import { html } from "../html.js";
-import { STATUSI, frakcijasSaraksts } from "../dati.js";
+import { STATUSI, frakcijasSaraksts, sisSaeimasBalsojums } from "../dati.js";
 import { izkartojums, statussPill, datums, amatpersonaRindas } from "./izkartojums.js";
-import { temaSaite } from "./salidzinajums.js";
-import { parskatsSaite } from "./saites.js";
+import { parskatsSaite, temaSaite } from "./saites.js";
 
 const AVOTI = { cvk: "CVK programma", paplasinata: "Paplašinātā programma" };
 const NOTIKUMA_AVOTI = {
@@ -57,7 +56,7 @@ const josla = (s) => html`<dl class="josla">
   </div>
 </dl>`;
 
-/** Frakcijas rindas virsraksts: 15. Saeimā — Saraksts (kā citur lapā); citādi — kods, kā Saeimas datos. */
+/** Frakcijas rindas virsraksts: šīs Saeimas balsojumā — Saraksts (kā citur lapā); citādi — kods, kā Saeimas datos. */
 function frakcija(b, kods, saraksti) {
   if (kods === "bez_frakcijas") return "Bez frakcijas";
   const sr = frakcijasSaraksts(b, kods, saraksti);
@@ -73,7 +72,7 @@ const balsojums = (b, saraksti) => html`
       ([f, x]) => html`<tr><th scope="row">${frakcija(b, f, saraksti)}</th><td>${x.par}</td><td>${x.pret}</td><td>${x.atturas}</td><td>${x.nebalsoja ?? ""}</td></tr>`,
     )}</tbody>
   </table>
-  ${b.saeima < 15 && html`<p class="vajs">${b.saeima}. Saeimas frakcijas; uz šo vēlēšanu Sarakstiem netiek attiecinātas.</p>`}
+  ${!sisSaeimasBalsojums(b) && html`<p class="vajs">${b.saeima}. Saeimas frakcijas; uz šo vēlēšanu Sarakstiem netiek attiecinātas.</p>`}
   <p><a href="${b.datu_avots}">Saeimas atvērtie dati</a>${b.komentars && html` · ${b.komentars}`}</p>
 </details>`;
 

@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { statuss, amatpersona, progress, frakcijasSaraksts, ieladetModeli } from "../dati.js";
+import { statuss, amatpersona, frakcijasSaraksts, sisSaeimasBalsojums, ieladetModeli } from "../dati.js";
 
 test("statuss: pēdējā Statusa maiņa, citādi Nav vērtēts; Nepārbaudāmam — neparbaudams", () => {
   assert.equal(statuss({ parbaudams: true }), "nav-vertets");
@@ -18,12 +18,6 @@ test("amatpersona: kas amatā dotajā datumā (lidz ieskaitot)", () => {
   assert.equal(amatpersona(i, "2026-11-20").vards, "A");
   assert.equal(amatpersona(i, "2026-11-21").vards, "B");
   assert.equal(amatpersona(i, "2026-05-01"), null);
-});
-
-test("progress: N bez Nepārbaudāmajiem", () => {
-  const p = progress([{ statuss: "izpildits" }, { statuss: "nav-vertets" }, { statuss: "neparbaudams" }]);
-  assert.equal(p.n, 2);
-  assert.equal(p.skaits.izpildits, 1);
 });
 
 test("modelis no fixtures: saites starp Solījumiem, Notikumiem un iestādēm", () => {
@@ -47,4 +41,9 @@ test("frakcijasSaraksts: 15. Saeimā kods → Saraksts pēc `frakcija`; 14. Saei
   assert.equal(frakcijasSaraksts({ saeima: 15 }, "bez_frakcijas", saraksti), null);
   assert.equal(frakcijasSaraksts({ saeima: 15 }, "ZZS", saraksti), null);
   assert.equal(frakcijasSaraksts({ saeima: 14 }, "JV", saraksti), null);
+});
+
+test("sisSaeimasBalsojums: tikai 15. Saeimas (kurā ievēlēti šie Saraksti) balsojums", () => {
+  assert.equal(sisSaeimasBalsojums({ saeima: 15 }), true);
+  assert.equal(sisSaeimasBalsojums({ saeima: 14 }), false);
 });

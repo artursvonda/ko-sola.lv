@@ -1,8 +1,6 @@
 import { html, raw } from "../html.js";
 import { izkartojums, statussPill } from "./izkartojums.js";
-import { progress as skaititProgresu, skaiti, datuAtributi, izvelesSaite, STATUSU_SECIBA } from "../klients/filtri.js";
-
-const TUKSI = { saraksts: null, atbildigais: null, tema: null };
+import { progress, skaiti, datuAtributi, izvelesSaite, STATUSU_SECIBA, BEZ_FILTRIEM } from "../klients/filtri.js";
 
 // Statusu joslas segmenti: bez Nepārbaudāmajiem (tie N neiekļauti).
 const JOSLAS_STATUSI = STATUSU_SECIBA.filter((k) => k !== "neparbaudams");
@@ -10,14 +8,13 @@ const JOSLAS_STATUSI = STATUSU_SECIBA.filter((k) => k !== "neparbaudams");
 /** Ieraksts filtrēšanai: galvenā vērtība pirmā, tad papildu (klients to nolasa no data-* atribūtiem). */
 const ieraksts = (s) => ({
   saraksts: s.saraksts.slug,
-  atbildigais: [s.iestade, ...s.papildu_iestades].map((i) => i.slug),
+  iestades: [s.iestade, ...s.papildu_iestades].map((i) => i.slug),
   tema: [s.tema, ...s.papildu_temas].map((t) => t.slug),
   statuss: s.statuss,
 });
 
 function progresaSadala(p) {
   return html`<section class="progress" aria-label="Progress">
-  <h1 class="filtra-nosaukums" data-k="nosaukums">Visi saraksti</h1>
   <p class="liels" aria-live="polite"><strong data-k="izpilditi">${p.izpilditi}</strong> <span class="vajs">no <span data-k="n">${p.n}</span></span> solījumiem izpildīti</p>
   <div class="statusu-josla" aria-hidden="true">${JOSLAS_STATUSI.map(
     (k) => html`<span class="seg seg-${k}" data-statuss="${k}" style="flex-grow: ${p.skaits[k]}"${p.skaits[k] === 0 && raw(" hidden")}></span>`,
@@ -52,10 +49,10 @@ const tabula = (solijumi) => html`<div class="ritinams">
 <p class="tukss" data-k="tukss" hidden>Šim filtram solījumu nav.</p>`;
 
 /** Viena filtra grupa: „Visi…” + izvēles ar skaitu (pēc galvenās vērtības). Sākumā izvēlēts „Visi…”. */
-function filtraGrupa(grupa, virsraksts, visi, izveles, sk) {
+function filtraGrupa(grupa, virsraksts, visi, izveles, skaits) {
   const saite = (vertiba, nosaukums) => {
-    const n = sk[vertiba ?? ""] ?? 0;
-    return html`<li><a href="${izvelesSaite(TUKSI, grupa, vertiba)}" data-grupa="${grupa}" data-vertiba="${vertiba ?? ""}" data-nosaukums="${nosaukums}"${vertiba ? "" : raw(' aria-current="true"')}${n === 0 && raw(' class="nulle"')}><span>${nosaukums}</span> <span class="mono skaits" data-k="skaits">${n}</span></a></li>`;
+    const n = skaits[vertiba ?? ""] ?? 0;
+    return html`<li><a href="${izvelesSaite(BEZ_FILTRIEM, grupa, vertiba)}" data-grupa="${grupa}" data-vertiba="${vertiba ?? ""}" data-nosaukums="${nosaukums}"${vertiba ? "" : raw(' aria-current="true"')}${n === 0 && raw(' class="nulle"')}><span>${nosaukums}</span> <span class="mono skaits" data-k="skaits">${n}</span></a></li>`;
   };
   return html`<section class="filtra-grupa" aria-labelledby="f-${grupa}">
     <h2 class="lbl" id="f-${grupa}">${virsraksts}</h2>
@@ -64,16 +61,15 @@ function filtraGrupa(grupa, virsraksts, visi, izveles, sk) {
 }
 
 function filtri(m, ieraksti) {
-  const sk = skaiti(ieraksti, TUKSI);
-  const ir = (g) => new Set(ieraksti.flatMap((r) => r[g]));
-  const iestades = ir("atbildigais");
-  const temas = ir("tema");
+  const skaitiPec = skaiti(ieraksti, BEZ_FILTRIEM);
+  const iestades = new Set(ieraksti.flatMap((ieraksts) => ieraksts.iestades));
+  const temas = new Set(ieraksti.flatMap((ieraksts) => ieraksts.tema));
   return html`<div class="filtri">
   <details class="filtri-atvere" data-k="atvere">
     <summary><span class="lbl">Filtri</span> <span class="filtra-nosaukums" data-k="nosaukums">Visi saraksti</span></summary>
-    ${filtraGrupa("saraksts", "Saraksts", "Visi saraksti", m.saraksti.map((s) => ({ slug: s.slug, nosaukums: s.isais_nosaukums })), sk.saraksts)}
-    ${filtraGrupa("atbildigais", "Atbildīgais", "Visi", m.iestades.filter((i) => iestades.has(i.slug)), sk.atbildigais)}
-    ${filtraGrupa("tema", "Tēma", "Visas tēmas", m.temas.filter((t) => temas.has(t.slug)), sk.tema)}
+    ${filtraGrupa("saraksts", "Saraksts", "Visi saraksti", m.saraksti.map((s) => ({ slug: s.slug, nosaukums: s.isais_nosaukums })), skaitiPec.saraksts)}
+    ${filtraGrupa("atbildigais", "Atbildīgais", "Visi", m.iestades.filter((i) => iestades.has(i.slug)), skaitiPec.atbildigais)}
+    ${filtraGrupa("tema", "Tēma", "Visas tēmas", m.temas.filter((t) => temas.has(t.slug)), skaitiPec.tema)}
   </details>
 </div>`;
 }
@@ -83,9 +79,11 @@ export function sakums(m) {
   const saturs = m.solijumi.length
     ? html`<ko-parskats>
 <div class="parskats">
+<h1 class="parskats-virsraksts" data-k="nosaukums">Visi saraksti</h1>
+<noscript><p class="vajs bez-js">Filtri darbojas tikai ar JavaScript — redzami visi solījumi.</p></noscript>
 ${filtri(m, ieraksti)}
 <div class="parskats-saturs">
-${progresaSadala(skaititProgresu(ieraksti))}
+${progresaSadala(progress(ieraksti))}
 <div class="parskats-zona" data-k="zona">
 <div class="parskats-tabula">
 ${tabula(m.solijumi)}

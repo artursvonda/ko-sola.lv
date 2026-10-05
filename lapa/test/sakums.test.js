@@ -23,6 +23,14 @@ test("pārskats: progress „X no N izpildīti” bez Nepārbaudāmajiem", () =>
   assert.match(teksts(progress), /Izpildīts 3 Daļēji izpildīts 1 Procesā 2 Nav izpildīts 1 Nav vērtēts 9 Nepārbaudāms 1/);
 });
 
+test("progress: statusu joslas segmenti tajā pašā secībā kā leģenda zem tās (bez Nepārbaudāmā)", () => {
+  const progress = lapa.match(/<section class="progress"[\s\S]*?<\/section>/)[0];
+  const josla = [...progress.matchAll(/<span class="seg [^"]*" data-statuss="([^"]+)"/g)].map((x) => x[1]);
+  const legenda = [...progress.matchAll(/<li data-statuss="([^"]+)"/g)].map((x) => x[1]);
+  assert.deepEqual(josla, ["izpildits", "daleji-izpildits", "procesa", "nav-izpildits", "nav-vertets"]);
+  assert.deepEqual(legenda, [...josla, "neparbaudams"]);
+});
+
 const atributi = (s) => Object.fromEntries([...s.matchAll(/data-([a-z]+)="([^"]*)"/g)].map((x) => [x[1], x[2]]));
 const rindas = [...lapa.matchAll(/<tr [^>]*?data-id="([^"]+)"([^>]*)>([\s\S]*?)<\/tr>/g)].map(([, id, attr, saturs]) => ({ id, attr, saturs }));
 
@@ -36,7 +44,7 @@ test("tabula: rinda nes filtra datus ar papildu vērtībām; papildu rāda kā �
   const r = rindas.find((x) => x.id === "jv-aizsardzibai-5-nato-klatbutne");
   assert.deepEqual(ierakstsNoDatiem(atributi(r.attr)), {
     saraksts: "jv",
-    atbildigais: ["am", "arm"],
+    iestades: ["am", "arm"],
     tema: ["aizsardziba", "arpolitika"],
     statuss: "procesa",
   });
@@ -68,6 +76,19 @@ test("filtri: skaita pēc galvenās; tikai papildu vērtība ir izvēle ar 0; T�
   assert.equal(izvele("tema", "arpolitika").teksts, "Ārpolitika 0");
   assert.equal(izvele("tema", "aizsardziba").teksts, "Aizsardzība 5");
   assert.equal(izvele("tema", "transports"), null);
+});
+
+test("virsraksti: h1 (izvēlētais filtrs) pirms filtru grupu h2", () => {
+  const h1 = lapa.search(/<h1\b/);
+  assert.ok(h1 >= 0);
+  assert.ok(h1 < lapa.search(/<h2\b/));
+  assert.equal(teksts(lapa.match(/<h1\b[\s\S]*?<\/h1>/)[0]).trim(), "Visi saraksti");
+});
+
+test("bez JS: <noscript> paziņo, ka filtri nedarbojas un redzami visi solījumi", () => {
+  const ns = lapa.match(/<noscript>([\s\S]*?)<\/noscript>/);
+  assert.ok(ns);
+  assert.match(teksts(ns[1]), /Filtri darbojas tikai ar JavaScript — redzami visi solījumi\./);
 });
 
 test("detaļu panelis: tukšs un paslēpts statiskajā HTML (bez JS — rindas saite)", () => {

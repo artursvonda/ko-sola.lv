@@ -24,19 +24,18 @@ export function amatpersona(iestade, d) {
   return iestade.amatpersonas.find((a) => a.no <= d && (!a.lidz || d <= a.lidz)) ?? null;
 }
 
-/** Skaits pa Statusiem; `n` — Pārbaudāmie (Nepārbaudāmie N neiekļauti). */
-export function progress(solijumi) {
-  const skaits = Object.fromEntries(Object.keys(STATUSI).map((k) => [k, 0]));
-  for (const s of solijumi) skaits[s.statuss]++;
-  return { n: solijumi.length - skaits.neparbaudams, skaits };
-}
+/** Saeima, kurā ievēlēti data/saraksti.yaml Saraksti. */
+export const SAEIMA = 15;
+
+/** Vai balsojums ir šīs (15.) Saeimas; citu Saeimu frakcijas nav šo Sarakstu frakcijas. */
+export const sisSaeimasBalsojums = (balsojums) => balsojums.saeima === SAEIMA;
 
 /**
  * Saraksts, kura Frakcija balsojumā ir `kods` (data/saraksti.yaml `frakcija`); null, ja nav.
- * Kartē tikai 15. Saeimu: 14. Saeimas frakcijas nav šo Sarakstu frakcijas; bez frakcijas — nevienam.
+ * Kartē tikai šīs Saeimas balsojumus (sisSaeimasBalsojums); bez frakcijas — nevienam.
  */
 export function frakcijasSaraksts(balsojums, kods, saraksti) {
-  if (balsojums.saeima !== 15) return null;
+  if (!sisSaeimasBalsojums(balsojums)) return null;
   return saraksti.find((s) => s.frakcija === kods) ?? null;
 }
 

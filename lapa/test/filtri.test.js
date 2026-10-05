@@ -4,7 +4,7 @@ import { nolasitFiltrus, atbilst, skaiti, progress, izvelesSaite } from "../klie
 
 const VISI = { saraksts: null, atbildigais: null, tema: null };
 // Ieraksts: galvenā vērtība pirmā, tad papildu.
-const jvAizs = { saraksts: "jv", atbildigais: ["am", "arm"], tema: ["aizsardziba", "arpolitika"], statuss: "procesa" };
+const jvAizs = { saraksts: "jv", iestades: ["am", "arm"], tema: ["aizsardziba", "arpolitika"], statuss: "procesa" };
 
 test("nolasitFiltrus: saraksts, atbildigais, tema no query; trūkstošie — null", () => {
   assert.deepEqual(nolasitFiltrus("?saraksts=jv&tema=aizsardziba"), { saraksts: "jv", atbildigais: null, tema: "aizsardziba" });
@@ -26,10 +26,10 @@ test("atbilst: papildu Tēma un papildu iestāde arī atbilst filtram", () => {
 });
 
 const PARAUGS = [
-  { saraksts: "jv", atbildigais: ["fm"], tema: ["nodokli"], statuss: "izpildits" },
-  { saraksts: "jv", atbildigais: ["am", "fm"], tema: ["aizsardziba", "nodokli"], statuss: "procesa" },
-  { saraksts: "as", atbildigais: ["fm"], tema: ["nodokli"], statuss: "neparbaudams" },
-  { saraksts: "as", atbildigais: ["vm"], tema: ["veseliba"], statuss: "nav-vertets" },
+  { saraksts: "jv", iestades: ["fm"], tema: ["nodokli"], statuss: "izpildits" },
+  { saraksts: "jv", iestades: ["am", "fm"], tema: ["aizsardziba", "nodokli"], statuss: "procesa" },
+  { saraksts: "as", iestades: ["fm"], tema: ["nodokli"], statuss: "neparbaudams" },
+  { saraksts: "as", iestades: ["vm"], tema: ["veseliba"], statuss: "nav-vertets" },
 ];
 
 test("skaiti: katra grupa ņem vērā pārējo grupu filtrus, skaita pēc galvenās vērtības", () => {

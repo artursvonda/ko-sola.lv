@@ -1,9 +1,7 @@
 import { html } from "../html.js";
 import { izkartojums, statussPill } from "./izkartojums.js";
 import { matrica, temasSaraksti } from "./salidzinajums-dati.js";
-
-// Visas tēmas ir statiskajā HTML ar enkuru (strādā bez JS); ko-salidzinajums pēc ?tema= rāda tikai izvēlēto (docs/lapa.md).
-export const temaSaite = (slug) => `/salidzinajums/?tema=${slug}#${slug}`;
+import { temaSaite } from "./saites.js";
 
 function suna(saraksts, { tema, n }) {
   if (n === 0) return html`<td data-tema="${tema.slug}"><span aria-hidden="true">·</span><span class="nav-redzams">0</span></td>`;

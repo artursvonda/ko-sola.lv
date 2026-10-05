@@ -7,6 +7,9 @@ ko-parskats { display: block; }
 ko-parskats:not(:defined) .filtri { display: none; }
 
 .parskats { display: grid; gap: var(--size-5); }
+/* h1 — izvēlētais filtrs (Title); DOM pirms filtru grupu h2, sānu izkārtojumā virs satura kolonnas. */
+.parskats-virsraksts { font-size: 1.125rem; line-height: 1.35; font-weight: 600; margin: 0; text-wrap: balance; }
+.bez-js { margin: 0; font-size: 14px; }
 .parskats-saturs { min-width: 0; }
 
 /* Filtri: šaurā ekrānā — viena atverama rinda virs satura; sānos — vienmēr atvērti. */
@@ -20,19 +23,21 @@ ko-parskats:not(:defined) .filtri { display: none; }
 
 .filtra-grupa + .filtra-grupa { margin-top: var(--size-5); }
 .filtra-grupa ul { list-style: none; margin: 0; padding: 0; }
-.filtra-grupa a { display: flex; justify-content: space-between; align-items: center; gap: var(--size-3); min-height: 40px; padding: 6px var(--size-2); color: var(--ink); text-decoration: none; font-size: 14px; line-height: 1.3; }
-.filtra-grupa a:hover { background: var(--surface); color: var(--ink); }
-.filtra-grupa a[aria-current="true"] { background: var(--sel); font-weight: 600; box-shadow: inset 2px 0 0 var(--accent); }
+/* Navigācijas saites (izņēmums no Links, docs/lapa.md): ink bez pasvītrojuma; hover/fokuss — pasvītro nosaukumu. */
+.filtra-grupa a { display: flex; justify-content: space-between; align-items: center; gap: var(--size-3); min-height: 40px; padding: 6px var(--size-2); border-left: 2px solid transparent; color: var(--ink); text-decoration: none; font-size: 14px; line-height: 1.3; }
+.filtra-grupa a:hover, .filtra-grupa a:focus-visible { color: var(--ink); }
+.filtra-grupa a:is(:hover, :focus-visible) > span:first-child { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .18em; }
+.filtra-grupa a[aria-current="true"] { background: var(--sel); font-weight: 600; border-left-color: var(--accent); }
 .filtra-grupa .skaits { font-size: 12px; color: var(--muted); font-weight: 400; }
 .filtra-grupa a.nulle { color: var(--muted); }
 
 /* Progress: „X no N solījumiem izpildīti”, statusu josla, skaiti. */
 .progress { display: flex; flex-direction: column; gap: var(--size-2); margin-bottom: var(--size-5); }
 .progress p { margin: 0; }
-.progress h1.filtra-nosaukums { font-size: 14px; font-weight: 400; line-height: 1.4; color: var(--muted); margin: 0; }
 .progress .liels { line-height: 1.1; }
 .progress .liels strong { font-weight: 700; }
 .progress .liels > .vajs { font-size: 40px; letter-spacing: -.02em; }
+/* Josla ir dekoratīva (aria-hidden): tie paši Statusi tajā pašā secībā kā leģenda zem tās (vārds + forma + skaits). */
 .statusu-josla { display: flex; gap: 2px; height: 10px; }
 .statusu-josla .seg { flex-basis: 0; min-width: 2px; }
 .statusu-josla .seg[hidden] { display: none; }
@@ -53,7 +58,8 @@ ko-parskats:not(:defined) .filtri { display: none; }
 .parskata-tabula .t-atb { font-size: 13px; line-height: 1.35; width: 13rem; }
 .parskata-tabula .t-st { width: 9.5rem; }
 ko-parskats:defined .parskata-tabula tbody tr { cursor: pointer; }
-.parskata-tabula tbody tr:hover { background: var(--surface); }
+/* Rindas hover — kā saites hover tās virsrakstam (Links), ne fona tonis (Surface — tikai tabulas galvenei). */
+ko-parskats:defined .parskata-tabula tbody tr:hover .t-sol a { color: var(--ink); text-decoration-thickness: 2px; }
 .parskata-tabula tbody tr.izvelets { background: var(--sel); }
 .parskats-tabula > .tukss { padding: var(--size-4) 14px; margin: 0; }
 
@@ -73,15 +79,13 @@ ko-parskats:defined .parskata-tabula tbody tr { cursor: pointer; }
 /* Detaļu panelis: rindota josla blakus tabulai (tikai platā ekrānā ar JS). */
 .panelis { border-top: 1px solid var(--ink); padding-top: var(--size-2); }
 .panelis[hidden] { display: none; }
-.panelis:focus { outline: none; }
 .panelis-galva { display: flex; justify-content: space-between; align-items: center; gap: var(--size-3); }
 .panelis-galva p { margin: 0; font-size: 12px; }
 .panelis-aizvert { display: inline-grid; place-items: center; width: 40px; height: 40px; margin-right: -10px; border: 0; background: transparent; color: var(--muted); font: inherit; font-size: 22px; line-height: 1; cursor: pointer; }
-.panelis-aizvert:hover { color: var(--ink); background: var(--surface); }
+.panelis-aizvert:hover { color: var(--ink); }
 .panelis-virsraksts { font-size: 1rem; line-height: 1.35; font-weight: 600; margin: var(--size-1) 0 var(--size-4); text-wrap: balance; }
-.panelis-virsraksts:focus { outline: none; }
 .panelis-virsraksts a { color: var(--ink); text-decoration: none; }
-.panelis-virsraksts a:hover { text-decoration: underline; }
+.panelis-virsraksts a:is(:hover, :focus-visible) { text-decoration: underline; text-decoration-thickness: 2px; }
 /* Citāts paliek virsraksts (Quote Outranks The Title), tikai šaurākai kolonnai mērogots. */
 .panelis .galvenais blockquote p { font-size: 1.25rem; line-height: 1.3; }
 .panelis .galvenais.c-s blockquote p { font-size: 1.125rem; line-height: 1.35; }
@@ -95,14 +99,18 @@ ko-parskats:defined .parskata-tabula tbody tr { cursor: pointer; }
 .panelis-pilna { margin: var(--size-5) 0 0; font-size: 14px; }
 
 @media (min-width: 64rem) {
-  .parskats { grid-template-columns: 15rem minmax(0, 1fr); gap: var(--size-7); align-items: start; }
+  .parskats { grid-template-columns: 15rem minmax(0, 1fr); gap: var(--size-2) var(--size-6); align-items: start; }
+  ko-parskats:defined .parskats { grid-template-rows: auto 1fr; }
+  ko-parskats:defined .parskats-virsraksts { grid-column: 2; grid-row: 1; }
+  ko-parskats:defined .filtri { grid-column: 1; grid-row: 1 / span 2; }
+  ko-parskats:defined .parskats-saturs { grid-column: 2; grid-row: 2; }
   .filtri { position: sticky; top: 0; max-height: 100vh; overflow-y: auto; padding: var(--size-2) var(--size-4) var(--size-6) 0; border-right: 1px solid var(--line); }
   .filtri-atvere > summary { display: none; }
   ko-parskats:not(:defined) .parskats { grid-template-columns: minmax(0, 1fr); }
 }
 
 @media (min-width: 75rem) {
-  .parskats-zona.ar-paneli { display: grid; grid-template-columns: minmax(0, 1fr) 24rem; gap: var(--size-7); align-items: start; }
+  .parskats-zona.ar-paneli { display: grid; grid-template-columns: minmax(0, 1fr) 24rem; gap: var(--size-6); align-items: start; }
   .panelis { position: sticky; top: var(--size-3); max-height: calc(100vh - var(--size-6)); overflow-y: auto; padding-left: var(--size-4); }
 }
 

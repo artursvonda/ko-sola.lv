@@ -1,6 +1,7 @@
 // Pārskata filtri bez DOM: query parsēšana, atbilstība, skaiti pa grupām un progress.
 // Lieto gan serveris (sākotnējais HTML), gan <ko-parskats> (pārrēķins pēc filtra maiņas).
 import { parskatsSaite } from "../lapas/saites.js";
+import { nolasitParametru } from "./parametri.js";
 
 /** Statusi pārskata leģendas secībā (B1): no izpildītā uz nevērtēto. */
 export const STATUSU_SECIBA = ["izpildits", "daleji-izpildits", "procesa", "nav-izpildits", "nav-vertets", "neparbaudams"];
@@ -8,35 +9,40 @@ export const STATUSU_SECIBA = ["izpildits", "daleji-izpildits", "procesa", "nav-
 /** Filtru grupas = query parametri `/` lapā (pa vienai vērtībai: slug no data/*.yaml). */
 export const GRUPAS = ["saraksts", "atbildigais", "tema"];
 
+/** Bez filtriem: katra grupa — „Visi”. */
+export const BEZ_FILTRIEM = Object.freeze(Object.fromEntries(GRUPAS.map((g) => [g, null])));
+
+/** Grupa (query parametrs) → ieraksta lauks. Parametrs „atbildigais” (lasītāja vārds) filtrē Atbildīgās iestādes. */
+const LAUKS = { saraksts: "saraksts", atbildigais: "iestades", tema: "tema" };
+
 /**
  * `location.search` → { saraksts, atbildigais, tema }; trūkstošs vai tukšs — null.
  * Ar `derigas` ({ grupa: Set }) nezināmu vērtību (piem., novecojusi saite) neņem vērā.
  */
 export function nolasitFiltrus(meklesana, derigas) {
-  const q = new URLSearchParams(meklesana);
-  return Object.fromEntries(
-    GRUPAS.map((g) => {
-      const v = q.get(g) || null;
-      return [g, v && derigas && !derigas[g].has(v) ? null : v];
-    }),
-  );
+  return Object.fromEntries(GRUPAS.map((g) => [g, nolasitParametru(meklesana, g, derigas?.[g])]));
 }
 
-const vertibas = (ieraksts, g) => [].concat(ieraksts[g]);
+const vertibas = (ieraksts, grupa) => [].concat(ieraksts[LAUKS[grupa]]);
 
 /** Ieraksts → data-* atribūtu vērtības tabulas rindai (vairākas vērtības — atdalītas ar atstarpi, galvenā pirmā). */
-export const datuAtributi = (r) => ({ saraksts: r.saraksts, atbildigais: r.atbildigais.join(" "), tema: r.tema.join(" "), statuss: r.statuss });
+export const datuAtributi = (ieraksts) => ({
+  saraksts: ieraksts.saraksts,
+  iestades: ieraksts.iestades.join(" "),
+  tema: ieraksts.tema.join(" "),
+  statuss: ieraksts.statuss,
+});
 
 /** Rindas `dataset` → ieraksts (pretējais datuAtributi). */
 export const ierakstsNoDatiem = (d) => ({
   saraksts: d.saraksts,
-  atbildigais: d.atbildigais.split(" "),
+  iestades: d.iestades.split(" "),
   tema: d.tema.split(" "),
   statuss: d.statuss,
 });
 
 /**
- * Vai ieraksts atbilst filtriem. Ieraksts: { saraksts, atbildigais: [galvenā, ...papildu], tema: [galvenā, ...papildu] }.
+ * Vai ieraksts atbilst filtriem. Ieraksts: { saraksts, iestades: [galvenā, ...papildu], tema: [galvenā, ...papildu], statuss }.
  * Papildu Tēma un papildu iestāde atbilst tāpat kā galvenā (GLOSSARY: ietekmē filtrēšanu). `izlaist` — grupa, ko neņem vērā.
  */
 export function atbilst(ieraksts, filtri, izlaist = null) {
@@ -50,14 +56,14 @@ export function atbilst(ieraksts, filtri, izlaist = null) {
 export function skaiti(ieraksti, filtri) {
   return Object.fromEntries(
     GRUPAS.map((g) => {
-      const sk = { "": 0 };
-      for (const r of ieraksti) {
-        if (!atbilst(r, filtri, g)) continue;
-        const galvena = vertibas(r, g)[0];
-        sk[""]++;
-        sk[galvena] = (sk[galvena] ?? 0) + 1;
+      const skaits = { "": 0 };
+      for (const ieraksts of ieraksti) {
+        if (!atbilst(ieraksts, filtri, g)) continue;
+        const galvena = vertibas(ieraksts, g)[0];
+        skaits[""]++;
+        skaits[galvena] = (skaits[galvena] ?? 0) + 1;
       }
-      return [g, sk];
+      return [g, skaits];
     }),
   );
 }
@@ -68,6 +74,6 @@ export const izvelesSaite = (filtri, grupa, vertiba) => parskatsSaite({ ...filtr
 /** „X no N izpildīti”: N — bez Nepārbaudāmajiem; `skaits` pa Statusiem STATUSU_SECIBA secībā. */
 export function progress(ieraksti) {
   const skaits = Object.fromEntries(STATUSU_SECIBA.map((k) => [k, 0]));
-  for (const r of ieraksti) skaits[r.statuss]++;
+  for (const ieraksts of ieraksti) skaits[ieraksts.statuss]++;
   return { izpilditi: skaits.izpildits, n: ieraksti.length - skaits.neparbaudams, neparbaudami: skaits.neparbaudams, skaits };
 }
