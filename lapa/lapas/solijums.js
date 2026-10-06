@@ -1,6 +1,7 @@
 import { html } from "../html.js";
-import { STATUSI } from "../dati.js";
+import { STATUSI, frakcijasSaraksts, sisSaeimasBalsojums } from "../dati.js";
 import { izkartojums, statussPill, datums, amatpersonaRindas } from "./izkartojums.js";
+import { parskatsSaite, temaSaite } from "./saites.js";
 
 const AVOTI = { cvk: "CVK programma", paplasinata: "Paplašinātā programma" };
 const NOTIKUMA_AVOTI = {
@@ -34,6 +35,11 @@ function statussTeksts(s) {
   return pedeja ? html`kopš <time class="mono" datetime="${pedeja.datums}">${datums(pedeja.datums)}</time>` : "Notikumu, kas mainītu Statusu, vēl nav.";
 }
 
+// Papildu Tēmas un iestādes filtrē pārskatu tāpat kā galvenās (GLOSSARY.md), tāpēc saite ir tā pati.
+const iestadesSaite = (i) => html`<a href="${parskatsSaite({ atbildigais: i.slug })}">${i.nosaukums}</a>`;
+const temasSaite = (t) => html`<a href="${parskatsSaite({ tema: t.slug })}">${t.nosaukums}</a>`;
+const saisuSaraksts = (xi, saite) => xi.map((x, k) => html`${k > 0 && ", "}${saite(x)}`);
+
 const josla = (s) => html`<dl class="josla">
   <div>
     <dt class="lbl">Statuss</dt>
@@ -41,24 +47,45 @@ const josla = (s) => html`<dl class="josla">
   </div>
   <div>
     <dt class="lbl">Atbildīgais</dt>
-    <dd><strong>${s.iestade.nosaukums}</strong>${amatpersonaRindas(s.amatpersona, "josla-sik")}
-    ${s.papildu_iestades.length > 0 && html`<span class="josla-sik">Arī: ${s.papildu_iestades.map((i) => i.nosaukums).join(", ")}</span>`}</dd>
+    <dd><strong>${iestadesSaite(s.iestade)}</strong>${amatpersonaRindas(s.amatpersona, "josla-sik")}
+    ${s.papildu_iestades.length > 0 && html`<span class="josla-sik">Arī: ${saisuSaraksts(s.papildu_iestades, iestadesSaite)}</span>`}</dd>
   </div>
   <div class="josla-pilna">
     <dt class="lbl">Tēma</dt>
-    <dd>${s.tema.nosaukums}${s.papildu_temas.length > 0 && html`<span class="vajs"> · arī ${s.papildu_temas.map((t) => t.nosaukums).join(", ")}</span>`}</dd>
+    <dd>${temasSaite(s.tema)}${s.papildu_temas.length > 0 && html`<span class="vajs"> · arī ${saisuSaraksts(s.papildu_temas, temasSaite)}</span>`}</dd>
   </div>
 </dl>`;
 
-const balsojums = (b) => html`
+const BEZ_FRAKCIJAS = "bez_frakcijas";
+
+/**
+ * Balsojuma rindas: { kods, saraksts (šīs Saeimas balsojumā, ja kartēts), balsis }.
+ * Šīs Saeimas balsojumā — Sarakstu CVK secībā, tad nekartētie kodi (datu secībā), „Bez frakcijas” pēdējā; citādi — datu secībā.
+ */
+function balsojumaRindas(b, saraksti) {
+  const rindas = Object.entries(b.frakcijas).map(([kods, balsis]) => ({ kods, saraksts: frakcijasSaraksts(b, kods, saraksti), balsis }));
+  if (!sisSaeimasBalsojums(b)) return rindas;
+  const vieta = (r) => (r.kods === BEZ_FRAKCIJAS ? Infinity : (r.saraksts?.nr ?? Number.MAX_SAFE_INTEGER));
+  return rindas.toSorted((a, c) => vieta(a) - vieta(c));
+}
+
+/** Rindas virsraksts: kartēts — tikai Saraksts (kā citur lapā), Frakcijas kods — `title`; citādi — kods, kā Saeimas datos. */
+function frakcija({ kods, saraksts }) {
+  if (kods === BEZ_FRAKCIJAS) return html`<th scope="row">Bez frakcijas</th>`;
+  if (!saraksts) return html`<th scope="row">${kods}</th>`;
+  return html`<th scope="row" title="${kods}"><abbr title="${saraksts.nosaukums}">${saraksts.saisinajums}</abbr> · ${saraksts.isais_nosaukums}</th>`;
+}
+
+const balsojums = (b, saraksti) => html`
 <details class="balsojums">
   <summary>Frakciju balsojums (${b.saeima}. Saeima): par ${b.kopa.par}, pret ${b.kopa.pret}, atturas ${b.kopa.atturas}</summary>
   <table>
     <thead><tr><th scope="col">Frakcija</th><th scope="col">Par</th><th scope="col">Pret</th><th scope="col">Atturas</th><th scope="col">Nebalsoja</th></tr></thead>
-    <tbody>${Object.entries(b.frakcijas).map(
-      ([f, x]) => html`<tr><th scope="row">${f === "bez_frakcijas" ? "Bez frakcijas" : f}</th><td>${x.par}</td><td>${x.pret}</td><td>${x.atturas}</td><td>${x.nebalsoja ?? ""}</td></tr>`,
+    <tbody>${balsojumaRindas(b, saraksti).map(
+      (r) => html`<tr>${frakcija(r)}<td>${r.balsis.par}</td><td>${r.balsis.pret}</td><td>${r.balsis.atturas}</td><td>${r.balsis.nebalsoja ?? ""}</td></tr>`,
     )}</tbody>
   </table>
+  ${!sisSaeimasBalsojums(b) && html`<p class="vajs">Balsojums ${b.saeima}. Saeimā. Tās frakcijas nav tas pats, kas 2026. gada vēlēšanu Saraksti.</p>`}
   <p><a href="${b.datu_avots}">Saeimas atvērtie dati</a>${b.komentars && html` · ${b.komentars}`}</p>
 </details>`;
 
@@ -73,21 +100,21 @@ const maina = (m) => html`<li class="la-maina la-${m.statuss}">
   <p class="vajs">Pamatā: ${m.notikumi.map((n, i) => html`${i > 0 && ", "}<a href="#${n.id}">${n.nosaukums}</a>`)}</p>
 </li>`;
 
-const notikums = (n) => html`<li class="la-notikums la-${n.virziens}" id="${n.id}">
+const notikums = (n, saraksti) => html`<li class="la-notikums la-${n.virziens}" id="${n.id}">
   <p class="la-datums"><time datetime="${n.datums}">${datums(n.datums)}</time> · Notikums · <span class="virziens virziens-${n.virziens}">${n.virziens === "par" ? "par" : "pret"} solīto</span></p>
   <h3>${n.nosaukums}</h3>
   <p>${n.pamatojums}</p>
   <p class="vajs">${n.apraksts}</p>
   <p class="la-avoti">Avots: ${n.avoti.map((a, i) => html`${i > 0 && ", "}${notikumaAvots(a)}`)}</p>
-  ${n.balsojums && balsojums(n.balsojums)}
+  ${n.balsojums && balsojums(n.balsojums, saraksti)}
   ${n.citi.length > 0 && html`<div class="la-citi"><p class="vajs">Attiecas arī uz:</p><ul>${n.citi.map((x) => html`<li>${solijumaSaite(x)}</li>`)}</ul></div>`}
 </li>`;
 
-function laikaAss(s) {
+function laikaAss(s, saraksti) {
   // Jaunākais augšā; vienā datumā Statusa maiņa pirms Notikuma, kas to pamato.
   const ieraksti = [
     ...s.statusa_mainas.map((m) => ({ datums: m.datums, k: 0, html: maina(m) })),
-    ...s.notikumi.map((n) => ({ datums: n.datums, k: 1, html: notikums(n) })),
+    ...s.notikumi.map((n) => ({ datums: n.datums, k: 1, html: notikums(n, saraksti) })),
   ].sort((a, b) => b.datums.localeCompare(a.datums) || a.k - b.k);
   const sakums = s.avoti[0];
   return html`<ol class="laika-ass">
@@ -115,11 +142,11 @@ function citiSaraksti(s, m) {
     ({ sr, visi }) => html`<div class="cits-saraksts">
       <h3><abbr title="${sr.nosaukums}">${sr.saisinajums}</abbr> · ${sr.isais_nosaukums}</h3>
       ${solijumuSaraksts(visi.slice(0, CITU_MAX))}
-      ${visi.length > CITU_MAX && html`<p><a href="/salidzinajums/?tema=${tema.slug}">Visi ${sr.saisinajums} solījumi šajā tēmā (${visi.length})</a></p>`}
+      ${visi.length > CITU_MAX && html`<p><a href="${parskatsSaite({ saraksts: sr.slug, tema: tema.slug })}">Visi ${sr.saisinajums} solījumi šajā tēmā (${visi.length})</a></p>`}
     </div>`,
   )}
   ${bez.length > 0 && html`<p class="vajs">Šajā tēmā solījumu nav: ${bez.map(({ sr }, i) => html`${i > 0 && ", "}<abbr title="${sr.nosaukums}">${sr.saisinajums}</abbr>`)}.</p>`}
-  <p><a href="/salidzinajums/?tema=${tema.slug}">Salīdzināt visus sarakstus tēmā „${tema.nosaukums}”</a></p>
+  <p><a href="${temaSaite(tema.slug)}">Salīdzināt visus sarakstus tēmā „${tema.nosaukums}”</a></p>
 </section>`;
 }
 
@@ -129,7 +156,7 @@ export function solijums(s, m) {
 
   const saturs = html`
 <article class="solijums">
-  <nav class="cels" aria-label="Atrašanās vieta"><a href="/">Solījumi</a> <span aria-hidden="true">›</span> <abbr title="${s.saraksts.nosaukums}">${s.saraksts.saisinajums}</abbr> · ${s.saraksts.isais_nosaukums}</nav>
+  <nav class="cels" aria-label="Atrašanās vieta"><a href="/">Solījumi</a> <span aria-hidden="true">›</span> <a href="${parskatsSaite({ saraksts: s.saraksts.slug })}"><abbr title="${s.saraksts.nosaukums}">${s.saraksts.saisinajums}</abbr> · ${s.saraksts.isais_nosaukums}</a></nav>
   <h1>${s.nosaukums}</h1>
   ${citats(galvenais, `galvenais ${citataPakape(galvenais.citats)}`)}
   ${josla(s)}
@@ -146,7 +173,7 @@ export function solijums(s, m) {
 
   <section class="sadala" aria-labelledby="laika-ass">
     <h2 id="laika-ass">${s.parbaudams ? "Statusa vēsture un Notikumi" : "Notikumi"}</h2>
-    ${laikaAss(s)}
+    ${laikaAss(s, m.saraksti)}
   </section>
 
   <section class="sadala" aria-labelledby="tas-pats">

@@ -42,7 +42,9 @@
       { "name": "chevron", "value": ".2s", "purpose": "Vote-details disclosure chevron rotation." }
     ],
     "breakpoints": [
-      { "name": "band-wide", "value": "48rem", "purpose": "Statuss band columns go from 1:1 to 1:1.4." }
+      { "name": "band-wide", "value": "48rem", "purpose": "Statuss band columns go from 1:1 to 1:1.4; below it overview rows stack in two tiers." },
+      { "name": "overview-sidebar", "value": "64rem", "purpose": "Overview filters become a sticky 15rem sidebar, always open." },
+      { "name": "overview-panel", "value": "75rem", "purpose": "Overview row opens the 24rem detail panel beside the table." }
     ],
     "shareCard": {
       "size": "1200x630",
