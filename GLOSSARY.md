@@ -31,7 +31,10 @@ Valsts iestāde, kuras kompetencē ir Solījuma iznākums: ministrija, Valsts ka
 _Avoid_: ministrija (modelī), atbildīgā persona
 
 **Galvenā atbildīgā iestāde**:
-Solījuma vienīgā Atbildīgā iestāde, pēc kuras to rāda un skaita; katram Solījumam ir tieši viena.
+Solījuma vienīgā Atbildīgā iestāde, pēc kuras to rāda un skaita; katram Solījumam ir tieši viena (vai Neskaidra).
+
+**Neskaidra Atbildīgā iestāde**:
+Pagaidu stāvoklis Solījumam, kura Atbildīgo iestādi redaktors vēl nav noteicis, jo avots to nepasaka un kompetence ir sadalīta. Lasītājam rāda "Neskaidrs" bez Amatpersonas; Papildu atbildīgo iestāžu tad nav.
 
 **Papildu atbildīgā iestāde**:
 Solījuma otrā vai trešā Atbildīgā iestāde (0–2) starpnozaru Solījumam; ietekmē tikai filtrēšanu, ne skaitīšanu.

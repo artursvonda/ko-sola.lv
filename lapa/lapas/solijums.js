@@ -1,5 +1,5 @@
 import { html } from "../html.js";
-import { STATUSI, frakcijasSaraksts, sisSaeimasBalsojums } from "../dati.js";
+import { STATUSI, NESKAIDRA_IESTADE, frakcijasSaraksts, sisSaeimasBalsojums } from "../dati.js";
 import { izkartojums, statussPill, datums, amatpersonaRindas } from "./izkartojums.js";
 import { parskatsSaite, temaSaite } from "./saites.js";
 
@@ -47,7 +47,7 @@ const josla = (s) => html`<dl class="josla">
   </div>
   <div>
     <dt class="lbl">Atbildīgais</dt>
-    <dd><strong>${iestadesSaite(s.iestade)}</strong>${amatpersonaRindas(s.amatpersona, "josla-sik")}
+    <dd><strong>${iestadesSaite(s.iestade)}</strong>${s.iestade.slug !== NESKAIDRA_IESTADE && amatpersonaRindas(s.amatpersona, "josla-sik")}
     ${s.papildu_iestades.length > 0 && html`<span class="josla-sik">Arī: ${saisuSaraksts(s.papildu_iestades, iestadesSaite)}</span>`}</dd>
   </div>
   <div class="josla-pilna">

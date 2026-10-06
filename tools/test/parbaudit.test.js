@@ -163,6 +163,13 @@ test("tēmām un iestādēm jābūt no slēgtā saraksta, galvenā neatkārtojas
   ]);
 });
 
+test("galvenā iestāde „neskaidrs” — atļauta, bet bez papildu iestādēm", () => {
+  assert.deepEqual(zinojumi(repo(solijums({ iestades: { galvena: "neskaidrs", papildu: [] } }))), []);
+  assert.deepEqual(zinojumi(repo(solijums({ iestades: { galvena: "neskaidrs", papildu: ["lm"] } }))), [
+    `${F}: iestāde "neskaidrs" — papildu iestādēm jābūt tukšām`,
+  ]);
+});
+
 test("bez data/iestades.yaml Solījumu nevar pārbaudīt", () => {
   assert.deepEqual(zinojumi(repo({ "data/iestades.yaml": null })), [
     `${F}: data/iestades.yaml nav — Atbildīgo iestādi nevar pārbaudīt`,

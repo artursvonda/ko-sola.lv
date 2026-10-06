@@ -2,7 +2,7 @@
 // Solījumus un Notikumus var ņemt no citas saknes (KO_DATI=fixtures izstrādei), pārējo — vienmēr no data/.
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
-import { lasitYaml, frontmatter, solijumuFaili, notikumuFaili } from "../tools/lib/dati.js";
+import { lasitYaml, frontmatter, solijumuFaili, notikumuFaili, NESKAIDRA_IESTADE } from "../tools/lib/dati.js";
 
 export const STATUSI = {
   "nav-vertets": "Nav vērtēts",
@@ -23,6 +23,10 @@ export function statuss(s) {
 export function amatpersona(iestade, d) {
   return iestade.amatpersonas.find((a) => a.no <= d && (!a.lidz || d <= a.lidz)) ?? null;
 }
+
+/** Iestāde Solījumiem, kuru Atbildīgā iestāde vēl nav noteikta: bez Amatpersonām, filtrējama kā citas. */
+export { NESKAIDRA_IESTADE };
+const NESKAIDRA = { slug: NESKAIDRA_IESTADE, nosaukums: "Neskaidrs", isais_nosaukums: "?", amatpersonas: [] };
 
 /** Saeima, kurā ievēlēti data/saraksti.yaml Saraksti. */
 export const SAEIMA = 15;
@@ -48,7 +52,7 @@ function publikacija(sakne, avots) {
 export function ieladetModeli({ sakne, datuSakne = sakne, sodien = new Date().toISOString().slice(0, 10) }) {
   const saraksti = lasitYaml(sakne, "data/saraksti.yaml").sort((a, b) => a.nr - b.nr);
   const temas = lasitYaml(sakne, "data/temas.yaml");
-  const iestades = lasitYaml(sakne, "data/iestades.yaml");
+  const iestades = [...lasitYaml(sakne, "data/iestades.yaml"), NESKAIDRA];
   const sarakstsPec = new Map(saraksti.map((s) => [s.slug, s]));
   const temaPec = new Map(temas.map((t) => [t.slug, t]));
   const iestadePec = new Map(iestades.map((i) => [i.slug, i]));

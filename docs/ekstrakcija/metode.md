@@ -80,7 +80,7 @@ vk (Valsts kanceleja), saeima, am (Aizsardzības), arm (Ārlietu), em (Ekonomika
 - Valdības kopējā vai Ministru prezidenta kompetence (piem., valsts pārvaldes reforma) → Valsts kanceleja. Iznākums tikai Saeimas rokās (piem., Kārtības rullis, deputātu skaits) → Saeima.
 - ES līmeņa solījums ("iestāsimies ES par X") → nozares ministrija, kas gatavo Latvijas pozīciju par X, ne Ārlietu ministrija (ja vien X nav ārpolitika).
 - Iznākums pašvaldību vai neatkarīgas iestādes kompetencē → ministrija vai Saeima, kas var mainīt attiecīgo regulējumu.
-- Neskaidrā gadījumā ieraksti iemeslu `piezimes`.
+- Neskaidrā gadījumā ieraksti iemeslu `piezimes`. Ja redaktors nevar izlemt — `iestades.galvena: neskaidrs`, `papildu: []` (lasītājam "Neskaidrs").
 
 ## 7. ID
 
