@@ -1,0 +1,24 @@
+id: pro-socialas-iemaksas-bernu-kopsanas-atvalinajuma
+saraksts: pro
+nosaukums: Sociālās iemaksas bērna kopšanas atvaļinājuma laikā
+parbaudams: true
+temas:
+  galvena: gimenes-un-demografija
+  papildu:
+    - socialais-atbalsts-un-pensijas
+iestades:
+  galvena: lm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: DZĪVES DĀRDZĪBAS MAZINĀŠANA
+    citats: Nodrošināsim sociālās iemaksas bērna kopšanas atvaļinājuma laikā
+  - veids: paplasinata
+    vieta: 3. Sociālās drošības tīkls un dzīves dārdzības mazināšana › Atbalsts jaunajām ģimenēm
+    citats: Tāpat nodrošināsim to, lai vecāki bērna kopšanas atvaļinājuma laikā saņemtu atbilstošas sociālās iemaksas.
+  - veids: paplasinata
+    vieta: 3. Sociālās drošības tīkls un dzīves dārdzības mazināšana › Pensiju sistēma, kas rada drošību
+    citats: Veidosim taisnīgāku iemaksu sistēmu jaunajiem vecākiem
+nesakritiba: CVK sola "nodrošināsim sociālās iemaksas"; paplašinātā programma — "atbilstošas sociālās iemaksas" un pensiju sadaļā plašāk — "taisnīgāku iemaksu sistēmu jaunajiem vecākiem".
+piezimes: Pensiju sadaļas "Veidosim taisnīgāku iemaksu sistēmu jaunajiem vecākiem" pievienots kā tas pats iznākums (sociālās iemaksas jaunajiem vecākiem). Vērtēšanai jādefinē, kas ir "nodrošinātas"/"atbilstošas" iemaksas salīdzinājumā ar kārtību pilnvaru sākumā.
+jautajums: ""
