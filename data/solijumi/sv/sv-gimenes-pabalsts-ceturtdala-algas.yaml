@@ -1,0 +1,17 @@
+id: sv-gimenes-pabalsts-ceturtdala-algas
+saraksts: sv
+nosaukums: Ģimenes valsts pabalsts par katru bērnu 1/4 no minimālās algas
+parbaudams: true
+temas:
+  galvena: gimenes-un-demografija
+  papildu: [socialais-atbalsts-un-pensijas]
+iestades:
+  galvena: lm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "DEMOGRĀFIJA"
+    citats: "noteikt, ka ģimenes valsts pabalsts par katru bērnu ir 1/4 no minimālās algas"
+nesakritiba: ""
+piezimes: "Pārbaudāms: konkrēts mērs (1/4 no minimālās algas par katru bērnu)."
+jautajums: ""

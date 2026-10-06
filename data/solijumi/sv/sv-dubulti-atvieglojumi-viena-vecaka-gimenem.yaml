@@ -1,0 +1,17 @@
+id: sv-dubulti-atvieglojumi-viena-vecaka-gimenem
+saraksts: sv
+nosaukums: Dubulti IIN atvieglojumi par apgādājamajiem viena vecāka ģimenēs
+parbaudams: true
+temas:
+  galvena: gimenes-un-demografija
+  papildu: [nodokli-un-budzets]
+iestades:
+  galvena: fm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "DEMOGRĀFIJA"
+    citats: "dubultot atvieglojumus par apgādājamajiem viena vecāka ģimenēs"
+nesakritiba: ""
+piezimes: "Pārbaudāms: konkrēts mērs (divkāršs atvieglojums). FM — IIN regulējums."
+jautajums: ""

@@ -1,0 +1,17 @@
+id: sv-atvalinajums-adoptetajiem
+saraksts: sv
+nosaukums: Elastīgs valsts apmaksāts bērna kopšanas atvaļinājums adoptētājiem
+parbaudams: true
+temas:
+  galvena: gimenes-un-demografija
+  papildu: []
+iestades:
+  galvena: lm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "DEMOGRĀFIJA"
+    citats: "nodrošināt adoptētājiem elastīgu valsts apmaksātu bērna kopšanas atvaļinājumu neatkarīgi no bērna vecuma"
+nesakritiba: ""
+piezimes: "Pārbaudāms: regulējums ieviests vai nē (valsts apmaksāts, neatkarīgi no bērna vecuma). LM — atvaļinājumi un pabalsti."
+jautajums: ""
