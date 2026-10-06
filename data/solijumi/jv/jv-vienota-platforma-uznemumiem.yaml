@@ -1,0 +1,20 @@
+id: jv-vienota-platforma-uznemumiem
+saraksts: jv
+nosaukums: Viena platforma uzņēmumu saziņai ar visām valsts iestādēm
+parbaudams: true
+temas:
+  galvena: valsts-parvalde
+  papildu: [ekonomika-un-darbs]
+iestades:
+  galvena: varam
+  papildu: [em]
+avoti:
+  - veids: paplasinata
+    vieta: "4. Ekonomika, enerģētika un uzņēmējdarbība › Apņemšanās un uzdevumi › Tehnoloģijas un mākslīgais intelekts"
+    citats: "Veidosim vienu platformu uzņēmumu saziņai un darījumu kārtošanai ar visām valsts iestādēm"
+  - veids: paplasinata
+    vieta: "6. Valsts pārvalde › Apņemšanās un uzdevumi › Mūsdienīga un efektīva valsts pārvalde"
+    citats: "Veidosim vienu platformu uzņēmumu saziņai un lietu kārtošanai ar visām valsts iestādēm"
+nesakritiba: ""
+piezimes: "Vērtēšanas avots — paplašinātās programmas 4. nodaļa (CVK citāta nav). Tas pats punkts 6. nodaļā — citāts (§0.3); „darījumu” ↔ „lietu” kārtošanai — sinonīmi. Pārbaudāms: viena platforma darbojas vai nē. Atbildīgā iestāde neskaidra: VARAM (valsts digitālie pakalpojumi), EM papildu (uzņēmējdarbības vide) — pieņēmums, nav pārbaudīts."
+jautajums: ""
