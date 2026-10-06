@@ -1,0 +1,17 @@
+id: as-valsts-veselibas-apdrosinasanas-modelis
+saraksts: as
+nosaukums: Valsts veselības apdrošināšanas modelis — nauda seko pacientam
+parbaudams: true
+temas:
+  galvena: veseliba
+  papildu: []
+iestades:
+  galvena: vm
+  papildu: [fm]
+avoti:
+  - veids: cvk
+    vieta: "Veselības un sociālajai aprūpei"
+    citats: "Ieviesīsim valsts veselības apdrošināšanas modeli, kur nauda seko pacientam neatkarīgi no tā, vai ārstējas valsts vai sertificētā privātā iestādē"
+nesakritiba: ""
+piezimes: "Palīgteikums („kur nauda seko pacientam …”) apraksta modeli — nav dalīts (§1). Pārbaudāms: normatīvajā aktā ieviests valsts veselības apdrošināšanas modelis, kurā valsts finansējums seko pacientam arī uz sertificētām privātām iestādēm, vai nē. Nošķirts no NVD pārveides par fondu (atsevišķs teikums, cits iznākums — iestādes pārveide). VM — veselības aprūpes finansēšanas modelis; FM papildu — modelis maina veselības aprūpes finansēšanu no budžeta."
+jautajums: ""

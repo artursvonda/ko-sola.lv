@@ -1,0 +1,17 @@
+id: as-veselibas-aprupe-izglitibas-iestades
+saraksts: as
+nosaukums: Veselības aprūpes stiprināšana izglītības iestādēs
+parbaudams: false
+temas:
+  galvena: veseliba
+  papildu: [izglitiba-un-zinatne]
+iestades:
+  galvena: vm
+  papildu: [izm]
+avoti:
+  - veids: cvk
+    vieta: "Veselības un sociālajai aprūpei"
+    citats: "Bērniem nodrošināsim savlaicīgu diagnostiku un ārstēšanu, paplašinot pakalpojumu pieejamību un stiprinot veselības aprūpi izglītības iestādēs"
+nesakritiba: ""
+piezimes: "„-ot” daļa nosauc atsevišķu jomu ar savu iznākumu (veselības aprūpe izglītības iestādēs), tāpēc dalīta (§1, robežgadījums); citēts viss teikums, jo „-ot” daļai nav sava subjekta (§3). Nepārbaudāms: „stiprinot” bez mēra. VM — veselības aprūpe; IZM papildu — izglītības iestādes."
+jautajums: ""
