@@ -1,0 +1,25 @@
+id: pro-transports-pec-pieprasijuma
+saraksts: pro
+nosaukums: Transports pēc pieprasījuma attālos novados
+parbaudams: true
+temas:
+  galvena: transports
+  papildu:
+    - regioni-un-pasvaldibas
+iestades:
+  galvena: sm
+  papildu:
+    - varam
+avoti:
+  - veids: paplasinata
+    vieta: 1. Ekonomiskās labklājības un izaugsmes programma › Reģionu dzīves telpa, mājokļi un vietējā ražošana
+    citats: Stiprināsim reģionu mobilitāti, attīstot pasažieru autotransportu pēc pieprasījuma attālos novados
+  - veids: paplasinata
+    vieta: 9. Reģioni, kas attīstās › Pieejams un kvalitatīvs pamatfunkciju pakalpojums ikvienā Latvijas pašvaldībā
+    citats: Stiprināsim sabiedriskā transporta pieejamību reģionu centros un lauku teritorijās realizējot transportu pēc pieprasījuma un ieviešot citus mobilitātes risinājumus.
+  - veids: paplasinata
+    vieta: 10. Transports, savienojamība un droša mobilitāte › Ērts un mūsdienīgs sabiedriskais transports
+    citats: Mazāk apdzīvotās teritorijās attīstīsim transportu pēc pieprasījuma un citus elastīgus mobilitātes risinājumus.
+nesakritiba: ""
+piezimes: 'Solījums ir "-ot" daļa. 9. un 10. nodaļas punkti pievienoti pēc §0.3. Robežgadījums pārbaudāmībai: vērtē, vai transports pēc pieprasījuma ieviests attālos/mazāk apdzīvotos novados.'
+jautajums: ""

@@ -1,0 +1,24 @@
+id: pro-lauksaimniecibas-subsidijas-ar-ieguvumiem
+saraksts: pro
+nosaukums: Subsīdijas lauksaimniekiem atkarībā no vides un sociālajiem ieguvumiem
+parbaudams: true
+temas:
+  galvena: lauksaimnieciba-un-zivsaimnieciba
+  papildu:
+    - vide-un-klimats
+iestades:
+  galvena: zm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: KLIMATS UN VIDE
+    citats: Piesaistīsim subsīdījas lauksaimniekiem ar izmērāmiem vides un sociālajiem ieguvumiem.
+  - veids: paplasinata
+    vieta: 1. Ekonomiskās labklājības un izaugsmes programma › Reģionu dzīves telpa, mājokļi un vietējā ražošana
+    citats: Pārdefinēsim ES un valsts lauksaimniecības subsīdiju mērķus, sasaistot finansējumu ar lauku apdzīvotības saglabāšanu, kooperācijas attīstību, bioloģiskās daudzveidības un augsnes kvalitātes uzlabošanu un pesticīdu lietošanas samazināšanu.
+  - veids: paplasinata
+    vieta: 2. Zaļa enerģija, aizsargāta vide, un taisnīga klimatrīcība › Ilgtspējīga lauksaimniecība
+    citats: Visus tiešmaksājumus lauksaimniekiem saistīsim ar izmērāmiem vides un sociālajiem ieguvumiem.
+nesakritiba: 2. nodaļa attiecina uz "visus tiešmaksājumus"; CVK un 1. nodaļa — uz subsīdijām kopumā; 1. nodaļa nemin "izmērāmus" ieguvumus, bet uzskaita mērķus (lauku apdzīvotība, kooperācija, bioloģiskā daudzveidība, augsne, pesticīdi).
+piezimes: "CVK citāts no nodaļas KLIMATS UN VIDE: punkts der vairākām CVK nodaļām, paplašinātajā programmā tas ir arī 1. nodaļā (→ šī izpilde); 2. nodaļas punkts pievienots pēc §0.3."
+jautajums: ""

@@ -1,0 +1,22 @@
+id: pro-pasnodarbinato-minimalo-iemaksu-atcelsana
+saraksts: pro
+nosaukums: Minimālo sociālo iemaksu atcelšana pašnodarbinātajiem
+parbaudams: true
+temas:
+  galvena: nodokli-un-budzets
+  papildu:
+    - ekonomika-un-darbs
+iestades:
+  galvena: lm
+  papildu:
+    - fm
+avoti:
+  - veids: cvk
+    vieta: EKONOMIKA UN ENERGONEATKARĪBA
+    citats: Pāriesim no minimālās sociālo iemaksu bāzes uz proporcionālām iemaksām sociālajā budžetā.
+  - veids: paplasinata
+    vieta: 14. Taisnīga un atbildīga nodokļu sistēma › Vienkāršots apgrozījuma nodoklis pašnodarbinātajiem
+    citats: Pakalpojumu apgrozījuma nodoklis ar likmi 25%, kur IIN un VSAOI (valsts sociālās apdrošināšanas obligātās iemaksas) sadalījums noteikts 20/80 attiecībā, atceļot minimālās iemaksas
+nesakritiba: ""
+piezimes: '"-ot" daļa ar savu iznākumu, atdalīta no 25% apgrozījuma nodokļa. CVK 4. punkts sadalīts pēc paplašinātās programmas (sk. pro-socialas-iemaksas-proporcionali-slodzei).'
+jautajums: ""

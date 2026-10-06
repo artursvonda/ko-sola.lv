@@ -1,0 +1,17 @@
+id: pro-automatiska-datu-apmaina
+saraksts: pro
+nosaukums: Automātiska datu apmaiņa starp iestādēm, nepieprasot uzņēmējiem esošus datus
+parbaudams: false
+temas:
+  galvena: valsts-parvalde
+  papildu: []
+iestades:
+  galvena: varam
+  papildu: []
+avoti:
+  - veids: paplasinata
+    vieta: 1. Ekonomiskās labklājības un izaugsmes programma › Digitāla valsts pārvalde un birokrātijas mazināšana
+    citats: Automatizēsim valsts pārvaldes procesus, lai nodrošinātu automātisku datu apmaiņu starp valsts pārvaldes iestādēm un pašvaldībām, novēršot situācijas, kad uzņēmējiem tiek pieprasīti dati, kas jau ir valsts rīcībā
+nesakritiba: ""
+piezimes: 'Nepārbaudāms: nav mēra vai termiņa; "automatizēsim procesus" — virziens. Atvērto datu paplašināšana — atsevišķs Solījums.'
+jautajums: ""

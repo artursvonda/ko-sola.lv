@@ -1,0 +1,20 @@
+id: pro-elektroenergijas-jaudu-portfelis
+saraksts: pro
+nosaukums: Elektroenerģijas ražošanas jaudu portfelis ar priekšroku atjaunīgajiem resursiem
+parbaudams: true
+temas:
+  galvena: energetika
+  papildu: []
+iestades:
+  galvena: kem
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: EKONOMIKA UN ENERGONEATKARĪBA
+    citats: Noteiksim skaidru elektroenerģijas ražošanas jaudu portfeli, priekšroku dodot atjaunīgajiem energoresursiem.
+  - veids: paplasinata
+    vieta: 1. Ekonomiskās labklājības un izaugsmes programma › Klimatneitrāla enerģētika un zaļās ekonomikas stimuli
+    citats: Definēsim, kādam jābūt elektroenerģijas ražošanas avotu kopumam, lai sistēma būtu droša, izdevīga un spētu nodrošināt elektroapgādi jebkuros apstākļos. Latvijai jānodrošina bāzes elektroenerģijas jaudas nepārtrauktā režīmā, kā arī jāspēj kāpināt jaudas pēc pieprasījuma.
+nesakritiba: CVK sola portfeli, "priekšroku dodot atjaunīgajiem energoresursiem"; paplašinātā programma atjaunīgos resursus nemin, bet prasa "bāzes elektroenerģijas jaudas nepārtrauktā režīmā".
+piezimes: ""
+jautajums: ""
