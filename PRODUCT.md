@@ -45,11 +45,11 @@ Neighbours: Re:Check "Solīja, bet vai izdarīja?" (status scale is compatible);
 - Solījums page shows all quotes with sources and any Nesakritība (#13, #8).
 - Latvian only; no EN version.
 - Out of scope: government declaration tracking, systematic Publisks izteikums collection, public status suggestions, subscriptions/notifications, user profiles (planned later; architecture allows).
-- Undecided: methodology page and neutrality statement; how to present source asymmetry honestly (only JV and PRO have full extended programs, so they will have more Solījumi); tags/collections across Tēmas; reader-facing Nesakritība counts/filter; launch (domain #4, DNS, OG).
+- Undecided: methodology page and neutrality statement; how to present source asymmetry honestly (only JV and PRO have full extended programs, so they will have more Solījumi); tags/collections across Tēmas; reader-facing Nesakritība counts/filter; launch (deploy, OG).
 
 ## Brand Commitments
 
-- Name and domain: ko-sola.lv (registration pending, #4).
+- Name and domain: ko-sola.lv (registered 05.10.2026, DNS on Cloudflare, #4).
 - Lists shown neutrally: abbreviation + name, no party colours.
 - Visual direction already chosen in #7: B1 · Tabula ar atbildīgajiem, colour scheme Grafīts; prototype on branch `prototype/dizains` (`prototypes/dizains/Tabula.dc.html`). Visual details belong in DESIGN.md, not here.
 

@@ -4,6 +4,8 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "ko-sola",
   "compatibility_date": "2026-10-05",
+  // Domēns ko-sola.lv (#4): zona Cloudflare, Worker ir izcelsme, DNS ierakstu pārvalda Cloudflare.
+  "routes": [{ "pattern": "ko-sola.lv", "custom_domain": true }],
   "assets": {
     "directory": "./dist",
     "html_handling": "auto-trailing-slash",
