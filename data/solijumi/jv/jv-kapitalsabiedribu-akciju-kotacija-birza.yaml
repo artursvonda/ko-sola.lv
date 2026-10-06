@@ -1,0 +1,23 @@
+id: jv-kapitalsabiedribu-akciju-kotacija-birza
+saraksts: jv
+nosaukums: Valsts kapitālsabiedrību akciju kotācija biržā (līdz 25%)
+parbaudams: true
+temas:
+  galvena: ekonomika-un-darbs
+  papildu: []
+iestades:
+  galvena: vk
+  papildu: [fm]
+avoti:
+  - veids: cvk
+    vieta: "3. Finanses"
+    citats: "Attīstīsim kapitāla tirgu"
+  - veids: paplasinata
+    vieta: "3. Finanses › Apņemšanās un uzdevumi"
+    citats: "virzīsim valsts kapitālsabiedrību akciju kotāciju biržā (līdz 25%)"
+  - veids: paplasinata
+    vieta: "4. Ekonomika, enerģētika un uzņēmējdarbība › Apņemšanās un uzdevumi › Uzņēmējdarbība un investīcijas"
+    citats: "Izvērtēsim iespēju veikt valsts kapitālsabiedrību daļēju kotāciju biržā, saglabājot valsts kontroli"
+nesakritiba: "CVK programma sola tikai „Attīstīsim kapitāla tirgu” bez mēra; paplašinātās programmas 3. nodaļā — „virzīsim … akciju kotāciju biržā (līdz 25%)” (vērtē pēc šī), bet 4. nodaļā — tikai „Izvērtēsim iespēju veikt … daļēju kotāciju biržā”."
+piezimes: "Dalīts no paplašinātās programmas punkta par kapitāla tirgu (§1 piemērs). CVK „Attīstīsim kapitāla tirgu” pievienots kā paplašinātās programmas dalījuma attiecīgā daļa (§4) — tas pats citāts arī jv-kapitala-tirgus-sasaiste-ar-depozitarijiem; „valsts attīstības fondu” — jv-valsts-attistibas-fonds. 4. nodaļas punkta otrais teikums ir tas pats Solījums (§0.3) ar vājāku stiprumu. Pārbaudāms: „virzīsim” + konkrēts objekts un mērs. Valsts kapitālsabiedrību pārvaldības koordinācija — VK, FM papildu (kapitāla tirgus politika; pieņēmums, nav pārbaudīts). Redaktors: CVK „Attīstīsim kapitāla tirgu” pievienot konkrētajiem kapitāla tirgus Solījumiem, atsevišķu Nepārbaudāmu Solījumu „Kapitāla tirgus attīstība” neveidot."
+jautajums: ""
