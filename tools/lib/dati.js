@@ -6,6 +6,8 @@ import { sadalitAvotu } from "./avots.js";
 
 export const SOLIJUMI = "data/solijumi";
 export const NOTIKUMI = "data/notikumi";
+/** Galvenā iestāde, kamēr Atbildīgā iestāde nav noteikta (GLOSSARY.md "Neskaidra Atbildīgā iestāde"). */
+export const NESKAIDRA_IESTADE = "neskaidrs";
 
 export function lasitYaml(sakne, cels) {
   return parse(readFileSync(join(sakne, cels), "utf8"));

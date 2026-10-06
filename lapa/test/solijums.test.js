@@ -83,6 +83,13 @@ test("saites uz filtrētu pārskatu: vairākas papildu iestādes atdalītas ar k
   assert.match(h, /Arī: <a href="\/\?atbildigais=fm">[^<]+<\/a>, <a href="\/\?atbildigais=varam">/);
 });
 
+test("neskaidra Atbildīgā iestāde: „Neskaidrs” bez Amatpersonas rindas", () => {
+  const neskaidra = m.iestades.find((i) => i.slug === "neskaidrs");
+  const h = lapa({ ...atrast("as-majoklu-garantijas-regionos"), iestade: neskaidra, amatpersona: null, papildu_iestades: [] });
+  assert.match(h, /<strong><a href="\/\?atbildigais=neskaidrs">Neskaidrs<\/a><\/strong>/);
+  assert.doesNotMatch(h, /Amatpersona nav norādīta/);
+});
+
 test("citi saraksti tēmā: „Visi … solījumi šajā tēmā” ved uz pārskatu ar Sarakstu un Tēmu", () => {
   // Fixtures nevienam Sarakstam nav vairāk par 3 solījumiem vienā tēmā — ceturto pieliek tikai šim testam.
   const as = m.solijumi.filter((x) => x.saraksts.slug === "as" && x.tema.slug === "nodokli-un-budzets");

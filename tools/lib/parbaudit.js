@@ -4,7 +4,7 @@ import { existsSync, readFileSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import Ajv2020 from "ajv/dist/2020.js";
-import { lasitYaml, solijumuFaili, notikumuFaili, avotuLasitajs } from "./dati.js";
+import { lasitYaml, solijumuFaili, notikumuFaili, avotuLasitajs, NESKAIDRA_IESTADE } from "./dati.js";
 import { atrastCitatu } from "./avots.js";
 
 const SHEMAS = join(dirname(fileURLToPath(import.meta.url)), "../../schemas");
@@ -82,7 +82,9 @@ export function parbaudit(sakne) {
 
     parbauditSlugus(s.temas, temuSlugi, "tēma", "data/temas.yaml", kf);
     if (iestades === null) kf("data/iestades.yaml nav — Atbildīgo iestādi nevar pārbaudīt");
-    else parbauditSlugus(s.iestades, iestazuSlugi, "iestāde", "data/iestades.yaml", kf);
+    else if (s.iestades.galvena === NESKAIDRA_IESTADE) {
+      if (s.iestades.papildu?.length) kf(`iestāde "${NESKAIDRA_IESTADE}" — papildu iestādēm jābūt tukšām`);
+    } else parbauditSlugus(s.iestades, iestazuSlugi, "iestāde", "data/iestades.yaml", kf);
 
     if ((s.jautajums ?? "").trim()) kf(`neatbildēts jautājums redaktoram: ${s.jautajums.trim()}`);
     parbauditStatusaMainas(s, notikumi, kf);
