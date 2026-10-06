@@ -160,4 +160,21 @@
         - REĢIONI
     - veids: paplasinata
       url: https://progresivie.lv/velesanas/programma#gara-programma
-      # fails, atbilst_cvk — pievieno "Ekstrakcija: Progresīvie" (#18).
+      fails: sources/paplasinata/pro.md
+      # 14 nodaļas, CVK — 11; tēmā vairākas paplašinātās nodaļas uz vienu CVK nodaļu.
+      # MEŽI: paplašinātās nodaļas nav (mežsaimniecība — 2. nodaļas sadaļa).
+      # 10. Transports — bez atbilsmes (CVK transporta punkti izkaisīti) → "Ārpus CVK nodaļām".
+      atbilst_cvk:
+        1. Ekonomiskās labklājības un izaugsmes programma: EKONOMIKA UN ENERGONEATKARĪBA
+        2. Zaļa enerģija, aizsargāta vide, un taisnīga klimatrīcība: KLIMATS UN VIDE
+        3. Sociālās drošības tīkls un dzīves dārdzības mazināšana: DZĪVES DĀRDZĪBAS MAZINĀŠANA
+        4. Veselīga un ilgi dzīvojoša sabiedrība: VESELĪGA SABIEDRĪBA UN PIEEJAMA APRŪPE
+        5. Eiropa kā globāli nozīmīgs, taisnīgs spēlētājs un Latvija tās kodolā: DROŠĪBA UN ĀRPOLITIKA
+        6. Aizsargāta un droša valsts, kur ikviens apzinās savu lomu: DROŠĪBA UN ĀRPOLITIKA
+        7. Iekļaujoša sabiedrība, kur ikviens jūtas droši: DEMOKRĀTIJA UN CILVĒKTIESĪBAS
+        8. Izglītoti un daudzpusīgi jaunieši, kuriem ir iespējas: IZGLĪTĪBA UN ZINĀTNE
+        9. Reģioni, kas attīstās: REĢIONI
+        11. Stipra pilsoniskā sabiedrība, neatkarīgi un kvalitatīvi mediji, spēcīga tiesu vara – demokrātijas stūrakmens: DEMOKRĀTIJA UN CILVĒKTIESĪBAS
+        12. Kultūra, kas saliedē un stiprina demokrātiju: KULTŪRA, KAS STIPRINA DEMOKRĀTIJU
+        13. Valsts pārvalde, kas sasniedz mērķus: PRETKORUPCIJA UN VALSTS PĀRVALDE
+        14. Taisnīga un atbildīga nodokļu sistēma: EKONOMIKA UN ENERGONEATKARĪBA
