@@ -1,0 +1,17 @@
+id: as-valsts-rezervju-audits
+saraksts: as
+nosaukums: Valsts rezervju audits
+parbaudams: true
+temas:
+  galvena: iekseja-drosiba-un-tiesiskums
+  papildu: []
+iestades:
+  galvena: iem
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "Iekšējai un ārējai drošībai"
+    citats: "veiksim valsts rezervju auditu"
+nesakritiba: ""
+piezimes: "No teikuma „Civilajā aizsardzībā ieviesīsim …” (§1). Pārbaudāms: audits veikts vai nē. Atbildīgā iestāde nav droša: avotā nav precizēts, kuras rezerves (materiālās, energoresursu u. c.) un kas auditu veic; IeM izvēlēta, jo teikums ir par civilo aizsardzību (valsts materiālās rezerves). Redaktoram izlemt."
+jautajums: ""
