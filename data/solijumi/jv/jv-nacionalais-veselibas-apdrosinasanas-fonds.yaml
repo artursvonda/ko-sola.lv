@@ -1,0 +1,20 @@
+id: jv-nacionalais-veselibas-apdrosinasanas-fonds
+saraksts: jv
+nosaukums: "Nacionālā veselības un apdrošināšanas fonda izveide"
+parbaudams: true
+temas:
+  galvena: veseliba
+  papildu: []
+iestades:
+  galvena: vm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "5. Veselība, labklājība un demogrāfija"
+    citats: "izveidosim Nacionālo veselības un apdrošināšanas fondu efektīvākai pārvaldībai"
+  - veids: paplasinata
+    vieta: "5. Veselība, labklājība un demogrāfija › Apņemšanās un uzdevumi › Investīcijas veselībā, pakalpojumu pieejamība un noturība"
+    citats: "stiprināsim efektīvu pārvaldību, izveidojot Nacionālo veselības un apdrošināšanas fondu"
+nesakritiba: ""
+piezimes: "Paplašinātās programmas punkta otrajā daļā „stiprināsim efektīvu pārvaldību” ir tikai vispārīgs darbības vārds — Solījums ir „-ot” daļa (§1); finansējuma daļa — jv-veselibas-finansejums-6-no-ikp. Pārbaudāms: iestādes (fonda) izveide. VM (pieņēmums, nav pārbaudīts)."
+jautajums: ""

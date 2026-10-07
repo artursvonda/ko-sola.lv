@@ -1,0 +1,20 @@
+id: jv-medicinas-cilvekresursu-stiprinasana
+saraksts: jv
+nosaukums: "Mediķu izglītība, studiju vietas un cieņpilns atalgojums"
+parbaudams: false
+temas:
+  galvena: veseliba
+  papildu: [izglitiba-un-zinatne]
+iestades:
+  galvena: vm
+  papildu: [izm]
+avoti:
+  - veids: cvk
+    vieta: "5. Veselība, labklājība un demogrāfija"
+    citats: "Stiprināsim mediķu izglītību, cieņpilnu atalgojumu"
+  - veids: paplasinata
+    vieta: "5. Veselība, labklājība un demogrāfija › Apņemšanās un uzdevumi › Investīcijas veselībā, pakalpojumu pieejamība un noturība"
+    citats: "Stiprināsim cilvēkresursus medicīnā ar vairāk studiju vietām, cieņpilnu atalgojumu, mūžizglītību un valsts pasūtījumu nepieciešamo speciālistu sagatavošanā"
+nesakritiba: ""
+piezimes: "CVK teikums sadalīts pēc paplašinātās programmas dalījuma (§4): mediķu izglītība un atalgojums (šeit), krīzes gatavība (jv-veselibas-sektora-krizes-gataviba); daļai nav sava darbības vārda — citēts teikums līdz šai daļai (§3). Paplašinātās programmas uzskaitījums zem viena darbības vārda, nav dalīts (§1). Robežgadījums pārbaudāmībai: „vairāk studiju vietām” ir izmērāms virziens, bet galvenais darbības vārds „stiprināsim” un „cieņpilnu atalgojumu” ir bez mēra — Nepārbaudāms. VM, IZM papildu (studiju vietas; pieņēmums, nav pārbaudīts)."
+jautajums: ""

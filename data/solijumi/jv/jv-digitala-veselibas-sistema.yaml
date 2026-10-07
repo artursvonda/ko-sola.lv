@@ -1,0 +1,20 @@
+id: jv-digitala-veselibas-sistema
+saraksts: jv
+nosaukums: "Digitālā veselības sistēma ar vienotu pacientu portālu un pierakstiem"
+parbaudams: true
+temas:
+  galvena: veseliba
+  papildu: [valsts-parvalde]
+iestades:
+  galvena: vm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "5. Veselība, labklājība un demogrāfija"
+    citats: "Attīstīsim digitālu veselības sistēmu ar vienotu pacientu portālu, pierakstiem, atgādinājumiem un ārstniecības kvalitātes datiem"
+  - veids: paplasinata
+    vieta: "5. Veselība, labklājība un demogrāfija › Apņemšanās un uzdevumi › Investīcijas veselībā, pakalpojumu pieejamība un noturība"
+    citats: "Attīstīsim modernu digitālu veselības sistēmu ar vienotu pacientu pierakstu un atgādinājumu reģistru"
+nesakritiba: "CVK programma sola sistēmu „ar vienotu pacientu portālu, pierakstiem, atgādinājumiem un ārstniecības kvalitātes datiem”, bet paplašinātā programma — „ar vienotu pacientu pierakstu un atgādinājumu reģistru” (pacientu portālu un ārstniecības kvalitātes datus nemin); Statuss pēc CVK."
+piezimes: "Uzskaitījums „ar …” zem viena darbības vārda, nav dalīts (§1). Pārbaudāms: konkrēts objekts — vienots pacientu portāls ar pierakstiem, atgādinājumiem un ārstniecības kvalitātes datiem ieviests vai nē. VM (pieņēmums, nav pārbaudīts)."
+jautajums: ""
