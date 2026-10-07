@@ -1,0 +1,17 @@
+id: as-veselibas-un-socialas-aprupes-integracija
+saraksts: as
+nosaukums: Veselības un sociālās aprūpes integrācija
+parbaudams: false
+temas:
+  galvena: veseliba
+  papildu: [socialais-atbalsts-un-pensijas]
+iestades:
+  galvena: vm
+  papildu: [lm]
+avoti:
+  - veids: cvk
+    vieta: "Veselības un sociālajai aprūpei"
+    citats: "Integrēsim veselības un sociālo aprūpi"
+nesakritiba: ""
+piezimes: "Teikums dalīts 2 Solījumos — katrai daļai savs darbības vārds un iznākums (§1). Nepārbaudāms: „integrēsim” bez konkrēta mehānisma vai mēra. Starpnozaru: VM galvenā (pirmā nosauktā joma), LM papildu — sociālā aprūpe; avots vadošo nenosaka, LM kā galvenā arī iespējama."
+jautajums: ""

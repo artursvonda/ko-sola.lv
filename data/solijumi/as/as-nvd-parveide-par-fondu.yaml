@@ -1,0 +1,17 @@
+id: as-nvd-parveide-par-fondu
+saraksts: as
+nosaukums: NVD pārveide par fondu ar ilgtermiņa finanšu plānošanu
+parbaudams: true
+temas:
+  galvena: veseliba
+  papildu: [valsts-parvalde]
+iestades:
+  galvena: vm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "Veselības un sociālajai aprūpei"
+    citats: "NVD pārveidosim par fondu ar ilgtermiņa finanšu plānošanu"
+nesakritiba: ""
+piezimes: "Pārbaudāms: iestādes pārveide — Nacionālais veselības dienests pārveidots par fondu vai nē; „ar ilgtermiņa finanšu plānošanu” apraksta fondu, nav dalīts. Atsevišķs no valsts veselības apdrošināšanas modeļa (cits teikums, cits iznākums; statusi var atšķirties). VM — NVD ir VM padotības iestāde."
+jautajums: ""
