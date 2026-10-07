@@ -1,0 +1,17 @@
+id: lpv-referenduma-paraksti-5-procenti
+saraksts: lpv
+nosaukums: Referenduma ierosināšanas parakstu slieksnis 5% balsstiesīgo
+parbaudams: true
+temas:
+  galvena: demokratija-un-cilvektiesibas
+  papildu: []
+iestades:
+  galvena: saeima
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: STIPRA UN NEATKARĪGA LATVIJA
+    citats: Samazināsim parakstu slieksni referendumu ierosināšanai no 10% līdz 5% balsstiesīgo
+nesakritiba: ""
+piezimes: 'Pārbaudāms: konkrēts skaitlis (no 10% līdz 5%). Iestāde nav pārbaudīta: slieksni nosaka Satversme vai likums, iznākums Saeimas rokās → Saeima (alternatīva — TM kā likumprojekta sagatavotāja).'
+jautajums: ""
