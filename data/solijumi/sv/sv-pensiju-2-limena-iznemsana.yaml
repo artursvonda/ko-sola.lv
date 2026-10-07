@@ -1,0 +1,17 @@
+id: sv-pensiju-2-limena-iznemsana
+saraksts: sv
+nosaukums: Pensiju 2. līmeņa uzkrājuma izņemšanas atļaušana
+parbaudams: true
+temas:
+  galvena: socialais-atbalsts-un-pensijas
+  papildu: []
+iestades:
+  galvena: lm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "DEMOGRĀFIJA"
+    citats: "atļaut izņemt pensijas 2.līmeni"
+nesakritiba: ""
+piezimes: "Pārbaudāms: regulējums atļauj izņemt 2. līmeņa uzkrājumu vai nē. Avots nenosaka nosacījumus (kad, kādā apjomā); ja atļauts tikai daļēji, vērtējams kā daļēji izpildīts. LM — valsts fondēto pensiju regulējums."
+jautajums: ""

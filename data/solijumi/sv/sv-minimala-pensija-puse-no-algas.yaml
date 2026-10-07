@@ -1,0 +1,17 @@
+id: sv-minimala-pensija-puse-no-algas
+saraksts: sv
+nosaukums: Minimālā pensija — puse no minimālās algas
+parbaudams: true
+temas:
+  galvena: socialais-atbalsts-un-pensijas
+  papildu: []
+iestades:
+  galvena: lm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "DEMOGRĀFIJA"
+    citats: "minimālās pensijas apmēru noteikt pusi no minimālās algas"
+nesakritiba: ""
+piezimes: "Pārbaudāms: konkrēts mērs (1/2 no minimālās algas)."
+jautajums: ""

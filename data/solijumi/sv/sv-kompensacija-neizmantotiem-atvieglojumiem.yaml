@@ -1,0 +1,17 @@
+id: sv-kompensacija-neizmantotiem-atvieglojumiem
+saraksts: sv
+nosaukums: Neizmantoto atvieglojumu par apgādājamajiem kompensācija mazo algu saņēmējiem
+parbaudams: true
+temas:
+  galvena: gimenes-un-demografija
+  papildu: [nodokli-un-budzets]
+iestades:
+  galvena: fm
+  papildu: [lm]
+avoti:
+  - veids: cvk
+    vieta: "DEMOGRĀFIJA"
+    citats: "kompensēt mazāko algu saņēmējiem neizmantotos atvieglojumus par apgādājamajiem"
+nesakritiba: ""
+piezimes: "Pārbaudāms: kompensācijas mehānisms ieviests vai nē (algas slieksnis avotā nav noteikts). FM — IIN atvieglojumi; LM papildu, jo kompensācija var būt arī sociāls maksājums."
+jautajums: ""

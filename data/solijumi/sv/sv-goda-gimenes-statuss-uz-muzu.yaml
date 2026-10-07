@@ -1,0 +1,17 @@
+id: sv-goda-gimenes-statuss-uz-muzu
+saraksts: sv
+nosaukums: Goda ģimenes statuss uz mūžu daudzbērnu, adoptētāju u.c. ģimenēm
+parbaudams: true
+temas:
+  galvena: gimenes-un-demografija
+  papildu: []
+iestades:
+  galvena: lm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "DEMOGRĀFIJA"
+    citats: "piešķirt daudzbērnu ģimenēm, adoptētājiem un ģimenēm, kuras audzina bērnu ar invaliditāti, Goda ģimenes statusu uz mūžu"
+nesakritiba: ""
+piezimes: "Uzskaitījums zem viena darbības vārda — viens Solījums (§1); ja statuss uz mūžu ieviests tikai daļai no trim grupām, vērtējams kā daļēji izpildīts. Pārbaudāms. Iestāde: LM — ģimenes valsts politika; Goda ģimenes statusa administrētājs nav pārbaudīts, redaktoram vērts apstiprināt."
+jautajums: ""

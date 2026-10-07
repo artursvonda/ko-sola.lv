@@ -1,0 +1,17 @@
+id: sv-atbalsts-paliativo-pacientu-tuviniekiem
+saraksts: sv
+nosaukums: Valsts atbalsts paliatīvo pacientu tuviniekiem
+parbaudams: false
+temas:
+  galvena: socialais-atbalsts-un-pensijas
+  papildu: [veseliba]
+iestades:
+  galvena: lm
+  papildu: [vm]
+avoti:
+  - veids: cvk
+    vieta: "DEMOGRĀFIJA"
+    citats: "sniegt pienācīgu valsts atbalstu paliatīvo pacientu tuviniekiem"
+nesakritiba: ""
+piezimes: "Nepārbaudāms: pienācīgu valsts atbalstu bez konkrēta atbalsta veida vai mēra. LM — atbalsts tuviniekiem (sociālais atbalsts); VM papildu — paliatīvā aprūpe."
+jautajums: ""

@@ -1,0 +1,17 @@
+id: sv-ires-majokli-jaunajam-gimenem
+saraksts: sv
+nosaukums: Īres mājokļu pieejamība jaunajām ģimenēm sadarbībā ar pašvaldībām
+parbaudams: false
+temas:
+  galvena: majokli
+  papildu: [gimenes-un-demografija]
+iestades:
+  galvena: em
+  papildu: [varam]
+avoti:
+  - veids: cvk
+    vieta: "DEMOGRĀFIJA"
+    citats: "sadarbībā ar pašvaldībām nodrošināt uzticamu īres mājokļu pieejamību jaunajām ģimenēm"
+nesakritiba: ""
+piezimes: "Nepārbaudāms: nodrošināt pieejamību bez skaita vai konkrēta pasākuma. EM — mājokļu politika; VARAM papildu — sadarbība ar pašvaldībām."
+jautajums: ""

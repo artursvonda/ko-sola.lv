@@ -1,0 +1,17 @@
+id: sv-invaliditates-pensijas-bez-iin
+saraksts: sv
+nosaukums: Invaliditātes pensiju atbrīvošana no IIN
+parbaudams: true
+temas:
+  galvena: socialais-atbalsts-un-pensijas
+  papildu: [nodokli-un-budzets]
+iestades:
+  galvena: fm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "DEMOGRĀFIJA"
+    citats: "invaliditātes pensijas atbrīvot no IIN"
+nesakritiba: ""
+piezimes: "Pārbaudāms: atbrīvojums ieviests vai nē. FM — IIN regulējums."
+jautajums: ""

@@ -1,0 +1,17 @@
+id: sv-agraka-pensija-vecakiem-bernu-invaliditate
+saraksts: sv
+nosaukums: Vecuma pensija 10 gadus ātrāk vecākiem, kas audzina bērnu ar invaliditāti
+parbaudams: true
+temas:
+  galvena: socialais-atbalsts-un-pensijas
+  papildu: [gimenes-un-demografija]
+iestades:
+  galvena: lm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "DEMOGRĀFIJA"
+    citats: "vecākiem, kuri audzina bērnu ar invaliditāti, piešķirt tiesības uz vecuma pensiju 10 gadus ātrāk"
+nesakritiba: ""
+piezimes: "Pārbaudāms: konkrēts mērs (10 gadus ātrāk)."
+jautajums: ""

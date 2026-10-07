@@ -1,0 +1,17 @@
+id: sv-pensijas-vecuma-necelsana
+saraksts: sv
+nosaukums: Pensijas vecuma necelšana
+parbaudams: true
+temas:
+  galvena: socialais-atbalsts-un-pensijas
+  papildu: []
+iestades:
+  galvena: lm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "DEMOGRĀFIJA"
+    citats: "neatbalstīt pensijas vecuma celšanu"
+nesakritiba: ""
+piezimes: "Pārbaudāms pēc iznākuma: vai Saeimas pilnvaru laikā pensijas vecums tika celts (nevis tikai pēc Saraksta balsojuma)."
+jautajums: ""
