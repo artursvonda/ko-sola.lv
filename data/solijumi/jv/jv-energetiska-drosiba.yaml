@@ -1,0 +1,20 @@
+id: jv-energetiska-drosiba
+saraksts: jv
+nosaukums: Valsts enerģētiskā drošība un pieejama, prognozējama enerģija
+parbaudams: false
+temas:
+  galvena: energetika
+  papildu: []
+iestades:
+  galvena: kem
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "4. Ekonomika, enerģētika un uzņēmējdarbība"
+    citats: "Attīstīsim pieejamu, drošu un prognozējamu enerģiju"
+  - veids: paplasinata
+    vieta: "4. Ekonomika, enerģētika un uzņēmējdarbība › Apņemšanās un uzdevumi › Enerģētika un klimats"
+    citats: "Garantēsim pilnīgu valsts enerģētisko drošību"
+nesakritiba: "CVK programma sola „Attīstīsim pieejamu, drošu un prognozējamu enerģiju”, bet paplašinātā programma — „Garantēsim pilnīgu valsts enerģētisko drošību” (stiprāka apņemšanās; pieejamību un prognozējamību nemin)."
+piezimes: "CVK teikums (viens darbības vārds, uzskaitījums) sadalīts pēc paplašinātās programmas dalījuma sadaļā „Enerģētika un klimats” (§4): enerģētiskā drošība (šeit), jaunas jaudas (jv-jaunas-elektroenergijas-jaudas), tīkli (jv-energijas-tiklu-parvaldiba), uzkrāšana (jv-agregatoru-regulejums-uzkrasanai), energoefektivitāte (jv-privatais-finansejums-energoefektivitatei, jv-siltinasanas-risinajumi-tipveida-majam), elektrifikācija (jv-transporta-un-siltuma-elektrifikacija). Nepārbaudāms: „attīstīsim”/„garantēsim pilnīgu … drošību” bez mēra vai konkrēta iznākuma. Eiropas enerģētiskā neatkarība — cits Solījums (jv-eiropas-energetiska-neatkariba). Prioritāte „Valsts enerģētiskā drošība …” pārklāta šeit un jv-vietejas-militaras-industrijas-attistiba."
+jautajums: ""

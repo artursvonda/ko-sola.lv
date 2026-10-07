@@ -1,0 +1,20 @@
+id: jv-maksliga-intelekta-attistibas-plans
+saraksts: jv
+nosaukums: Nacionālais mākslīgā intelekta attīstības plāns
+parbaudams: true
+temas:
+  galvena: ekonomika-un-darbs
+  papildu: [izglitiba-un-zinatne, valsts-parvalde]
+iestades:
+  galvena: varam
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "4. Ekonomika, enerģētika un uzņēmējdarbība"
+    citats: "Ieviesīsim nacionālu mākslīgā intelekta attīstības plānu"
+  - veids: paplasinata
+    vieta: "4. Ekonomika, enerģētika un uzņēmējdarbība › Apņemšanās un uzdevumi › Tehnoloģijas un mākslīgais intelekts"
+    citats: "Izstrādāsim nacionālo mākslīgā intelekta (MI) attīstības plānu"
+nesakritiba: "CVK programma sola plānu „Ieviesīsim”, bet paplašinātā programma — tikai „Izstrādāsim” (vājāka apņemšanās)."
+piezimes: "CVK teikumā un paplašinātās programmas punktā divi objekti ar atšķirīgu iznākumu — dalīts (§1): plāns (šeit) un vietējie tehnoloģiskie risinājumi / MI rīki (jv-drosi-vietejie-mi-riki). Pārbaudāms: plāns pieņemts (un, pēc CVK, ieviests) vai nē. Digitālā transformācija — VARAM (pieņēmums, nav pārbaudīts). Prioritātes „Latvija kā viena no Eiropas Savienības līderiem mākslīgā intelekta pielietošanā” un „Mākslīgais intelekts un robotika kā prioritāri attīstības virzieni …” daļēji pārklātas šeit (Prioritātes netiek izrakstītas)."
+jautajums: ""

@@ -1,0 +1,17 @@
+id: jv-mi-asistenti-valsts-parvalde
+saraksts: jv
+nosaukums: MI asistenti valsts pārvaldes dokumentu apritē, datu analīzē un apkalpošanā
+parbaudams: true
+temas:
+  galvena: valsts-parvalde
+  papildu: []
+iestades:
+  galvena: varam
+  papildu: [vk]
+avoti:
+  - veids: paplasinata
+    vieta: "4. Ekonomika, enerģētika un uzņēmējdarbība › Apņemšanās un uzdevumi › Tehnoloģijas un mākslīgais intelekts"
+    citats: "Ieviesīsim MI asistentus valsts pārvaldes dokumentu apritē, datu analīzē un klientu apkalpošanā"
+nesakritiba: ""
+piezimes: "Punkts pieder 4. nodaļai pēc atrašanās vietas (§0); CVK 6. nodaļas teikums „Pāriesim uz … datu un mākslīgā intelekta asistentu izmantošanu publiskajā pārvaldē” — CVK citātu pievienot 6. nodaļas izpildē, ja tas pats Solījums. Uzskaitījums (dokumentu aprite, datu analīze, klientu apkalpošana) zem viena darbības vārda nav dalīts. „pilnībā automatizējot iesniegumu pārbaudi” — atsevišķs Solījums jv-iesniegumu-parbaudes-automatizacija (§1); „likvidējot birokrātiju starp iestādēm” — mērķis. Pārbaudāms: MI asistenti ieviesti nosauktajās jomās vai nē. 6. un 7. nodaļas punkti par MI izmantošanu valsts pārvaldē („Paātrināsim digitālās transformācijas un mākslīgā intelekta izmantošanas procesus …”, „Turpināsim valsts pārvaldes digitalizāciju un mākslīgā intelekta ieviešanu …”) — vispārīgāki, atstāti savām nodaļām. VARAM (digitālā transformācija), VK papildu (valsts pārvalde; pieņēmums, nav pārbaudīts)."
+jautajums: ""

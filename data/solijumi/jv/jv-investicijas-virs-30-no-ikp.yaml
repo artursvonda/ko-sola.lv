@@ -1,0 +1,20 @@
+id: jv-investicijas-virs-30-no-ikp
+saraksts: jv
+nosaukums: Investīcijas virs 30% no IKP
+parbaudams: true
+temas:
+  galvena: ekonomika-un-darbs
+  papildu: []
+iestades:
+  galvena: em
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "4. Ekonomika, enerģētika un uzņēmējdarbība"
+    citats: "Mērķis ir produktīvākā ekonomika Baltijā: vismaz 3,5% IKP izaugsme gadā, augstākā darba samaksa, investīcijas virs 30% no IKP"
+  - veids: paplasinata
+    vieta: "4. Ekonomika, enerģētika un uzņēmējdarbība › Apņemšanās un uzdevumi › Uzņēmējdarbība un investīcijas"
+    citats: "Sasniegsim ilgtspējīgu 3,5% iekšzemes kopprodukta pieaugumu ik gadu, nodrošinot, ka investīciju apjoms pārsniedz 30% no iekšzemes kopprodukta"
+nesakritiba: "CVK programmā investīcijas virs 30% no IKP ir „Mērķis”, bet paplašinātajā programmā — apņemšanās „nodrošinot, ka investīciju apjoms pārsniedz 30%”."
+piezimes: "Paplašinātās programmas „-ot” daļa ar savu mēru un iznākumu — atsevišķs Solījums no IKP izaugsmes (§1); citēts punkts līdz šai daļai. CVK teikuma daļai nav sava darbības vārda — citēts teikums līdz šai daļai (§3). Pārbaudāms: investīciju īpatsvars IKP; konkrēts rādītājs (piem., bruto pamatkapitāla veidošana) avotā nav nosaukts. Ārvalstu investīciju piesaiste — cits Solījums (jv-arvalstu-investiciju-piesaiste). EM (pieņēmums, nav pārbaudīts)."
+jautajums: ""
