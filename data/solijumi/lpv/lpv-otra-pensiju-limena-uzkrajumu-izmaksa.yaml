@@ -1,0 +1,20 @@
+id: lpv-otra-pensiju-limena-uzkrajumu-izmaksa
+saraksts: lpv
+nosaukums: "Tiesības izņemt 2. pensiju līmeņa uzkrājumus un pašiem ar tiem rīkoties"
+parbaudams: true
+temas:
+  galvena: socialais-atbalsts-un-pensijas
+  papildu: []
+iestades:
+  galvena: lm
+  papildu: [fm]
+avoti:
+  - veids: cvk
+    vieta: "VESELĪBA UN LABKLĀJĪBA"
+    citats: "Dosim tiesības cilvēkiem izņemt līdzekļus no 2. pensiju līmeņa un pašiem rīkoties ar savu uzkrāto naudu"
+  - veids: paplasinata
+    vieta: "1. Nodokļi un Pensijas › Pensijas"
+    citats: "2. pensiju līmeņa reforma: Princips “atdot naudu tautai”, adaptējot Igaunijas un Lietuvas labākās prakses pieredzi. Tiks ieviesta sistēma, kas ļauj iedzīvotājiem pašiem investēt savus uzkrājumus"
+nesakritiba: "CVK sola tiesības izņemt līdzekļus no 2. pensiju līmeņa; paplašinātā programma — sistēmu, kas ļauj iedzīvotājiem pašiem investēt savus uzkrājumus (izņemšana tieši nav minēta)."
+piezimes: "Punkts ir paplašinātās 1. nod. → pieder šai izpildei (§0). CVK teikums ir nodaļā VESELĪBA UN LABKLĀJĪBA; tas pats iznākums (\"atdot naudu tautai\") → CVK citāts pievienots, vērtē pēc CVK (§4). Iestāde nav pārbaudīta: valsts fondētās pensijas → LM; papildu FM."
+jautajums: ""

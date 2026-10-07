@@ -1,0 +1,20 @@
+id: lpv-airbaltic-tikai-no-rigas
+saraksts: lpv
+nosaukums: "airBaltic lidojumi tikai uz/no Rīgas, Tallinas un Viļņas bāzu slēgšana"
+parbaudams: true
+temas:
+  galvena: transports
+  papildu: []
+iestades:
+  galvena: sm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "VALSTS ATTĪSTĪBA › Ekonomika un uzņēmējdarbība"
+    citats: "\"AirBaltic\" nodrošinās savienojumus tikai uz/no Rīgas. Tallinas un Viļņas bāzes tiks aizvērtas"
+  - veids: paplasinata
+    vieta: "4. Loģistikas, tranzīta un ārvalstu sadarbība"
+    citats: "to vajag pilnība restrukturizēt lai likvidētu parādu slogu (~50 milj. EUR gadā procentu maksājumos), kā arī visus nerentablos reisus un bāzes ārpus Rīgas"
+nesakritiba: "CVK sola airBaltic savienojumus tikai uz/no Rīgas; paplašinātā programma — likvidēt nerentablos reisus un bāzes ārpus Rīgas (ne visus savienojumus, kas nav uz/no Rīgas)."
+piezimes: "Savienojumi tikai uz/no Rīgas un Tallinas/Viļņas bāzu slēgšana — viens iznākums → viens Solījums; \"jo tās rada zaudējumus\" — pamatojums. Paplašinātās programmas citāts kopīgs ar restrukturizācijas Solījumu (viens teikums, kopīgs darbības vārds). Iestāde nav pārbaudīta: airBaltic valsts kapitāla daļu turētājs → SM."
+jautajums: ""

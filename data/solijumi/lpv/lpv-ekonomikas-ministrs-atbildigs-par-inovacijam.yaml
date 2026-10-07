@@ -1,0 +1,17 @@
+id: lpv-ekonomikas-ministrs-atbildigs-par-inovacijam
+saraksts: lpv
+nosaukums: "Ekonomikas ministrs tieši atbildīgs par inovāciju un jaunuzņēmumu politiku"
+parbaudams: true
+temas:
+  galvena: izglitiba-un-zinatne
+  papildu: [valsts-parvalde, ekonomika-un-darbs]
+iestades:
+  galvena: vk
+  papildu: [em]
+avoti:
+  - veids: paplasinata
+    vieta: "7. Startup un Innovācijas › Mērķtiecīga inovāciju pārvaldība"
+    citats: "Ekonomikas ministrs ir tieši atbildīgs par inovāciju ekosistēmas attīstību, augsto tehnoloģiju piesaisti un jaunuzņēmumu vides konkurētspēju"
+nesakritiba: ""
+piezimes: "Pārbaudāms: atbildība nodota EM vai nē (pašlaik sadalīta starp vairākām ministrijām — pamatojums). Iestāde nav pārbaudīta: kompetenču sadale starp ministrijām → VK; papildu EM."
+jautajums: ""

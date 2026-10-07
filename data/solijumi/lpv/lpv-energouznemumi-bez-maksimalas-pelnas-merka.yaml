@@ -1,0 +1,20 @@
+id: lpv-energouznemumi-bez-maksimalas-pelnas-merka
+saraksts: lpv
+nosaukums: "Valsts enerģētikas un siltuma uzņēmumiem atcelts maksimālas peļņas mērķis"
+parbaudams: true
+temas:
+  galvena: energetika
+  papildu: [ekonomika-un-darbs]
+iestades:
+  galvena: kem
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "VALSTS ATTĪSTĪBA › Ekonomika un uzņēmējdarbība"
+    citats: "Likvidēsim principu, ka valsts enerģētikas un siltuma uzņēmumu mērķis ir strādāt ar maksimālu peļņu"
+  - veids: paplasinata
+    vieta: "5. Enerģētika un dabas resursu suverenitāte › Enerģētiskā neatkarība un cenu pieejamība"
+    citats: "Likvidēt principu, ka valsts enerģētikas un siltuma uzņēmumiem mērķis ir strādāt ar maksimālu peļņu"
+nesakritiba: ""
+piezimes: "Pārbaudāms robežgadījumā: vērtējams pēc izmaiņām uzņēmumu noteiktajos mērķos (piem., dalībnieka noteiktajos stratēģiskajos mērķos vai dividenžu politikā); avots instrumentu nenosauc. Paplašinātās 5. nod. punkts ir šīs izpildes nodaļa. Iestāde nav pārbaudīta: Latvenergo kapitāla daļu turētājs pieņemts KEM; siltumapgādes uzņēmumi bieži pašvaldību."
+jautajums: ""

@@ -1,0 +1,17 @@
+id: lpv-pasvaldibu-tiesibas-apturet-vejparkus
+saraksts: lpv
+nosaukums: "Pašvaldību tiesības apturēt vai atteikt vēja parkus, ja iedzīvotāji iebilst"
+parbaudams: true
+temas:
+  galvena: energetika
+  papildu: [regioni-un-pasvaldibas]
+iestades:
+  galvena: kem
+  papildu: [varam]
+avoti:
+  - veids: cvk
+    vieta: "VALSTS ATTĪSTĪBA › Nozaru attīstība"
+    citats: "Apturēsim vēja parku nekontrolētu attīstību, nosakot, ka pašvaldībām ir tiesības apturēt vai atteikt projektus teritorijās, kur vietējie iedzīvotāji pamatoti iebilst"
+nesakritiba: ""
+piezimes: "Galvenā daļa (\"apturēsim nekontrolētu attīstību\") vispārīga → Solījums ir \"-ot\" daļa, citēts viss teikums (§1). Iestāde nav pārbaudīta: vēja enerģētika → KEM; teritorijas plānošana un pašvaldības → VARAM (papildu)."
+jautajums: ""

@@ -1,0 +1,20 @@
+id: lpv-iin-atbrivojums-matem-ar-diviem-berniem
+saraksts: lpv
+nosaukums: "Mātes atbrīvojums no IIN, ja ģimenē aug vismaz divi nepilngadīgi bērni"
+parbaudams: true
+temas:
+  galvena: nodokli-un-budzets
+  papildu: [gimenes-un-demografija]
+iestades:
+  galvena: fm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "VALSTS ATTĪSTĪBA › Zemi un stabili nodokļi"
+    citats: "Māti atbrīvosim no IIN, ja ģimenē aug vismaz divi nepilngadīgi bērni"
+  - veids: paplasinata
+    vieta: "2. Demogrāfija un Darbaspēks › Demogrāfiskie un investīciju stimuli"
+    citats: "Ieviest 100% iedzīvotāju ienākuma nodokļa atlaidi māmiņām pēc otrā bērna piedzimšanas līdz bērnu pilngadības sasniegšanai"
+nesakritiba: ""
+piezimes: "Paplašinātās 2. nod. (ĢIMEŅU ATBALSTS UN KRISTĪGĀS VĒRTĪBAS izpilde) punkts ir tas pats iznākums → citāts pievienots (§0.3). \"100% atlaide\" = atbrīvojums; formulējuma atšķirības (\"vismaz divi nepilngadīgi bērni\" ↔ \"pēc otrā bērna piedzimšanas līdz bērnu pilngadības sasniegšanai\") iznākumu nemaina. Iestāde nav pārbaudīta: IIN → FM."
+jautajums: ""

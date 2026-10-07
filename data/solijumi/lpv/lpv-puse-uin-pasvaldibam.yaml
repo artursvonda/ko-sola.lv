@@ -1,0 +1,20 @@
+id: lpv-puse-uin-pasvaldibam
+saraksts: lpv
+nosaukums: "Puse no uzņēmumu ienākuma nodokļa ieņēmumiem pašvaldībām"
+parbaudams: true
+temas:
+  galvena: regioni-un-pasvaldibas
+  papildu: [nodokli-un-budzets]
+iestades:
+  galvena: fm
+  papildu: [varam]
+avoti:
+  - veids: cvk
+    vieta: "VALSTS ATTĪSTĪBA › Zemi un stabili nodokļi"
+    citats: "pusi no UIN atdosim pašvaldībām"
+  - veids: paplasinata
+    vieta: "1. Nodokļi un Pensijas › Pašvaldības un uzņēmējdarbība"
+    citats: "Pašvaldības saņemtu 50% no UIN ieņēmumiem, ko valsts un pašvaldības savā starpā sadalītu uz pusēm (50/50)"
+nesakritiba: ""
+piezimes: "\"Lai veicinātu reģionu attīstību\" — mērķis, nav citēts. Iestāde nav pārbaudīta: nodokļu ieņēmumu sadale starp valsti un pašvaldībām → FM; pašvaldību finanšu politika → VARAM (papildu)."
+jautajums: ""
