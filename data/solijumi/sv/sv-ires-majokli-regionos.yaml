@@ -1,0 +1,17 @@
+id: sv-ires-majokli-regionos
+saraksts: sv
+nosaukums: Pieejamāki īres mājokļi reģionos sadarbībā ar pašvaldībām
+parbaudams: false
+temas:
+  galvena: majokli
+  papildu: [regioni-un-pasvaldibas]
+iestades:
+  galvena: em
+  papildu: [varam]
+avoti:
+  - veids: cvk
+    vieta: "EKONOMIKA"
+    citats: "sadarbībā ar pašvaldībām nodrošināt pieejamākus īres mājokļus reģionos"
+nesakritiba: ""
+piezimes: "Atsevišķs Solījums, nevis sv-ires-majokli-jaunajam-gimenem papildinājums (§4): cita mērķgrupa un iznākums (pieejamāki īres mājokļi reģionos, ne uzticami īres mājokļi jaunajām ģimenēm), Notikumi var atšķirties; CVK programma tos dod kā divus punktus dažādās nodaļās. Alternatīva — viens Solījums ar Nesakritību par mērķgrupu. Nepārbaudāms: „nodrošināt pieejamākus” bez skaita vai konkrēta pasākuma (tāpat kā sv-ires-majokli-jaunajam-gimenem). EM — mājokļu politika; VARAM papildu — reģionālā attīstība un sadarbība ar pašvaldībām."
+jautajums: ""
