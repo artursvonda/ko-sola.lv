@@ -1,0 +1,21 @@
+id: pro-gimenes-valsts-pabalsta-palielinasana
+saraksts: pro
+nosaukums: Ģimenes valsts pabalsta palielināšana
+parbaudams: true
+temas:
+  galvena: gimenes-un-demografija
+  papildu:
+    - socialais-atbalsts-un-pensijas
+iestades:
+  galvena: lm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: DZĪVES DĀRDZĪBAS MAZINĀŠANA
+    citats: Palielināsim ģimenes valsts pabalstu
+  - veids: paplasinata
+    vieta: 3. Sociālās drošības tīkls un dzīves dārdzības mazināšana › Atbalsts jaunajām ģimenēm
+    citats: Palielināsim ģimenes valsts pabalstu, lai atbalstītu ģimenes ar zemākiem ienākumiem.
+nesakritiba: ""
+piezimes: 'CVK 2. punkta pirmais teikums sadalīts: pabalsta palielināšana un pieteikšanās vienkāršošana (atšķirīgi iznākumi). Paplašinātās programmas "lai atbalstītu ģimenes ar zemākiem ienākumiem" — mērķis, nav ierakstīts kā Nesakritība (nav teikts, ka pabalsts kļūst atkarīgs no ienākumiem).'
+jautajums: ""

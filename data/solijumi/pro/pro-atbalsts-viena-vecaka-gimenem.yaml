@@ -1,0 +1,21 @@
+id: pro-atbalsts-viena-vecaka-gimenem
+saraksts: pro
+nosaukums: Mērķēts atbalsts viena vecāka ģimenēm
+parbaudams: true
+temas:
+  galvena: gimenes-un-demografija
+  papildu:
+    - socialais-atbalsts-un-pensijas
+iestades:
+  galvena: lm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: DZĪVES DĀRDZĪBAS MAZINĀŠANA
+    citats: veidosim mērķētu atbalstu viena vecāka ģimenēm
+  - veids: paplasinata
+    vieta: 3. Sociālās drošības tīkls un dzīves dārdzības mazināšana › Atbalsts jaunajām ģimenēm
+    citats: Veidosim pakalpojumus viena vecāka ģimenēm un citām ģimenēm, kam ir nepieciešams papildus atbalsts.
+nesakritiba: CVK sola "mērķētu atbalstu viena vecāka ģimenēm"; paplašinātā programma — "pakalpojumus viena vecāka ģimenēm un citām ģimenēm, kam ir nepieciešams papildus atbalsts".
+piezimes: "Robežgadījums pārbaudāmībai: vērtē, vai izveidots viena vecāka ģimenēm mērķēts atbalsta pasākums."
+jautajums: ""
