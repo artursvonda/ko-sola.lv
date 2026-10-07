@@ -1,0 +1,20 @@
+id: jv-ministriju-funkciju-parskatisana
+saraksts: jv
+nosaukums: Ministriju funkciju sadalījuma pārskatīšana, lai funkcijas nepārklātos
+parbaudams: true
+temas:
+  galvena: valsts-parvalde
+  papildu: []
+iestades:
+  galvena: vk
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "6. Valsts pārvalde"
+    citats: "Ieviesīsim vienotas valdības pieeju, kopīgus pakalpojumu centrus, funkciju nepārklāšanos"
+  - veids: paplasinata
+    vieta: "6. Valsts pārvalde › Apņemšanās un uzdevumi › Mūsdienīga un efektīva valsts pārvalde"
+    citats: "Mazināsim sadrumstalotību un uzlabosim atbildību par rezultātu, pārskatot ministriju funkciju sadalījumu"
+nesakritiba: "CVK programmā „Ieviesīsim … funkciju nepārklāšanos” (iznākums visā pārvaldē), bet paplašinātajā programmā — „pārskatot ministriju funkciju sadalījumu” (darbība ministriju līmenī)."
+piezimes: "Paplašinātās punkta galvenais teikums („Mazināsim sadrumstalotību un uzlabosim atbildību par rezultātu”) ir vispārīgs — Solījums ir „-ot” daļa (§1), citēts viss punkts. CVK „funkciju nepārklāšanos” pievienota šim punktam, jo paplašinātās programmas „Pamatojums” saista ministriju funkciju pārskatīšanu ar „atbildībām, kas nepārklājas”; daļai nav sava darbības vārda — citēts teikums līdz šai daļai (§3). Institūciju ar līdzīgām funkcijām apvienošana — atsevišķs Solījums (jv-instituciju-ar-lidzigam-funkcijam-apvienosana). Pārbaudāms: ministriju funkciju sadalījums pārskatīts un mainīts (piem., grozīta ministriju kompetence) vai nē. Prioritāte „… iestāžu pārvaldes uzdevumu nedublēšanās” pārklāta šeit un jv-instituciju-ar-lidzigam-funkcijam-apvienosana. Valdības struktūra — VK (§6a; pieņēmums, nav pārbaudīts)."
+jautajums: ""

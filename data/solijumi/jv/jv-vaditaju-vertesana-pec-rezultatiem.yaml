@@ -1,0 +1,20 @@
+id: jv-vaditaju-vertesana-pec-rezultatiem
+saraksts: jv
+nosaukums: Ministru un iestāžu vadītāju vērtēšana pēc sasniegtajiem rezultātiem
+parbaudams: true
+temas:
+  galvena: valsts-parvalde
+  papildu: []
+iestades:
+  galvena: vk
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "6. Valsts pārvalde"
+    citats: "ministrus un iestāžu vadītājus vērtēsim pēc rezultātiem"
+  - veids: paplasinata
+    vieta: "6. Valsts pārvalde › Apņemšanās un uzdevumi › Vienotas valdības pārvaldes modelis"
+    citats: "Ieviesīsim rezultātos balstītu pārvaldību, katrā nozarē nosakot trīs līdz piecus galvenos attīstības rādītājus, ministru un iestāžu vadītāju sniegumu vērtējot pēc sasniegtajiem rezultātiem"
+nesakritiba: ""
+piezimes: "„-ot” daļa ar savu iznākumu — atsevišķs Solījums (§1; sk. jv-galvenie-attistibas-raditaji-nozarem); citēts punkts līdz šai daļai. Robežgadījums pārbaudāmībai: avots nenosaka vērtēšanas mehānismu, bet iznākums konkrēts — ieviesta ministru un iestāžu vadītāju snieguma vērtēšana pēc rezultātiem (piem., pret nozaru attīstības rādītājiem) vai nē. Nav apvienots ar jv-augstaka-limena-vaditaju-atlase (tur — vadītāju atlase, attīstība un motivācija bez sasaistes ar nozaru rezultātiem). VK (valdības darba koordinācija un valsts pārvaldes cilvēkresursu politika; pieņēmums, nav pārbaudīts)."
+jautajums: ""

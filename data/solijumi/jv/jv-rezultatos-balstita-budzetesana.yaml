@@ -1,0 +1,23 @@
+id: jv-rezultatos-balstita-budzetesana
+saraksts: jv
+nosaukums: Pāreja uz rezultātos balstītu budžetēšanu
+parbaudams: true
+temas:
+  galvena: nodokli-un-budzets
+  papildu: [valsts-parvalde]
+iestades:
+  galvena: fm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "6. Valsts pārvalde"
+    citats: "Pāriesim uz rezultātos balstītu budžeta veidošanu"
+  - veids: paplasinata
+    vieta: "6. Valsts pārvalde › Apņemšanās un uzdevumi › Vienotas valdības pārvaldes modelis"
+    citats: "Realizēsim pāreju uz rezultātos balstītu budžetēšanas un finansēšanas procesu, definējot valsts prioritātes un veidojot vienotu rezultātu sistēmu. Atteiksimies no līdzšinējās inkrementālās (budžeta bāze) budžetēšanas sistēmas, veidosim jaunus līdzekļu piešķiršanas principus"
+  - veids: paplasinata
+    vieta: "6. Valsts pārvalde › Apņemšanās un uzdevumi › Mūsdienīga un efektīva valsts pārvalde"
+    citats: "pāriesim uz rezultātos balstītu budžeta plānošanu"
+nesakritiba: ""
+piezimes: "Tas pats iznākums trijās vietās — viens Solījums (§1). Teikums par atteikšanos no inkrementālās budžetēšanas un jauniem līdzekļu piešķiršanas principiem — tās pašas pārejas saturs, nav dalīts; „-ot” daļas („definējot …, veidojot …”) — veids. Daļa „ieviešot digitalizētu un caurspīdīgu budžeta pārvaldību, par to ziņojot parlamentam” — atsevišķs Solījums (jv-digitalizeta-budzeta-parvaldiba). „Mūsdienīga un efektīva valsts pārvalde” punkta pirmā daļa („Ieviesīsim digitālās inovācijas”) — jv-datu-izmantosana-un-digitala-transformacija; „tā panākot daudz efektīvākus … pakalpojumus” — mērķis. Pārbaudāms: valsts budžets tiek sagatavots pēc rezultātos balstītas metodes (bez bāzes budžeta pieejas) vai nē. Prioritāte „Rezultātos balstīta budžetēšana un caurskatāma publisko līdzekļu pārvaldība” pārklāta šeit un jv-digitalizeta-budzeta-parvaldiba. Budžeta process — FM (pieņēmums, nav pārbaudīts)."
+jautajums: ""

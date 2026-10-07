@@ -9,9 +9,12 @@ iestades:
   galvena: varam
   papildu: [vk]
 avoti:
+  - veids: cvk
+    vieta: "6. Valsts pārvalde"
+    citats: "Pāriesim uz rezultātos balstītu budžeta veidošanu, datu un mākslīgā intelekta asistentu izmantošanu publiskajā pārvaldē"
   - veids: paplasinata
     vieta: "4. Ekonomika, enerģētika un uzņēmējdarbība › Apņemšanās un uzdevumi › Tehnoloģijas un mākslīgais intelekts"
     citats: "Ieviesīsim MI asistentus valsts pārvaldes dokumentu apritē, datu analīzē un klientu apkalpošanā"
-nesakritiba: ""
-piezimes: "Punkts pieder 4. nodaļai pēc atrašanās vietas (§0); CVK 6. nodaļas teikums „Pāriesim uz … datu un mākslīgā intelekta asistentu izmantošanu publiskajā pārvaldē” — CVK citātu pievienot 6. nodaļas izpildē, ja tas pats Solījums. Uzskaitījums (dokumentu aprite, datu analīze, klientu apkalpošana) zem viena darbības vārda nav dalīts. „pilnībā automatizējot iesniegumu pārbaudi” — atsevišķs Solījums jv-iesniegumu-parbaudes-automatizacija (§1); „likvidējot birokrātiju starp iestādēm” — mērķis. Pārbaudāms: MI asistenti ieviesti nosauktajās jomās vai nē. 6. un 7. nodaļas punkti par MI izmantošanu valsts pārvaldē („Paātrināsim digitālās transformācijas un mākslīgā intelekta izmantošanas procesus …”, „Turpināsim valsts pārvaldes digitalizāciju un mākslīgā intelekta ieviešanu …”) — vispārīgāki, atstāti savām nodaļām. VARAM (digitālā transformācija), VK papildu (valsts pārvalde; pieņēmums, nav pārbaudīts)."
+nesakritiba: "CVK programmā „mākslīgā intelekta asistentu izmantošanu publiskajā pārvaldē” bez jomām, bet paplašinātajā programmā — MI asistenti „valsts pārvaldes dokumentu apritē, datu analīzē un klientu apkalpošanā”."
+piezimes: "Punkts pieder 4. nodaļai pēc atrašanās vietas (§0). Vērtēšanas avots — CVK programma (pievienota 6. nodaļas izpildē): CVK teikuma daļa „mākslīgā intelekta asistentu izmantošanu publiskajā pārvaldē” — tas pats iznākums; daļai nav sava darbības vārda — citēts viss teikums (§3; daļas „datu … izmantošanu” — jv-datu-izmantosana-un-digitala-transformacija, budžets — jv-rezultatos-balstita-budzetesana). CVK jomu nav, vērtē pēc paplašinātās programmas jomām (§4). Uzskaitījums (dokumentu aprite, datu analīze, klientu apkalpošana) zem viena darbības vārda nav dalīts. „pilnībā automatizējot iesniegumu pārbaudi” — atsevišķs Solījums jv-iesniegumu-parbaudes-automatizacija (§1); „likvidējot birokrātiju starp iestādēm” — mērķis. Pārbaudāms: MI asistenti ieviesti nosauktajās jomās vai nē. 6. un 7. nodaļas punkti par MI izmantošanu valsts pārvaldē („Paātrināsim digitālās transformācijas un mākslīgā intelekta izmantošanas procesus …”, „Turpināsim valsts pārvaldes digitalizāciju un mākslīgā intelekta ieviešanu …”) — vispārīgāki, 6. nodaļas izpildē apvienoti Solījumā jv-datu-izmantosana-un-digitala-transformacija. VARAM (digitālā transformācija), VK papildu (valsts pārvalde; pieņēmums, nav pārbaudīts)."
 jautajums: ""
