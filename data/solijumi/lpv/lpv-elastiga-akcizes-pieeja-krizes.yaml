@@ -1,0 +1,20 @@
+id: lpv-elastiga-akcizes-pieeja-krizes
+saraksts: lpv
+nosaukums: "Elastīga degvielas akcīzes nodokļa pieeja krīžu gadījumos"
+parbaudams: false
+temas:
+  galvena: nodokli-un-budzets
+  papildu: [energetika]
+iestades:
+  galvena: fm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "VALSTS ATTĪSTĪBA › Zemi un stabili nodokļi"
+    citats: "Piemērosim elastīgu pieeju akcīzes nodoklim krīžu gadījumos"
+  - veids: paplasinata
+    vieta: "5. Enerģētika un dabas resursu suverenitāte › Enerģētiskā neatkarība un cenu pieejamība"
+    citats: "Elastīga pieeja akcīzes nodoklim krīžu gadījumos"
+nesakritiba: ""
+piezimes: "Nepārbaudāms: \"elastīga pieeja\" bez konkrēta mehānisma vai mēra. Iestāde nav pārbaudīta: FM."
+jautajums: ""

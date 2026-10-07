@@ -1,0 +1,20 @@
+id: lpv-bankas-konts-48-stundu-laika
+saraksts: lpv
+nosaukums: "Bankas norēķinu konta atvēršana 48 stundās, ja ir konts citā ES valstī"
+parbaudams: true
+temas:
+  galvena: ekonomika-un-darbs
+  papildu: []
+iestades:
+  galvena: fm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "VALSTS ATTĪSTĪBA › Ekonomika un uzņēmējdarbība"
+    citats: "Nodrošināsim, ka privātpersonai vai uzņēmumam, kam ir aktīvs konts citā ES dalībvalstī, Latvijas bankām ir pienākums atvērt norēķinu kontu 48 stundu laikā bez papildu birokrātiskiem šķēršļiem"
+  - veids: paplasinata
+    vieta: "3. Banku sektora transformācija, Publiskā Privātā Partnerība, Eiropas Savienības Fondi › Kreditēšanas apjomu salīdzinājums (2025 gads)"
+    citats: "Garantēt, ka privātpersonai vai uzņēmumam, kuram ir aktīvs konts citā ES dalībvalstī, Latvijas bankām ir pienākums atvērt norēķinu kontu 48 stundu laikā bez papildu birokrātiskiem šķēršļiem"
+nesakritiba: ""
+piezimes: "Paplašinātajā programmā punkts atrodas aiz tabulas zem virsraksta \"Kreditēšanas apjomu salīdzinājums (2025 gads)\" → `vieta` pēc avota struktūras. Iestāde nav pārbaudīta: finanšu sektora regulējums → FM."
+jautajums: ""

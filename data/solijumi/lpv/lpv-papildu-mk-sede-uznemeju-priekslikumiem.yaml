@@ -1,0 +1,20 @@
+id: lpv-papildu-mk-sede-uznemeju-priekslikumiem
+saraksts: lpv
+nosaukums: "Papildu Ministru kabineta sēde katru nedēļu uzņēmēju organizāciju priekšlikumiem"
+parbaudams: true
+temas:
+  galvena: valsts-parvalde
+  papildu: [ekonomika-un-darbs]
+iestades:
+  galvena: vk
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "VALSTS ATTĪSTĪBA"
+    citats: "sadarbībā ar valdības stratēģiskajiem partneriem LTRK, LDDK un citām uzņēmēju organizācijām katru nedēļu organizēsim vēl vienu Ministru kabineta sēdi, kurā tiks izskatīti uzņēmēju organizāciju sagatavotie priekšlikumi"
+  - veids: paplasinata
+    vieta: "8. Valsts pārvaldes efektivitāte un birokrātijas demontāža › Kompakta, moderna un izmaksu efektīva valsts pārvalde"
+    citats: "Nodrošināt Ministru kabineta sēžu norisi vismaz divas reizes nedēļā, vienu dienu veltot tikai ekonomikas jautājumiem"
+nesakritiba: "CVK sola katru nedēļu vēl vienu Ministru kabineta sēdi, kurā izskata uzņēmēju organizāciju sagatavotos priekšlikumus; paplašinātā programma — sēdes vismaz divas reizes nedēļā, vienu dienu veltot tikai ekonomikas jautājumiem (bez uzņēmēju organizāciju priekšlikumu nosacījuma)."
+piezimes: "Ievadrindkopā ir konkrēta apņemšanās (nav vīzija) → izrakstīta. Paplašinātās 8. nod. punkts ir tas pats iznākums (papildu MK sēde nedēļā ekonomikai) → citāts pievienots (§0.3). \"Ministru kabinets kļūs par vietu …\" — retorika, nav izrakstīts. Pārbaudāms: sēdes notiek vai nē. Iestāde nav pārbaudīta: MK darba organizācija → VK."
+jautajums: ""

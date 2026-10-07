@@ -1,0 +1,20 @@
+id: lpv-rail-baltica-adazi-osta-lidosta
+saraksts: lpv
+nosaukums: "Rail Baltica savienojums Ādažu bāze – Rīgas osta – lidosta"
+parbaudams: true
+temas:
+  galvena: transports
+  papildu: [aizsardziba]
+iestades:
+  galvena: sm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "VALSTS ATTĪSTĪBA › Ekonomika un uzņēmējdarbība"
+    citats: "\"Rail Baltica\" projektam ir jāsavieno Ādažu militārā bāze, Rīgas osta un lidosta"
+  - veids: paplasinata
+    vieta: "4. Loģistikas, tranzīta un ārvalstu sadarbība"
+    citats: "Prioritāte ir funkcionāls savienojums (Ādažu poligons-Rīgas Osta-Lidosta)"
+nesakritiba: ""
+piezimes: "Paplašinātās 4. nod. punkts ir tas pats iznākums. Apvienotā tilta ideja — atsevišķs Solījums (lpv-rail-baltica-apvienotais-tilts). Iestāde nav pārbaudīta: SM; militārā mobilitāte — iespējama AM."
+jautajums: ""

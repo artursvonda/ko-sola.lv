@@ -1,0 +1,20 @@
+id: lpv-obligats-finansu-pratibas-kurss-skolas
+saraksts: lpv
+nosaukums: "Obligāts finanšu un uzņēmējdarbības pratības kurss 9.–12. klasē"
+parbaudams: true
+temas:
+  galvena: izglitiba-un-zinatne
+  papildu: [ekonomika-un-darbs]
+iestades:
+  galvena: izm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "IZGLĪTĪBA"
+    citats: "ieviesīsim valstī obligāto vidējo izglītību (vispārējo vai profesionālo), kā arī obligātu finanšu un uzņēmējdarbības pratības kursu"
+  - veids: paplasinata
+    vieta: "3. Banku sektora transformācija, Publiskā Privātā Partnerība, Eiropas Savienības Fondi › Kreditēšanas apjomu salīdzinājums (2025 gads)"
+    citats: "9.-12. klasēs tiek ieviests obligāts finanšu un uzņēmējdarbības pratības kurss"
+nesakritiba: ""
+piezimes: "Punkts ir paplašinātās 3. nod. → pieder šai izpildei (§0). CVK teikums ir nodaļā IZGLĪTĪBA; tas pats iznākums → CVK citāts pievienots (daļām nav sava darbības vārda → citēts viss teikums, §3). Obligātā vidējā izglītība — cits Solījums, atstāts IZGLĪTĪBA izpildei. Paplašinātā programma precizē klases (9.–12.) — papildinājums. Iestāde nav pārbaudīta: IZM."
+jautajums: ""

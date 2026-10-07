@@ -1,0 +1,20 @@
+id: lpv-aizsardzibas-iepirkumi-no-asv-50-procenti
+saraksts: lpv
+nosaukums: "Vismaz puse aizsardzības iepirkumu no ASV"
+parbaudams: true
+temas:
+  galvena: aizsardziba
+  papildu: [arpolitika]
+iestades:
+  galvena: am
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "DROŠĪBA"
+    citats: "Pusi no visiem militārajiem iepirkumiem veiksim no ASV"
+  - veids: paplasinata
+    vieta: "4. Loģistikas, tranzīta un ārvalstu sadarbība › Stratēģiskā partnerība ar ASV"
+    citats: "Noteikt, ka vismaz 50% no valsts aizsardzības iepirkumiem tiek novirzīti tieši ASV kompānijām"
+nesakritiba: ""
+piezimes: "Punkts ir paplašinātās 4. nod. → pieder šai izpildei (§0: punkts pieder nodaļai, kurā tas ir paplašinātajā programmā). CVK teikums ir nodaļā DROŠĪBA; tas pats iznākums → CVK citāts pievienots, vērtē pēc CVK. \"pusi\" ↔ \"vismaz 50%\" — būtiski neatšķiras. Iestāde nav pārbaudīta: AM."
+jautajums: ""

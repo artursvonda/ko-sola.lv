@@ -1,0 +1,17 @@
+id: lpv-rail-baltica-apvienotais-tilts
+saraksts: lpv
+nosaukums: "Viens apvienots Rail Baltica tilts trīs atsevišķu vietā"
+parbaudams: true
+temas:
+  galvena: transports
+  papildu: [aizsardziba]
+iestades:
+  galvena: sm
+  papildu: []
+avoti:
+  - veids: paplasinata
+    vieta: "4. Loģistikas, tranzīta un ārvalstu sadarbība"
+    citats: "Trīs atsevišķu tiltu vietā tiktu būvēts viens apvienotais tilts, integrējot to ar Rīgas Ziemeļu koridoru"
+nesakritiba: ""
+piezimes: "Cits iznākums nekā CVK Rail Baltica Solījumi → atsevišķs Solījums ar paplašinātās programmas avotu (§4). Saistīts ar lpv-rigas-ziemelu-koridors. Iestāde nav pārbaudīta: SM."
+jautajums: ""

@@ -1,0 +1,17 @@
+id: lpv-mezizstrades-ienakumi-pasvaldibam
+saraksts: lpv
+nosaukums: "Ienākumi no mežizstrādes pašvaldību ienākumu bāzē"
+parbaudams: true
+temas:
+  galvena: regioni-un-pasvaldibas
+  papildu: [nodokli-un-budzets]
+iestades:
+  galvena: fm
+  papildu: [varam]
+avoti:
+  - veids: cvk
+    vieta: "VALSTS ATTĪSTĪBA › Zemi un stabili nodokļi"
+    citats: "Pašvaldību ienākumu bāzi palielināsim, iekļaujot ienākumus no mežizstrādes"
+nesakritiba: ""
+piezimes: "Galvenā teikuma daļa \"palielināsim ienākumu bāzi\" ir vispārīga → Solījums ir \"-ot\" daļa (§1). Avots nenosaka, kuri mežizstrādes ienākumi (nodoklis, valsts mežu dividendes u. c.) domāti; pārbaudāms: šādi ienākumi iekļauti pašvaldību ienākumos vai nē. Iestāde nav pārbaudīta: FM; papildu VARAM."
+jautajums: ""

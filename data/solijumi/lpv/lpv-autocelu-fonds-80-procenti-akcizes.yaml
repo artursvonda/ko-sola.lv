@@ -1,0 +1,20 @@
+id: lpv-autocelu-fonds-80-procenti-akcizes
+saraksts: lpv
+nosaukums: "Autoceļu fonda atjaunošana ar 80% no degvielas akcīzes nodokļa"
+parbaudams: true
+temas:
+  galvena: transports
+  papildu: [nodokli-un-budzets]
+iestades:
+  galvena: sm
+  papildu: [fm]
+avoti:
+  - veids: cvk
+    vieta: "VALSTS ATTĪSTĪBA › Zemi un stabili nodokļi"
+    citats: "Atjaunosim Autoceļu fondu, novirzot 80% no degvielas akcīzes nodokļa"
+  - veids: paplasinata
+    vieta: "1. Nodokļi un Pensijas › Mazāki nodokļi – lielākie ienākumi"
+    citats: "Atjaunosim Autoceļa fondu – 80% no degvielas akcīzes novirzīsim ceļu būvniecībai un atjaunošanai"
+nesakritiba: ""
+piezimes: "\"-ot\" daļa dod mēru, nav atsevišķs iznākums → viens Solījums. Iestāde nav pārbaudīta: autoceļi → SM; budžeta mehānisms → FM (papildu)."
+jautajums: ""
