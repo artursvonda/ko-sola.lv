@@ -1,0 +1,17 @@
+id: sv-valsts-socialas-drosibas-fonds
+saraksts: sv
+nosaukums: Valsts Sociālās drošības fonds no valsts uzņēmumu dividendēm
+parbaudams: true
+temas:
+  galvena: socialais-atbalsts-un-pensijas
+  papildu: [ekonomika-un-darbs]
+iestades:
+  galvena: lm
+  papildu: [fm]
+avoti:
+  - veids: cvk
+    vieta: "EKONOMIKA"
+    citats: "izveidot Valsts Sociālās drošības fondu, kura kapitālu veidos valstij piederošo uzņēmumu dividendes"
+nesakritiba: ""
+piezimes: "Pārbaudāms: fonds izveidots vai nē (ar dividendēm kā kapitāla avotu). Fonda mērķis avotā nav precizēts. LM — sociālās drošības sistēma; FM papildu — valsts kapitālsabiedrību dividendes un budžets. Iestāde nav pārbaudīta oficiālā avotā."
+jautajums: ""

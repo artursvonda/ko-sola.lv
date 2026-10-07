@@ -1,0 +1,17 @@
+id: sv-energouznemumi-bez-pelnas
+saraksts: sv
+nosaukums: Energoapgādes uzņēmumi netiecas pēc peļņas, bet nodrošina zemāko cenu
+parbaudams: false
+temas:
+  galvena: energetika
+  papildu: []
+iestades:
+  galvena: kem
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "EKONOMIKA"
+    citats: "energoapgādes uzņēmumiem nav jātiecas pēc peļņas, bet jānodrošina iespējami zemākā cena pasūtītājam"
+nesakritiba: ""
+piezimes: "Punkts dalīts (§1), sk. sv-nordpool-dalibas-izvertesana. Nepārbaudāms: principa deklarācija bez konkrēta pasākuma (uzņēmumi nav nosaukti, „iespējami zemākā cena” — bez mēra). KEM — enerģētikas politika; iestāde nav pārbaudīta oficiālā avotā."
+jautajums: ""

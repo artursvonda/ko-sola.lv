@@ -1,0 +1,17 @@
+id: sv-regionalas-biznesa-oazes
+saraksts: sv
+nosaukums: Reģionālās biznesa oāzes ar pazeminātu darbaspēka nodokli
+parbaudams: true
+temas:
+  galvena: ekonomika-un-darbs
+  papildu: [nodokli-un-budzets, regioni-un-pasvaldibas]
+iestades:
+  galvena: fm
+  papildu: [varam]
+avoti:
+  - veids: cvk
+    vieta: "EKONOMIKA"
+    citats: "sadarbībā ar pašvaldībām ieviest reģionālās biznesa oāzes ar pazeminātu darba spēka nodokli konkrētām uzņēmējdarbības jomām"
+nesakritiba: ""
+piezimes: "Pārbaudāms: šādas zonas ar pazeminātu darbaspēka nodokli ieviestas vai nē (jomas un apmērs avotā nav noteikti). FM — nodokļu regulējums; VARAM papildu — reģionālā attīstība un sadarbība ar pašvaldībām. Iestāde nav pārbaudīta oficiālā avotā."
+jautajums: ""

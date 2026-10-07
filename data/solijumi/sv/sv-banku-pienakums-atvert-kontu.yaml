@@ -1,0 +1,17 @@
+id: sv-banku-pienakums-atvert-kontu
+saraksts: sv
+nosaukums: Kredītiestāžu pienākums atvērt norēķinu kontu visām Latvijas personām
+parbaudams: true
+temas:
+  galvena: ekonomika-un-darbs
+  papildu: []
+iestades:
+  galvena: fm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "EKONOMIKA"
+    citats: "nodrošināt Latvijas kredītiestādēm pienākumu atvērt norēķinu kontu visām Latvijas fiziskām un juridiskām personām"
+nesakritiba: ""
+piezimes: "Pārbaudāms: pienākums noteikts regulējumā vai nē (gan fiziskām, gan juridiskām personām; ja tikai daļai — daļēji izpildīts). Pašreizējais regulējums nav pārbaudīts. FM — finanšu sektora politika."
+jautajums: ""

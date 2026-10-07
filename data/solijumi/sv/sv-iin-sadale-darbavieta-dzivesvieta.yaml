@@ -1,0 +1,17 @@
+id: sv-iin-sadale-darbavieta-dzivesvieta
+saraksts: sv
+nosaukums: IIN sadale starp pamata darbavietas un dzīvesvietas pašvaldību
+parbaudams: true
+temas:
+  galvena: regioni-un-pasvaldibas
+  papildu: [nodokli-un-budzets]
+iestades:
+  galvena: fm
+  papildu: [varam]
+avoti:
+  - veids: cvk
+    vieta: "EKONOMIKA"
+    citats: "sadalīt IIN starp pamata darbavietu un dzīvesvietu"
+nesakritiba: ""
+piezimes: "Punkts dalīts trīs Solījumos (§1): IIN sadale, pašvaldību IIN daļa 95% un UIN pārdale var saņemt atšķirīgus statusus. Pārbaudāms: IIN sadales princips ieviests vai nē. FM — nodokļu regulējums un pašvaldību finansēšana; VARAM papildu — pašvaldības. Iestāde nav pārbaudīta oficiālā avotā."
+jautajums: ""

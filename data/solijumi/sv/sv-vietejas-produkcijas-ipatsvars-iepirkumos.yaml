@@ -1,0 +1,17 @@
+id: sv-vietejas-produkcijas-ipatsvars-iepirkumos
+saraksts: sv
+nosaukums: Lielāks Latvijā ražotās produkcijas īpatsvars publiskajos iepirkumos
+parbaudams: true
+temas:
+  galvena: ekonomika-un-darbs
+  papildu: []
+iestades:
+  galvena: fm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "EKONOMIKA"
+    citats: "palielināt Latvijā ražotās produkcijas īpatsvaru publiskajos iepirkumos"
+nesakritiba: ""
+piezimes: "Robežgadījums: mērķa skaitļa nav, bet rādītājs konkrēts (īpatsvars publiskajos iepirkumos) — pārbaudāms, vai īpatsvars pieaudzis. Nav pārbaudīts, vai šāds rādītājs tiek oficiāli uzskaitīts. FM — publisko iepirkumu politika; iestāde nav pārbaudīta oficiālā avotā."
+jautajums: ""
