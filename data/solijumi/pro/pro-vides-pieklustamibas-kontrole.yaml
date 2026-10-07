@@ -1,6 +1,6 @@
 id: pro-vides-pieklustamibas-kontrole
 saraksts: pro
-nosaukums: Stingrāka vides piekļūstamības kontrole un atbalsts uzlabojumiem
+nosaukums: Pieejama vide personām ar invaliditāti un stingrāka piekļūstamības kontrole
 parbaudams: false
 temas:
   galvena: socialais-atbalsts-un-pensijas
@@ -10,9 +10,12 @@ iestades:
   papildu:
     - em
 avoti:
+  - veids: cvk
+    vieta: DEMOKRĀTIJA UN CILVĒKTIESĪBAS
+    citats: Veidosim pieejamu vidi un darba tirgu personām ar invaliditāti.
   - veids: paplasinata
     vieta: 3. Sociālās drošības tīkls un dzīves dārdzības mazināšana › Atbalsts cilvēkiem ar invaliditāti un viņu ģimenēm
     citats: Stingrāk kontrolēsim vides piekļūstamību un atbalstīsim vides piekļūstamības uzlabošanas projektus.
 nesakritiba: ""
-piezimes: 'Nav dalīts: abas daļas bez mēra (Nepārbaudāmas). Atbildīgā: invaliditātes politika — LM; būvju piekļūstamības prasības un kontrole — EM (neesmu drošs). CVK DEMOKRĀTIJA UN CILVĒKTIESĪBAS 6. "Veidosim pieejamu vidi un darba tirgu personām ar invaliditāti" — atstāts tās nodaļas izpildei.'
+piezimes: "CVK DEMOKRĀTIJA UN CILVĒKTIESĪBAS 6. punkts pievienots tās izpildē: sadalīts pēc paplašinātās programmas (vide — šis; darba tirgus — pro-uznemeju-motivacija-nodarbinat-cilvekus-ar-invaliditati), CVK citāts abos (§4). Vērtēšanas avots — CVK (bez mēra). Nav dalīts: abas paplašinātās daļas bez mēra (Nepārbaudāmas). Atbildīgā: invaliditātes politika — LM; būvju piekļūstamības prasības un kontrole — EM (neesmu drošs)."
 jautajums: ""

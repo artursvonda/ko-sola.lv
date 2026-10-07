@@ -1,6 +1,6 @@
 id: pro-uznemeju-motivacija-nodarbinat-cilvekus-ar-invaliditati
 saraksts: pro
-nosaukums: Uzņēmēju motivācija nodarbināt cilvēkus ar invaliditāti
+nosaukums: Pieejams darba tirgus personām ar invaliditāti, motivējot uzņēmējus
 parbaudams: false
 temas:
   galvena: ekonomika-un-darbs
@@ -10,9 +10,12 @@ iestades:
   galvena: lm
   papildu: []
 avoti:
+  - veids: cvk
+    vieta: DEMOKRĀTIJA UN CILVĒKTIESĪBAS
+    citats: Veidosim pieejamu vidi un darba tirgu personām ar invaliditāti.
   - veids: paplasinata
     vieta: 3. Sociālās drošības tīkls un dzīves dārdzības mazināšana › Atbalsts cilvēkiem ar invaliditāti un viņu ģimenēm
     citats: Atvieglosim uzņēmēju iespējas un motivāciju noalgot cilvēkus ar invaliditāti.
 nesakritiba: ""
-piezimes: Bez konkrēta pasākuma. Saistīts ar pro-darba-algas-lidzfinansejums-riska-grupam (konkrēts pasākums), nav apvienots.
+piezimes: CVK DEMOKRĀTIJA UN CILVĒKTIESĪBAS 6. punkts pievienots tās izpildē (sk. pro-vides-pieklustamibas-kontrole), CVK citāts abos (§4). Bez konkrēta pasākuma. Saistīts ar pro-darba-algas-lidzfinansejums-riska-grupam (konkrēts pasākums), nav apvienots.
 jautajums: ""
