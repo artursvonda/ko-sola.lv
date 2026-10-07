@@ -92,7 +92,19 @@
     - veids: paplasinata
       url: https://latvijapirmajavieta.lv/latvija-pirmaja-vieta-ekonomiska-programma-2026/
       # Tematiska (ekonomika), publicēta 28.09.2026; skaitās pēc #16.
-      # fails, atbilst_cvk, izlaist, nav_jaizraksta — pievieno "Ekstrakcija: Latvija pirmajā vietā" (#21).
+      fails: sources/paplasinata/lpv.md
+      # 8 nodaļas, CVK — 7; visas paplašinātās nodaļas atbilst kādai CVK nodaļai → "Ārpus CVK nodaļām" nav vajadzīga.
+      # STIPRA UN NEATKARĪGA LATVIJA, DROŠĪBA, VESELĪBA UN LABKLĀJĪBA, IZGLĪTĪBA — paplašinātās nodaļas nav.
+      # atbilst_cvk — PRIEKŠLIKUMS, gaida redaktora lēmumu (#21).
+      atbilst_cvk:
+        1. Nodokļi un Pensijas: VALSTS ATTĪSTĪBA
+        2. Demogrāfija un Darbaspēks: ĢIMEŅU ATBALSTS UN KRISTĪGĀS VĒRTĪBAS
+        3. Banku sektora transformācija, Publiskā Privātā Partnerība, Eiropas Savienības Fondi: VALSTS ATTĪSTĪBA
+        4. Loģistikas, tranzīta un ārvalstu sadarbība: VALSTS ATTĪSTĪBA
+        5. Enerģētika un dabas resursu suverenitāte: VALSTS ATTĪSTĪBA
+        6. Augstas pievienotās vērtības nozares un tūrisms: VALSTS ATTĪSTĪBA
+        7. Startup un Innovācijas: VALSTS ATTĪSTĪBA
+        8. Valsts pārvaldes efektivitāte un birokrātijas demontāža: EFEKTĪVA VALSTS PĀRVALDE
 
 - slug: jv
   nosaukums: Jaunā VIENOTĪBA
