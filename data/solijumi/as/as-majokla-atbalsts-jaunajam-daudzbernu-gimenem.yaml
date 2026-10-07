@@ -1,0 +1,17 @@
+id: as-majokla-atbalsts-jaunajam-daudzbernu-gimenem
+saraksts: as
+nosaukums: Mājokļa atbalsts jaunajām un daudzbērnu ģimenēm (granti, garantijas, īre)
+parbaudams: true
+temas:
+  galvena: majokli
+  papildu: [gimenes-un-demografija]
+iestades:
+  galvena: em
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "Demogrāfijas, ģimeņu un sociālās drošības veicināšanai"
+    citats: "Atbalstīsim jaunās un daudzbērnu ģimenes ar mājokļa grantiem, valsts garantijām un īres mājokļu programmām"
+nesakritiba: ""
+piezimes: "Instrumentu uzskaitījums zem viena darbības vārda — nav dalīts (§1, analoģija ar `as-mediku-piesaiste-novados`). Pārbaudāms robežgadījumā: atbalsta apjoma mēra nav, bet nosaukti konkrēti instrumenti. Ieteicamais kritērijs „izpildīts”: valsts līmenī jaunajām un daudzbērnu ģimenēm pieejami visi trīs instrumenti (mājokļa granti, valsts garantijas, īres mājokļu programmas); daļa — „daļēji izpildīts”. Pirms vērtēšanas pārbaudīt jau esošās valsts mājokļu atbalsta programmas ģimenēm (lai vērtētu jaunu vai paplašinātu atbalstu). „Jaunā ģimene” avotā nav definēta (vecuma robeža?). Nošķirts no `as-majoklu-buvniecibas-garantiju-programma` (cits iznākums — garantijas būvniecībai reģionos ar kreditēšanas mēru; šeit — atbalsts noteiktām ģimeņu grupām). Iestāde — pieņēmums, nav pārbaudīts oficiālā avotā: EM — mājokļu politika (kā `as-majoklu-buvniecibas-garantiju-programma`)."
+jautajums: ""
