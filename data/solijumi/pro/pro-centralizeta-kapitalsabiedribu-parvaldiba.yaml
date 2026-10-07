@@ -1,0 +1,21 @@
+id: pro-centralizeta-kapitalsabiedribu-parvaldiba
+saraksts: pro
+nosaukums: Centralizēta valsts kapitālsabiedrību pārvaldība vienā kapitāla daļu turētājā
+parbaudams: true
+temas:
+  galvena: ekonomika-un-darbs
+  papildu:
+    - valsts-parvalde
+iestades:
+  galvena: vk
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: PRETKORUPCIJA UN VALSTS PĀRVALDE
+    citats: Centralizēsim valsts kapitālsabiedrību pārvaldību, nodrošinot to darbu sabiedrības labā un samazinot resoru politisko ietekmi
+  - veids: paplasinata
+    vieta: 13. Valsts pārvalde, kas sasniedz mērķus › Valsts kapitālsabiedrību pārvaldība
+    citats: Ieviesīsim centralizētu kapitālsabiedrību pārvaldības modeli, kas paredz vienu institūciju, kura tur kapitāla daļas.
+nesakritiba: CVK sola "centralizēsim valsts kapitālsabiedrību pārvaldību"; paplašinātā programma — modeli, "kas paredz vienu institūciju, kura tur kapitāla daļas".
+piezimes: 'CVK teikums nav dalīts: "-ot" daļas apraksta mērķi (§1). CVK avotā pirms punkta ir atstarpe — citāts beidzas pirms tās. Vērtē pēc paplašinātās programmas mēra (viena kapitāla daļu turētāja institūcija). Tēma: valsts kapitālsabiedrības — ekonomika-un-darbs (data/temas.yaml). Atbildīgā: valsts kapitālsabiedrību pārvaldības koordinācija — VK (neesmu drošs; nav pārbaudīts).'
+jautajums: ""
