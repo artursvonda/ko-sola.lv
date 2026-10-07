@@ -1,0 +1,17 @@
+id: as-vienots-pakalpojumu-planosanas-modelis
+saraksts: as
+nosaukums: Vienots valsts un pašvaldību pakalpojumu plānošanas modelis
+parbaudams: true
+temas:
+  galvena: regioni-un-pasvaldibas
+  papildu: [valsts-parvalde]
+iestades:
+  galvena: varam
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "Reģionu, infrastruktūras un lauksaimniecības attīstībai"
+    citats: "Izveidosim vienotu valsts un pašvaldību pakalpojumu plānošanas modeli izglītības pakalpojumu, civilās aizsardzības, sabiedriskā transporta, atkritumu pārvaldības un citās jomās"
+nesakritiba: ""
+piezimes: "Jomu uzskaitījums zem viena darbības vārda — nav dalīts (§1). Pārbaudāms robežgadījumā: konkrēts objekts (modeļa izveide), bet „modelis” avotā nav definēts. Ieteicamais kritērijs „izpildīts”: normatīvajā aktā vai MK apstiprinātā dokumentā noteikts vienots valsts un pašvaldību pakalpojumu plānošanas modelis, kas aptver vismaz četras nosauktās jomas (izglītība, civilā aizsardzība, sabiedriskais transports, atkritumu pārvaldība); daļa jomu — „daļēji izpildīts”. Iestāde — pieņēmums, nav pārbaudīts oficiālā avotā: VARAM — reģionālā attīstība un pašvaldību jautājumi; jomas ir dažādu ministriju kompetencē (izglītība — IZM, civilā aizsardzība — IeM, sabiedriskais transports — SM), avots vadošo nenosaka; alternatīva — VK (valdības kopējā kompetence)."
+jautajums: ""

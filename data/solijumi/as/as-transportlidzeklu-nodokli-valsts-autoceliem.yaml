@@ -1,0 +1,17 @@
+id: as-transportlidzeklu-nodokli-valsts-autoceliem
+saraksts: as
+nosaukums: Transportlīdzekļu nodokļu novirzīšana valsts autoceļiem
+parbaudams: true
+temas:
+  galvena: transports
+  papildu: [nodokli-un-budzets]
+iestades:
+  galvena: sm
+  papildu: [fm]
+avoti:
+  - veids: cvk
+    vieta: "Reģionu, infrastruktūras un lauksaimniecības attīstībai"
+    citats: "Transportlīdzekļu nodokļus novirzīsim valsts autoceļiem, prioritāri tranzīta maģistrālēm, reģionālo centru savienojumiem un militārajai mobilitātei"
+nesakritiba: ""
+piezimes: "„prioritāri …” nosaka līdzekļu izlietojuma prioritātes — nav dalīts un netiek vērtēts atsevišķi (§1). Pārbaudāms: nodokļu ieņēmumi novirzīti (iezīmēti) valsts autoceļiem vai nē. Avotā nav definēts: kuri nodokļi ir „transportlīdzekļu nodokļi” (piem., transportlīdzekļa ekspluatācijas nodoklis, uzņēmumu vieglo transportlīdzekļu nodoklis; vai arī citi), vai tie novirzāmi pilnā apmērā — jādefinē pirms vērtēšanas. Ieteicamais kritērijs „izpildīts”: likumā vai budžetā noteikts, ka šo nodokļu ieņēmumi pilnā apmērā tiek izlietoti valsts autoceļiem; daļējs novirzījums — „daļēji izpildīts”. Iestāde — pieņēmums, nav pārbaudīts oficiālā avotā: SM — valsts autoceļi; FM papildu — budžeta ieņēmumu iezīmēšana; alternatīva — FM galvenā (iznākums ir budžeta lēmums)."
+jautajums: ""
