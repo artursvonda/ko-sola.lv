@@ -1,0 +1,20 @@
+id: pro-birokratijas-sloga-novertejums
+saraksts: pro
+nosaukums: Regulārs birokrātijas sloga novērtējums
+parbaudams: true
+temas:
+  galvena: valsts-parvalde
+  papildu: []
+iestades:
+  galvena: vk
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: PRETKORUPCIJA UN VALSTS PĀRVALDE
+    citats: Ieviesīsim regulāru birokrātijas sloga novērtējumu.
+  - veids: paplasinata
+    vieta: 13. Valsts pārvalde, kas sasniedz mērķus › Iekšējās un ārējās birokrātijas kontrole
+    citats: Birokrātijas slogs kontrolēsim, vērtējot administratīvo procedūru skaitu, lēmumu izpildes laiku un iesaistīto institūciju skaitu lēmuma pieņemšanā. Nodrošināsim regulāru publisku pārskatu par sasniegto progresu.
+nesakritiba: CVK sola "regulāru birokrātijas sloga novērtējumu"; paplašinātā programma — kontroli pēc trim rādītājiem (procedūru skaits, izpildes laiks, iesaistīto institūciju skaits) un "regulāru publisku pārskatu".
+piezimes: 'Citātā "Birokrātijas slogs kontrolēsim" — tā avotā. Atbildīgā: valsts pārvaldes administratīvā sloga mazināšanas koordinācija — VK (nav pārbaudīts).'
+jautajums: ""
