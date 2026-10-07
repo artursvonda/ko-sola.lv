@@ -1,0 +1,23 @@
+id: jv-snieguma-datu-publiskosana
+saraksts: jv
+nosaukums: Attīstības rādītāju un valsts pārvaldes snieguma datu publiskošana
+parbaudams: true
+temas:
+  galvena: valsts-parvalde
+  papildu: []
+iestades:
+  galvena: vk
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "6. Valsts pārvalde"
+    citats: "Publiskosim šo attīstības rādītāju datus"
+  - veids: paplasinata
+    vieta: "6. Valsts pārvalde › Apņemšanās un uzdevumi › Vienotas valdības pārvaldes modelis"
+    citats: "Ieviesīsim rezultātos balstītu pārvaldību, katrā nozarē nosakot trīs līdz piecus galvenos attīstības rādītājus, ministru un iestāžu vadītāju sniegumu vērtējot pēc sasniegtajiem rezultātiem, regulāri publiskojot valsts pārvaldes snieguma datus"
+  - veids: paplasinata
+    vieta: "6. Valsts pārvalde › Apņemšanās un uzdevumi › Vienotas valdības pārvaldes modelis"
+    citats: "Publiskosim valsts institūciju snieguma rezultātus un pakalpojumu kvalitātes rādītājus"
+nesakritiba: "CVK programmā „Publiskosim šo attīstības rādītāju datus”, bet paplašinātajā programmā — „regulāri publiskojot valsts pārvaldes snieguma datus” un „valsts institūciju snieguma rezultātus un pakalpojumu kvalitātes rādītājus” (plašāks apjoms un regularitāte)."
+piezimes: "Tas pats iznākums (snieguma un rādītāju datu publiskošana) trijās vietās — viens Solījums (§1, §4). Otrā punkta daļa „ieviesīsim regulāru valdības atskaitīšanos …” — atsevišķs Solījums (jv-regulara-valdibas-atskaitisanas). Pārbaudāms: dati publiski pieejami vai nē; vērtē pēc CVK — nozaru attīstības rādītāju dati. VK (pieņēmums, nav pārbaudīts)."
+jautajums: ""

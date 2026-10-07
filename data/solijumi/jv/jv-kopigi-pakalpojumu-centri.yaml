@@ -1,0 +1,20 @@
+id: jv-kopigi-pakalpojumu-centri
+saraksts: jv
+nosaukums: Kopīgi pakalpojumu centri valsts iestāžu atbalsta funkcijām
+parbaudams: true
+temas:
+  galvena: valsts-parvalde
+  papildu: []
+iestades:
+  galvena: vk
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "6. Valsts pārvalde"
+    citats: "Ieviesīsim vienotas valdības pieeju, kopīgus pakalpojumu centrus"
+  - veids: paplasinata
+    vieta: "6. Valsts pārvalde › Apņemšanās un uzdevumi › Vienotas valdības pārvaldes modelis"
+    citats: "Veidosim kopīgus pakalpojuma centrus grāmatvedībai, personālvadībai, iepirkumiem, IT atbalstam, nekustamā īpašuma pārvaldībai"
+nesakritiba: "CVK programmā „kopīgus pakalpojumu centrus” bez jomām, bet paplašinātajā programmā — centri „grāmatvedībai, personālvadībai, iepirkumiem, IT atbalstam, nekustamā īpašuma pārvaldībai”."
+piezimes: "Dalīts no CVK teikuma pēc paplašinātās programmas dalījuma (§4; sk. jv-vienotas-valdibas-pieeja); CVK daļai nav sava darbības vārda — citēts teikums līdz šai daļai (§3). Jomu uzskaitījums zem viena darbības vārda nav dalīts (§1). Pārbaudāms: kopīgi pakalpojumu centri izveidoti vai nē; vērtē pēc paplašinātās programmas jomām (§4). Atbildīgā iestāde neskaidra: VK (valsts pārvaldes organizācija; pieņēmums, nav pārbaudīts); atsevišķu jomu centri var būt FM (grāmatvedība) vai VARAM (IT) pārziņā."
+jautajums: ""
