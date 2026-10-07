@@ -1,0 +1,20 @@
+id: jv-sporta-un-kustiga-dzivesveida-atbalsts
+saraksts: jv
+nosaukums: "Sporta un kustīga, veselīga dzīvesveida atbalsts"
+parbaudams: false
+temas:
+  galvena: valoda-kultura-un-mediji
+  papildu: [veseliba]
+iestades:
+  galvena: izm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "5. Veselība, labklājība un demogrāfija"
+    citats: "Sportu atbalstīsim kā sabiedrības veselības, bērnu attīstības, kopienu un nacionālās pašapziņas daļu"
+  - veids: paplasinata
+    vieta: "5. Veselība, labklājība un demogrāfija › Apņemšanās un uzdevumi › Sports"
+    citats: "Iestāsimies par kustīgu un veselīgu dzīvesveidu, veidojot veselīgu un sociāli aktīvu sabiedrību, īpaši rūpējoties par bērniem un jauniešiem"
+nesakritiba: ""
+piezimes: "Apvienots (§4): abi avoti — vispārīgs sporta un fizisko aktivitāšu atbalsts. Konkrētie paplašinātās programmas sporta punkti pievieno citus iznākumus (§4) — atsevišķi Solījumi bez CVK citāta: jv-iin-1-procents-sporta-organizacijam, jv-sporta-izdevumi-attaisnotajos-izdevumos, jv-sporta-izglitibas-un-infrastrukturas-finansejums, jv-paralimpiesu-atbalsta-sistema, jv-sporta-pieejamiba-cilvekiem-ar-invaliditati, jv-solidaritate-ar-ukrainu-sporta. „veidojot …”, „īpaši rūpējoties …” — mērķis, nav dalīts. Nepārbaudāms. Tēma — valoda-kultura-un-mediji (sports pēc data/temas.yaml), veseliba papildu. Sports — IZM (pieņēmums, nav pārbaudīts). Prioritāte „Fiziskās aktivitātes kā sabiedrības veselības un sociālās noturības pamats” pārklāta šeit."
+jautajums: ""

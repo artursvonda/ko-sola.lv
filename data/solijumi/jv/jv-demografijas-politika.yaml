@@ -1,0 +1,20 @@
+id: jv-demografijas-politika
+saraksts: jv
+nosaukums: "Demogrāfijas politika kā ieguldījums ģimenēs, veselībā un bērnu attīstībā"
+parbaudams: false
+temas:
+  galvena: gimenes-un-demografija
+  papildu: []
+iestades:
+  galvena: vk
+  papildu: [lm, vm]
+avoti:
+  - veids: cvk
+    vieta: "5. Veselība, labklājība un demogrāfija"
+    citats: "Demogrāfijas politiku veidosim kā rūpes par stiprām ģimenēm, grūtniecību, dzemdībām, bērnu veselību, neauglības ārstēšanu, vecāku psihisko veselību, tēvu iesaisti, bērnu aprūpi, darba un privātās dzīves līdzsvaru"
+  - veids: paplasinata
+    vieta: "5. Veselība, labklājība un demogrāfija › Apņemšanās un uzdevumi › Demogrāfija un ģimeņu veselība"
+    citats: "Veidosim demogrāfijas politiku kā ilgtermiņa ieguldījumu cilvēkkapitālā – veselībā, ģimenēs un bērnu attīstībā"
+nesakritiba: ""
+piezimes: "CVK teikums sadalīts pēc paplašinātās programmas dalījuma (§4): uzskaitījuma vienumi ar savu paplašinātās programmas punktu — jv-neauglibas-arstesanas-paplasinasana, jv-grutniecu-dzemdibu-un-bernu-veseliba, jv-vecaku-psihiska-veseliba-tevu-iesaiste; vispārīgais teikums un vienumi bez sava punkta („stiprām ģimenēm”, „bērnu aprūpi, darba un privātās dzīves līdzsvaru”) — šeit, citēts viss teikums. Nepārbaudāms: virziena deklarācija bez mēra. Prioritātes „Demogrāfijas politika kā ieguldījums cilvēkkapitālā …” un „Veselības aprūpe un ģimeņu drošība kā ilgtermiņa valsts prioritāte” pārklātas šeit. Atbildīgā iestāde nav droša: demogrāfijas politika ir starpnozaru — VK (valdības kopējā kompetence), LM un VM papildu (pieņēmums, nav pārbaudīts)."
+jautajums: ""

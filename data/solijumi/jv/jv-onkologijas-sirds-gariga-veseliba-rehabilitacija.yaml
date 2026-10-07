@@ -1,0 +1,17 @@
+id: jv-onkologijas-sirds-gariga-veseliba-rehabilitacija
+saraksts: jv
+nosaukums: "Onkoloģijas, sirds un asinsvadu, garīgās veselības, rehabilitācijas pakalpojumi"
+parbaudams: false
+temas:
+  galvena: veseliba
+  papildu: []
+iestades:
+  galvena: vm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "5. Veselība, labklājība un demogrāfija"
+    citats: "stiprināsim primāro aprūpi, ģimenes ārstu pieejamību, slimnīcu pakalpojumus, zāļu pieejamību, onkoloģijas, sirds un asinsvadu, garīgās veselības, rehabilitācijas, paliatīvās aprūpes un hospisa pakalpojumus"
+nesakritiba: ""
+piezimes: "Tikai CVK: šiem uzskaitījuma pakalpojumiem paplašinātajā programmā sava punkta nav (§4 dalījums, sk. jv-primaras-aprupes-un-gimenes-arstu-pieejamiba); apvienoti vienā Solījumā kā uzskaitījums zem viena darbības vārda (§1). Citēta visa „stiprināsim …” daļa, jo pakalpojumu veidi attiecas uz teikuma beigu vārdu „pakalpojumus” (§3). Paplašinātās programmas punkts par medicīnisko un sociālo rehabilitāciju cilvēkiem ar invaliditāti — cits iznākums (jv-atbalsta-sistema-cilvekiem-ar-invaliditati). Nepārbaudāms: „stiprināsim” bez mēra. VM."
+jautajums: ""

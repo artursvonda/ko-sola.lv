@@ -1,0 +1,20 @@
+id: jv-slimnicu-pakalpojumi-un-medikamenti
+saraksts: jv
+nosaukums: "Vajadzībām atbilstoši slimnīcu pakalpojumi un pieejami medikamenti"
+parbaudams: false
+temas:
+  galvena: veseliba
+  papildu: []
+iestades:
+  galvena: vm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "5. Veselība, labklājība un demogrāfija"
+    citats: "stiprināsim primāro aprūpi, ģimenes ārstu pieejamību, slimnīcu pakalpojumus, zāļu pieejamību"
+  - veids: paplasinata
+    vieta: "5. Veselība, labklājība un demogrāfija › Apņemšanās un uzdevumi › Investīcijas veselībā, pakalpojumu pieejamība un noturība"
+    citats: "Nodrošināsim iedzīvotāju vajadzībām atbilstošus slimnīcu pakalpojumus un pieejamus medikamentus"
+nesakritiba: ""
+piezimes: "CVK uzskaitījums sadalīts pēc paplašinātās programmas dalījuma (§4, sk. jv-primaras-aprupes-un-gimenes-arstu-pieejamiba); daļai nav sava darbības vārda — citēts no „stiprināsim” līdz šai daļai (§3). Slimnīcas un medikamenti paplašinātajā programmā ir viens punkts zem viena darbības vārda — nav dalīts (§1). Nepārbaudāms: „stiprināsim”/„nodrošināsim … atbilstošus, pieejamus” bez mēra; „stiprināsim” ↔ „nodrošināsim” nav uzskatīts par būtisku Nesakritību (abi bez mēra). VM."
+jautajums: ""

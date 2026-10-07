@@ -1,0 +1,23 @@
+id: jv-baasik-agrina-atbalsta-sistema
+saraksts: jv
+nosaukums: "Agrīna atbalsta sistēma bērniem ar attīstības grūtībām (BAASIK)"
+parbaudams: true
+temas:
+  galvena: gimenes-un-demografija
+  papildu: [veseliba, izglitiba-un-zinatne]
+iestades:
+  galvena: vm
+  papildu: [izm, lm]
+avoti:
+  - veids: cvk
+    vieta: "5. Veselība, labklājība un demogrāfija"
+    citats: "Bērnu agrīnās attīstības vajadzību noteikšana un nepieciešamā atbalsta sniegšana (BAASIK) būs to ietvarā"
+  - veids: paplasinata
+    vieta: "5. Veselība, labklājība un demogrāfija › Apņemšanās un uzdevumi › Demogrāfija un ģimeņu veselība"
+    citats: "Ieviesīsim agrīna atbalsta sistēmu bērniem ar attīstības grūtībām (BAASIK), balstītu savlaicīgā izvērtēšanā, agrīnā intervencē un speciālistu komandas atbalstā bērnam un ģimenei"
+  - veids: paplasinata
+    vieta: "8. Izglītība, latviešu valoda, kultūra un pilsoniskā sabiedrība › Apņemšanās un uzdevumi › Kvalitatīva, pieejama izglītība katram bērnam"
+    citats: "Uzsāksim agrīnās attīstības skrīninga instrumenta ieviešanu (BAASIK), sākot ar pirmsskolu"
+nesakritiba: "CVK programmā BAASIK „būs to ietvarā” (profilakses un veselībpratības ietvarā, bez darbības vārda), paplašinātās programmas 5. nodaļā — „Ieviesīsim agrīna atbalsta sistēmu …”, bet 8. nodaļā — tikai „Uzsāksim agrīnās attīstības skrīninga instrumenta ieviešanu (BAASIK), sākot ar pirmsskolu” (vājāka apņemšanās, tikai skrīnings)."
+piezimes: "CVK teikums konkrēts (BAASIK nosaukts), lai gan bez darbības vārda; „to” attiecas uz iepriekšējā teikuma profilaksi un veselībpratību. 8. nodaļas punkts (§0.3) BAASIK daļā — tas pats Solījums; tā otrā daļa „nodrošināsim vardarbības novēršanas un labbūtības stiprināšanas programmu katrā skolā” — cits iznākums, atstāts 8. nodaļas izpildei. „balstītu savlaicīgā izvērtēšanā, …” apraksta sistēmu, nav dalīts. Pārbaudāms: sistēma ieviesta vai nē. Atbildīgā iestāde nav droša: BAASIK ir starpnozaru (veselība, izglītība, sociālie pakalpojumi) — VM, IZM un LM papildu (pieņēmums, nav pārbaudīts)."
+jautajums: ""

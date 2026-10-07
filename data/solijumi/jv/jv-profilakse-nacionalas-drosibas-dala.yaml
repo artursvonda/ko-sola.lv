@@ -1,0 +1,20 @@
+id: jv-profilakse-nacionalas-drosibas-dala
+saraksts: jv
+nosaukums: "Profilakse un veselībpratība kā nacionālās drošības daļa"
+parbaudams: true
+temas:
+  galvena: veseliba
+  papildu: []
+iestades:
+  galvena: vm
+  papildu: [vk]
+avoti:
+  - veids: cvk
+    vieta: "5. Veselība, labklājība un demogrāfija"
+    citats: "Profilaksi un veselībpratību padarīsim par nacionālās drošības daļu"
+  - veids: paplasinata
+    vieta: "5. Veselība, labklājība un demogrāfija › Apņemšanās un uzdevumi › Profilakse un veselībpratība"
+    citats: "Noteiksim profilaksi par vienu no veselības politikas prioritātēm"
+nesakritiba: "CVK programma sola „Profilaksi un veselībpratību padarīsim par nacionālās drošības daļu”, bet paplašinātā programma — „Noteiksim profilaksi par vienu no veselības politikas prioritātēm” (cits ietvars: veselības politika, ne nacionālā drošība; veselībpratību nemin); Statuss pēc CVK."
+piezimes: "Apvienots (§4): abi avoti sola profilakses nostiprināšanu politikas plānošanā; atšķiras ietvars. Paplašinātās programmas punkta otrais teikums (nodokļu ieņēmumu novirzīšana) — atsevišķs Solījums jv-akcizes-ienemumi-veselibai. 3. punkta „balstoties Ziemeļvalstu pieejā par veselībpratību kā daļu no valsts drošības un sabiedrības noturības” apraksta veselības mācības pieeju (jv-veselibas-macibas-pilnveide-skolas), šeit nav pievienots. Robežgadījums pārbaudāmībai: iznākums pārbaudāms nacionālās drošības plānošanas dokumentos (vai profilakse un veselībpratība tajos iekļauta) — Pārbaudāms. VM, VK papildu (nacionālās drošības plānošana; pieņēmums, nav pārbaudīts)."
+jautajums: ""
