@@ -6,6 +6,10 @@
   "compatibility_date": "2026-10-05",
   // Domēns ko-sola.lv (#4): zona Cloudflare, Worker ir izcelsme, DNS ierakstu pārvalda Cloudflare.
   "routes": [{ "pattern": "ko-sola.lv", "custom_domain": true }],
+  // Produkcija tikai ko-sola.lv; workers.dev izslēgts. Preview URL zariem/PR (Workers Builds, #38)
+  // jāieslēdz tieši — citādi tie seko `workers_dev` un ir izslēgti.
+  "workers_dev": false,
+  "preview_urls": true,
   "assets": {
     "directory": "./dist",
     "html_handling": "auto-trailing-slash",
