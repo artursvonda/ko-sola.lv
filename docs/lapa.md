@@ -43,7 +43,7 @@ Filtru stāvoklis — query parametros. Saraksta, Tēmas un Notikuma lapu nav.
 
 ## Izvietošana
 
-Workers Builds (Cloudflare panelī): build `npm run build`, deploy `npx wrangler deploy` (`main`), citi zari — `npx wrangler versions upload` (preview URL). `lapa/public/_headers` pagaidām aizliedz indeksēšanu (`X-Robots-Tag: noindex`) — noņemt palaišanā.
+Workers Builds (Cloudflare panelī, worker `ko-sola`, #38): build `npm run build`, deploy `npx wrangler deploy` (`main` → https://ko-sola.lv), citi zari — `npx wrangler versions upload` (preview URL `*-ko-sola.arturs-c88.workers.dev`). `workers_dev` izslēgts, `preview_urls` ieslēgts tieši `wrangler.jsonc`. `lapa/public/_headers` pagaidām aizliedz indeksēšanu (`X-Robots-Tag: noindex`) — noņemt palaišanā.
 
 ## Solījuma lapa: saites un Frakciju balsojums (#36)
 
