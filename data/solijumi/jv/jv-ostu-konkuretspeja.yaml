@@ -1,0 +1,20 @@
+id: jv-ostu-konkuretspeja
+saraksts: jv
+nosaukums: "Latvijas ostu konkurētspēja un infrastruktūras modernizācija"
+parbaudams: false
+temas:
+  galvena: transports
+  papildu: [ekonomika-un-darbs]
+iestades:
+  galvena: sm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "9. Vide, reģioni un infrastruktūra"
+    citats: 'Satiksmē nodrošināsim "Rail Baltica", reģionālo ceļu, dzelzceļa, ostu, sabiedriskā transporta un digitālās infrastruktūras attīstību ar skaidru atbildību, termiņiem un izmaksu kontroli'
+  - veids: paplasinata
+    vieta: "9. Vide, reģioni un infrastruktūra › Apņemšanās un uzdevumi › Satiksme un pasažieru pārvadājumi"
+    citats: "Nodrošināsim Latvijas ostu konkurētspēju, modernizējot infrastruktūru, diversificējot kravas, nodrošinot tālāku industrializāciju, kā arī pielāgojot to militārās mobilitātes prasībām"
+nesakritiba: ""
+piezimes: "CVK satiksmes teikums (viens darbības vārds, uzskaitījums bez sava darbības vārda katrai daļai) sadalīts pēc paplašinātās programmas dalījuma (§4); citēts viss teikums, jo kopīgais „attīstību” ir teikuma beigās (§3). Daļas: «Rail Baltica» (jv-rail-baltica-pamatsavienojums), reģionālie ceļi (jv-melna-seguma-autocelu-ipatsvars, jv-celu-finansejums-pierobeza, jv-dualas-lietojamibas-celi-un-tilti), dzelzceļš (jv-dzelzcela-pasazieru-parvadajumi), ostas (jv-ostu-konkuretspeja), sabiedriskais transports (jv-sabiedriska-transporta-reforma, jv-vienota-bilesu-sistema), digitālā infrastruktūra (jv-digitalas-infrastrukturas-attistiba). „ar skaidru atbildību, termiņiem un izmaksu kontroli” — veids, nav dalīts. „-ot” daļas (infrastruktūras modernizācija, kravu diversifikācija, industrializācija, pielāgošana militārajai mobilitātei) — veids bez konkrēta objekta vai mēra, nav dalītas (robežgadījums: militārās mobilitātes prasības). Ostu pārvaldības modelis — atsevišķs Solījums (jv-ostu-parvaldibas-modelis). Nepārbaudāms. SM (pieņēmums, nav pārbaudīts). Prioritāte „Konkurētspējīgas ostas, modernizēta infrastruktūra, diversificētas kravas un militārās mobilitātes prasībām pielāgota pārvaldība” pārklāta šeit un jv-ostu-parvaldibas-modelis."
+jautajums: ""

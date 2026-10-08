@@ -1,0 +1,20 @@
+id: jv-latvijas-partikas-prioritate-iepirkumos
+saraksts: jv
+nosaukums: "Prioritāte Latvijā ražotai pārtikai publiskajos iepirkumos"
+parbaudams: true
+temas:
+  galvena: lauksaimnieciba-un-zivsaimnieciba
+  papildu: [ekonomika-un-darbs]
+iestades:
+  galvena: zm
+  papildu: [fm]
+avoti:
+  - veids: cvk
+    vieta: "9. Vide, reģioni un infrastruktūra"
+    citats: "Noteiksim publiskajos iepirkumos prioritāti Latvijas pārtikai"
+  - veids: paplasinata
+    vieta: "9. Vide, reģioni un infrastruktūra › Apņemšanās un uzdevumi › Vide, mežsaimniecība, lauksaimniecība"
+    citats: "Noteiksim prioritāti Latvijā ražotai pārtikai publiskajos iepirkumos"
+nesakritiba: ""
+piezimes: "CVK un paplašinātā programma sakrīt („Latvijas pārtikai” ↔ „Latvijā ražotai pārtikai” — sinonīmi). Pārbaudāms: prioritāte noteikta normatīvajos aktos vai nē. Iestāde — neskaidrs robežgadījums: pārtikas politika — ZM, publisko iepirkumu regulējums — FM papildu (pieņēmums, nav pārbaudīts)."
+jautajums: ""

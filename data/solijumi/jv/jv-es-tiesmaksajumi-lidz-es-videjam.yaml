@@ -1,0 +1,20 @@
+id: jv-es-tiesmaksajumi-lidz-es-videjam
+saraksts: jv
+nosaukums: "ES tiešmaksājumi Latvijas lauksaimniekiem līdz ES vidējam līmenim"
+parbaudams: true
+temas:
+  galvena: lauksaimnieciba-un-zivsaimnieciba
+  papildu: [arpolitika]
+iestades:
+  galvena: zm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "9. Vide, reģioni un infrastruktūra"
+    citats: "Pieprasīsim ES tiešmaksājumu pieaugumu mūsu lauksaimniekiem līdz ES vidējam līmenim"
+  - veids: paplasinata
+    vieta: "9. Vide, reģioni un infrastruktūra › Apņemšanās un uzdevumi › Vide, mežsaimniecība, lauksaimniecība"
+    citats: "Pieprasīsim Eiropas Savienības tiešo maksājumu pieaugumu Latvijas lauksaimniekiem, sasniedzot Eiropas Savienības vidējo tiešo maksājumu līmeni"
+nesakritiba: ""
+piezimes: "CVK un paplašinātā programma sola to pašu iznākumu un mēru (ES vidējais līmenis). Paplašinātās programmas punkta „-ot” daļa „sasaistot atbalstu ar lauksaimniecisko ražošanu un taisnīgām kompensācijām par ražošanas ierobežojumiem” apraksta veidu — nav dalīta. Pārbaudāms (§2: „pieprasīsim” + konkrēts X): vai Latvijas lauksaimnieku tiešmaksājumu līmenis ES lēmumā sasniedz ES vidējo. ES līmeņa solījums — nozares ministrija ZM (§6a). Avots ES daudzgadu budžeta finansējumam lauksaimniecībai (bez mēra) — cits Solījums jv-es-daudzgadu-budzeta-finansejums. Prioritāte „Taisnīgi Eiropas Savienības tiešie maksājumi lauksaimniekiem, attīstīta kooperācija un Latvijā ražotas pārtikas prioritāte publiskajos iepirkumos” pārklāta šeit, jv-lauksaimnieku-kooperacija un jv-latvijas-partikas-prioritate-iepirkumos."
+jautajums: ""

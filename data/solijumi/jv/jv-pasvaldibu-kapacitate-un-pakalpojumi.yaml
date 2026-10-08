@@ -1,0 +1,20 @@
+id: jv-pasvaldibu-kapacitate-un-pakalpojumi
+saraksts: jv
+nosaukums: "Pašvaldību kapacitāte un pakalpojumu pieejamība reģionos"
+parbaudams: false
+temas:
+  galvena: regioni-un-pasvaldibas
+  papildu: [valsts-parvalde]
+iestades:
+  galvena: varam
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "9. Vide, reģioni un infrastruktūra"
+    citats: "Reģionos stiprināsim pašvaldību spēju attīstīties, skolu, veselības, sociālo pakalpojumu un mājokļu pieejamību"
+  - veids: paplasinata
+    vieta: "9. Vide, reģioni un infrastruktūra › Apņemšanās un uzdevumi › Spēcīgi reģioni, droša pierobeža, vienādas iespējas visā Latvijā"
+    citats: "Stiprināsim pašvaldību institucionālo kapacitāti un sadarbību ar vietējām kopienām, nodrošinot mūsdienīgu pārvaldību un kvalitatīvus, pieejamus un iedzīvotāju vajadzībām atbilstošus pakalpojumus"
+nesakritiba: ""
+piezimes: "CVK reģionu teikums dalīts pēc paplašinātās programmas dalījuma (§4): pašvaldību spēja attīstīties un skolu, veselības, sociālo pakalpojumu pieejamība (šeit — paplašinātās programmas punkts sola pašvaldību kapacitāti un pieejamus pakalpojumus), mājokļu pieejamība (jv-balsts-programmas-paplasinasana, jv-zemas-ires-majoklu-programma), uzņēmējdarbība un ģimenēm draudzīga vide (jv-uznemejdarbiba-un-gimenem-draudziga-vide-regionos). Daļām nav sava darbības vārda — citēts teikums līdz „pieejamību” (§3). Nepārbaudāms: „stiprināsim” bez mēra. Pašvaldību kapacitāte — VARAM (pieņēmums, nav pārbaudīts; skolas, veselība, sociālie pakalpojumi — nozaru ministrijas, bet Solījums vērsts uz pašvaldībām)."
+jautajums: ""
