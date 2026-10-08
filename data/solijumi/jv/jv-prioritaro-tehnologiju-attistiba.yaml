@@ -1,0 +1,20 @@
+id: jv-prioritaro-tehnologiju-attistiba
+saraksts: jv
+nosaukums: Prioritāro tehnoloģiju attīstība (aizsardzība, kvantu drošība, MI u. c.)
+parbaudams: false
+temas:
+  galvena: izglitiba-un-zinatne
+  papildu: [ekonomika-un-darbs, aizsardziba]
+iestades:
+  galvena: izm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "7. Zinātne, inovācijas un tehnoloģijas"
+    citats: "Prioritāri attīstīsim aizsardzības tehnoloģijas, kvantu drošību, sensorus, autonomās sistēmas, 5G un 6G, biomedicīnu, enerģētiku, klimata tehnoloģijas un mākslīgo intelektu"
+  - veids: paplasinata
+    vieta: "7. Zinātne, inovācijas un tehnoloģijas › Apņemšanās un uzdevumi"
+    citats: "attīstot Latvijas spēju pašai radīt stratēģiski svarīgas tehnoloģijas"
+nesakritiba: ""
+piezimes: "Uzskaitījums zem viena darbības vārda bez atsevišķiem mērķiem — nav dalīts (§1). Paplašinātās programmas „-ot” daļa (punktā „Stiprināsim Latvijas zinātnes neatkarību …”) — tas pats Solījums; tajā jomas nav uzskaitītas, bet Prioritāte „Stratēģiski svarīgu tehnoloģiju radīšana Latvijā, tostarp militārā pētniecība, kvantu drošība, sensori un autonomās sistēmas” tās sasaista, tāpēc Nesakritība nav ierakstīta. Nepārbaudāms: „attīstīsim” bez mēra. Nav apvienots ar jv-aizsardzibas-tehnologiju-attistiba (1. nodaļa: tehnoloģiskais pārākums aizsardzībā; šeit — plašākas pētniecības prioritātes, arī biomedicīna, enerģētika, klimats). Pētniecības prioritātes — IZM (pieņēmums, nav pārbaudīts; jomas skar arī AM, EM, KEM)."
+jautajums: ""
