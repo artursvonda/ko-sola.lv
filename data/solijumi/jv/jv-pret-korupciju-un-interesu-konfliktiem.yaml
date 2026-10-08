@@ -1,17 +1,23 @@
 id: jv-pret-korupciju-un-interesu-konfliktiem
 saraksts: jv
-nosaukums: Iestāšanās pret korupciju un interešu konfliktiem
+nosaukums: Korupcijas apkarošanas stiprināšana
 parbaudams: false
 temas:
   galvena: iekseja-drosiba-un-tiesiskums
   papildu: [valsts-parvalde]
 iestades:
   galvena: vk
-  papildu: []
+  papildu: [tm]
 avoti:
+  - veids: cvk
+    vieta: "10. Tiesiskums"
+    citats: "Stiprināsim tiesiskumu, tiesu efektivitāti, korupcijas apkarošanu"
+  - veids: paplasinata
+    vieta: "10. Tiesiskums › Apņemšanās un uzdevumi › Tiesu varas neatkarība un pārvaldība"
+    citats: "Pilnveidosim tiesisko regulējumu un uzraudzības mehānismus korupcijas, konkurences tiesību pārkāpumu un finanšu noziedzīgo nodarījumu apkarošanai"
   - veids: paplasinata
     vieta: "6. Valsts pārvalde › Apņemšanās un uzdevumi › Vienotas valdības pārvaldes modelis"
     citats: "Iestāsimies pret korupciju un interešu konfliktiem"
-nesakritiba: ""
-piezimes: "Tikai paplašinātā programma. Nepārbaudāms: vispārīga nostāja bez konkrēta iznākuma. Tēma — korupcija (iekseja-drosiba-un-tiesiskums pēc data/temas.yaml). CVK 10. nodaļas „Stiprināsim … korupcijas apkarošanu” un paplašinātās 10. nodaļas korupcijas punkti — atstāti 10. nodaļas izpildei; tur izvērtēt, vai tas pats Solījums. Atbildīgā iestāde neskaidra: VK (KNAB pārraudzība — Ministru prezidents; pieņēmums, nav pārbaudīts); interešu konflikta regulējums var būt arī TM jautājums."
+nesakritiba: "CVK sola stiprināt „korupcijas apkarošanu”, paplašinātajā programmā — arī iestāties pret „interešu konfliktiem” (6. nodaļa) un pilnveidot regulējumu „konkurences tiesību pārkāpumu un finanšu noziedzīgo nodarījumu apkarošanai” (10. nodaļa)."
+piezimes: "Sākotnēji (6. nodaļas izpildē) tikai paplašinātās 6. nodaļas punkts; 10. nodaļas izpildē papildināts ar CVK citātu (vērtēšanas avots) un paplašinātās 10. nodaļas punktu — tas pats iznākums (korupcijas apkarošana), atšķiras tvērums (§4). Nosaukums pielāgots CVK (§4); ID nemainīts (§7). CVK 1. teikums dalīts pēc paplašinātās programmas punktiem (§4; sk. jv-tiesiskuma-stiprinasana); citēts teikums līdz attiecīgajai daļai (§3). Paplašinātās 10. nodaļas punkta uzskaitījums zem viena darbības vārda nav dalīts (§1); „tādējādi uzlabojot komercdarbības vidi …” — mērķis, nav citēts. Slēptās korupcijas punkts — konkrētāks, cits iznākums, atsevišķs Solījums jv-slepta-korupcija-tirgosanas-ar-ietekmi. Nepārbaudāms: vērtēšanas avots (CVK) bez mēra; „pilnveidosim tiesisko regulējumu …” bez konkrēta likuma. Tēma — korupcija (iekseja-drosiba-un-tiesiskums pēc data/temas.yaml). Atbildīgā iestāde neskaidra: VK (KNAB pārraudzība — Ministru prezidents; pieņēmums, nav pārbaudīts), TM papildu (krimināltiesiskais regulējums); interešu konflikta regulējums var būt arī TM jautājums, konkurence — EM."
 jautajums: ""
