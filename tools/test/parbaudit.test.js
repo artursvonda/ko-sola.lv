@@ -347,6 +347,26 @@ test("Statusa maiņa: Notikumam jāeksistē un jāattiecas uz Solījumu, datums 
   ]);
 });
 
+test("Statusa maiņa: Notikums pirms vēlēšanu dienas — tikai konteksts, Statusu nemaina", () => {
+  const { balsojums, ...bezBalsojuma } = NOTIKUMS;
+  const pirms = { ...bezBalsojuma, id: "2026-10-02-pirms", datums: "2026-10-02" };
+  const diena = { ...bezBalsojuma, id: "2026-10-03-diena", datums: "2026-10-03" };
+  const mainas = [
+    { ...MAINA, datums: diena.datums, statuss: "procesa", notikumi: [diena.id] },
+    { ...MAINA, datums: diena.datums, notikumi: [pirms.id, diena.id] },
+  ];
+  const sakne = arNotikumu({
+    [`data/notikumi/${pirms.id}.yaml`]: stringify(pirms),
+    [`data/notikumi/${diena.id}.yaml`]: stringify(diena),
+    ...solijums({ statusa_mainas: mainas }),
+  });
+  assert.deepEqual(zinojumi(sakne), [
+    `${F}: statusa_mainas[1]: Notikums "${pirms.id}" ir pirms vēlēšanu dienas 2026-10-03 — tikai konteksts`,
+  ]);
+  // Bez Statusa maiņas Notikums pirms vēlēšanām ir derīgs.
+  assert.deepEqual(zinojumi(arNotikumu({ [`data/notikumi/${pirms.id}.yaml`]: stringify(pirms) })), []);
+});
+
 test("Statusa maiņa: Statuss mainās; Nepārbaudāmam — nav; atpakaļ uz Nav vērtēts nevar", () => {
   const mainas = [MAINA, { ...MAINA }, { ...MAINA, statuss: "nav-vertets" }];
   assert.deepEqual(zinojumi(arNotikumu(solijums({ parbaudams: false, statusa_mainas: mainas }))), [

@@ -62,8 +62,11 @@ Solījuma izpildes vērtējums: Nav vērtēts, Procesā, Izpildīts, Daļēji iz
 Ieraksts Solījuma statusa vēsturē: datums, jaunais Statuss un pamatojums, kas atsaucas uz vienu vai vairākiem šī Solījuma Notikumiem. AI sagatavo melnrakstu, redaktors apstiprina. Statuss var mainīties jebkurā virzienā, bet ne atpakaļ uz Nav vērtēts.
 
 **Notikums**:
-Datēts, ar pierādījumu apliecināts fakts (piem., pieņemts likums, budžeta lēmums, balsojums), kas liecina par rīcību **par** vai **pret** vienu vai vairākiem Solījumiem, arī dažādu Sarakstu; virziens var atšķirties katram Solījumam. Pierādījums ir oficiāls dokuments; ziņa var būt tikai norāde uz to.
+Datēts, ar pierādījumu apliecināts fakts (piem., pieņemts likums, budžeta lēmums, balsojums), kas liecina par rīcību **par** vai **pret** vienu vai vairākiem Solījumiem, arī dažādu Sarakstu; virziens var atšķirties katram Solījumam. Pierādījums ir oficiāls dokuments; ziņa var būt tikai norāde uz to. Notikums pirms Vērtēšanas perioda ir konteksts: tas rāda sākumstāvokli, bet Statusu nemaina.
 _Avoid_: pierādījums, ziņa
+
+**Vērtēšanas periods**:
+Laiks, kurā Notikums var mainīt Statusu: no vēlēšanu dienas (03.10.2026) līdz 15. Saeimas pilnvaru beigām (16. Saeimas pirmā sēde). Ietver arī 14. Saeimas un iepriekšējās valdības darbu pēc vēlēšanām, jo Statuss vērtē iznākumu, nevis to, kurš to sasniedza.
 
 **Nesakritība**:
 Būtiska atšķirība starp viena Solījuma citātiem — dažādos avotos vai vienā avotā (piem., CVK programmā "celsim līdz 50%", paplašinātajā "virzoties uz 50%", vai cits rādītājs). Tiek fiksēta un rādīta; Statusu vērtē pēc CVK programmas.

@@ -98,3 +98,11 @@ test("citi saraksti tēmā: „Visi … solījumi šajā tēmā” ved uz pārsk
   const h = lapa(atrast("jv-parads-zem-55-no-ikp"), m4);
   assert.match(h, /<a href="\/\?saraksts=as&amp;tema=nodokli-un-budzets">Visi AS solījumi šajā tēmā \(4\)<\/a>/);
 });
+
+test("Notikums pirms vēlēšanu dienas — atzīmēts „Pirms vēlēšanām”", () => {
+  const s = atrast("as-mun-likme-10-fiziskam-personam");
+  const [n] = s.notikumi;
+  const h = lapa({ ...s, statusa_mainas: [], notikumi: [{ ...n, datums: "2026-10-02" }, { ...n, id: "x", datums: "2026-10-03" }] });
+  assert.equal([...h.matchAll(/ · Notikums · Pirms vēlēšanām · /g)].length, 1);
+  assert.match(h, /datetime="2026-10-02">[^<]*<\/time> · Notikums · Pirms vēlēšanām · /);
+});

@@ -32,7 +32,10 @@ Pierādījuma standarts katram Statusam (lēmums: "Statusa maiņas plūsma", #10
 
 - **Pieņemts, bet stājas spēkā vēlāk**: izsludināts → Izpildīts; spēkā stāšanās datumu min `pamatojums`.
 - **Likums, kas atļauj, bet neliek** (piem., MK "var lemt" par finansējumu): tas ir solis, ne iznākums; iznākums ir MK lēmums — atsevišķs Notikums.
-- **Fakts pirms 15. Saeimas sanākšanas** (14. Saeima, iepriekšējā valdība, arī pirms vēlēšanām): vēl nav izlemts — [Notikumi pirms 15. Saeimas sanākšanas](https://github.com/artursvonda/ko-sola.lv/issues/31). Līdz lēmumam: Notikumu var sagatavot, Statusu nemaina, `jautajums` (bloķē merge).
+- **Vērtēšanas periods** (lēmums: [Notikumi pirms 15. Saeimas sanākšanas](https://github.com/artursvonda/ko-sola.lv/issues/31)): no vēlēšanu dienas **03.10.2026** līdz 15. Saeimas pilnvaru beigām (16. Saeimas pirmā sēde). Statusu maina tikai Notikums šajā periodā (CI).
+  - **Fakts pirms vēlēšanām** (piem., 14. Saeimas airBaltic likums 1495/Lp14, 20.08.2026): Notikums kā **konteksts** — ar `virziens` kā parasti, bez Statusa maiņas; lapā "Pirms vēlēšanām". Sistemātiski nemeklē: pievieno, ja atrasts (`/notikums`, routine meklē no 03.10).
+  - **Starp vēlēšanām un 15. Saeimas sanākšanu (03.11.2026)** strādā 14. Saeima; iepriekšējā valdība — līdz jaunās apstiprināšanai (MK iekārtas likuma 19. p. (3) 1), 21. p.). Izsludināts 14. Saeimas likums → Izpildīts / Daļēji izpildīts. 14. Saeimas likumprojekta iesniegšana vai lasījumi **Procesā nedod** (Notikums bez Statusa maiņas): nepabeigtu likumprojektu 15. Saeima var neturpināt (Kārtības ruļļa 39. p. (2)–(3)). Procesā dod 15. Saeimas lēmums turpināt likumprojektu. MK/TAP soļi Procesā dod — valdības maiņa projektu virzību nepārtrauc (MK iekārtas likuma 23. p.).
+  - **Iznākums sasniegts jau pirms vēlēšanām**: Solījums paliek, Statuss Nav vērtēts; konteksta Notikums un `piezimes`. Solījumu "saglabāt" / "neatcelt" vērtē kā parasti — perioda beigās vai ar Notikumu "pret".
 - **Netieša ietekme** (fakts var ietekmēt iznākumu tikai caur citiem, vēl nenotikušiem soļiem): Solījumu neiekļauj; PR aprakstā "Meklēts, bet neiekļauts" ar iemeslu.
 - **Vairāki Solījumi vienā Notikumā** (arī dažādu Sarakstu): katram savs `virziens` un `pamatojums`; Statusa maiņas — katrā Solījuma failā, vienā PR.
 - **Nav skaidrs, vai standarts izpildīts**: Statusu nemaini; pievieno Notikumu un `jautajums` redaktoram.
