@@ -1,0 +1,17 @@
+id: jv-personigs-valsts-konsultants-investoriem
+saraksts: jv
+nosaukums: Personīgs valsts konsultants katram investoram
+parbaudams: true
+temas:
+  galvena: ekonomika-un-darbs
+  papildu: [valsts-parvalde]
+iestades:
+  galvena: em
+  papildu: []
+avoti:
+  - veids: paplasinata
+    vieta: "10. Tiesiskums › Apņemšanās un uzdevumi › Godīga konkurence un investīciju vides tiesiskā drošība"
+    citats: "Katram investoram piešķirsim personīgu valsts konsultantu ar mandātu pieprasīt atbildes no jebkuras valsts iestādes pakalpojuma līmeņa līgumā noteiktajos termiņos"
+nesakritiba: ""
+piezimes: "Tikai paplašinātā programma. Atsevišķs teikums ar savu darbības vārdu un iznākumu punktā par stratēģiskā investora statusu (sk. jv-strategiska-investora-statuss) (§1). „Katram investoram” — no konteksta, visticamāk, stratēģiskajiem investoriem; avots to nenosaka. Pārbaudāms: investoriem piešķirti personīgi valsts konsultanti ar nosaukto mandātu vai nē. EM (pieņēmums, nav pārbaudīts)."
+jautajums: ""
