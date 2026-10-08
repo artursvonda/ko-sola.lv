@@ -1,0 +1,17 @@
+id: jv-latviska-kulturvide
+saraksts: jv
+nosaukums: "Latviska kultūrvide"
+parbaudams: false
+temas:
+  galvena: valoda-kultura-un-mediji
+  papildu: []
+iestades:
+  galvena: km
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "8. Izglītība, latviešu valoda, kultūra un pilsoniskā sabiedrība"
+    citats: "Veidosim latvisku kultūrvidi"
+nesakritiba: ""
+piezimes: "CVK teikums dalīts (§1; objekti ar atšķirīgu iznākumu): latviska kultūrvide (jv-latviska-kulturvide), kultūras mantojums (jv-kulturas-mantojuma-saglabasana-un-pieejamiba), laikmetīgā kultūra (jv-laikmetiga-kultura), kultūras un radošās industrijas (jv-kulturas-un-radoso-industriju-konkuretspeja); citēts teikums līdz attiecīgajai daļai (§3). Tikai CVK: paplašinātās programmas „Veidosim latvisku vidi …” attiecas uz valodas lietojumu (apvienots jv-valsts-valodas-lietojums-visas-jomas), „Jaunā Eiropas Bauhaus” punkts — cits saturs (jv-jauna-eiropas-bauhaus-principi). Nepārbaudāms. KM."
+jautajums: ""

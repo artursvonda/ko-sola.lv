@@ -1,0 +1,20 @@
+id: jv-macibu-lidzekli-un-gramata-katra-prieksmeta
+saraksts: jv
+nosaukums: "Mācību līdzekļi, arī mācību grāmata katrā mācību priekšmetā"
+parbaudams: true
+temas:
+  galvena: izglitiba-un-zinatne
+  papildu: []
+iestades:
+  galvena: izm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "8. Izglītība, latviešu valoda, kultūra un pilsoniskā sabiedrība"
+    citats: "Nodrošināsim kvalitatīvu, drošu un iekļaujošu izglītību katram bērnam, mūsdienīgus, pieejamus mācību līdzekļus"
+  - veids: paplasinata
+    vieta: "8. Izglītība, latviešu valoda, kultūra un pilsoniskā sabiedrība › Apņemšanās un uzdevumi › Kvalitatīva, pieejama izglītība katram bērnam"
+    citats: "Nodrošināsim daudzveidīgus mācību līdzekļus, tajā skaitā mācību grāmatu kā pamatlīdzekli satura apguvei katrā mācību priekšmetā"
+nesakritiba: "CVK sola „mūsdienīgus, pieejamus mācību līdzekļus” bez mēra, paplašinātā programma — „mācību grāmatu kā pamatlīdzekli satura apguvei katrā mācību priekšmetā”."
+piezimes: "CVK teikums (viens darbības vārds, trīs objekti ar atšķirīgu iznākumu) dalīts pēc paplašinātās programmas punktiem (§4): izglītības kvalitāte (jv-kvalitativa-izglitiba-katram-bernam), mācību līdzekļi (jv-macibu-lidzekli-un-gramata-katra-prieksmeta), pedagogu atalgojums (jv-pedagogu-atalgojums-pec-mk-grafika); citēts teikums līdz attiecīgajai daļai (§3). Robežgadījums pārbaudāmībai: CVK citātā mēra nav, paplašinātajā — mācību grāmata kā pamatlīdzeklis katrā mācību priekšmetā; vērtē pēc šī mēra (§4) — Pārbaudāms. IZM."
+jautajums: ""

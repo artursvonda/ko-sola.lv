@@ -1,0 +1,17 @@
+id: jv-latviesu-valodas-petnieciba
+saraksts: jv
+nosaukums: "Latviešu valodas pētniecības paplašināšana"
+parbaudams: false
+temas:
+  galvena: valoda-kultura-un-mediji
+  papildu: [izglitiba-un-zinatne]
+iestades:
+  galvena: izm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "8. Izglītība, latviešu valoda, kultūra un pilsoniskā sabiedrība"
+    citats: "Paplašināsim latviešu valodas apguves iespējas un pētniecību"
+nesakritiba: ""
+piezimes: "Tikai CVK (sk. jv-latviesu-valodas-apguves-iespejas par dalījumu). Paplašinātajā programmā pētniecība nav minēta; korpuss un valodas tehnoloģijas — atsevišķi Solījumi (jv-latviesu-valodas-korpuss, jv-masintulkosanas-un-valodas-tehnologijas). Nepārbaudāms: bez mēra. IZM."
+jautajums: ""
