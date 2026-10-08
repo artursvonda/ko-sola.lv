@@ -1,0 +1,20 @@
+id: jv-sabiedriska-transporta-reforma
+saraksts: jv
+nosaukums: "Sabiedriskā transporta plānošanas un pārvaldības reforma"
+parbaudams: true
+temas:
+  galvena: transports
+  papildu: [regioni-un-pasvaldibas]
+iestades:
+  galvena: sm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "9. Vide, reģioni un infrastruktūra"
+    citats: 'Satiksmē nodrošināsim "Rail Baltica", reģionālo ceļu, dzelzceļa, ostu, sabiedriskā transporta un digitālās infrastruktūras attīstību ar skaidru atbildību, termiņiem un izmaksu kontroli'
+  - veids: paplasinata
+    vieta: "9. Vide, reģioni un infrastruktūra › Apņemšanās un uzdevumi › Satiksme un pasažieru pārvadājumi"
+    citats: "Īstenosim sabiedriskā transporta plānošanas un pārvaldības reformu, nodrošinot pakalpojuma pieejamību reģionos, vienotu biļešu sistēmu un koordinētu kustības grafiku starp dažādiem transporta veidiem"
+nesakritiba: "CVK programma sola „nodrošināsim … sabiedriskā transporta … attīstību” bez konkrēta iznākuma, bet paplašinātā programma — „Īstenosim sabiedriskā transporta plānošanas un pārvaldības reformu”; vērtē pēc šī."
+piezimes: "CVK satiksmes teikums (viens darbības vārds, uzskaitījums bez sava darbības vārda katrai daļai) sadalīts pēc paplašinātās programmas dalījuma (§4); citēts viss teikums, jo kopīgais „attīstību” ir teikuma beigās (§3). Daļas: «Rail Baltica» (jv-rail-baltica-pamatsavienojums), reģionālie ceļi (jv-melna-seguma-autocelu-ipatsvars, jv-celu-finansejums-pierobeza, jv-dualas-lietojamibas-celi-un-tilti), dzelzceļš (jv-dzelzcela-pasazieru-parvadajumi), ostas (jv-ostu-konkuretspeja), sabiedriskais transports (jv-sabiedriska-transporta-reforma, jv-vienota-bilesu-sistema), digitālā infrastruktūra (jv-digitalas-infrastrukturas-attistiba). „ar skaidru atbildību, termiņiem un izmaksu kontroli” — veids, nav dalīts. Paplašinātās programmas punkts dalīts (§1): vienota biļešu sistēma — konkrēts, atsevišķi izvērtējams iznākums (jv-vienota-bilesu-sistema); pakalpojuma pieejamība reģionos un koordinēts kustības grafiks — reformas mērķi, paliek šeit; citēts viss punkts. Pārbaudāms: reforma īstenota (regulējuma maiņa) vai nē. SM (pieņēmums, nav pārbaudīts). Prioritāte „Moderni pasažieru pārvadājumi, vienota biļešu sistēma un koordinēti kustības grafiki” pārklāta šeit, jv-vienota-bilesu-sistema un jv-dzelzcela-pasazieru-parvadajumi."
+jautajums: ""

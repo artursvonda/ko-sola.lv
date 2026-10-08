@@ -1,0 +1,20 @@
+id: jv-vienota-bilesu-sistema
+saraksts: jv
+nosaukums: "Vienota biļešu sistēma sabiedriskajā transportā"
+parbaudams: true
+temas:
+  galvena: transports
+  papildu: []
+iestades:
+  galvena: sm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "9. Vide, reģioni un infrastruktūra"
+    citats: 'Satiksmē nodrošināsim "Rail Baltica", reģionālo ceļu, dzelzceļa, ostu, sabiedriskā transporta un digitālās infrastruktūras attīstību ar skaidru atbildību, termiņiem un izmaksu kontroli'
+  - veids: paplasinata
+    vieta: "9. Vide, reģioni un infrastruktūra › Apņemšanās un uzdevumi › Satiksme un pasažieru pārvadājumi"
+    citats: "Īstenosim sabiedriskā transporta plānošanas un pārvaldības reformu, nodrošinot pakalpojuma pieejamību reģionos, vienotu biļešu sistēmu un koordinētu kustības grafiku starp dažādiem transporta veidiem"
+nesakritiba: "CVK programma sola „nodrošināsim … sabiedriskā transporta … attīstību” bez konkrēta iznākuma, bet paplašinātā programma — „vienotu biļešu sistēmu”; vērtē pēc šī."
+piezimes: "Dalīts no sabiedriskā transporta reformas punkta (sk. jv-sabiedriska-transporta-reforma); „-ot” daļai nav sava darbības vārda — citēts viss punkts (§3). CVK satiksmes teikuma „sabiedriskā transporta” daļa pievienota abiem Solījumiem (§4). Pārbaudāms: vienota biļešu sistēma ieviesta vai nē. SM (pieņēmums, nav pārbaudīts)."
+jautajums: ""

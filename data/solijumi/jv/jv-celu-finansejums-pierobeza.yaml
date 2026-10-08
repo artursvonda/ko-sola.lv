@@ -1,0 +1,20 @@
+id: jv-celu-finansejums-pierobeza
+saraksts: jv
+nosaukums: "Mērķēts finansējums reģionālo un vietējo ceļu asfaltēšanai pierobežā"
+parbaudams: true
+temas:
+  galvena: transports
+  papildu: [regioni-un-pasvaldibas]
+iestades:
+  galvena: sm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "9. Vide, reģioni un infrastruktūra"
+    citats: 'Satiksmē nodrošināsim "Rail Baltica", reģionālo ceļu, dzelzceļa, ostu, sabiedriskā transporta un digitālās infrastruktūras attīstību ar skaidru atbildību, termiņiem un izmaksu kontroli'
+  - veids: paplasinata
+    vieta: "9. Vide, reģioni un infrastruktūra › Apņemšanās un uzdevumi › Spēcīgi reģioni, droša pierobeža, vienādas iespējas visā Latvijā"
+    citats: "Novirzīsim mērķtiecīgu finansējumu reģionālo un vietējo ceļu sakārtošanai un asfaltēšanai pierobežā"
+nesakritiba: "CVK programma sola „nodrošināsim … reģionālo ceļu … attīstību” visā valstī bez mēra, bet paplašinātā programma — „Novirzīsim mērķtiecīgu finansējumu reģionālo un vietējo ceļu sakārtošanai un asfaltēšanai pierobežā”; vērtē pēc šī."
+piezimes: "CVK satiksmes teikums (viens darbības vārds, uzskaitījums bez sava darbības vārda katrai daļai) sadalīts pēc paplašinātās programmas dalījuma (§4); citēts viss teikums, jo kopīgais „attīstību” ir teikuma beigās (§3). Daļas: «Rail Baltica» (jv-rail-baltica-pamatsavienojums), reģionālie ceļi (jv-melna-seguma-autocelu-ipatsvars, jv-celu-finansejums-pierobeza, jv-dualas-lietojamibas-celi-un-tilti), dzelzceļš (jv-dzelzcela-pasazieru-parvadajumi), ostas (jv-ostu-konkuretspeja), sabiedriskais transports (jv-sabiedriska-transporta-reforma, jv-vienota-bilesu-sistema), digitālā infrastruktūra (jv-digitalas-infrastrukturas-attistiba). „ar skaidru atbildību, termiņiem un izmaksu kontroli” — veids, nav dalīts. „garantējot iedzīvotāju mobilitāti …, kā arī ātru Nacionālo bruņoto spēku un operatīvā transporta kustību” — mērķis, nav dalīts. Pārbaudāms: vai pierobežas ceļiem novirzīts atsevišķs (mērķēts) finansējums. Autoceļi — SM (vietējie ceļi — pašvaldības; pieņēmums, nav pārbaudīts)."
+jautajums: ""
