@@ -1,0 +1,20 @@
+id: jv-vienota-cilvekkapitala-parvaldiba
+saraksts: jv
+nosaukums: "Vienota Latvijas cilvēkkapitāla pārvaldība"
+parbaudams: true
+temas:
+  galvena: izglitiba-un-zinatne
+  papildu: [ekonomika-un-darbs]
+iestades:
+  galvena: izm
+  papildu: [lm, em]
+avoti:
+  - veids: cvk
+    vieta: "8. Izglītība, latviešu valoda, kultūra un pilsoniskā sabiedrība"
+    citats: "Pārejai uz augstas produktivitātes ekonomiku nodrošināsim vienotu Latvijas cilvēkkapitāla pārvaldību"
+  - veids: paplasinata
+    vieta: "8. Izglītība, latviešu valoda, kultūra un pilsoniskā sabiedrība › Apņemšanās un uzdevumi › Darba tirgus vajadzībām atbilstoša mūžizglītība"
+    citats: "Virzīsim cilvēkkapitāla pāreju no zemas produktivitātes nodarbinātības uz intensīvu izaugsmi, ieviešot vienotu Latvijas cilvēkkapitāla pārvaldību, veidojot pastāvīgu un konstruktīvu dialogu starp izglītības sniedzēju un darba devēju, apvienojot fragmentētās finansēšanas plūsmas vienotā cilvēkkapitāla fondā, ko pārrauga viena vadošā institūcija"
+nesakritiba: ""
+piezimes: "CVK teikums dalīts (divi objekti ar atšķirīgu iznākumu): cilvēkkapitāla pārvaldība (jv-vienota-cilvekkapitala-parvaldiba), programma kompetenču apguvei (jv-programma-darba-tirgus-kompetencem); citēts teikums līdz attiecīgajai daļai (§3). Paplašinātās programmas galvenais teikums vispārīgs — Solījumi ir „-ot” daļas (§1), citēts viss punkts: vienota pārvaldība (šeit), vienots fonds (jv-vienots-cilvekkapitala-fonds); „veidojot pastāvīgu un konstruktīvu dialogu …” — veids, nav dalīts. Robežgadījums pārbaudāmībai: avots nedefinē pārvaldības modeli, bet tas ir nosaukts konkrēts modelis — Pārbaudāms pēc tā, vai tas formāli ieviests. Atbildīgā iestāde neskaidra: cilvēkkapitāls aptver izglītību (IZM), nodarbinātību (LM) un ekonomiku (EM); izvēlēta IZM (pieņēmums, nav pārbaudīts)."
+jautajums: ""

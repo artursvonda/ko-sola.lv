@@ -1,0 +1,20 @@
+id: jv-latviesu-valodas-apguves-iespejas
+saraksts: jv
+nosaukums: "Latviešu valodas apguves iespēju paplašināšana"
+parbaudams: false
+temas:
+  galvena: valoda-kultura-un-mediji
+  papildu: [izglitiba-un-zinatne]
+iestades:
+  galvena: izm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "8. Izglītība, latviešu valoda, kultūra un pilsoniskā sabiedrība"
+    citats: "Paplašināsim latviešu valodas apguves iespējas"
+  - veids: paplasinata
+    vieta: "8. Izglītība, latviešu valoda, kultūra un pilsoniskā sabiedrība › Apņemšanās un uzdevumi › Valsts valoda"
+    citats: "Attīstīsim latviešu valodas apguves rīkus pašmācībai dažādām vecuma un mērķa grupām"
+nesakritiba: ""
+piezimes: "CVK teikums dalīts (divi objekti ar atšķirīgu iznākumu): apguve (šeit), pētniecība (jv-latviesu-valodas-petnieciba); citēts teikums līdz attiecīgajai daļai (§3). Konkrētie paplašinātās programmas apguves punkti pievieno citus iznākumus (§4) — atsevišķi: jv-valodas-programma-pieaugusajiem, jv-valsts-valoda-augsta-limeni-skolas. Nepārbaudāms. IZM."
+jautajums: ""
