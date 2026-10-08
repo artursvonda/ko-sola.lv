@@ -25,7 +25,7 @@ Vispirms izlasi: `GLOSSARY.md`, `docs/statusi/vertesana.md` (pierādījuma stand
 
 - Kas notika, `datums` (kad fakts notika, nevis publicēts ziņās), oficiālais avots un tā `veids`.
 - Saeimā Notikums ir iesniegšana vai galīgais lasījums (steidzamam — "2.lasījums, steidzams"); citi lasījumi — tikai, ja būtiski grozījumi vai noraidījums. Izsludināšana — atsevišķs Notikums, ja tā maina Statusu (`vertesana.md`).
-- **Fakts pirms 15. Saeimas sanākšanas**: sk. `vertesana.md` robežgadījumus — Statusu nemaini, `jautajums`.
+- **Vērtēšanas periods** (no 03.10.2026, `vertesana.md`): fakts pirms vēlēšanām — Notikums kā konteksts, Statusu nemaini. Starp vēlēšanām un 03.11.2026: 14. Saeimas izsludināts likums var mainīt Statusu, bet tās likumprojekta iesniegšana vai lasījumi Procesā nedod.
 - **Dublikāti**: `grep -rl` `data/notikumi/` (ja mapes nav — dublikātu nav) pēc avota URL, likumprojekta numura (piem., `1065/Lp14`), balsojuma id; `gh pr list --state open --search "<numurs vai atslēgvārds>"`. Ja jau ir — pasaki un beidz.
 
 ## 4. Solījumi

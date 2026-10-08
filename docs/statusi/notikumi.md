@@ -57,4 +57,4 @@ Pašreizējais Statuss = pēdējā Statusa maiņa; bez `statusa_mainas` — Nav 
 ## CI (`npm run parbaude`)
 
 - Notikums: shēma; `id` = faila vārds un sākas ar `datums`; ≥1 oficiāls avots; Solījumi eksistē un neatkārtojas; `balsojums.laiks` diena = `datums`; viens balsojums tikai vienā Notikumā; 15. Saeimas Frakcijas kods ir `data/saraksti.yaml`; `jautajums` tukšs.
-- Statusa maiņa: Solījums ir Pārbaudāms; katrs Notikums eksistē un min šo Solījumu; `datums` = kāda tā Notikuma datums; datumi nesamazinās; Statuss mainās; atpakaļ uz Nav vērtēts nevar (shēma).
+- Statusa maiņa: Solījums ir Pārbaudāms; katrs Notikums eksistē, min šo Solījumu un nav pirms vēlēšanu dienas (Vērtēšanas periods, `vertesana.md`); `datums` = kāda tā Notikuma datums; datumi nesamazinās; Statuss mainās; atpakaļ uz Nav vērtēts nevar (shēma).

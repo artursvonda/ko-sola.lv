@@ -2,7 +2,7 @@
 // Solījumus un Notikumus var ņemt no citas saknes (KO_DATI=fixtures izstrādei), pārējo — vienmēr no data/.
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
-import { lasitYaml, frontmatter, solijumuFaili, notikumuFaili, NESKAIDRA_IESTADE } from "../tools/lib/dati.js";
+import { lasitYaml, frontmatter, solijumuFaili, notikumuFaili, NESKAIDRA_IESTADE, VELESANU_DIENA } from "../tools/lib/dati.js";
 
 export const STATUSI = {
   "nav-vertets": "Nav vērtēts",
@@ -26,6 +26,8 @@ export function amatpersona(iestade, d) {
 
 /** Iestāde Solījumiem, kuru Atbildīgā iestāde vēl nav noteikta: bez Amatpersonām, filtrējama kā citas. */
 export { NESKAIDRA_IESTADE };
+/** Notikums pirms Vērtēšanas perioda — tikai konteksts (docs/statusi/vertesana.md). */
+export const pirmsVelesanam = (n) => n.datums < VELESANU_DIENA;
 const NESKAIDRA = { slug: NESKAIDRA_IESTADE, nosaukums: "Neskaidrs", isais_nosaukums: "?", amatpersonas: [] };
 
 /** Saeima, kurā ievēlēti data/saraksti.yaml Saraksti. */

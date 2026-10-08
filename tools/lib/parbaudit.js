@@ -4,7 +4,7 @@ import { existsSync, readFileSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import Ajv2020 from "ajv/dist/2020.js";
-import { lasitYaml, solijumuFaili, notikumuFaili, avotuLasitajs, NESKAIDRA_IESTADE } from "./dati.js";
+import { lasitYaml, solijumuFaili, notikumuFaili, avotuLasitajs, NESKAIDRA_IESTADE, VELESANU_DIENA } from "./dati.js";
 import { atrastCitatu } from "./avots.js";
 
 const SHEMAS = join(dirname(fileURLToPath(import.meta.url)), "../../schemas");
@@ -21,7 +21,6 @@ const validet = {
 const VIETAS_ATDALITAJS = " › ";
 const ID_VARDI_MAX = 6;
 const BEZ_FRAKCIJAS = "bez_frakcijas";
-const VELESANU_DIENA = "2026-10-03";
 
 /** @returns {{ fails: string, zinojums: string }[]} */
 export function parbaudit(sakne) {
@@ -156,7 +155,11 @@ function parbauditStatusaMainas(s, notikumi, kf) {
       const n = notikumi.get(id);
       if (!n) km(`Notikums "${id}" nav data/notikumi/`);
       else if (!n.solijumi.some((x) => x.id === s.id)) km(`Notikums "${id}" neattiecas uz šo Solījumu`);
-      else datumi.push(n.datums);
+      else {
+        // Notikums pirms Vērtēšanas perioda ir tikai konteksts (docs/statusi/vertesana.md).
+        if (n.datums < VELESANU_DIENA) km(`Notikums "${id}" ir pirms vēlēšanu dienas ${VELESANU_DIENA} — tikai konteksts`);
+        datumi.push(n.datums);
+      }
     }
     if (datumi.length === m.notikumi.length && !datumi.includes(m.datums))
       km(`datums ${m.datums} nav neviena tā Notikuma datums`);

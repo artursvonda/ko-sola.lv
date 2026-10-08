@@ -1,5 +1,5 @@
 import { html } from "../html.js";
-import { STATUSI, NESKAIDRA_IESTADE, frakcijasSaraksts, sisSaeimasBalsojums } from "../dati.js";
+import { STATUSI, NESKAIDRA_IESTADE, frakcijasSaraksts, sisSaeimasBalsojums, pirmsVelesanam } from "../dati.js";
 import { izkartojums, statussPill, datums, amatpersonaRindas } from "./izkartojums.js";
 import { parskatsSaite, temaSaite } from "./saites.js";
 
@@ -101,7 +101,7 @@ const maina = (m) => html`<li class="la-maina la-${m.statuss}">
 </li>`;
 
 const notikums = (n, saraksti) => html`<li class="la-notikums la-${n.virziens}" id="${n.id}">
-  <p class="la-datums"><time datetime="${n.datums}">${datums(n.datums)}</time> · Notikums · <span class="virziens virziens-${n.virziens}">${n.virziens === "par" ? "par" : "pret"} solīto</span></p>
+  <p class="la-datums"><time datetime="${n.datums}">${datums(n.datums)}</time> · Notikums${pirmsVelesanam(n) && " · Pirms vēlēšanām"} · <span class="virziens virziens-${n.virziens}">${n.virziens === "par" ? "par" : "pret"} solīto</span></p>
   <h3>${n.nosaukums}</h3>
   <p>${n.pamatojums}</p>
   <p class="vajs">${n.apraksts}</p>

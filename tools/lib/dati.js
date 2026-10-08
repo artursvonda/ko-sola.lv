@@ -8,6 +8,8 @@ export const SOLIJUMI = "data/solijumi";
 export const NOTIKUMI = "data/notikumi";
 /** Galvenā iestāde, kamēr Atbildīgā iestāde nav noteikta (GLOSSARY.md "Neskaidra Atbildīgā iestāde"). */
 export const NESKAIDRA_IESTADE = "neskaidrs";
+/** Vērtēšanas perioda sākums (GLOSSARY.md): agrāks Notikums ir tikai konteksts, Statusu nemaina. */
+export const VELESANU_DIENA = "2026-10-03";
 
 export function lasitYaml(sakne, cels) {
   return parse(readFileSync(join(sakne, cels), "utf8"));
