@@ -1,0 +1,17 @@
+id: sv-pedagogu-algu-piesaiste-videjai-algai
+saraksts: sv
+nosaukums: Pedagogu algu piesaiste valsts vidējai mēnešalgai
+parbaudams: true
+temas:
+  galvena: izglitiba-un-zinatne
+  papildu: []
+iestades:
+  galvena: izm
+  papildu: [fm]
+avoti:
+  - veids: cvk
+    vieta: "IZGLĪTĪBA, ZINĀTNE, KULTŪRA UN SPORTS"
+    citats: "piesaistīt pedagogu algas valsts vidējai mēnešalgai"
+nesakritiba: ""
+piezimes: "Pārbaudāms: konkrēts rādītājs (valsts vidējā mēnešalga) — piesaiste normatīvajā aktā noteikta vai nē. Proporcija nav minēta, tāpēc vērtē tikai piesaistes esamību. Ekstraktors nav pārbaudījis pašreizējo pedagogu algu noteikšanas kārtību. IZM — pedagogu darba samaksa; FM papildu — budžets."
+jautajums: ""
