@@ -1,0 +1,17 @@
+id: lpv-pensionaru-invalidu-algas-bez-nodokliem
+saraksts: lpv
+nosaukums: "Pensionāru un cilvēku ar invaliditāti algas bez nodokļiem un iemaksām"
+parbaudams: true
+temas:
+  galvena: nodokli-un-budzets
+  papildu: [socialais-atbalsts-un-pensijas, ekonomika-un-darbs]
+iestades:
+  galvena: fm
+  papildu: [lm]
+avoti:
+  - veids: paplasinata
+    vieta: "2. Demogrāfija un Darbaspēks › Darbaspēks"
+    citats: "Pensionāriem un cilvēkiem ar invaliditāti noņemt sociālās iemaksas un nodokļus algām, ja viņi izvēlas atgriezties darba tirgū"
+nesakritiba: ""
+piezimes: "Tikai paplašinātā programma. Pensionāri un cilvēki ar invaliditāti — uzskaitījums zem viena darbības vārda, nedala (§1). Nosacījums \"ja viņi izvēlas atgriezties darba tirgū\" — nav skaidrs, vai attiecas arī uz jau strādājošajiem. Tēma kā lpv-jauniesu-algas-bez-nodokliem-pirmaja-gada. Iestāde nav pārbaudīta: IIN → FM; sociālās iemaksas → LM (papildu)."
+jautajums: ""

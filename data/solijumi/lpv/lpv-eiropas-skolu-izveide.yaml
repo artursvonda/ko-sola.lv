@@ -1,0 +1,17 @@
+id: lpv-eiropas-skolu-izveide
+saraksts: lpv
+nosaukums: "Eiropas skolu izveide"
+parbaudams: true
+temas:
+  galvena: izglitiba-un-zinatne
+  papildu: [migracija-un-diaspora]
+iestades:
+  galvena: izm
+  papildu: []
+avoti:
+  - veids: paplasinata
+    vieta: "2. Demogrāfija un Darbaspēks › Darbaspēks"
+    citats: "Eiropas skolu izveide"
+nesakritiba: ""
+piezimes: "Dalīts no reemigrācijas punkta uzskaitījuma (§1). Pārbaudāms robežgadījumā: skolas izveidotas vai nē; skaits nav norādīts. Ekstraktors nezina, vai \"Eiropas skolas\" nozīmē Eiropas skolu sistēmas akreditētas skolas. Nav apvienots ar lpv-anglu-valodas-skolu-izveide (6. nod. — ārvalstnieku ģimenēm, cits iznākums). Iestāde nav pārbaudīta: IZM."
+jautajums: ""

@@ -1,0 +1,17 @@
+id: lpv-pirma-majokla-atbalsts-reemigrantiem
+saraksts: lpv
+nosaukums: "Atbalsts pirmā mājokļa iegādei atgriezušamies ģimenēm"
+parbaudams: true
+temas:
+  galvena: majokli
+  papildu: [migracija-un-diaspora]
+iestades:
+  galvena: em
+  papildu: []
+avoti:
+  - veids: paplasinata
+    vieta: "2. Demogrāfija un Darbaspēks › Darbaspēks"
+    citats: "Atbalsts pirmā mājokļa iegādei"
+nesakritiba: ""
+piezimes: "Teikumā uzskaitīti trīs pasākumi ar atšķirīgu iznākumu un iestādi (mājoklis, skolas, nodokļi) → dalīts (§1). Mērķgrupa (atgriezušās ģimenes) izriet no iepriekšējā teikuma par reemigrāciju. Robežgadījums: apjoms nav norādīts → Pārbaudāms kā \"īpašs atbalsta instruments ieviests vai nē\". Nav apvienots ar lpv-majokla-atbalsts-gimenem-no-pua-ziedojumiem (cita mērķgrupa un finansējuma avots). Iestāde nav pārbaudīta: mājokļu politika → EM."
+jautajums: ""

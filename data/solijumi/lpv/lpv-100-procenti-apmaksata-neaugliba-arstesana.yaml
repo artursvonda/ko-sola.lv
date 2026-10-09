@@ -1,0 +1,17 @@
+id: lpv-100-procenti-apmaksata-neaugliba-arstesana
+saraksts: lpv
+nosaukums: "100% valsts apmaksāta neauglības ārstēšana"
+parbaudams: true
+temas:
+  galvena: veseliba
+  papildu: [gimenes-un-demografija]
+iestades:
+  galvena: vm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "ĢIMEŅU ATBALSTS UN KRISTĪGĀS VĒRTĪBAS"
+    citats: "Atbalstīsim 100% valsts apmaksātu neauglības ārstēšanu"
+nesakritiba: ""
+piezimes: "\"Atbalstīsim\" + konkrēts X (100% valsts apmaksa) → Pārbaudāms (§2: X panākts vai nē). Tēma pēc tā, ko maina lasītājam — veselības pakalpojuma apmaksa. Paplašinātajā programmā atbilstoša punkta nav. Iestāde nav pārbaudīta: VM."
+jautajums: ""
