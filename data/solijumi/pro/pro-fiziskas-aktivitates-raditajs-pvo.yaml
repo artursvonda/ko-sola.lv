@@ -1,0 +1,18 @@
+id: pro-fiziskas-aktivitates-raditajs-pvo
+saraksts: pro
+nosaukums: Vienots valsts fiziskās aktivitātes rādītājs pēc PVO metodikas
+parbaudams: true
+temas:
+  galvena: veseliba
+  papildu: []
+iestades:
+  galvena: vm
+  papildu:
+    - izm
+avoti:
+  - veids: paplasinata
+    vieta: "4. Veselīga un ilgi dzīvojoša sabiedrība › Proaktīva veselības aprūpe: profilakse un skrīnings"
+    citats: Ieviesīsim vienotu valsts rādītāju fiziskās aktivitātes novērtēšanai saskaņā ar PVO metodiku.
+nesakritiba: ""
+piezimes: "Atbildīgā: sabiedrības veselības rādītāji — VM (SPKC); sporta politika — IZM papildu (nav pārbaudīts)."
+jautajums: ""

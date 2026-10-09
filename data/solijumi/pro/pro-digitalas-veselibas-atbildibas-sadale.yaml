@@ -1,0 +1,18 @@
+id: pro-digitalas-veselibas-atbildibas-sadale
+saraksts: pro
+nosaukums: LDVC un SPKC atbildības sadale digitālajā veselībā
+parbaudams: true
+temas:
+  galvena: veseliba
+  papildu:
+    - valsts-parvalde
+iestades:
+  galvena: vm
+  papildu: []
+avoti:
+  - veids: paplasinata
+    vieta: 4. Veselīga un ilgi dzīvojoša sabiedrība › Vienota digitālās veselības vide un datos balstīta attīstība
+    citats: "Skaidri sadalīsim atbildību digitālajā veselībā: LDVC atbildēs par sistēmu kopējo uzbūvi un savienošanu, bet SPKC būs galvenais veselības datu pārvaldītājs."
+nesakritiba: ""
+piezimes: "Pārbaudāms: vērtē, vai normatīvi noteiktas norādītās LDVC un SPKC lomas."
+jautajums: ""

@@ -1,0 +1,17 @@
+id: pro-pacientu-pieredzes-merisana-prems-proms
+saraksts: pro
+nosaukums: Vienota pacientu pieredzes un rezultātu mērīšana (PREMs, PROMs)
+parbaudams: true
+temas:
+  galvena: veseliba
+  papildu: []
+iestades:
+  galvena: vm
+  papildu: []
+avoti:
+  - veids: paplasinata
+    vieta: 4. Veselīga un ilgi dzīvojoša sabiedrība › Kvalitatīva, uz cilvēku orientēta aprūpe un pacientu drošība
+    citats: Visās valsts finansētajās ārstniecības iestādēs vienoti mērīsim pacientu pieredzi un pacientu pašu vērtētos veselības rezultātus, izmantojot starptautiski atzītas metodes (PREMs, PROMs).
+nesakritiba: ""
+piezimes: "Punkts sadalīts: mērīšana (šis) un rezultātu publiskošana un izmantošana (pro-pacientu-pieredzes-rezultatu-publiskosana) — statusi var atšķirties (§1)."
+jautajums: ""

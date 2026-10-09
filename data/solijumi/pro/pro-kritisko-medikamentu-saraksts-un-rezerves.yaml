@@ -1,0 +1,17 @@
+id: pro-kritisko-medikamentu-saraksts-un-rezerves
+saraksts: pro
+nosaukums: Kritisko medikamentu saraksta un rezervju veidošanas kārtības pilnveide
+parbaudams: true
+temas:
+  galvena: veseliba
+  papildu: []
+iestades:
+  galvena: vm
+  papildu: []
+avoti:
+  - veids: paplasinata
+    vieta: 4. Veselīga un ilgi dzīvojoša sabiedrība › Zāļu pieejamība un piegādes drošība
+    citats: Pilnveidosim Latvijas kritisko medikamentu sarakstu un to rezervju veidošanas kārtību.
+nesakritiba: ""
+piezimes: 'Robežgadījums pārbaudāmībai: "pilnveidosim", bet objekts konkrēts — vērtē, vai saraksts un rezervju kārtība grozīti. Krīžu sadaļas "svarīgāko materiālu rezerves" (pro-medicinas-materialu-rezerves-krizem) — cits objekts, nav apvienots.'
+jautajums: ""

@@ -1,0 +1,20 @@
+id: pro-digitala-veseliba-valsts-vadiba-un-mi
+saraksts: pro
+nosaukums: Valsts vadīta digitālā veselība ar privātā sektora inovācijām un MI
+parbaudams: false
+temas:
+  galvena: veseliba
+  papildu: []
+iestades:
+  galvena: vm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: VESELĪGA SABIEDRĪBA UN PIEEJAMA APRŪPE
+    citats: Ieviesīsim digitālās veselības ekosistēmu ar datu standartiem, reāllaika reģistriem, drošu MI un anonimizētiem datiem pētniecībai.
+  - veids: paplasinata
+    vieta: 4. Veselīga un ilgi dzīvojoša sabiedrība › Vienota digitālās veselības vide un datos balstīta attīstība
+    citats: Sistēmu vadīs valsts, bet risinājumus nodrošina privātā sektora inovācijas, aktīvi un atbildīgi izmantojot mākslīgā intelekta, mākoņu un citas mūsdienu tehnoloģijas.
+nesakritiba: ""
+piezimes: 'CVK 4. punkts sadalīts pēc paplašinātās programmas (§4): MI un tehnoloģijas (šis), datu standarti (pro-veselibas-it-prasibas-un-datu-standarti), reāllaika reģistri (pro-realaika-veselibas-registri), dati pētniecībai (pro-veselibas-dati-petniecibai); CVK citāts visos, citēts viss teikums (§3). Nepārbaudāms: princips bez konkrēta iznākuma ("drošu MI" ↔ "atbildīgi izmantojot" — nav būtiska atšķirība).'
+jautajums: ""

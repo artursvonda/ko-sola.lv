@@ -1,0 +1,20 @@
+id: pro-vienota-pieraksta-sistema-ar-prioritizaciju
+saraksts: pro
+nosaukums: Vienota pieraksta sistēma ar pacientu prioritizāciju pēc klīniskās steidzamības
+parbaudams: true
+temas:
+  galvena: veseliba
+  papildu: []
+iestades:
+  galvena: vm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: VESELĪGA SABIEDRĪBA UN PIEEJAMA APRŪPE
+    citats: Ieviesīsim vienotu pieraksta sistēmu ar pacientu prioritizāciju pēc klīniskās steidzamības un skaidriem gaidīšanas laikiem.
+  - veids: paplasinata
+    vieta: 4. Veselīga un ilgi dzīvojoša sabiedrība › Pārdomāta rindu pārvaldība un slimnīcu tīkls
+    citats: Ieviesīsim kritērijus, kas nosaka pacientu prioritāti pēc veselības stāvokļa smaguma.
+nesakritiba: CVK sola "vienotu pieraksta sistēmu ar pacientu prioritizāciju pēc klīniskās steidzamības un skaidriem gaidīšanas laikiem"; paplašinātā programma — tikai "kritērijus, kas nosaka pacientu prioritāti pēc veselības stāvokļa smaguma".
+piezimes: 'Vērtē pēc CVK (vienota sistēma, prioritizācija, skaidri gaidīšanas laiki). CVK punkts nav dalīts: uzskaitījums zem viena darbības vārda (§1). Paplašinātās programmas atgādinājumi un rezerves saraksti (pro-pieraksta-atgadinajumi-un-rezerves-saraksti) un gaidīšanas laiku rādītāju publiskošana (pro-gaidisanas-laiku-raditaju-publiskosana) — citi iznākumi; "skaidriem gaidīšanas laikiem" nav pielīdzināts publiskošanai (var nozīmēt noteiktus maksimālos laikus).'
+jautajums: ""
