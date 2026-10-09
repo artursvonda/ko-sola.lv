@@ -1,0 +1,17 @@
+id: lpv-pretdronu-aizsardzibas-sistema
+saraksts: lpv
+nosaukums: Moderna aizsardzības sistēma pret naidīgu un neidentificētu dronu ielidošanu
+parbaudams: true
+temas:
+  galvena: aizsardziba
+  papildu: []
+iestades:
+  galvena: am
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: DROŠĪBA
+    citats: Izveidosim modernu aizsardzības sistēmu, lai nepieļautu naidīgu vai neidentificētu dronu nonākšanu Latvijas teritorijā
+nesakritiba: ""
+piezimes: 'Citēts viss teikums: bez "lai …" daļas nav skaidrs, kāda sistēma solīta. Robežgadījums, Pārbaudāms: sistēmas izveide ar nosauktu funkciju (pretdronu aizsardzība Latvijas teritorijā) — notiek vai nenotiek; "nepieļautu … nonākšanu" ir mērķis, nevis mērs. Ekstraktors nezina, vai šāda sistēma jau tiek veidota. Iestāde nav pārbaudīta: gaisa telpas aizsardzība → AM; iespējama IeM loma (robeža) — nav pievienota.'
+jautajums: ""
