@@ -1,0 +1,17 @@
+id: lpv-alimentu-parads-ka-prioritars-parads-valstij
+saraksts: lpv
+nosaukums: "Alimentu parāds kā prioritārs parāds valstij ar VID automātisku piedziņu"
+parbaudams: true
+temas:
+  galvena: gimenes-un-demografija
+  papildu: [iekseja-drosiba-un-tiesiskums]
+iestades:
+  galvena: tm
+  papildu: [fm]
+avoti:
+  - veids: paplasinata
+    vieta: "2. Demogrāfija un Darbaspēks › Demogrāfiskie un investīciju stimuli"
+    citats: "Alimentu nemaksātājiem tiek piemērots statuss, kas līdzvērtīgs parādam pret valsti, nodrošinot, ka VID veic automātisku piedziņu no jebkuriem ienākumiem pirms citu saistību kārtošanas"
+nesakritiba: ""
+piezimes: "Tikai paplašinātā programma. Punkts sadalīts 2 Solījumos: statuss ar VID piedziņu (šis) un liegums rīkoties ar īpašumu (lpv-alimentu-paradniekiem-liegums-rikoties-ar-ipasumu) — atsevišķi teikumi ar atšķirīgu iznākumu. \"nodrošinot, ka VID …\" — apraksta statusa saturu, nedala. Iestāde nav pārbaudīta: uzturlīdzekļu politika → TM (pieņemts, ka Uzturlīdzekļu garantiju fonds ir TM pārziņā); VID → FM (papildu)."
+jautajums: ""

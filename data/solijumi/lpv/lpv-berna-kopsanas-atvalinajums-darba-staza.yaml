@@ -1,0 +1,20 @@
+id: lpv-berna-kopsanas-atvalinajums-darba-staza
+saraksts: lpv
+nosaukums: "Bērna kopšanas atvaļinājuma ieskaitīšana darba stāžā"
+parbaudams: true
+temas:
+  galvena: gimenes-un-demografija
+  papildu: [socialais-atbalsts-un-pensijas]
+iestades:
+  galvena: lm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "ĢIMEŅU ATBALSTS UN KRISTĪGĀS VĒRTĪBAS"
+    citats: "Iekļausim bērna kopšanas atvaļinājumu darba stāžā"
+  - veids: paplasinata
+    vieta: "2. Demogrāfija un Darbaspēks › Demogrāfiskie un investīciju stimuli"
+    citats: "Nodrošināt, ka bērna kopšanas un dekrēta periods pilnā apmērā tiek ieskaitīts darba stāžā un sociālās apdrošināšanas uzkrājumā, ja māmiņa pirms tam bijusi nodarbināta"
+nesakritiba: "CVK sola iekļaut bērna kopšanas atvaļinājumu darba stāžā bez nosacījumiem; paplašinātā programma — ieskaitīt periodu \"pilnā apmērā\" arī sociālās apdrošināšanas uzkrājumā, bet tikai \"ja māmiņa pirms tam bijusi nodarbināta\"."
+piezimes: "Tas pats iznākums (periods ieskaitīts stāžā) → viens Solījums (§4); vērtē pēc CVK. \"nepieļaujot … samazināšanos\" — mērķis, nedala (§1). Ekstraktors nav pārbaudījis, kādā apmērā bērna kopšanas periods jau pašlaik tiek ieskaitīts stāžā — vērtējot jānoskaidro sākumstāvoklis. Iestāde nav pārbaudīta: sociālā apdrošināšana → LM."
+jautajums: ""
