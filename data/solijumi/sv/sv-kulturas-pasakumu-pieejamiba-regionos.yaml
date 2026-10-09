@@ -1,0 +1,17 @@
+id: sv-kulturas-pasakumu-pieejamiba-regionos
+saraksts: sv
+nosaukums: Kultūras pasākumu pieejamība visos reģionos
+parbaudams: false
+temas:
+  galvena: valoda-kultura-un-mediji
+  papildu: [regioni-un-pasvaldibas]
+iestades:
+  galvena: km
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "IZGLĪTĪBA, ZINĀTNE, KULTŪRA UN SPORTS"
+    citats: "nodrošināt kultūras pasākumu pieejamību visos reģionos"
+nesakritiba: ""
+piezimes: "Nepārbaudāms: „pieejamību” bez mēra vai konkrēta pasākuma. KM — kultūrpolitika."
+jautajums: ""
