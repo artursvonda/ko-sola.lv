@@ -1,0 +1,17 @@
+id: na-aprupes-pakalpojumi-senioriem-regionos
+saraksts: na
+nosaukums: "Aprūpes pakalpojumu pieejamība senioriem reģionos"
+parbaudams: false
+temas:
+  galvena: socialais-atbalsts-un-pensijas
+  papildu: [regioni-un-pasvaldibas]
+iestades:
+  galvena: lm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "LATVIJA ĢIMENĒM › Seniori un pensijas"
+    citats: "Nodrošināsim aprūpes pakalpojumu pieejamību senioriem reģionos."
+nesakritiba: ""
+piezimes: "Nepārbaudāms: „nodrošināsim pieejamību” bez mēra (kā na-kritiskas-infrastrukturas-aizsardziba). Iestāde: LM — sociālo pakalpojumu regulējums (pakalpojumus sniedz pašvaldības, §6a)."
+jautajums: ""
