@@ -1,0 +1,17 @@
+id: na-integreta-veselibas-aprupe-visos-novados
+saraksts: na
+nosaukums: "Integrēta veselības aprūpe visos novados, arī attālinātās konsultācijas"
+parbaudams: false
+temas:
+  galvena: veseliba
+  papildu: [regioni-un-pasvaldibas]
+iestades:
+  galvena: vm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "LATVIJA ĢIMENĒM › Veselības aprūpe"
+    citats: "Nodrošināsim ģimenes ārstu pieejamību un integrētu veselības aprūpi visos novados – arī attālinātās konsultācijas."
+nesakritiba: ""
+piezimes: "Dalīts no punkta par ģimenes ārstiem (§1; otrs — na-gimenes-arstu-pieejamiba-visos-novados); citēts viss teikums (§3). „Arī attālinātās konsultācijas” — daļa no tā paša iznākuma, nav dalīts. Nepārbaudāms: „integrēta veselības aprūpe” nav definēta, nav mēra. Iestāde: VM."
+jautajums: ""
