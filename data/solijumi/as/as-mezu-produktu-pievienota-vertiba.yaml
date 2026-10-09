@@ -1,0 +1,17 @@
+id: as-mezu-produktu-pievienota-vertiba
+saraksts: as
+nosaukums: Augstākas pievienotās vērtības produkti no Latvijas mežiem
+parbaudams: false
+temas:
+  galvena: ekonomika-un-darbs
+  papildu: [vide-un-klimats]
+iestades:
+  galvena: zm
+  papildu: [em]
+avoti:
+  - veids: cvk
+    vieta: "Enerģētikas un dabas drošībai"
+    citats: "Sekmēsim augstākas pievienotās vērtības produktu radīšanu Latvijā no Latvijas mežiem"
+nesakritiba: ""
+piezimes: "Nepārbaudāms: „sekmēsim” bez mēra vai konkrēta pasākuma. Nošķirts no `as-valsts-atbalsts-augstas-pievienotas-vertibas` (cits iznākums — valsts atbalsta koncentrēšana nozarēs vispār). Iestāde — pieņēmums, nav pārbaudīts oficiālā avotā: ZM — meža nozares politika; EM papildu — apstrādes rūpniecība un uzņēmējdarbības atbalsts."
+jautajums: ""
