@@ -1,0 +1,20 @@
+id: pro-koordinets-aprupes-modelis-retam-diagnozem
+saraksts: pro
+nosaukums: Koordinēts aprūpes modelis retām un sarežģītām diagnozēm
+parbaudams: true
+temas:
+  galvena: veseliba
+  papildu: []
+iestades:
+  galvena: vm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: VESELĪGA SABIEDRĪBA UN PIEEJAMA APRŪPE
+    citats: Nodrošināsim agrīnu palīdzību psihiskās veselības, atkarību, retu slimību, garā kovida un citu sarežģītu diagnožu gadījumā.
+  - veids: paplasinata
+    vieta: "4. Veselīga un ilgi dzīvojoša sabiedrība › Koordinēta pacienta aprūpe: retās, novārtā atstātās un hroniskās slimības"
+    citats: "Ieviesīsim koordinētu aprūpes modeli: ģimenes ārstiem būs skaidri norādījumi brīdinājuma pazīmju atpazīšanai, tiks rīkoti dažādu specialitāšu ārstu konsīliji un reģioniem būs pieejamas attālinātas konsultācijas."
+nesakritiba: CVK sola "agrīnu palīdzību" retu slimību "un citu sarežģītu diagnožu gadījumā"; paplašinātā programma — "koordinētu aprūpes modeli" ar ģimenes ārstu norādījumiem, konsīlijiem un attālinātām konsultācijām reģioniem.
+piezimes: 'CVK 2. punkts sadalīts pēc paplašinātās programmas (§4): retas un citas sarežģītas diagnozes (šis), garais kovids (pro-gara-kovida-aprupes-cels), psihiskā veselība (pro-psihisko-traucejumu-demences-agrina-atpazisana), atkarības (pro-atkaribu-konsultacija-30-dienu-laika); CVK citāts visos. Vērtē pēc paplašinātās programmas modeļa elementiem. Modeļa elementi nav dalīti — viena apņemšanās ("Ieviesīsim … modeli:").'
+jautajums: ""

@@ -1,0 +1,17 @@
+id: pro-realaika-veselibas-registri
+saraksts: pro
+nosaukums: Reāllaika veselības reģistri
+parbaudams: true
+temas:
+  galvena: veseliba
+  papildu: []
+iestades:
+  galvena: vm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: VESELĪGA SABIEDRĪBA UN PIEEJAMA APRŪPE
+    citats: Ieviesīsim digitālās veselības ekosistēmu ar datu standartiem, reāllaika reģistriem, drošu MI un anonimizētiem datiem pētniecībai.
+nesakritiba: ""
+piezimes: "CVK 4. punkta daļa (sk. pro-digitala-veseliba-valsts-vadiba-un-mi). Paplašinātajā programmā atsevišķa punkta nav (sadaļas pamatojumā minēts savlaicīgu datu trūkums — nav apņemšanās). Robežgadījums pārbaudāmībai: vērtē, vai veselības reģistri pārveidoti reāllaika datu režīmā."
+jautajums: ""

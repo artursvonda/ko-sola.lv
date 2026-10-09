@@ -1,0 +1,20 @@
+id: pro-neatkariga-skrininga-iestade
+saraksts: pro
+nosaukums: Viena neatkarīga skrīninga iestāde SPKC pārraudzībā ar atsevišķu finansējumu
+parbaudams: true
+temas:
+  galvena: veseliba
+  papildu: []
+iestades:
+  galvena: vm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: VESELĪGA SABIEDRĪBA UN PIEEJAMA APRŪPE
+    citats: Stiprināsim profilaksi ar centralizētu skrīningu pārvaldību un personalizāciju pēc ģenētiskā riska, t.sk. ar valsts apmaksātu BRCA testēšanu.
+  - veids: paplasinata
+    vieta: "4. Veselīga un ilgi dzīvojoša sabiedrība › Proaktīva veselības aprūpe: profilakse un skrīnings"
+    citats: SPKC pārraudzībā izveidosim vienu neatkarīgu iestādi, kas atbildēs par skrīningu un kam būs atsevišķs finansējums.
+nesakritiba: CVK sola "centralizētu skrīningu pārvaldību"; paplašinātā programma — "vienu neatkarīgu iestādi" SPKC pārraudzībā, kam "būs atsevišķs finansējums".
+piezimes: 'CVK 1. punkta galvenā daļa ("Stiprināsim profilaksi") vispārīga — Solījumi ir "ar …" daļas (§1), citēts viss teikums (§3); sadalīts pēc paplašinātās programmas (§4): šis, pro-skrininga-personalizacija-pec-genetiska-riska, pro-valsts-apmaksata-brca-testesana. Vērtē pēc paplašinātās programmas mēra (viena iestāde ar atsevišķu finansējumu).'
+jautajums: ""
