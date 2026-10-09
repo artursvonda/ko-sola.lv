@@ -1,0 +1,17 @@
+id: sv-pvn-5-medikamentiem
+saraksts: sv
+nosaukums: PVN 5% visiem medikamentiem
+parbaudams: true
+temas:
+  galvena: nodokli-un-budzets
+  papildu: [veseliba]
+iestades:
+  galvena: fm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "VESELĪBAS APRŪPE"
+    citats: "samazināt PVN visiem medikamentiem līdz 5%"
+nesakritiba: ""
+piezimes: "Pārbaudāms: konkrēts mērs (5%) un objekts (visi medikamenti). Tēma pēc esošo sv PVN Solījumu prakses (nodokli-un-budzets, nozare — papildu); alternatīva — veseliba galvenā. FM — PVN regulējums. Pašreizējā likme medikamentiem nav pārbaudīta."
+jautajums: ""

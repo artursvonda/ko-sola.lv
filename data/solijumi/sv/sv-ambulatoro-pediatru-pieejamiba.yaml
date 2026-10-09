@@ -1,0 +1,17 @@
+id: sv-ambulatoro-pediatru-pieejamiba
+saraksts: sv
+nosaukums: Lielāka ambulatoro pediatru pieejamība
+parbaudams: false
+temas:
+  galvena: veseliba
+  papildu: [gimenes-un-demografija]
+iestades:
+  galvena: vm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "VESELĪBAS APRŪPE"
+    citats: "palielināt ambulatoro pediatru pieejamību"
+nesakritiba: ""
+piezimes: "Nepārbaudāms: „pieejamība” bez rādītāja vai mēra (pediatru skaits, gaidīšanas laiks vai ģeogrāfiskā pieejamība — avots nenosaka). Alternatīva — Pārbaudāms kā sv-pacientu-rindu-samazinasana, ja redaktors izvēlas rādītāju. VM — veselības aprūpes pakalpojumu organizēšana."
+jautajums: ""

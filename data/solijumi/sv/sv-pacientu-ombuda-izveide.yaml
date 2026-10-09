@@ -1,0 +1,17 @@
+id: sv-pacientu-ombuda-izveide
+saraksts: sv
+nosaukums: Pacientu ombuda izveide
+parbaudams: true
+temas:
+  galvena: veseliba
+  papildu: []
+iestades:
+  galvena: vm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "VESELĪBAS APRŪPE"
+    citats: "izveidot pacientu ombudu"
+nesakritiba: ""
+piezimes: "Punkts dalīts (§1): ombuds un pēchospitalizācijas aprūpe — atsevišķi darbības vārdi un iznākumi (sk. sv-pechospitalizacijas-aprupe-ar-pasvaldibam). Pārbaudāms: iestādes/amata izveide. Avots nenosaka, vai ombuds ir atsevišķa iestāde vai funkcija esošā iestādē. VM — veselības nozares regulējums; iestāde nav pārbaudīta oficiālā avotā (ja ombuds būtu Tiesībsarga birojā — Saeima/TM)."
+jautajums: ""

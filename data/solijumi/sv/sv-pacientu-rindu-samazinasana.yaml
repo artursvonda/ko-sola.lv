@@ -1,0 +1,17 @@
+id: sv-pacientu-rindu-samazinasana
+saraksts: sv
+nosaukums: Pacientu rindu samazināšana
+parbaudams: true
+temas:
+  galvena: veseliba
+  papildu: []
+iestades:
+  galvena: vm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "VESELĪBAS APRŪPE"
+    citats: "garantēt pacientu rindu efektīvu samazināšanu"
+nesakritiba: ""
+piezimes: "Robežgadījums: skaitliska mērķa nav, bet rādītājs konkrēts (pacientu rindas / gaidīšanas laiki uz valsts apmaksātiem pakalpojumiem) — pārbaudāms, vai rindas samazinājušās. Alternatīva — Nepārbaudāms („efektīvu” bez mēra). VM — valsts apmaksātie veselības pakalpojumi."
+jautajums: ""

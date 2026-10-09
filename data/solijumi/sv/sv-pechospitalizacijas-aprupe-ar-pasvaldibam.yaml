@@ -1,0 +1,17 @@
+id: sv-pechospitalizacijas-aprupe-ar-pasvaldibam
+saraksts: sv
+nosaukums: Pēchospitalizācijas aprūpe sadarbībā ar pašvaldību sociālo dienestu
+parbaudams: true
+temas:
+  galvena: veseliba
+  papildu: [socialais-atbalsts-un-pensijas]
+iestades:
+  galvena: vm
+  papildu: [lm]
+avoti:
+  - veids: cvk
+    vieta: "VESELĪBAS APRŪPE"
+    citats: "uzlabot komunikāciju ar smagi slimu pacientu tuviniekiem, nodrošinot pēchospitalizācijas aprūpi sadarbībā ar pašvaldības sociālo dienestu"
+nesakritiba: ""
+piezimes: "Galvenajā daļā bez -ot paliek vispārīgs darbības vārds („uzlabot komunikāciju”) bez mēra, tāpēc Solījums ir -ot daļa; citēta visa teikuma daļa pēc semikola (§1). Robežgadījums: Pārbaudāms, ja ieviesta pēchospitalizācijas aprūpes kārtība slimnīcu un pašvaldību sociālo dienestu sadarbībā; mēra nav. Nav apvienots ar sv-atbalsts-paliativo-pacientu-tuviniekiem (cits iznākums: valsts atbalsts tuviniekiem). VM — veselības aprūpe; LM papildu — sociālie pakalpojumi."
+jautajums: ""

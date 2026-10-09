@@ -1,0 +1,17 @@
+id: sv-inovativi-medikamenti-onkologijas-pacientiem
+saraksts: sv
+nosaukums: Inovatīvu medikamentu pieejamība onkoloģijas pacientiem
+parbaudams: false
+temas:
+  galvena: veseliba
+  papildu: []
+iestades:
+  galvena: vm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "VESELĪBAS APRŪPE"
+    citats: "nodrošināt inovatīvu medikamentu pieejamību onkoloģijas pacientiem"
+nesakritiba: ""
+piezimes: "Nepārbaudāms: „pieejamība” bez nosauktiem medikamentiem vai mēra. Alternatīva — Pārbaudāms (vai kompensācijā iekļauti jauni inovatīvi onkoloģijas medikamenti), līdzīgi sv-kompensejamo-medikamentu-klasta-paplasinasana. VM — kompensējamo zāļu sistēma."
+jautajums: ""

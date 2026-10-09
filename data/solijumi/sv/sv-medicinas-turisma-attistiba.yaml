@@ -1,0 +1,17 @@
+id: sv-medicinas-turisma-attistiba
+saraksts: sv
+nosaukums: Medicīnas tūrisma attīstība
+parbaudams: false
+temas:
+  galvena: ekonomika-un-darbs
+  papildu: [veseliba]
+iestades:
+  galvena: em
+  papildu: [vm]
+avoti:
+  - veids: cvk
+    vieta: "VESELĪBAS APRŪPE"
+    citats: "attīstīt medicīnas tūrismu"
+nesakritiba: ""
+piezimes: "Punkts dalīts (§1), sk. sv-bezmaksas-ortodontija-berniem. Nepārbaudāms: „attīstīt” bez konkrēta pasākuma vai mēra. Tēma pēc tā, ko maina lasītājam — nozares (eksporta pakalpojumu) attīstība. EM — tūrisma politika; VM papildu — veselības pakalpojumu regulējums. Iestāde nav pārbaudīta oficiālā avotā."
+jautajums: ""
