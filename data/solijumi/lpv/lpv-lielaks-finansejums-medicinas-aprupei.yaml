@@ -1,0 +1,17 @@
+id: lpv-lielaks-finansejums-medicinas-aprupei
+saraksts: lpv
+nosaukums: Lielāks finansējums kvalitatīvai medicīnas aprūpei
+parbaudams: true
+temas:
+  galvena: veseliba
+  papildu: []
+iestades:
+  galvena: vm
+  papildu: [fm]
+avoti:
+  - veids: cvk
+    vieta: VESELĪBA UN LABKLĀJĪBA
+    citats: Palielināsim finansējumu kvalitatīvai medicīnas aprūpei
+nesakritiba: ""
+piezimes: 'Teikums dalīts: divi darbības vārdi ar atšķirīgiem iznākumiem (finansējums ↔ atalgojums), §1. Robežgadījums: mēra nav, bet "palielināsim" + konkrēts objekts (veselības aprūpes finansējums) ir pārbaudāms virziens → Pārbaudāms (kā lpv-atbalsts-gimenem-ar-ipasam-vajadzibam). "kvalitatīvai" — mērķis, nav atsevišķs iznākums. Paplašinātajā programmā atbilstoša punkta nav. Iestāde nav pārbaudīta: VM; budžets — FM (papildu).'
+jautajums: ""
