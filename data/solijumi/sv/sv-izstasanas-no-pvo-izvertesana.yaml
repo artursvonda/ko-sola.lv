@@ -1,0 +1,17 @@
+id: sv-izstasanas-no-pvo-izvertesana
+saraksts: sv
+nosaukums: Izvērtējums par Latvijas izstāšanos no Pasaules Veselības organizācijas
+parbaudams: true
+temas:
+  galvena: veseliba
+  papildu: [arpolitika]
+iestades:
+  galvena: vm
+  papildu: [arm]
+avoti:
+  - veids: cvk
+    vieta: "VALSTS PĀRVALDE UN TAUTAS VARA"
+    citats: "izvērtēt iespēju Latvijai izstāties no Pasaules Veselības organizācijas"
+nesakritiba: ""
+piezimes: "Pārbaudāms: „izvērtēt iespēju” + konkrēts X (§2) — izvērtējums notika vai nē. VM — nozares ministrija (§6a); ĀM papildu — dalība starptautiskā organizācijā. Iestāde nav pārbaudīta oficiālā avotā."
+jautajums: ""

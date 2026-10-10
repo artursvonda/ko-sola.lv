@@ -1,0 +1,17 @@
+id: sv-valsts-kontroles-revizija-saeimas-budzetam
+saraksts: sv
+nosaukums: Valsts kontroles revīzija Saeimas budžetam
+parbaudams: true
+temas:
+  galvena: valsts-parvalde
+  papildu: []
+iestades:
+  galvena: saeima
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "VALSTS PĀRVALDE UN TAUTAS VARA"
+    citats: "nodrošināt Valsts kontroles revīziju Saeimas budžetam"
+nesakritiba: ""
+piezimes: "Punkts dalīts (§1), sk. sv-jaukta-velesanu-sistema. Pārbaudāms: Valsts kontrole veic Saeimas budžeta revīziju vai nē. Nav pārbaudīts, vai Valsts kontrole jau tagad revidē Saeimas budžetu un vai tam vajadzīgas regulējuma izmaiņas. Saeima — Valsts kontrole ir neatkarīga, regulējumu var mainīt Saeima (§6a)."
+jautajums: ""

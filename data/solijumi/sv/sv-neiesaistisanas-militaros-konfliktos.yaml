@@ -1,0 +1,17 @@
+id: sv-neiesaistisanas-militaros-konfliktos
+saraksts: sv
+nosaukums: "Latvijas neiesaistīšanās militāros konfliktos, arī to nefinansēšana"
+parbaudams: true
+temas:
+  galvena: aizsardziba
+  papildu: [arpolitika]
+iestades:
+  galvena: am
+  papildu: [arm]
+avoti:
+  - veids: cvk
+    vieta: "VALSTS PĀRVALDE UN TAUTAS VARA"
+    citats: "nepieļaut Latvijas iesaistīšanos militārajos konfliktos, tai skaitā to finansēšanu"
+nesakritiba: ""
+piezimes: "Nedalīts (§1): „tai skaitā to finansēšanu” ir uzskaitījums zem viena darbības vārda. Pārbaudāms (robežgadījums): iesaistīšanās vai finansēšana notiek vai nē. Avots nenosauc konkrētus konfliktus un nedefinē „iesaistīšanos” un „finansēšanu”; iespējama interpretācija — militārais atbalsts kādai konflikta pusei (piem., Ukrainai), bet avots to tieši nesaka, tāpēc kritērijs redaktoram jāapstiprina. AM — bruņoto spēku izmantošana un militārais atbalsts; ĀM papildu — ārpolitiskās saistības. Iestāde nav pārbaudīta oficiālā avotā."
+jautajums: ""

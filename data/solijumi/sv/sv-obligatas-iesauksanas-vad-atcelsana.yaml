@@ -1,0 +1,17 @@
+id: sv-obligatas-iesauksanas-vad-atcelsana
+saraksts: sv
+nosaukums: Jauniešu obligātās iesaukšanas Valsts aizsardzības dienestā atcelšana
+parbaudams: true
+temas:
+  galvena: aizsardziba
+  papildu: []
+iestades:
+  galvena: am
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "VALSTS PĀRVALDE UN TAUTAS VARA"
+    citats: "atcelt jauniešu obligāto iesaukšanu Valsts aizsardzības dienestā"
+nesakritiba: ""
+piezimes: "Pārbaudāms: obligātā iesaukšana atcelta vai nē. AM — Valsts aizsardzības dienests."
+jautajums: ""

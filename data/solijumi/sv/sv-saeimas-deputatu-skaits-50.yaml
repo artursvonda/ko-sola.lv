@@ -1,0 +1,17 @@
+id: sv-saeimas-deputatu-skaits-50
+saraksts: sv
+nosaukums: Saeimas deputātu skaita samazināšana līdz 50
+parbaudams: true
+temas:
+  galvena: demokratija-un-cilvektiesibas
+  papildu: [valsts-parvalde]
+iestades:
+  galvena: saeima
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "VALSTS PĀRVALDE UN TAUTAS VARA"
+    citats: "samazināt Saeimas deputātu skaitu līdz 50"
+nesakritiba: ""
+piezimes: "Punkts dalīts (§1), sk. sv-jaukta-velesanu-sistema. Pārbaudāms: konkrēts mērs (50 deputāti); deputātu skaitu (100) nosaka Satversmes 5. pants — grozījumi pieņemti vai nē. Saeima — deputātu skaits (§6a)."
+jautajums: ""
