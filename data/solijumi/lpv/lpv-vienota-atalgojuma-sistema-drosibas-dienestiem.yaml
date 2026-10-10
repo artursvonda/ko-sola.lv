@@ -1,0 +1,17 @@
+id: lpv-vienota-atalgojuma-sistema-drosibas-dienestiem
+saraksts: lpv
+nosaukums: Vienota atalgojuma sistēma karavīriem, policistiem, ugunsdzēsējiem un glābējiem
+parbaudams: true
+temas:
+  galvena: iekseja-drosiba-un-tiesiskums
+  papildu: [aizsardziba]
+iestades:
+  galvena: iem
+  papildu: [am]
+avoti:
+  - veids: cvk
+    vieta: DROŠĪBA
+    citats: Apvienosim Iekšlietu un Aizsardzības ministrijas, lai garantētu valsts drošību un ieviestu vienotu atalgojuma sistēmu militārpersonām, policistiem, ugunsdzēsējiem un glābējiem
+nesakritiba: ""
+piezimes: 'Atdalīts no ministriju apvienošanas (lpv-iem-un-am-apvienosana): "lai … ieviestu vienotu atalgojuma sistēmu" nosauc konkrētu iznākumu, kas var notikt arī bez apvienošanas vai nenotikt pēc tās (§1). Daļai nav sava darbības vārda nākotnes formā → citēts viss teikums (§3). Pārbaudāms: vienota atalgojuma sistēma četrām nosauktām grupām ir ieviesta vai nav. Nav apvienots ar lpv-cienigs-atalgojums-drosibas-strukturas: sistēmas vienotība ↔ atalgojuma līmenis — cits iznākums. Iestāde nav pārbaudīta: policisti, ugunsdzēsēji un glābēji — IeM, militārpersonas — AM (papildu); valsts pārvaldes atlīdzības regulējums kopumā var būt VK vai FM kompetencē.'
+jautajums: ""
