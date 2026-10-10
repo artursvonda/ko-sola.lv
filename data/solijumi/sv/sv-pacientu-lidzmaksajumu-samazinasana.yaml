@@ -1,0 +1,17 @@
+id: sv-pacientu-lidzmaksajumu-samazinasana
+saraksts: sv
+nosaukums: Pacientu līdzmaksājumu samazināšana
+parbaudams: true
+temas:
+  galvena: veseliba
+  papildu: []
+iestades:
+  galvena: vm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "VESELĪBAS APRŪPE"
+    citats: "samazināt pacientu līdzmaksājumus"
+nesakritiba: ""
+piezimes: "Punkts dalīts 4 Solījumos (§1): katrai darbībai savs darbības vārds un iznākums. Robežgadījums: mēra nav, bet rādītājs konkrēts (pacientu līdzmaksājumu apmērs) — pārbaudāms, vai līdzmaksājumi samazināti. Avots nenosaka, kuri līdzmaksājumi (pacientu iemaksas, zāļu līdzmaksājumi). VM — pacientu iemaksu un kompensācijas regulējums."
+jautajums: ""

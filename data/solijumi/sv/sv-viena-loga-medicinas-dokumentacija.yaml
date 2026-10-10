@@ -1,0 +1,17 @@
+id: sv-viena-loga-medicinas-dokumentacija
+saraksts: sv
+nosaukums: „Viena loga” princips medicīniskajā dokumentācijā
+parbaudams: true
+temas:
+  galvena: veseliba
+  papildu: []
+iestades:
+  galvena: vm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "VESELĪBAS APRŪPE"
+    citats: 'nodrošināt "viena loga" principu medicīniskajā dokumentācijā'
+nesakritiba: ""
+piezimes: "Robežgadījums: Pārbaudāms, ja ieviests risinājums, kur medicīniskā dokumentācija pieejama vienuviet; avots nepaskaidro, ko tieši maina salīdzinājumā ar esošajām e-veselības sistēmām (nav pārbaudīts). Alternatīva — Nepārbaudāms. VM — e-veselības sistēma."
+jautajums: ""

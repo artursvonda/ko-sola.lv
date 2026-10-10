@@ -1,0 +1,17 @@
+id: sv-veselibas-personala-atalgojuma-celsana
+saraksts: sv
+nosaukums: Veselības aprūpes personāla atalgojuma celšana
+parbaudams: true
+temas:
+  galvena: veseliba
+  papildu: []
+iestades:
+  galvena: vm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "VESELĪBAS APRŪPE"
+    citats: "nodrošināt stabilu un prognozējamu finansējumu medicīnai, prioritāri novirzot līdzekļus personāla atalgojuma celšanai un izmaksājot papildu atbalstu par darbu reģionos"
+nesakritiba: ""
+piezimes: "Galvenajā teikumā bez -ot daļām paliek vispārīgs darbības vārds („nodrošināt stabilu un prognozējamu finansējumu”) bez mēra; abas -ot daļas nosauc konkrētas darbības ar savu iznākumu, tāpēc 2 Solījumi (sk. sv-papildu-atbalsts-par-darbu-regionos); citēts viss teikums (§1, §3). Robežgadījums: atalgojuma pieauguma mērs nav noteikts — pārbaudāms, vai veselības aprūpes personāla atalgojums celts. VM — veselības aprūpes finansēšana."
+jautajums: ""

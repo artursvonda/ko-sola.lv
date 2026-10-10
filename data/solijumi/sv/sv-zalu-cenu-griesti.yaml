@@ -1,0 +1,17 @@
+id: sv-zalu-cenu-griesti
+saraksts: sv
+nosaukums: Zāļu cenu griesti
+parbaudams: true
+temas:
+  galvena: veseliba
+  papildu: []
+iestades:
+  galvena: vm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "VESELĪBAS APRŪPE"
+    citats: "nodrošināt zāļu cenu griestus"
+nesakritiba: ""
+piezimes: "Punkts dalīts (§1): cenu griesti un farmaceita pakalpojuma maksas atcelšana — atsevišķi darbības vārdi un iznākumi (sk. sv-farmaceita-pakalpojuma-maksas-atcelsana). Pārbaudāms: zāļu cenu griesti noteikti normatīvā vai nē. Avots nenosaka, vai griesti attiecas uz visām zālēm vai tikai kompensējamām; pašreizējais cenu regulējums nav pārbaudīts. VM — zāļu cenu regulējums."
+jautajums: ""

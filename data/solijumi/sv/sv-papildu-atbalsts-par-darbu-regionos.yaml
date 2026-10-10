@@ -1,0 +1,17 @@
+id: sv-papildu-atbalsts-par-darbu-regionos
+saraksts: sv
+nosaukums: Papildu atbalsts medicīnas personālam par darbu reģionos
+parbaudams: true
+temas:
+  galvena: veseliba
+  papildu: [regioni-un-pasvaldibas]
+iestades:
+  galvena: vm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "VESELĪBAS APRŪPE"
+    citats: "nodrošināt stabilu un prognozējamu finansējumu medicīnai, prioritāri novirzot līdzekļus personāla atalgojuma celšanai un izmaksājot papildu atbalstu par darbu reģionos"
+nesakritiba: ""
+piezimes: "Teikums dalīts (§1), sk. sv-veselibas-personala-atalgojuma-celsana; citēts viss teikums. Pārbaudāms: papildu izmaksas par darbu reģionos ieviestas vai nē. Avots nenosaka apmēru un adresātus (no konteksta — medicīnas personāls). Nav pārbaudīts, vai līdzīgs atbalsts jau pastāv. VM — veselības aprūpes finansēšana."
+jautajums: ""

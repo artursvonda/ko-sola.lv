@@ -1,0 +1,17 @@
+id: sv-medikamentu-kompensacija-pilna-apjoma
+saraksts: sv
+nosaukums: Medikamentu kompensācija atbilstoši indikācijām pilnā apjomā
+parbaudams: true
+temas:
+  galvena: veseliba
+  papildu: []
+iestades:
+  galvena: vm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "VESELĪBAS APRŪPE"
+    citats: "nodrošināt medikamentu kompensāciju atbilstoši indikācijām pilnā apjomā"
+nesakritiba: ""
+piezimes: "Punkts dalīts (§1), sk. sv-pacientu-lidzmaksajumu-samazinasana. Robežgadījums: „pilnā apjomā” var nozīmēt kompensāciju visām medikamenta reģistrētajām indikācijām vai 100% kompensāciju; avots to nepaskaidro. Pārbaudāms, ja redaktors izvēlas vienu no nozīmēm; alternatīva — Nepārbaudāms. VM — kompensējamo zāļu sistēma."
+jautajums: ""

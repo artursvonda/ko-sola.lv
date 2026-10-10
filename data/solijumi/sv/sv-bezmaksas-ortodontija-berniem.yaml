@@ -1,0 +1,17 @@
+id: sv-bezmaksas-ortodontija-berniem
+saraksts: sv
+nosaukums: Bezmaksas ortodontijas pakalpojumi bērniem
+parbaudams: true
+temas:
+  galvena: veseliba
+  papildu: [gimenes-un-demografija]
+iestades:
+  galvena: vm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "VESELĪBAS APRŪPE"
+    citats: "nodrošināt bezmaksas ortodontijas pakalpojumus bērniem"
+nesakritiba: ""
+piezimes: "Punkts dalīts (§1): medicīnas tūrisms — cits darbības vārds un iznākums (sk. sv-medicinas-turisma-attistiba). Pārbaudāms: ortodontijas pakalpojumi bērniem bez maksas vai nē. Pašreizējais valsts apmaksas apjoms nav pārbaudīts. VM — valsts apmaksātie veselības pakalpojumi."
+jautajums: ""

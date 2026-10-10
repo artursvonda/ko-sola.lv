@@ -1,0 +1,17 @@
+id: sv-farmaceita-pakalpojuma-maksas-atcelsana
+saraksts: sv
+nosaukums: Maksas par farmaceita pakalpojumiem atcelšana
+parbaudams: true
+temas:
+  galvena: veseliba
+  papildu: []
+iestades:
+  galvena: vm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "VESELĪBAS APRŪPE"
+    citats: "atcelt maksu par farmaceita pakalpojumiem"
+nesakritiba: ""
+piezimes: "Punkts dalīts (§1), sk. sv-zalu-cenu-griesti. Pārbaudāms: maksa atcelta vai nē. Pašreizējā maksas kārtība nav pārbaudīta. VM — zāļu cenu un aptieku regulējums."
+jautajums: ""

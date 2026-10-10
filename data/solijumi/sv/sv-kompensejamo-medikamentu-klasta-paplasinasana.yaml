@@ -1,0 +1,17 @@
+id: sv-kompensejamo-medikamentu-klasta-paplasinasana
+saraksts: sv
+nosaukums: Kompensējamo medikamentu klāsta paplašināšana
+parbaudams: true
+temas:
+  galvena: veseliba
+  papildu: []
+iestades:
+  galvena: vm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "VESELĪBAS APRŪPE"
+    citats: "paplašināt kompensējamo medikamentu klāstu"
+nesakritiba: ""
+piezimes: "Punkts dalīts (§1), sk. sv-pacientu-lidzmaksajumu-samazinasana. Pārbaudāms: kompensējamo zāļu sarakstā iekļauti jauni medikamenti vai nē. Mēra nav; redaktoram jāņem vērā, ka saraksts var tikt papildināts arī ierastā kārtībā. VM — kompensējamo zāļu sistēma."
+jautajums: ""
