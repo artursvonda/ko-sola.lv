@@ -1,0 +1,17 @@
+id: lpv-automatiska-nodoklu-aprekinasana
+saraksts: lpv
+nosaukums: Automātiska nodokļu aprēķināšana VID pēc Igaunijas parauga
+parbaudams: true
+temas:
+  galvena: nodokli-un-budzets
+  papildu: [valsts-parvalde]
+iestades:
+  galvena: fm
+  papildu: []
+avoti:
+  - veids: paplasinata
+    vieta: 8. Valsts pārvaldes efektivitāte un birokrātijas demontāža › Pārvaldes efektivitāte un digitalizācija
+    citats: "VID modernizācija: Pāreja uz automātisku nodokļu aprēķināšanu, līdzīgi kā Igaunijā, likvidējot atkārtotas vēsturisko datu pārbaudes"
+nesakritiba: ""
+piezimes: "„likvidējot atkārtotas vēsturisko datu pārbaudes” — sekas/veids, nedala. Robežgadījums: avots nenosauc, kuri nodokļi → Pārbaudāms kā „vai VID ieviesis automātisku nodokļu aprēķinu, kura vēlēšanu dienā nebija”; alternatīva — Nepārbaudāms. Ekstraktors nav pārbaudījis, kas jau automatizēts. Iestāde nav pārbaudīta: VID → FM."
+jautajums: ""
