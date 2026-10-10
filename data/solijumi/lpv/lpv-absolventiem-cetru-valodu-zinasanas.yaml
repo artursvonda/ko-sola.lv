@@ -1,0 +1,17 @@
+id: lpv-absolventiem-cetru-valodu-zinasanas
+saraksts: lpv
+nosaukums: Skolas absolventiem vismaz četru valodu zināšanas
+parbaudams: true
+temas:
+  galvena: izglitiba-un-zinatne
+  papildu: [valoda-kultura-un-mediji]
+iestades:
+  galvena: izm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: IZGLĪTĪBA
+    citats: Pabeidzot skolu, absolventiem ir jāzina vismaz četras valodas
+nesakritiba: ""
+piezimes: 'Formulēts kā prasība, nevis darbība. Pārbaudāms robežgadījumā: ir skaitlis (vismaz četras valodas) — vērtē, vai izglītības standarts vai prasības skolas beigšanai paredz vismaz četras valodas; alternatīva — Nepārbaudāms (nav nosaukta rīcība). Avots nenorāda, vai "skola" ir pamatskola vai vidusskola un vai latviešu/dzimtā valoda tiek skaitīta. Nav apvienots ar lpv-anglu-valodas-skolu-izveide (cits iznākums). Iestāde nav pārbaudīta: IZM.'
+jautajums: ""

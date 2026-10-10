@@ -1,0 +1,17 @@
+id: lpv-lauku-un-regionu-skolu-saglabasana
+saraksts: lpv
+nosaukums: Lauku un reģionu skolu saglabāšana, vērtējot ne tikai pēc skolēnu skaita
+parbaudams: true
+temas:
+  galvena: izglitiba-un-zinatne
+  papildu: [regioni-un-pasvaldibas]
+iestades:
+  galvena: izm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: IZGLĪTĪBA
+    citats: Atbalstīsim lauku un reģionu skolu saglabāšanu, vērtējot to pastāvēšanu ne tikai pēc skolēnu skaita, bet arī pēc pieejamības, izglītības kvalitātes un nozīmes vietējai kopienai
+nesakritiba: ""
+piezimes: 'Galvenajā teikumā bez "-ot" daļas paliek vispārīgs "Atbalstīsim … saglabāšanu" → Solījums ir "-ot" daļa (jauni skolu pastāvēšanas vērtēšanas kritēriji), citēts viss teikums (§1). Pārbaudāms robežgadījumā: vērtē, vai skolu tīkla kritērijos papildus skolēnu skaitam ieviesta pieejamība, izglītības kvalitāte un nozīme vietējai kopienai; alternatīva — Nepārbaudāms ("atbalstīsim"). Ekstraktors nezina, kādi kritēriji skolu tīklam ir spēkā šobrīd. Iestāde nav pārbaudīta: IZM (skolu tīkla kritēriji); skolu dibinātāji ir pašvaldības.'
+jautajums: ""

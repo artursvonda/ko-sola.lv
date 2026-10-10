@@ -1,0 +1,17 @@
+id: lpv-obligata-videja-izglitiba
+saraksts: lpv
+nosaukums: Obligātā vidējā izglītība (vispārējā vai profesionālā)
+parbaudams: true
+temas:
+  galvena: izglitiba-un-zinatne
+  papildu: []
+iestades:
+  galvena: izm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: IZGLĪTĪBA
+    citats: ieviesīsim valstī obligāto vidējo izglītību (vispārējo vai profesionālo), kā arī obligātu finanšu un uzņēmējdarbības pratības kursu
+nesakritiba: ""
+piezimes: "Dalīts no obligātā finanšu un uzņēmējdarbības pratības kursa (lpv-obligats-finansu-pratibas-kurss-skolas) — cits iznākums. Citāts tāds pats kā kursa Solījumā (daļām kopīgs darbības vārds, §3). Paplašinātajā programmā atbilstības nav. Pārbaudāms: normatīva izmaiņa (vidējā izglītība obligāta vai nē). Iestāde nav pārbaudīta: IZM."
+jautajums: ""
