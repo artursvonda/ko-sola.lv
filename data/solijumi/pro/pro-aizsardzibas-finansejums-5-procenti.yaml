@@ -1,0 +1,19 @@
+id: pro-aizsardzibas-finansejums-5-procenti
+saraksts: pro
+nosaukums: "Aizsardzības nozares finansējums vismaz 5% apmērā"
+parbaudams: true
+temas:
+  galvena: aizsardziba
+  papildu:
+    - nodokli-un-budzets
+iestades:
+  galvena: am
+  papildu:
+    - fm
+avoti:
+  - veids: cvk
+    vieta: "DROŠĪBA UN ĀRPOLITIKA"
+    citats: "Saglabāsim finansējumu aizsardzības nozarei vismaz 5% apjomā."
+nesakritiba: ""
+piezimes: "Tikai CVK: paplašinātajā programmā atbilstoša punkta nav. Avots nenorāda, no kā rēķināti 5% (visticamāk no IKP, bet avots to nesaka) — redaktoram vērtējot jāizlemj bāze. „Saglabāsim” — ekstraktors nepārbaudīja, vai šāds līmenis jau sasniegts. Atbildīgā: AM (nozares budžets), FM papildu (budžeta likums)."
+jautajums: ""

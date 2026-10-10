@@ -1,0 +1,19 @@
+id: pro-vad-studiju-kreditpunkti
+saraksts: pro
+nosaukums: "Studiju kredītpunkti par izpildītu valsts aizsardzības dienestu"
+parbaudams: true
+temas:
+  galvena: aizsardziba
+  papildu:
+    - izglitiba-un-zinatne
+iestades:
+  galvena: izm
+  papildu:
+    - am
+avoti:
+  - veids: paplasinata
+    vieta: "6. Aizsargāta un droša valsts, kur ikviens apzinās savu lomu › Kvalitatīvs un pieejams valsts aizsardzības dienests"
+    citats: "Ieviesīsim studiju kredītpunktu piešķiršanu par sekmīgi izpildītu valsts aizsardzības dienestu"
+nesakritiba: ""
+piezimes: "Atbildīgā: IZM (studiju rezultātu atzīšana), AM papildu — nav pārbaudīts."
+jautajums: ""
