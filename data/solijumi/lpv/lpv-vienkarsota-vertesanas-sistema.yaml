@@ -1,0 +1,17 @@
+id: lpv-vienkarsota-vertesanas-sistema
+saraksts: lpv
+nosaukums: Vienkāršota skolēnu vērtēšanas sistēma
+parbaudams: true
+temas:
+  galvena: izglitiba-un-zinatne
+  papildu: []
+iestades:
+  galvena: izm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: IZGLĪTĪBA
+    citats: Ieviesīsim vienkāršotu vērtēšanas sistēmu ar mērķi nesodīt skolēnus
+nesakritiba: ""
+piezimes: 'Pārbaudāms robežgadījumā: jaunas vērtēšanas sistēmas ieviešana notiek vai nenotiek, bet "vienkāršota" un "nesodīt skolēnus" nav definēti; alternatīva — Nepārbaudāms. Nākamais teikums (eksāmenu pārkārtošana) — atsevišķs Solījums ar savu iznākumu (lpv-eksamenu-parkartosana-lidz-macibu-gada-sakumam). Iestāde nav pārbaudīta: IZM.'
+jautajums: ""
