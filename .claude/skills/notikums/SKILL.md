@@ -26,7 +26,7 @@ Vispirms izlasi: `GLOSSARY.md`, `docs/statusi/vertesana.md` (pierādījuma stand
 - Kas notika, `datums` (kad fakts notika, nevis publicēts ziņās), oficiālais avots un tā `veids`.
 - Saeimā Notikums ir iesniegšana vai galīgais lasījums (steidzamam — "2.lasījums, steidzams"); citi lasījumi — tikai, ja būtiski grozījumi vai noraidījums. Izsludināšana — atsevišķs Notikums, ja tā maina Statusu (`vertesana.md`).
 - **Vērtēšanas periods** (no 03.10.2026, `vertesana.md`): fakts pirms vēlēšanām — Notikums kā konteksts, Statusu nemaini. Starp vēlēšanām un 03.11.2026: 14. Saeimas izsludināts likums var mainīt Statusu, bet tās likumprojekta iesniegšana vai lasījumi Procesā nedod.
-- **Dublikāti**: `grep -rl` `data/notikumi/` (ja mapes nav — dublikātu nav) pēc avota URL, likumprojekta numura (piem., `1065/Lp14`), balsojuma id; `gh pr list --state open --search "<numurs vai atslēgvārds>"`. Ja jau ir — pasaki un beidz.
+- **Dublikāti**: `grep -rl` `data/notikumi/` (ja mapes nav — dublikātu nav) pēc avota URL, likumprojekta numura (piem., `1065/Lp14`), balsojuma id; `gh pr list --state open --search "<numurs vai atslēgvārds>"` (routine vidē — `git fetch origin '+refs/heads/notikums/*:refs/remotes/origin/notikums/*'` un `git grep <numurs> $(git for-each-ref --format='%(refname)' refs/remotes/origin/notikums/) -- data/notikumi/`). Ja jau ir — pasaki un beidz.
 
 ## 4. Solījumi
 
@@ -56,7 +56,7 @@ Katram Pārbaudāmam Solījumam: pašreizējais Statuss (pēdējā `statusa_main
 
 ## 8. PR
 
-- Zars `notikums/<id>`, viens commit, `gh pr create`:
+- Zars `notikums/<id>` (arī routine — ne `claude/…`), viens commit, `git push -u origin notikums/<id>`, `gh pr create` (routine vidē GraphQL bloķēts → `gh api repos/artursvonda/ko-sola.lv/pulls -f title=… -f head=notikums/<id> -f base=main -F body=@<fails>`):
   - nosaukums: `Notikums: <nosaukums>`;
   - apraksts: fakts (2–3 teikumi), avoti; tabula Solījums | virziens | Statuss pirms → pēc; atvērtie `jautajums`; ko meklēji, bet neiekļāvi (Solījumi, kas šķita saistīti, un kāpēc ne).
 - Nemerge. Redaktors pārbauda un apstiprina.

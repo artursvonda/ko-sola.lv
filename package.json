@@ -12,7 +12,8 @@
     "parbaude": "node tools/parbaudit.js",
     "parskats": "node tools/parskats.js",
     "balsojums": "node tools/balsojums.js",
-    "test": "node --test \"tools/test/*.test.js\" \"lapa/test/*.test.js\""
+    "test": "node --test \"tools/test/*.test.js\" \"lapa/test/*.test.js\"",
+    "kandidati": "node tools/kandidati.js"
   },
   "devDependencies": {
     "@fontsource/ibm-plex-mono": "^5.3.0",
