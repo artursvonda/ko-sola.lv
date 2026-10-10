@@ -1,0 +1,17 @@
+id: pro-rail-baltica-lidostas-savienojums
+saraksts: pro
+nosaukums: Rīgas un lidostas savienojums ar dzelzceļu
+parbaudams: true
+temas:
+  galvena: transports
+  papildu: []
+iestades:
+  galvena: sm
+  papildu: []
+avoti:
+  - veids: paplasinata
+    vieta: 10. Transports, savienojamība un droša mobilitāte › Rail Baltica – Latvijas savienojamībai un drošībai
+    citats: Nodrošināsim Rīgas un lidostas savienojamību ar dzelzceļu un jaunās infrastruktūras integrāciju esošajā transporta tīklā.
+nesakritiba: ""
+piezimes: "Punkts dalīts (§1): lidostas dzelzceļa savienojums (konkrēts objekts, šis) un jaunās infrastruktūras integrācija transporta tīklā (pro-rail-baltica-integracija-transporta-tikla, Nepārbaudāms) — atšķirīgi statusi. Daļām nav sava darbības vārda — citēts viss punkts (§3). Pārbaudāms: vērtē, vai Rīga un lidosta savienotas ar dzelzceļu (pasažieru satiksme). Nav apvienots ar pro-lidostas-infrastruktura-un-savienojamiba (vispārīga lidostas savienojamība, bez transporta veida)."
+jautajums: ""
