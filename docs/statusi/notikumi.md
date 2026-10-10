@@ -6,6 +6,21 @@ Formāts un manuālā plūsma (lēmums: "Statusa maiņas plūsma", #10). Pierād
 
 Redaktora Claude Code sesijā: `/notikums <url>` (`.claude/skills/notikums/SKILL.md`) → Notikums + tā izraisītās Statusa maiņas → **viens PR uz Notikumu** (zars `notikums/<id>`). Notikumu pievieno arī tad, ja Statuss nemainās. CI ("Dati") zaļš + redaktora apstiprinājums → merge.
 
+## Grafika režīms (nedēļas AI pārskats)
+
+Claude Code routine reizi nedēļā palaiž `/ai-parskats` (`.claude/skills/ai-parskats/SKILL.md`): `npm run --silent kandidati` → atlase pret Solījumiem → katram faktam `/notikums` (viens PR, zars `notikums/<id>`, ≤ 10 PR reizē) → kopsavilkums komentārā issue „AI pārskatu žurnāls”. Logs — pēdējās 14 dienas (ne agrāk par Vērtēšanas perioda sākumu); dublikāti — kandidāta atslēga (likumprojekta numurs + datums, Vēstneša `op/…`, TA numurs, balsojuma id) kādā Notikumā `main` vai `notikums/*` zarā. Noraidīta PR zars paliek → tas pats fakts netiek piedāvāts atkārtoti (lai piedāvātu — izdzēš zaru).
+
+`npm run kandidati` avoti (robots.txt atļauts):
+
+| Avots | Ko dod | Piezīmes |
+|---|---|---|
+| `saeima.lv/lawdata.json` | likumprojektu iesniegšana, galīgais lasījums, izsludināšana, noraidīšana | nedokumentēts; saites uz LIVS (nerāpo) |
+| data.gov.lv `saeimas-sedes` | Saeimas lēmumi (`/Lm`) no balsojumu failiem | ~1 dienu pēc sēdes |
+| data.gov.lv `tap-publicetie-tiesibu-akti` | MK projekti, iesniegti logā (TA numurs, tips, progress) | tekošā mēneša fails var kavēties — tad piezīme |
+| `vestnesis.lv/laidiens/YYYY/MM/DD` | "Tiesību akti" (bez pašvaldībām): likumi, MK noteikumi, rīkojumi, protokoli | Crawl-delay 1; RSS `/feed/JL` dod tikai pēdējo laidienu |
+
+CSP un Valsts kase — tikai pēc vajadzības skaitliskam Solījumam. LSM RSS (~1 dienas ziņas) grafikā nelieto — ziņa ir tikai norāde manuālajā režīmā.
+
 ## Notikums
 
 `data/notikumi/<id>.yaml`, `id` = `<datums>-<slug>` (slug: mazie latīņu burti bez diakritikas, ≤ 6 vārdi). Shēma: `schemas/notikums.schema.json`.

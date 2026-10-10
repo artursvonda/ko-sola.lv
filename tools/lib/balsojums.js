@@ -5,8 +5,8 @@
 const REZULTATI = { Par: "par", Pret: "pret", Atturas: "atturas", Nebalsoja: "nebalsoja" };
 export const BEZ_FRAKCIJAS = "bez_frakcijas";
 
-const ENTITIJAS = { amp: "&", lt: "<", gt: ">", quot: '"', apos: "'" };
-const atkodet = (t) =>
+const ENTITIJAS = { amp: "&", lt: "<", gt: ">", quot: '"', apos: "'", nbsp: " ", ndash: "–", mdash: "—" };
+export const atkodet = (t) =>
   t.replace(/&(#x[0-9a-f]+|#\d+|\w+);/gi, (m, e) =>
     e[0] === "#" ? String.fromCodePoint(Number(e[1] === "x" ? `0${e.slice(1)}` : e.slice(1))) : (ENTITIJAS[e] ?? m),
   );
