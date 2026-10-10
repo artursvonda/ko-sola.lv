@@ -1,0 +1,18 @@
+id: pro-atbalsta-personala-programma-regionos
+saraksts: pro
+nosaukums: Programma atbalsta personāla piesaistei reģionos
+parbaudams: true
+temas:
+  galvena: izglitiba-un-zinatne
+  papildu:
+    - regioni-un-pasvaldibas
+iestades:
+  galvena: izm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: IZGLĪTĪBA UN ZINĀTNE
+    citats: Ieviesīsim programmu atbalsta personāla piesaistei reģionos.
+nesakritiba: ""
+piezimes: 'Tikai CVK: paplašinātās programmas punkti par atbalsta personālu ("saskaņā ar “Programma skolā” plānoto", "katrā pirmsskolā", mērķdotācija pirmsskolā) sola citus iznākumus, nevis programmu piesaistei reģionos — atsevišķi Solījumi. Vērtē, vai ieviesta šāda programma.'
+jautajums: ""

@@ -1,6 +1,6 @@
 id: pro-seksuali-reproduktiva-izglitiba
 saraksts: pro
-nosaukums: Zinātnē balstīta, vecumposmam atbilstoša seksuāli reproduktīvā izglītība
+nosaukums: Visaptveroša veselības mācība, t. sk. seksuālā un reproduktīvā veselība
 parbaudams: true
 temas:
   galvena: izglitiba-un-zinatne
@@ -10,9 +10,15 @@ iestades:
   galvena: izm
   papildu: []
 avoti:
+  - veids: cvk
+    vieta: IZGLĪTĪBA UN ZINĀTNE
+    citats: Ieviesīsim visaptverošu veselības mācību, saturā ietverot seksuālo un reproduktīvo veselību, vardarbības un atkarību prevenciju.
+  - veids: paplasinata
+    vieta: 8. Izglītoti un daudzpusīgi jaunieši, kuriem ir iespējas › Atbalsts jauniešu mentālai veselībai un veselības pratībai skolās
+    citats: Ieviesīsim visaptverošu veselības mācības saturu, ietverot seksuālo un reproduktīvo veselību, vardarbības un atkarību prevenciju.
   - veids: paplasinata
     vieta: 3. Sociālās drošības tīkls un dzīves dārdzības mazināšana › Droša bērnība visiem
     citats: Nodrošināsim zinātnē balstītu un vecumposmam atbilstošu seksuāli reproduktīvo izglītību
-nesakritiba: ""
-piezimes: Vērtē, vai šāda izglītība iekļauta obligātajā mācību saturā. CVK IZGLĪTĪBA UN ZINĀTNE 2. un 8. nodaļas "visaptverošu veselības mācību" (ietverot seksuālo un reproduktīvo veselību) — plašāks, atstāts tās nodaļas izpildei; var izrādīties tas pats Solījums.
+nesakritiba: CVK un 8. nodaļa sola „visaptverošu veselības mācību”, ietverot arī vardarbības un atkarību prevenciju; 3. nodaļa — tikai „zinātnē balstītu un vecumposmam atbilstošu seksuāli reproduktīvo izglītību”.
+piezimes: "IZGLĪTĪBA UN ZINĀTNE izpildē apvienots ar CVK 2. punktu un 8. nodaļas punktu (§0, §4): tas pats iznākums — seksuālā un reproduktīvā izglītība mācību saturā —, atšķiras apjoms (Nesakritība). Vērtēšanas avots tagad CVK; nosaukums mainīts atbilstoši, ID nemainīts. Vērtē, vai obligātajā mācību saturā ieviesta visaptveroša veselības mācība ar seksuālās un reproduktīvās veselības, vardarbības un atkarību prevencijas saturu. Esošie pro-unplugged-programma-visas-skolas un pro-vardarbibas-diskriminacijas-prevencija-skolas — atsevišķas programmas, cits iznākums."
 jautajums: ""

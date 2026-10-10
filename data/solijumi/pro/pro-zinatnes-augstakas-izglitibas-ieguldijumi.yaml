@@ -1,0 +1,21 @@
+id: pro-zinatnes-augstakas-izglitibas-ieguldijumi
+saraksts: pro
+nosaukums: Ieguldījumi zinātnē un augstākajā izglītībā līdz OECD un ES vidējam līmenim
+parbaudams: true
+temas:
+  galvena: izglitiba-un-zinatne
+  papildu: []
+iestades:
+  galvena: izm
+  papildu:
+    - fm
+avoti:
+  - veids: cvk
+    vieta: IZGLĪTĪBA UN ZINĀTNE
+    citats: Palielināsim "Studētgods" stipendijas, finansējumu zinātnei un augstākajai izglītībai.
+  - veids: paplasinata
+    vieta: 8. Izglītoti un daudzpusīgi jaunieši, kuriem ir iespējas › Spēcīga pasaules līmeņa pētniecība Latvijā un akadēmiskā karjera jaunajiem pētniekiem
+    citats: Palielināsim valsts un privātā sektora ieguldījumus zinātnē un augstākajā izglītībā, pakāpeniski sasniedzot OECD un ES vidējo līmeni (šobrīd 2,2% no IKP).
+nesakritiba: CVK sola palielināt „finansējumu zinātnei un augstākajai izglītībai” bez mēra; paplašinātā programma — „valsts un privātā sektora ieguldījumus”, „pakāpeniski sasniedzot OECD un ES vidējo līmeni (šobrīd 2,2% no IKP)”.
+piezimes: Sk. pro-studentu-stipendiju-dubultosana (CVK 7. punkta dalījums). Vērtē pēc paplašinātās programmas mēra (§4); „pakāpeniski” — četros gados mērķis var netikt sasniegts, vērtē virzību. Skaitlis 2,2% no IKP — kā avotā, ekstraktors to nav pārbaudījis. FM papildu — budžeta finansējums.
+jautajums: ""
