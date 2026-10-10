@@ -1,0 +1,17 @@
+id: lpv-uzmaniba-onkologijai-sirds-slimibam-diabetam
+saraksts: lpv
+nosaukums: Uzmanība onkoloģijai, sirds slimībām, diabētam un jauniešu mentālajai veselībai
+parbaudams: false
+temas:
+  galvena: veseliba
+  papildu: []
+iestades:
+  galvena: vm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: VESELĪBA UN LABKLĀJĪBA
+    citats: Īpašu uzmanību pievērsīsim onkoloģijas, sirds un asinsvadu slimību, diabēta ārstēšanai, kā arī pusaudžu un jauniešu mentālas veselības problēmām
+nesakritiba: ""
+piezimes: 'Uzskaitījums zem viena darbības vārda → nedala (§1; kā lpv-latgales-drosiba-un-attistiba). Nepārbaudāms: "pievērsīsim uzmanību" bez konkrēta pasākuma vai mēra. Paplašinātajā programmā atbilstoša punkta nav. Iestāde nav pārbaudīta: VM.'
+jautajums: ""

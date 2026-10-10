@@ -1,0 +1,17 @@
+id: lpv-tautas-sporta-atbalsts
+saraksts: lpv
+nosaukums: Atbalsts tautas sporta aktivitātēm
+parbaudams: false
+temas:
+  galvena: valoda-kultura-un-mediji
+  papildu: [veseliba]
+iestades:
+  galvena: izm
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: VESELĪBA UN LABKLĀJĪBA
+    citats: atbalstīsim tautas sporta aktivitātes
+nesakritiba: ""
+piezimes: 'Dalīts no veselīga dzīvesveida veicināšanas (sk. lpv-veseliga-dzivesveida-veicinasana). Nepārbaudāms: "atbalstīsim" bez konkrēta pasākuma vai mēra. Tēma: sports → valoda-kultura-un-mediji (pēc data/temas.yaml), papildu veseliba. Paplašinātās 6. nod. sporta objekti (stadions, Siguldas trase, slēpošanas kūrorts) — konkrēti lielie objekti, nav tautas sports → nav tas pats Solījums (§0.3). Iestāde nav pārbaudīta: sporta politika → IZM.'
+jautajums: ""
