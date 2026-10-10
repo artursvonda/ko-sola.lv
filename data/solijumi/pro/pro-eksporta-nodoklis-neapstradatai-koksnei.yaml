@@ -1,0 +1,20 @@
+id: pro-eksporta-nodoklis-neapstradatai-koksnei
+saraksts: pro
+nosaukums: Eksporta nodoklis neapstrādātai un zemas pievienotās vērtības koksnei
+parbaudams: true
+temas:
+  galvena: nodokli-un-budzets
+  papildu:
+    - vide-un-klimats
+    - ekonomika-un-darbs
+iestades:
+  galvena: fm
+  papildu:
+    - zm
+avoti:
+  - veids: paplasinata
+    vieta: 2. Zaļa enerģija, aizsargāta vide, un taisnīga klimatrīcība › Zaļa ekonomika un augstvērtīga ražošana
+    citats: Ieviesīsim eksporta nodokli neapstrādātai un zemas pievienotās vērtības koksnei.
+nesakritiba: ""
+piezimes: 'Pārbaudāms: konkrēts nodoklis. "Zemas pievienotās vērtības koksne" avotā nav definēta. Ekstraktors nav pārbaudījis, vai ES kopējā tirdzniecības politika ļauj dalībvalstij noteikt eksporta nodokli (var ietekmēt izpildāmību, ne Statusa vērtēšanu). Iestāde: nodokļi — FM; meža nozare — ZM papildu (nav pārbaudīts).'
+jautajums: ""
