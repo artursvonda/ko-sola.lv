@@ -1,0 +1,17 @@
+id: as-investicijas-drosiba-es
+saraksts: as
+nosaukums: "Latvijas intereses ES: investīcijas drošībā"
+parbaudams: false
+temas:
+  galvena: aizsardziba
+  papildu: [arpolitika]
+iestades:
+  galvena: am
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "Latvijas vārdam Eiropā un pasaulē"
+    citats: "Eiropas Savienībā konsekventi aizstāvēsim Latvijas intereses – vienlīdzīgus lauksaimniecības maksājumus, konkurētspējīgu enerģētiku, mazāk birokrātijas, investīcijas drošībā un spēcīgu Eiropas Savienības austrumu robežu"
+nesakritiba: ""
+piezimes: "Teikums „Eiropas Savienībā konsekventi aizstāvēsim Latvijas intereses – …” dalīts 5 Solījumos: viens darbības vārds, bet pieci atšķirīgi iznākumi, kuriem statusi var atšķirties (§1 „Dali”, kā lauksaimniecības teikums nodaļā „Reģionu, infrastruktūras un lauksaimniecības attīstībai”); citēts viss teikums, jo daļām nav sava darbības vārda (§3). Pirmā daļa (vienlīdzīgi lauksaimniecības maksājumi) pievienota esošajam `as-vienlidzigi-es-platibu-maksajumi-2028`. Nepārbaudāms: „investīcijas drošībā” bez apjoma, instrumenta vai mēra. Avots nenosaka, vai „drošība” ir tikai aizsardzība vai arī iekšējā drošība. Iestāde — pieņēmums, nav pārbaudīts oficiālā avotā: AM — Latvijas pozīcija par ES aizsardzības finansējumu (§6a); ja „drošību” tver plašāk — IeM papildu."
+jautajums: ""
