@@ -1,0 +1,17 @@
+id: sv-valsts-pakalpojumu-autobuss
+saraksts: sv
+nosaukums: Vienots valsts pakalpojumu autobuss reģionos
+parbaudams: true
+temas:
+  galvena: valsts-parvalde
+  papildu: [regioni-un-pasvaldibas]
+iestades:
+  galvena: varam
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "VALSTS PĀRVALDE UN TAUTAS VARA"
+    citats: "\"Valsts Tev, tavā pagalmā\" - ieviest vienotu valsts pakalpojumu autobusu, kas nodrošina atbalstu iedzīvotājiem reģionos"
+nesakritiba: ""
+piezimes: "Pārbaudāms: konkrēts pasākums — mobils valsts pakalpojumu autobuss ieviests vai nē. Nav pārbaudīts, vai līdzīgs mobils pakalpojums jau pastāv. VARAM — valsts pakalpojumu pieejamība (vienotie klientu apkalpošanas centri); iestāde nav pārbaudīta oficiālā avotā."
+jautajums: ""

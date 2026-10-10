@@ -1,0 +1,17 @@
+id: sv-ierednu-skaita-samazinasana
+saraksts: sv
+nosaukums: Ierēdņu skaita samazināšana
+parbaudams: true
+temas:
+  galvena: valsts-parvalde
+  papildu: []
+iestades:
+  galvena: vk
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "VALSTS PĀRVALDE UN TAUTAS VARA"
+    citats: "samazināt ierēdņu skaitu"
+nesakritiba: ""
+piezimes: "Punkts dalīts (§1), sk. sv-valsts-parvaldes-funkcionalais-audits. Pārbaudāms: mēra nav, bet rādītājs konkrēts — ierēdņu skaits pilnvaru beigās mazāks nekā sākumā. Nav skaidrs, vai „ierēdņi” nozīmē tikai civildienesta ierēdņus vai visus valsts pārvaldē nodarbinātos — redaktoram izvēlēties rādītāju. VK — valsts pārvaldes cilvēkresursu politika (§6a); iestāde nav pārbaudīta oficiālā avotā."
+jautajums: ""

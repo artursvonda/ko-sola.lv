@@ -1,0 +1,17 @@
+id: sv-papildu-finansejums-medicinai-glabsanai
+saraksts: sv
+nosaukums: Papildu finansējums medicīnai un glābšanas dienestiem
+parbaudams: true
+temas:
+  galvena: veseliba
+  papildu: [iekseja-drosiba-un-tiesiskums]
+iestades:
+  galvena: fm
+  papildu: [vm, iem]
+avoti:
+  - veids: cvk
+    vieta: "VALSTS PĀRVALDE UN TAUTAS VARA"
+    citats: "pārdalīt aizsardzības budžetu iekšējās drošības garantēšanai un infrastruktūrai, nodrošinot papildu finansējumu medicīnai un glābšanas dienestiem"
+nesakritiba: ""
+piezimes: "Punkts dalīts (§1), sk. sv-nmpd-un-vugd-apvienosana; „nodrošinot …” nosauc konkrētu iznākumu (papildu finansējums), citēts viss teikums līdz šai daļai. Pārbaudāms (robežgadījums): mēra nav — finansējums medicīnai un glābšanas dienestiem budžetā palielināts vai nē. „Medicīnai” nav precizēts (neatliekamā medicīniskā palīdzība vai veselības aprūpe kopumā). FM — valsts budžets; VM un IeM papildu."
+jautajums: ""

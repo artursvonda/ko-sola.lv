@@ -1,0 +1,17 @@
+id: sv-tautas-velets-prezidents
+saraksts: sv
+nosaukums: Tautas vēlēts Valsts prezidents
+parbaudams: true
+temas:
+  galvena: demokratija-un-cilvektiesibas
+  papildu: []
+iestades:
+  galvena: saeima
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "VALSTS PĀRVALDE UN TAUTAS VARA"
+    citats: "tautas vēlēts prezidents"
+nesakritiba: ""
+piezimes: "Punkts dalīts (§1), sk. sv-bijuso-prezidentu-privilegiju-likvidesana. Avotā nav darbības vārda; nolasīts kā apņemšanās ieviest Valsts prezidenta tiešas vēlēšanas. Pārbaudāms: Satversmes grozījumi pieņemti vai nē (Valsts prezidentu ievēl Saeima — Satversmes 35. pants). Saeima — Satversmes grozījumi tikai Saeimas (vai tautas nobalsošanas) rokās (§6a). Vai grozījumiem vajadzīga tautas nobalsošana, nav pārbaudīts."
+jautajums: ""
