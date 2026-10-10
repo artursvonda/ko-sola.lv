@@ -38,7 +38,9 @@ test("teksts pirms pirmās nodaļas un pēc `neizrakstit` virsraksta ir ārpus n
     neizrakstit: ["MŪSU REDZĒJUMS"],
   });
   assert.equal(atrastCitatu(avots, "Ievada teikums.")[0].nodala, null);
+  assert.equal(atrastCitatu(avots, "Ievada teikums.")[0].ievads, true);
   assert.equal(atrastCitatu(avots, "Mēs varam.")[0].nodala, null);
+  assert.equal(atrastCitatu(avots, "Mēs varam.")[0].ievads, false);
   assert.equal(atrastCitatu(avots, "Celsim minimālo algu")[0].nodala, "2. Finanses");
 });
 

@@ -11,6 +11,7 @@ Ekstraktora (AI) prompts. Vārdnīca: `GLOSSARY.md`. Redaktora pārbaude: `parba
   3. punktus no **citām** paplašinātās programmas nodaļām — tikai tad, ja tie ir tas pats Solījums kā 1. vai 2. punktā (tad pievieno citātu un, ja vajag, Nesakritību). Punkts ar jaunu saturu paliek savai nodaļai.
 - Ja punkts der vairākām CVK nodaļām, tas pieder nodaļai, kurā tas atrodas paplašinātajā programmā.
 - Paplašinātās programmas nodaļas bez atbilstošas CVK nodaļas apstrādā **pēdējā izpildē** ("Ārpus CVK nodaļām").
+- **CVK ievads** (teksts pirms pirmās CVK nodaļas) nav izpilde: tā apņemšanos, ko nepārklāj neviens nodaļu Solījums, izraksta ar `vieta: Ievads` (pēc visām izpildēm; #96). Jau pārklātai apņemšanai ievada citātu nepievieno.
 - **Jau esošie Solījumi** (iepriekšējās izpildes): ja atrastais punkts ir esošs Solījums, papildini tā failu (citāts, Nesakritība), nevis veido jaunu.
 - Paplašinātās programmas iekļauto CVK teksta kopiju (piem., JV "10 000 zīmju programmas apsolījums") **ignorē**: tas nav atsevišķs avots.
 - Viena izpilde = viens PR, ko redaktors pārbauda.
@@ -24,7 +25,7 @@ Solījums = viena apņemšanās, kurai četru gadu beigās var piešķirt **vien
 - **Dali**, ja vienā teikumā/punktā ir darbības, kurām var būt **atšķirīgi statusi** (piem., "dibinot valsts attīstības fondu …, virzīsim akciju kotāciju biržā (līdz 25%), nodrošināsim sasaisti ar Eiropas depozitārijiem" → 3 Solījumi). Palīgteikums ar "-ot" ir atsevišķs Solījums, ja tas nosauc konkrētu darbību ar savu iznākumu ("paplašinot NATO daudznacionālo brigādi"); ja tas tikai apraksta veidu vai mērķi ("mazinot nodokļu slogu"), nedali.
 - Ja galvenajā teikumā bez "-ot" daļas paliek tikai vispārīgs darbības vārds ("Stiprināsim pašvaldības policiju, integrējot …"), Solījums ir tikai "-ot" daļa (citē visu teikumu).
 - **Nedali** uzskaitījumu zem viena darbības vārda bez atsevišķiem mērķiem (piem., "stiprināsim pretgaisa, dronu un pretdronu spējas" → 1 Solījums).
-- **Neizraksti**: ievadu, vīziju ("Mēs gribam …"), "Pamatojums", kā arī "Prioritātes", ja tās tikai atkārto "Apņemšanās un uzdevumi". Prioritāti izraksti tikai tad, ja tā nav pārklāta citur.
+- **Neizraksti**: ievadu, vīziju ("Mēs gribam …"), "Pamatojums", kā arī "Prioritātes", ja tās tikai atkārto "Apņemšanās un uzdevumi". Prioritāti vai ievada apņemšanos izraksti tikai tad, ja tā nav pārklāta citur (CVK ievads — §0).
 - Ja tas pats saturs avotā atkārtojas, tas ir viens Solījums ar vairākiem citātiem.
 
 ## 2. Pārbaudāms vai Nepārbaudāms

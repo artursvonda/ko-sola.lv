@@ -66,6 +66,7 @@ export function sadalitAvotu(teksts, cfg = {}) {
 
   const vienibas = [];
   let nodala = null;
+  let bijusiNodala = false;
   let sadalas = [];
   let pilns = "";
   const pievienot = (k, t) => {
@@ -77,6 +78,7 @@ export function sadalitAvotu(teksts, cfg = {}) {
       t,
       nodala,
       sadalas: [...sadalas],
+      ievads: !bijusiNodala,
       sakums: pilns.length,
       beigas: pilns.length + t.length,
       izlaists: atzimes.some((a) => izlaist.has(a)),
@@ -92,6 +94,7 @@ export function sadalitAvotu(teksts, cfg = {}) {
     if (r.k === "md") {
       if (r.limenis === 1) {
         nodala = r.t;
+        bijusiNodala = true;
         sadalas = [];
       } else {
         sadalas = [...sadalas.slice(0, r.limenis - 2), r.t];
@@ -105,6 +108,7 @@ export function sadalitAvotu(teksts, cfg = {}) {
       if (v || arpus) {
         const garums = virsraksts(r.t, v ?? arpus);
         nodala = v ?? null;
+        bijusiNodala = true;
         sadalas = [];
         pievienot("h", r.t.slice(0, garums));
         r.t = r.t.slice(garums).trim();
@@ -121,7 +125,7 @@ export function sadalitAvotu(teksts, cfg = {}) {
   return { vienibas, pilns };
 }
 
-/** Visas citāta vietas avotā (pēc atstarpju normalizācijas), izņemot `izlaist` sadaļas. */
+/** Visas citāta vietas avotā (pēc atstarpju normalizācijas), izņemot `izlaist` sadaļas; `ievads` — pirms pirmās nodaļas. */
 export function atrastCitatu(avots, citats) {
   const c = norm(citats);
   const vietas = [];
@@ -129,7 +133,7 @@ export function atrastCitatu(avots, citats) {
   for (let i = avots.pilns.indexOf(c); i >= 0; i = avots.pilns.indexOf(c, i + 1)) {
     const v = avots.vienibas.find((u) => u.sakums <= i && i < u.beigas);
     if (!v || v.izlaists) continue;
-    vietas.push({ nodala: v.nodala, sadalas: v.sadalas, sakums: i, beigas: i + c.length });
+    vietas.push({ nodala: v.nodala, sadalas: v.sadalas, ievads: v.ievads, sakums: i, beigas: i + c.length });
   }
   return vietas;
 }

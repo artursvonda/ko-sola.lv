@@ -10,6 +10,8 @@ const CVK = `---
 url: https://www.vestnesis.lv/op/2026/176A.9
 ---
 
+Mēs aizstāvēsim Stambulas konvenciju.
+
 1. Drošība
 
 Nodrošināsim aizsardzības finansējumu 5% no IKP un attīstīsim
@@ -151,6 +153,17 @@ test("vieta jāsakrīt ar nodaļu, kurā ir citāts", () => {
   const avoti = [{ ...SOLIJUMS.avoti[0], vieta: "1. Drošība" }];
   assert.deepEqual(zinojumi(repo(solijums({ avoti }))), [
     `${F}: avoti[0] (cvk): vieta "1. Drošība" nesakrīt: citāts ir nodaļā "3. Finanses"`,
+  ]);
+});
+
+test("CVK ievada citātam vieta „Ievads”; nodaļas citātam — ne", () => {
+  const ievada = { veids: "cvk", vieta: "Ievads", citats: "Mēs aizstāvēsim Stambulas konvenciju." };
+  assert.deepEqual(zinojumi(repo(solijums({ avoti: [ievada] }))), []);
+  assert.deepEqual(zinojumi(repo(solijums({ avoti: [{ ...ievada, vieta: "1. Drošība" }] }))), [
+    `${F}: avoti[0] (cvk): vieta "1. Drošība" nesakrīt: citāts ir nodaļā "Ievads"`,
+  ]);
+  assert.deepEqual(zinojumi(repo(solijums({ avoti: [{ ...SOLIJUMS.avoti[0], vieta: "Ievads" }] }))), [
+    `${F}: avoti[0] (cvk): vieta "Ievads" nesakrīt: citāts ir nodaļā "3. Finanses"`,
   ]);
 });
 
