@@ -1,0 +1,19 @@
+id: pro-uin-30-procenti-pasvaldibam
+saraksts: pro
+nosaukums: 30% UIN ieņēmumu pašvaldībai pēc uzņēmuma adreses vai darbības vietas
+parbaudams: true
+temas:
+  galvena: regioni-un-pasvaldibas
+  papildu:
+    - nodokli-un-budzets
+iestades:
+  galvena: fm
+  papildu:
+    - varam
+avoti:
+  - veids: paplasinata
+    vieta: 9. Reģioni, kas attīstās › Finanšu pašpietiekamība un taisnīga naudas sadale reģioniem
+    citats: Novirzīsim 30% no uzņēmumu ienākuma nodokļa pašvaldībai pēc uzņēmuma juridiskās adreses vai galvenās darbības vietas.
+nesakritiba: ""
+piezimes: "14. nodaļas UIN punkti (reinvestētās peļņas regulējums, „Pillar Two”) — citi iznākumi, nav apvienoti."
+jautajums: ""
