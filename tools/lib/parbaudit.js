@@ -19,6 +19,8 @@ const validet = {
 };
 
 const VIETAS_ATDALITAJS = " › ";
+// CVK teksts pirms pirmās nodaļas (#96): izraksta tikai nodaļās nepārklātas apņemšanās.
+const IEVADS = "Ievads";
 const ID_VARDI_MAX = 6;
 const BEZ_FRAKCIJAS = "bez_frakcijas";
 
@@ -98,8 +100,9 @@ export function parbaudit(sakne) {
       const vietas = teksti.flatMap((t) => atrastCitatu(t, a.citats).map((v) => ({ ...v, arNodalam: arNodalam(t) })));
       if (!vietas.length) return ka(`citāts nav atrasts avotā burtiski: „${a.citats}”`);
       const nodala = a.vieta.split(VIETAS_ATDALITAJS)[0];
-      if (vietas.every((v) => v.arNodalam) && !vietas.some((v) => v.nodala === nodala)) {
-        const kur = [...new Set(vietas.map((v) => v.nodala ?? "ārpus nodaļām"))].join(", ");
+      const atbilst = (v) => (nodala === IEVADS && a.veids === "cvk" ? v.ievads : v.nodala === nodala);
+      if (vietas.every((v) => v.arNodalam) && !vietas.some(atbilst)) {
+        const kur = [...new Set(vietas.map((v) => v.nodala ?? (v.ievads ? IEVADS : "ārpus nodaļām")))].join(", ");
         ka(`vieta "${a.vieta}" nesakrīt: citāts ir nodaļā "${kur}"`);
       }
     });
