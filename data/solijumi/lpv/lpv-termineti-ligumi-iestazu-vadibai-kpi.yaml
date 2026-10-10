@@ -1,0 +1,17 @@
+id: lpv-termineti-ligumi-iestazu-vadibai-kpi
+saraksts: lpv
+nosaukums: Terminēti darba līgumi iestāžu vadībai ar pagarināšanu tikai pēc KPI
+parbaudams: true
+temas:
+  galvena: valsts-parvalde
+  papildu: []
+iestades:
+  galvena: vk
+  papildu: []
+avoti:
+  - veids: paplasinata
+    vieta: 8. Valsts pārvaldes efektivitāte un birokrātijas demontāža › Strukturālās reformas
+    citats: izbeigt “mūža garantiju” valsts pārvaldē, ieviešot terminētus darba līgumus un stingrus rezultātu rādītājus (KPI) iestāžu vadībai. Līgums tiek pagarināts tikai tad, ja ir sasniegti konkrēti KPI
+nesakritiba: ""
+piezimes: "Viens Solījums: termiņa līgumi un KPI kā pagarināšanas nosacījums ir viena mehānisma daļas. Avots nav viennozīmīgs, vai terminēti līgumi paredzēti visiem valsts pārvaldes darbiniekiem („izbeigt „mūža garantiju” valsts pārvaldē”) vai tikai iestāžu vadībai; nosaukums seko „iestāžu vadībai” — redaktoram. Ekstraktors nav pārbaudījis, vai iestāžu vadītāju amata pilnvaras jau nav terminētas; vērtējot jānosaka, kas ir jauns (KPI kā pagarināšanas nosacījums). Nav apvienots ar lpv-ierednu-efektivitates-raditaji-kpi (visiem ierēdņiem, bez līguma termiņa). Iestāde nav pārbaudīta: VK."
+jautajums: ""

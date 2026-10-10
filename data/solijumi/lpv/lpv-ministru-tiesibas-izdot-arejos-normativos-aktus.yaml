@@ -1,0 +1,17 @@
+id: lpv-ministru-tiesibas-izdot-arejos-normativos-aktus
+saraksts: lpv
+nosaukums: Ministru tiesības patstāvīgi izdot nozares ārējos normatīvos aktus
+parbaudams: true
+temas:
+  galvena: valsts-parvalde
+  papildu: []
+iestades:
+  galvena: vk
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: EFEKTĪVA VALSTS PĀRVALDE
+    citats: Lai valsts pārvaldi padarītu efektīvāku un operatīvāku, paplašināsim ministru pilnvaras, nosakot tiesības patstāvīgi izdot nozares ārējos normatīvos aktus
+nesakritiba: ""
+piezimes: "Galvenā daļa („paplašināsim ministru pilnvaras”) vispārīga → Solījums ir „-ot” daļa, citēts viss teikums (§1). „Lai … padarītu efektīvāku un operatīvāku” — mērķis. Paplašinātajā programmā atbilstoša punkta nav. Pārbaudāms: ministriem piešķirtas tiesības patstāvīgi izdot nozares ārējos normatīvos aktus vai nē. Ekstraktors nav pārbaudījis, kādi likuma (vai Satversmes) grozījumi tam vajadzīgi. Iestāde nav pārbaudīta: valdības darba organizācija un normatīvo aktu izdošanas kārtība → VK; alternatīva — Saeima, ja vajadzīgi Satversmes grozījumi."
+jautajums: ""

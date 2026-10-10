@@ -1,0 +1,20 @@
+id: lpv-mi-asistenti-valsts-parvalde-pasvaldibas
+saraksts: lpv
+nosaukums: Mākslīgā intelekta asistentu ieviešana valsts pārvaldē un pašvaldībās
+parbaudams: true
+temas:
+  galvena: valsts-parvalde
+  papildu: [regioni-un-pasvaldibas]
+iestades:
+  galvena: varam
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: EFEKTĪVA VALSTS PĀRVALDE
+    citats: Veicināsim mākslīgā intelekta izmantošanu tehniskā sloga mazināšanai valsts pārvaldē un pašvaldībās
+  - veids: paplasinata
+    vieta: 8. Valsts pārvaldes efektivitāte un birokrātijas demontāža › Pārvaldes efektivitāte un digitalizācija
+    citats: "Mākslīgā intelekta (MI) asistentu ieviešana valsts pārvaldē un pašvaldībās: lai automatizētu atbilžu sagatavošanu, tiesību aktu analīzi un rutīnas uzdevumus"
+nesakritiba: CVK sola veicināt mākslīgā intelekta izmantošanu tehniskā sloga mazināšanai; paplašinātā programma — ieviest MI asistentus atbilžu sagatavošanas, tiesību aktu analīzes un rutīnas uzdevumu automatizēšanai.
+piezimes: "Viens Solījums: abi avoti sola to pašu iznākumu — MI lietošanu valsts pārvaldē un pašvaldībās (§4). Robežgadījums: CVK „veicināsim” bez mēra; paplašinātā programma nosauc konkrētu iznākumu (MI asistenti ieviesti) → vērtē pēc tā (§4), Pārbaudāms; alternatīva — Nepārbaudāms pēc CVK citāta. Paplašinātās punkta pēdējais teikums („Tas ļaus ierēdņiem strādāt ātrāk …”) — pamatojums, nav citēts. Nav apvienots ar lpv-dokumentu-izskatisana-10-darba-dienas (MI tur ir tikai līdzeklis termiņa saīsināšanai). Iestāde nav pārbaudīta: valsts pārvaldes digitālā transformācija → VARAM."
+jautajums: ""
