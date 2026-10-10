@@ -1,0 +1,17 @@
+id: as-augstako-amatpersonu-rezultatu-raditaji
+saraksts: as
+nosaukums: Rezultātu rādītāji augstākajām amatpersonām
+parbaudams: true
+temas:
+  galvena: valsts-parvalde
+  papildu: []
+iestades:
+  galvena: vk
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "Jaunai valsts pārvaldei"
+    citats: "Ieviesīsim skaidrus augstāko amatpersonu rezultātu rādītājus un rotāciju"
+nesakritiba: ""
+piezimes: "Teikums „Ieviesīsim …” dalīts 2 Solījumos: viens darbības vārds, bet divi atšķirīgi iznākumi (rezultātu rādītāji, rotācija), kuriem statusi var atšķirties (§1 „Dali”, precedents `as-modularo-kodolreaktoru-izpete`); citēts viss teikums, jo daļām nav sava darbības vārda (§3). Pārbaudāms robežgadījumā: konkrēts objekts, bet „augstākās amatpersonas” avotā nav definētas (valsts sekretāri? iestāžu vadītāji? kapitālsabiedrību valdes — tās jau `as-kapitalsabiedribu-vadibas-atalgojums-rezultati`). Ieteicamais kritērijs „izpildīts”: normatīvajā aktā vai MK lēmumā noteikti konkrēti, publiski rezultātu rādītāji valsts pārvaldes augstākajām amatpersonām; „skaidrus” — vērtējums, ne mērs. Ekstraktors nezina, kādi darbības novērtēšanas rādītāji jau ir spēkā — pirms vērtēšanas jāpārbauda sākumstāvoklis. Iestāde — pieņēmums, nav pārbaudīts oficiālā avotā: VK — valsts pārvaldes politika un civildienests (valdības kopējā kompetence, §6a)."
+jautajums: ""

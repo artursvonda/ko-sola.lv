@@ -1,0 +1,17 @@
+id: as-mi-riki-pakalpojumu-automatizacijai
+saraksts: as
+nosaukums: MI rīku ieviešana valsts pakalpojumu automatizācijai
+parbaudams: false
+temas:
+  galvena: valsts-parvalde
+  papildu: []
+iestades:
+  galvena: varam
+  papildu: []
+avoti:
+  - veids: cvk
+    vieta: "Jaunai valsts pārvaldei"
+    citats: "plaši ieviesīsim MI rīkus pakalpojumu automatizācijai"
+nesakritiba: ""
+piezimes: "Dalīts no teikuma „Primāri ieviesīsim tirgū pieejamus risinājumus, … un plaši ieviesīsim MI rīkus …” — savs darbības vārds un iznākums (§1). Nepārbaudāms: „plaši” bez mēra, nav nosaukti pakalpojumi; ekstraktors nezina, vai MI rīki valsts pakalpojumos jau tiek izmantoti (ja jā, iznākumu nevar atšķirt no esošā stāvokļa). Nav tas pats Solījums kā `as-maksliga-intelekta-izmantosana-izglitiba` (cita joma). Iestāde — pieņēmums, nav pārbaudīts oficiālā avotā: VARAM — valsts pārvaldes digitālā transformācija."
+jautajums: ""
