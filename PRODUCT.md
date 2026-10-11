@@ -42,10 +42,10 @@ Neighbours: Re:Check "Solīja, bet vai izdarīja?" (status scale is compatible);
 - Terminology: `GLOSSARY.md` is the glossary (Saraksts, Solījums, Nepārbaudāms solījums, Statuss, Statusa maiņa, Tēma, Galvenā/Papildu tēma, CVK programma, Paplašinātā programma, Publisks izteikums). Readers may see "partija" for Saraksts.
 - Statuss scale: Nav vērtēts / Procesā / Izpildīts / Daļēji izpildīts / Nav izpildīts. Nepārbaudāmi solījumi are listed but not rated and excluded from progress totals.
 - 19 flat Tēmas; each Solījums has exactly one Galvenā tēma and 0–2 Papildu tēmas.
-- Solījums page shows all quotes with sources and any Nesakritība (#13, #8).
+- Solījums page shows all quotes with sources and any Nesakritība (#13, #8); the detail panel shows the Nesakritība too. No per-Saraksts Nesakritība counts or filter: they would reflect source asymmetry, not consistency (#97).
 - Latvian only; no EN version.
 - Out of scope: government declaration tracking, systematic Publisks izteikums collection, public status suggestions, subscriptions/notifications, user profiles (planned later; architecture allows).
-- Undecided: methodology page and neutrality statement; how to present source asymmetry honestly (only JV and PRO have full extended programs, so they will have more Solījumi); tags/collections across Tēmas; reader-facing Nesakritība counts/filter; launch (deploy, OG).
+- Undecided: methodology page and neutrality statement; how to present source asymmetry honestly (only JV and PRO have full extended programs, so they will have more Solījumi); tags/collections across Tēmas; launch (deploy, OG).
 
 ## Brand Commitments
 

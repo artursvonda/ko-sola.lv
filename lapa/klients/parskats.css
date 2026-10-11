@@ -92,6 +92,8 @@ ko-parskats:defined .parskata-tabula tbody tr[data-id]:hover .t-sol a { color: v
 /* Citāts paliek virsraksts (Quote Outranks The Title), tikai šaurākai kolonnai mērogots. */
 .panelis .galvenais blockquote p { font-size: 1.25rem; line-height: 1.3; }
 .panelis .galvenais.c-s blockquote p { font-size: 1.125rem; line-height: 1.35; }
+.panelis .nesakritiba { margin-top: var(--size-4); font-size: 14px; }
+.panelis .nesakritiba-saite { margin-top: var(--size-2); }
 .panelis .josla { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: var(--size-5); }
 .panelis .josla dd { font-size: 15px; }
 .panelis h3.lbl { margin: var(--size-6) 0 var(--size-3); }

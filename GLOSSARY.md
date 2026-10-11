@@ -69,7 +69,7 @@ _Avoid_: pierādījums, ziņa
 Laiks, kurā Notikums var mainīt Statusu: no vēlēšanu dienas (03.10.2026) līdz 15. Saeimas pilnvaru beigām (16. Saeimas pirmā sēde). Ietver arī 14. Saeimas un iepriekšējās valdības darbu pēc vēlēšanām, jo Statuss vērtē iznākumu, nevis to, kurš to sasniedza.
 
 **Nesakritība**:
-Būtiska atšķirība starp viena Solījuma citātiem — dažādos avotos vai vienā avotā (piem., CVK programmā "celsim līdz 50%", paplašinātajā "virzoties uz 50%", vai cits rādītājs). Tiek fiksēta un rādīta; Statusu vērtē pēc CVK programmas.
+Būtiska atšķirība starp viena Solījuma citātiem — dažādos avotos vai vienā avotā (piem., CVK programmā "celsim līdz 50%", paplašinātajā "virzoties uz 50%", vai cits rādītājs). Tiek fiksēta un rādīta pie Solījuma (ne kā Saraksta rādītājs: iespējama tikai Solījumiem ar vairākiem citātiem). Statusu vērtē pēc CVK programmas; ja tajā nav mēra — pēc mēra citā citātā; ja CVK citāta nav — pēc Paplašinātās programmas.
 _Avoid_: pretruna, konflikts
 
 **Tēma**:
