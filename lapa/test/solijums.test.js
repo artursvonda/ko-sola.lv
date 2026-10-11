@@ -106,3 +106,16 @@ test("Notikums pirms vēlēšanu dienas — atzīmēts „Pirms vēlēšanām”
   assert.equal([...h.matchAll(/ · Notikums · Pirms vēlēšanām · /g)].length, 1);
   assert.match(h, /datetime="2026-10-02">[^<]*<\/time> · Notikums · Pirms vēlēšanām · /);
 });
+
+test("Nesakritība: vērtēšanas avots pēc citātiem — CVK, paplašinātā; Nepārbaudāmam nav", () => {
+  const s = atrast("jv-aizsardzibai-5-nato-klatbutne");
+  const nesakritiba = (h) => h.match(/<aside class="nesakritiba"[\s\S]*?<\/aside>/)?.[0];
+  assert.match(nesakritiba(lapa(s)), /Statusu vērtē pēc CVK programmas; ja tajā nav mēra — pēc mēra citā citātā\./);
+
+  const paplasinata = { ...s, avoti: s.avoti.map((a) => ({ ...a, veids: "paplasinata" })) };
+  assert.match(nesakritiba(lapa(paplasinata)), /Statusu vērtē pēc paplašinātās programmas\./);
+
+  const neparbaudams = nesakritiba(lapa({ ...s, parbaudams: false, statuss: "neparbaudams" }));
+  assert.match(neparbaudams, /Nesakritība starp citātiem/);
+  assert.doesNotMatch(neparbaudams, /Statusu vērtē/);
+});

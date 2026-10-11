@@ -6,6 +6,7 @@ export const PANELA_DALAS = {
   cels: "nav.cels",
   virsraksts: "h1",
   citats: "figure.citats.galvenais",
+  nesakritiba: "aside.nesakritiba", // tikai Solījumiem ar Nesakritību
   josla: "dl.josla",
   laikaAss: "ol.laika-ass",
 };
@@ -69,6 +70,14 @@ export function panelaSaturs(doc, href) {
 
   frag.append(galva, h2);
   if (d.citats) frag.append(d.citats.cloneNode(true));
+  if (d.nesakritiba) {
+    // Panelī redzams tikai galvenais citāts — pārējie pilnajā lapā.
+    const ns = d.nesakritiba.cloneNode(true);
+    const p = el("p", "nesakritiba-saite");
+    p.append(saite(`${href}#citati`, "Visi citāti pilnajā lapā"));
+    ns.append(p);
+    frag.append(ns);
+  }
   if (d.josla) frag.append(d.josla.cloneNode(true));
   if (d.laikaAss) {
     frag.append(el("h3", "lbl", doc.getElementById("laika-ass")?.textContent ?? "Notikumi"), isaVesture(d.laikaAss, href));

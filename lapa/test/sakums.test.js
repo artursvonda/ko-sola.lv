@@ -139,7 +139,7 @@ test("detaļu panelis: tukšs un paslēpts statiskajā HTML (bez JS — rindas s
   assert.match(lapa, /<aside class="panelis" aria-label="Izvēlētais solījums" data-k="panelis" tabindex="-1" hidden><\/aside>/);
 });
 
-test("Solījuma lapa satur daļas, ko panelis ņem no tās: virsraksts, citāts ar avotu, josla, laika ass", () => {
+test("Solījuma lapa satur daļas, ko panelis ņem no tās: virsraksts, citāts ar avotu, Nesakritība, josla, laika ass", () => {
   const s = m.solijumi.find((x) => x.id === "jv-aizsardzibai-5-nato-klatbutne");
   const h = solijums(s, m);
   for (const selektors of Object.values(PANELA_DALAS)) {

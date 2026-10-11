@@ -34,7 +34,7 @@ Filtru stāvoklis — query parametros. Saraksta, Tēmas un Notikuma lapu nav.
 - **Bez JS** — redzamas visas rindas un sākotnējie skaiti, filtrus nerāda (`ko-parskats:not(:defined)`), rindas virsraksts ir saite uz Solījuma lapu. Filtra query parametrus (piem., saite no Solījuma lapas) bez JS nevar piemērot — `<noscript>`: „Filtri darbojas tikai ar JavaScript — redzami visi solījumi.”
 - **Navigācijas saites** — filtru izvēles un matricas (`/salidzinajums/`) galvenes/šūnas ir navigācija, ne teksta saites: izņēmums no DESIGN.md Links (bez pasvītrojuma; hover un `:focus-visible` — pasvītro, fokusam arī 2px accent outline). Izvēlētais filtrs — selection wash + 2px accent `border-left`.
 - **`<ko-parskats>`** (`lapa/klients/ko-parskats.js`) — nolasa query, slēpj rindas (`hidden`), pārrēķina skaitus, filtra maiņa — `pushState`. No 64rem filtri sānos, šaurāk — atverama rinda „Filtri”.
-- **Detaļu panelis** — no 75rem rindas klikšķis atver paneli blakus tabulai ar `pushState` uz `/solijumi/<id>/`; saturu ņem no pašas Solījuma lapas HTML (`lapa/klients/panelis.js`: citāts ar avotu, josla ar Atbildīgo un Amatpersonu, 3 jaunākie laika ass ieraksti, saite uz pilno lapu). Šaurāk — parasta saite. Esc / × / „Atpakaļ” aizver. Saite uz pārskatu (`/?…`, piem., Atbildīgais vai Tēma joslā) panelī aizver paneli un piemēro filtrus uz vietas (`pushState`, bez pārlādes; „Atpakaļ” atgriež paneli); pārējās saites — kā parasti.
+- **Detaļu panelis** — no 75rem rindas klikšķis atver paneli blakus tabulai ar `pushState` uz `/solijumi/<id>/`; saturu ņem no pašas Solījuma lapas HTML (`lapa/klients/panelis.js`: citāts ar avotu, Nesakritība (ja ir) ar saiti uz visiem citātiem, josla ar Atbildīgo un Amatpersonu, 3 jaunākie laika ass ieraksti, saite uz pilno lapu). Šaurāk — parasta saite. Esc / × / „Atpakaļ” aizver. Saite uz pārskatu (`/?…`, piem., Atbildīgais vai Tēma joslā) panelī aizver paneli un piemēro filtrus uz vietas (`pushState`, bez pārlādes; „Atpakaļ” atgriež paneli); pārējās saites — kā parasti.
 
 ## Komandas
 
@@ -44,6 +44,12 @@ Filtru stāvoklis — query parametros. Saraksta, Tēmas un Notikuma lapu nav.
 ## Izvietošana
 
 Workers Builds (Cloudflare panelī, worker `ko-sola`, #38): build `npm run build`, deploy `npx wrangler deploy` (`main` → https://ko-sola.lv), citi zari — `npx wrangler versions upload` (preview URL `*-ko-sola.arturs-c88.workers.dev`). `workers_dev` izslēgts, `preview_urls` ieslēgts tieši `wrangler.jsonc`. `lapa/public/_headers` pagaidām aizliedz indeksēšanu (`X-Robots-Tag: noindex`) — noņemt palaišanā.
+
+## Nesakritība (#97)
+
+- Rāda tikai pie Solījuma: Solījuma lapā (josla „Nesakritība starp citātiem” pirms pārējiem citātiem) un detaļu panelī (tā pati josla + „Visi citāti pilnajā lapā” → `#citati`).
+- Nav skaita uz Sarakstu, filtra vai atzīmes tabulas rindā: Nesakritība iespējama tikai Solījumiem ar vairākiem citātiem (gandrīz tikai JV, PRO, LPV), tāpēc skaits rādītu avotu asimetriju, ne Saraksta konsekvenci; tas jāpaskaidro metodoloģijā.
+- Vērtēšanas avota rinda atvasināta (`vertesanasAvots`, `lapa/lapas/solijums.js`): ir CVK citāts → „Statusu vērtē pēc CVK programmas; ja tajā nav mēra — pēc mēra citā citātā.”; nav → „… pēc paplašinātās programmas.”; Nepārbaudāmam — nav.
 
 ## Solījuma lapa: saites un Frakciju balsojums (#36)
 

@@ -246,7 +246,7 @@ Accent, 1px underline offset .18em; hover turns ink with a 2px underline. Focus:
 Full-width, collapsed; uppercase 11px tracked sans headers on the surface tint; 10px 14px cells divided by hairlines. Comparison matrix: mono, fully hairline-gridded, centred.
 
 ### Overview (Pārskats)
-The one page wider than the table column: `main` widens to 90rem.
+The one page wider than the table column: `main` takes the full viewport width.
 - **Breakpoints:** from 64rem the filters are a 15rem sticky sidebar (hairline right rule), always open; from 75rem a row opens a 24rem sticky detail panel beside the table (ink top rule, no box).
 - **Narrow filters:** one collapsed disclosure row, „Filtri · <selection>”: Label + current selection, ink top rule, hairline bottom, the CSS chevron of the vote details.
 - **Selected filter:** selection wash (`--sel`), weight 600, 2px accent left border. Options with 0 are not listed, except the selected one.

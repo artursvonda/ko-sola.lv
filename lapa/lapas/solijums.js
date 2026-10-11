@@ -56,6 +56,14 @@ const josla = (s) => html`<dl class="josla">
   </div>
 </dl>`;
 
+/** Pēc kā vērtē Statusu (docs/ekstrakcija/metode.md): CVK programma, ja tajā ir citāts, citādi paplašinātā. Nepārbaudāmam — nevērtē. */
+function vertesanasAvots(s) {
+  if (!s.parbaudams) return null;
+  return s.avoti.some((a) => a.veids === "cvk")
+    ? "Statusu vērtē pēc CVK programmas; ja tajā nav mēra — pēc mēra citā citātā."
+    : "Statusu vērtē pēc paplašinātās programmas.";
+}
+
 const BEZ_FRAKCIJAS = "bez_frakcijas";
 
 /**
@@ -166,7 +174,7 @@ export function solijums(s, m) {
     ${s.nesakritiba && html`<aside class="nesakritiba" aria-labelledby="nesakritiba">
       <p class="lbl" id="nesakritiba">Nesakritība starp citātiem</p>
       <p>${s.nesakritiba}</p>
-      <p class="vajs">Statusu vērtē pēc CVK programmas.</p>
+      ${vertesanasAvots(s) && html`<p class="vajs">${vertesanasAvots(s)}</p>`}
     </aside>`}
     ${citi.map((a) => citats(a, "papildu"))}
   </section>`}
