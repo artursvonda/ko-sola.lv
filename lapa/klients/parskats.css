@@ -1,7 +1,7 @@
 /* Pārskats (/): filtri, progress, tabula, detaļu panelis (B1). Rindots, ne kartītes. */
 
-/* Ar paneli tabulai vajag vairāk vietas nekā 1200px kolonnai. */
-main:has(> ko-parskats) { max-width: 90rem; }
+/* Ar paneli tabulai vajag vairāk vietas nekā 1200px kolonnai — pārskats aizņem visu platumu. */
+main:has(> ko-parskats) { max-width: none; }
 ko-parskats { display: block; }
 /* Bez JS filtri nestrādā (statiskais HTML neko nefiltrē) — tos nerāda; visas rindas redzamas. */
 ko-parskats:not(:defined) .filtri { display: none; }
