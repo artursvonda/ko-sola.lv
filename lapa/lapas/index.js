@@ -4,6 +4,7 @@ import { izkartojums } from "./izkartojums.js";
 import { sakums } from "./sakums.js";
 import { solijums } from "./solijums.js";
 import { salidzinajums } from "./salidzinajums.js";
+import { metodologija } from "./metodologija.js";
 
 const lapa = (cels, html, og) => ({ cels, fails: cels === "/404" ? "404.html" : `${cels.slice(1)}index.html`, html, og });
 
@@ -11,10 +12,11 @@ export function lapas(m) {
   return [
     lapa("/", sakums(m)),
     lapa("/salidzinajums/", salidzinajums(m)),
+    lapa("/metodologija/", metodologija(m)),
     ...m.solijumi.map((s) => lapa(`/solijumi/${s.id}/`, solijums(s, m), s)),
     lapa(
       "/404",
-      izkartojums({ virsraksts: "Lapa nav atrasta", apraksts: "", saturs: html`<h1>Lapa nav atrasta</h1><p><a href="/">Uz sākumu</a></p>` }),
+      izkartojums({ virsraksts: "Lapa nav atrasta", apraksts: "", atjaunoti: m.atjaunoti, saturs: html`<h1>Lapa nav atrasta</h1><p><a href="/">Uz sākumu</a></p>` }),
     ),
   ];
 }

@@ -51,7 +51,8 @@ function publikacija(sakne, avots) {
   return frontmatter(readFileSync(join(sakne, avots.fails), "utf8"))?.publikacija ?? null;
 }
 
-export function ieladetModeli({ sakne, datuSakne = sakne, sodien = new Date().toISOString().slice(0, 10) }) {
+/** `atjaunoti` — pēdējās datu izmaiņas datums kājenē (lapa/atjaunoti.js); null — nerāda. */
+export function ieladetModeli({ sakne, datuSakne = sakne, sodien = new Date().toISOString().slice(0, 10), atjaunoti = null }) {
   const saraksti = lasitYaml(sakne, "data/saraksti.yaml").sort((a, b) => a.nr - b.nr);
   const temas = lasitYaml(sakne, "data/temas.yaml");
   const iestades = [...lasitYaml(sakne, "data/iestades.yaml"), NESKAIDRA];
@@ -95,5 +96,5 @@ export function ieladetModeli({ sakne, datuSakne = sakne, sodien = new Date().to
     for (const n of s.notikumi)
       n.citi = n.solijumi.filter((x) => x.id !== s.id).map((x) => solijumsPec.get(x.id)).filter(Boolean);
 
-  return { saraksti, temas, iestades, solijumi, notikumi, sodien };
+  return { saraksti, temas, iestades, solijumi, notikumi, sodien, atjaunoti };
 }

@@ -10,3 +10,21 @@ export function parskatsSaite({ saraksts, atbildigais, tema } = {}) {
 
 /** Salīdzinājuma tēma: ?tema= (<ko-salidzinajums> rāda tikai to) + #enkurs (bez JS — visas tēmas statiskajā HTML, docs/lapa.md). */
 export const temaSaite = (slug) => `/salidzinajums/?tema=${slug}#${slug}`;
+
+/** Publiskais repo: kods, dati, vēsture un kļūdu ziņojumi (GitHub issues). */
+export const REPO = "https://github.com/artursvonda/ko-sola.lv";
+
+/** Fails publiskajā repo (`main`), piem., `docs/statusi/vertesana.md`. */
+export const repoFails = (cels) => `${REPO}/blob/main/${cels}`;
+
+export const METODOLOGIJA = "/metodologija/";
+
+/** Kļūdu ziņošanas veidne `.github/ISSUE_TEMPLATE/kluda-solijuma.yml`; Solījumam — ar ID virsrakstā un aizpildītu saiti. */
+export function kludasSaite(solijums, saite = "https://ko-sola.lv") {
+  const p = new URLSearchParams({ template: "kluda-solijuma.yml" });
+  if (solijums) {
+    p.set("title", `Kļūda: ${solijums.id}`);
+    p.set("solijums", `${saite}/solijumi/${solijums.id}/`);
+  }
+  return `${REPO}/issues/new?${p}`;
+}

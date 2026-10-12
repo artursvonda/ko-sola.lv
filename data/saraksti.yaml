@@ -9,7 +9,8 @@
 #   atbilst_cvk — paplašinātās nodaļa → CVK nodaļa, kuras izpildē to apstrādā;
 #                 nodaļas, kuru te nav, apstrādā pēdējā izpildē "Ārpus CVK nodaļām";
 #   izlaist — sadaļas, kas nav šī avota teksts (piem., iekļauta CVK programmas kopija);
-#   nav_jaizraksta — sadaļas, kuras metode neizraksta (pārskatā pelēkas).
+#   nav_jaizraksta — sadaļas, kuras metode neizraksta (pārskatā pelēkas);
+#   tematiska — tikai tematiskai programmai: tēma lasītājam (lapā „tematiska paplašinātā programma (<tēma>)”).
 #
 # frakcija: Saraksta Frakcijas kods 15. Saeimā tieši kā Saeimas balsojumu datos (data.gov.lv `saeimas-sedes`,
 #   lauks FRACTION; sk. `npm run balsojums`). Pievieno, kad 15. Saeimas frakcijas izveidotas — kodus ņem no
@@ -92,6 +93,7 @@
     - veids: paplasinata
       url: https://latvijapirmajavieta.lv/latvija-pirmaja-vieta-ekonomiska-programma-2026/
       # Tematiska (ekonomika), publicēta 28.09.2026; skaitās pēc #16.
+      tematiska: ekonomika
       fails: sources/paplasinata/lpv.md
       # 8 nodaļas, CVK — 7; visas paplašinātās nodaļas atbilst kādai CVK nodaļai → "Ārpus CVK nodaļām" nav vajadzīga.
       # STIPRA UN NEATKARĪGA LATVIJA, DROŠĪBA, VESELĪBA UN LABKLĀJĪBA, IZGLĪTĪBA — paplašinātās nodaļas nav.

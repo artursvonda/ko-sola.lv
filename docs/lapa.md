@@ -19,6 +19,7 @@ Statisks HTML no repo datiem, Vite + Web Components + Open Props, Cloudflare Wor
 | `/` | Pārskats: progress, filtri, tabula, detaļu panelis |
 | `/solijumi/<id>/` | Solījuma lapa (ID pēc publicēšanas nemainās) |
 | `/salidzinajums/` | Matrica saraksts × galvenā tēma; tēma — `?tema=<slug>#<slug>` (visas tēmas statiskajā HTML) |
+| `/metodologija/` | Metodoloģija un izdevējs (8 sadaļas); saite no kājenes, galvenē cilnes nav |
 
 Filtru stāvoklis — query parametros. Saraksta, Tēmas un Notikuma lapu nav.
 
@@ -35,6 +36,13 @@ Filtru stāvoklis — query parametros. Saraksta, Tēmas un Notikuma lapu nav.
 - **Navigācijas saites** — filtru izvēles un matricas (`/salidzinajums/`) galvenes/šūnas ir navigācija, ne teksta saites: izņēmums no DESIGN.md Links (bez pasvītrojuma; hover un `:focus-visible` — pasvītro, fokusam arī 2px accent outline). Izvēlētais filtrs — selection wash + 2px accent `border-left`.
 - **`<ko-parskats>`** (`lapa/klients/ko-parskats.js`) — nolasa query, slēpj rindas (`hidden`), pārrēķina skaitus, filtra maiņa — `pushState`. No 64rem filtri sānos, šaurāk — atverama rinda „Filtri”.
 - **Detaļu panelis** — no 75rem rindas klikšķis atver paneli blakus tabulai ar `pushState` uz `/solijumi/<id>/`; saturu ņem no pašas Solījuma lapas HTML (`lapa/klients/panelis.js`: citāts ar avotu, Nesakritība (ja ir) ar saiti uz visiem citātiem, josla ar Atbildīgo un Amatpersonu, 3 jaunākie laika ass ieraksti, saite uz pilno lapu). Šaurāk — parasta saite. Esc / × / „Atpakaļ” aizver. Saite uz pārskatu (`/?…`, piem., Atbildīgais vai Tēma joslā) panelī aizver paneli un piemēro filtrus uz vietas (`pushState`, bez pārlādes; „Atpakaļ” atgriež paneli); pārējās saites — kā parasti.
+
+## Metodoloģija un kājene (#104)
+
+- **`/metodologija/`** (`lapa/lapas/metodologija.js`) — kopsavilkums lasītājam ar saitēm uz `docs/ekstrakcija/metode.md` un `docs/statusi/vertesana.md` publiskajā repo; sadaļas numurētas, enkuri `#par`, `#atlase`, `#avoti`, `#vertesana`, `#ai`, `#izdevejs`, `#neitralitate`, `#kludas`. Skaitļi tekstā nav ierakstīti: avotu tabula (Saraksts × avoti × Solījumi × Nepārbaudāmi + Kopā) — no `data/` build laikā. Teksts par izdevēju un Par!/Progresīvajiem — tikai pārbaudīti fakti (avoti koda komentārā).
+- **Avoti lasītājam** (`lapa/lapas/avoti.js`) no `data/saraksti.yaml`: „CVK programma” / „+ paplašinātā programma” / „+ tematiska paplašinātā programma (<`tematiska`>)”. Pārskatā katram Sarakstam ir paslēpta rinda „Avoti: … · Metodoloģija” (`data-k="avoti"`), `<ko-parskats>` rāda izvēlētā Saraksta rindu; Salīdzinājumā zem virsraksta — viena rinda par avotu asimetriju.
+- **Kājene** visās lapās (`izkartojums`): Metodoloģija un izdevējs · Ziņot par kļūdu (`/metodologija/#kludas`) · Atvērtais kods un dati (GitHub) · „Dati atjaunoti <datums>” — pēdējā commit datums, kas mainīja `data/` (`lapa/atjaunoti.js`, vite plugin). Seklā klonā mēģina `git fetch --unshallow`; ja neizdodas — datumu nerāda (robežas commit datums būtu par jaunu).
+- **Kļūdas** — tikai GitHub issues: veidne `.github/ISSUE_TEMPLATE/kluda-solijuma.yml` (Solījuma saite, kas nepareizi, avots; birka `kluda`). Solījuma lapā „Ziņot par kļūdu” — `kludasSaite()` (`lapa/lapas/saites.js`): `?template=…&title=Kļūda: <id>&solijums=<lapas URL>`.
 
 ## Komandas
 

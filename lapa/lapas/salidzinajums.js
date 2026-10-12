@@ -1,7 +1,8 @@
 import { html } from "../html.js";
 import { izkartojums, statussPill } from "./izkartojums.js";
 import { matrica, temasSaraksti } from "./salidzinajums-dati.js";
-import { temaSaite } from "./saites.js";
+import { temaSaite, METODOLOGIJA } from "./saites.js";
+import { avotuAsimetrija } from "./avoti.js";
 
 function suna(saraksts, { tema, n }) {
   if (n === 0) return html`<td data-tema="${tema.slug}"><span aria-hidden="true">·</span><span class="nav-redzams">0</span></td>`;
@@ -32,6 +33,7 @@ export function salidzinajums(m) {
   const saturs = html`
 <ko-salidzinajums class="salidzinajums">
 <h1>Solījumu skaits: saraksts × galvenā tēma</h1>
+<p class="avotu-rinda">Solījumu skaits atkarīgs no programmu apjoma: ${avotuAsimetrija(m.saraksti)}. <a href="${METODOLOGIJA}#avoti">Metodoloģija</a></p>
 <p class="vajs">Tēma vai šūna atver šīs tēmas solījumus visiem sarakstiem blakus.</p>
 <div class="ritinams" id="matrica">
 <table class="matrica mono">
@@ -50,6 +52,7 @@ ${m.temas.map((t) => sadala(m, t))}</div>
 </ko-salidzinajums>`;
   return izkartojums({
     cels: "/salidzinajums/",
+    atjaunoti: m.atjaunoti,
     virsraksts: "Salīdzinājums pēc tēmas",
     apraksts: "Ko par katru tēmu solīja 15. Saeimā ievēlētie saraksti.",
     saturs,
