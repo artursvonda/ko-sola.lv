@@ -10,11 +10,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          # Vēsture: stabilitātes pārbaudei (iepriekšējais `main`) un „Dati atjaunoti” (lapa/atjaunoti.js).
+          fetch-depth: 0
       - uses: actions/setup-node@v7
         with:
           node-version: 24
       - run: npm ci
       - run: npm test
       - run: npm run parbaude
+      # Publicētie ID nepazūd (#105): PR — pret `main` (merge commit pirmais vecāks), push — pret iepriekšējo `main`.
+      - run: npm run stabilitate -- ${{ github.event_name == 'push' && github.event.before || 'HEAD^1' }}
       - run: KO_DATI=fixtures npm run build
       - run: npm run build

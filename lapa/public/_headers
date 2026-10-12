@@ -1,2 +1,7 @@
+# Preview URL (Workers Builds, #38) neindeksē. Cloudflare to dara arī pats workers.dev Preview URL; te — tieši.
+https://:version.:subdomain.workers.dev/*
+  X-Robots-Tag: noindex
+
+# Līdz palaišanai (#105) neindeksē arī ko-sola.lv — noņemt pēc galīgo CVK rezultātu pārbaudes.
 /*
   X-Robots-Tag: noindex

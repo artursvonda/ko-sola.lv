@@ -2,7 +2,7 @@
 // Solījumus un Notikumus var ņemt no citas saknes (KO_DATI=fixtures izstrādei), pārējo — vienmēr no data/.
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
-import { lasitYaml, frontmatter, solijumuFaili, notikumuFaili, NESKAIDRA_IESTADE, VELESANU_DIENA } from "../tools/lib/dati.js";
+import { lasitYaml, frontmatter, solijumuFaili, notikumuFaili, NESKAIDRA_IESTADE, VELESANU_DIENA, PARVIRZIJUMI } from "../tools/lib/dati.js";
 
 export const STATUSI = {
   "nav-vertets": "Nav vērtēts",
@@ -96,5 +96,8 @@ export function ieladetModeli({ sakne, datuSakne = sakne, sodien = new Date().to
     for (const n of s.notikumi)
       n.citi = n.solijumi.filter((x) => x.id !== s.id).map((x) => solijumsPec.get(x.id)).filter(Boolean);
 
-  return { saraksti, temas, iestades, solijumi, notikumi, sodien, atjaunoti };
+  // Aizstāto Solījumu ID → `_redirects` (docs/lapa.md „Publicēšana”); no datu saknes, jo attiecas uz tās Solījumiem.
+  const parvirzijumi = existsSync(join(datuSakne, PARVIRZIJUMI)) ? lasitYaml(datuSakne, PARVIRZIJUMI) : [];
+
+  return { saraksti, temas, iestades, solijumi, notikumi, parvirzijumi, sodien, atjaunoti };
 }

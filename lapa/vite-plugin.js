@@ -1,6 +1,6 @@
 // Statiskās lapas no repo datiem. Dev: renderē pēc pieprasījuma (dati un šabloni vienmēr svaigi).
 // Build: klienta ieeja tiek bundlēta, tad katra lapa izdota kā HTML fails ar hešotajām CSS/JS saitēm;
-// Solījuma lapai blakus — og.png (lapa/og.js).
+// Solījuma lapai blakus — og.png (lapa/og.js); saknē — `_redirects` un `sitemap.xml` (lapa/lapas/index.js).
 import { join } from "node:path";
 import { RESURSI } from "./lapas/izkartojums.js";
 import { pedejaIzmaina } from "./atjaunoti.js";
@@ -18,6 +18,14 @@ function modelaOpcijas(sakne) {
 async function renderet(ieladet, sakne) {
   const [{ ieladetModeli }, { lapas }] = await Promise.all(SABLONI.map(ieladet));
   return lapas(ieladetModeli(modelaOpcijas(sakne)));
+}
+
+/** Lapas + `_redirects` un `sitemap.xml` (tikai build). */
+async function renderetVisu(ieladet, sakne) {
+  const [{ ieladetModeli }, { lapas, papildFaili }] = await Promise.all(SABLONI.map(ieladet));
+  const m = ieladetModeli(modelaOpcijas(sakne));
+  const visas = lapas(m);
+  return { visas, papildu: papildFaili(m, visas) };
 }
 
 export function koLapas() {
@@ -70,7 +78,8 @@ export function koLapas() {
         ...[...(ieeja.viteMetadata?.importedCss ?? [])].map((f) => `<link rel="stylesheet" href="/${f}">`),
         `<script type="module" src="/${ieeja.fileName}"></script>`,
       ].join("\n");
-      const visas = await renderet((m) => import(join(sakne, m)), sakne);
+      const { visas, papildu } = await renderetVisu((m) => import(join(sakne, m)), sakne);
+      for (const f of papildu) this.emitFile({ type: "asset", fileName: f.fails, source: f.saturs });
       const { ogAttels } = await import(join(sakne, OG));
       for (const l of visas) {
         this.emitFile({ type: "asset", fileName: l.fails, source: l.html.replace(RESURSI, resursi) });

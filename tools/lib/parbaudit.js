@@ -1,10 +1,10 @@
 // Datu pārbaude (CI): shēmas, tēmu un iestāžu slugi, citātu burtiskums pret sources/,
-// Notikumi un Statusa maiņas (docs/statusi/notikumi.md).
+// Notikumi, Statusa maiņas (docs/statusi/notikumi.md) un Pārvirzījumi (docs/lapa.md).
 import { existsSync, readFileSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import Ajv2020 from "ajv/dist/2020.js";
-import { lasitYaml, solijumuFaili, notikumuFaili, avotuLasitajs, NESKAIDRA_IESTADE, VELESANU_DIENA } from "./dati.js";
+import { lasitYaml, PARVIRZIJUMI, solijumuFaili, notikumuFaili, avotuLasitajs, NESKAIDRA_IESTADE, VELESANU_DIENA } from "./dati.js";
 import { atrastCitatu } from "./avots.js";
 
 const SHEMAS = join(dirname(fileURLToPath(import.meta.url)), "../../schemas");
@@ -16,6 +16,7 @@ const validet = {
   iestades: shema("iestades.schema.json"),
   solijums: shema("solijums.schema.json"),
   notikums: shema("notikums.schema.json"),
+  parvirzijumi: shema("parvirzijumi.schema.json"),
 };
 
 const VIETAS_ATDALITAJS = " › ";
@@ -63,7 +64,10 @@ export function parbaudit(sakne) {
   if (iestades) parbauditIestades(iestades, new Set(saraksti.map((s) => s.slug)), k);
 
   const solijumi = solijumuFaili(sakne);
-  const notikumi = parbauditNotikumus(sakne, ielasit, new Set(solijumi.map((f) => f.vards)), saraksti, k);
+  const solijumuId = new Set(solijumi.map((f) => f.vards));
+  const notikumi = parbauditNotikumus(sakne, ielasit, solijumuId, saraksti, k);
+  if (existsSync(join(sakne, PARVIRZIJUMI)))
+    parbauditParvirzijumus(ielasit(PARVIRZIJUMI, validet.parvirzijumi) ?? [], solijumuId, k);
 
   for (const f of solijumi) {
     const s = ielasit(f.cels, validet.solijums);
@@ -170,6 +174,18 @@ function parbauditStatusaMainas(s, notikumi, kf) {
     if (ieprieks && m.datums < ieprieks.datums) km(`datums ${m.datums} agrāks par iepriekšējo (${ieprieks.datums})`);
     if (ieprieks && m.statuss === ieprieks.statuss) km(`Statuss "${m.statuss}" nemainās`);
   });
+}
+
+// Vecais ID nav Solījums (citādi lapa un pārvirzījums uz tā paša ceļa), jaunais — ir.
+function parbauditParvirzijumus(parvirzijumi, solijumuId, k) {
+  const redzeti = new Set();
+  for (const { no, uz } of parvirzijumi) {
+    const kp = (zinojums) => k(PARVIRZIJUMI, `${no}: ${zinojums}`);
+    if (redzeti.has(no)) kp("atkārtojas");
+    redzeti.add(no);
+    if (solijumuId.has(no)) kp("Solījums ar šo ID ir data/solijumi/ — pārvirzījums nav vajadzīgs");
+    if (!solijumuId.has(uz)) kp(`uz "${uz}" nav data/solijumi/`);
+  }
 }
 
 const arNodalam = (avots) => avots.vienibas.some((u) => u.nodala !== null);

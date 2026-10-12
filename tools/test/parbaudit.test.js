@@ -390,3 +390,14 @@ test("Statusa maiņa: Statuss mainās; Nepārbaudāmam — nav; atpakaļ uz Nav 
     `${F}: statusa_mainas[1]: Statuss "izpildits" nemainās`,
   ]);
 });
+
+test("Pārvirzījumi: no — nav Solījums, uz — ir; neatkārtojas", () => {
+  const P = "data/parvirzijumi.yaml";
+  const ok = { no: "jv-vecais", uz: SOLIJUMS.id, iemesls: "dublikāts" };
+  assert.deepEqual(zinojumi(repo({ [P]: stringify([ok]) })), []);
+  assert.deepEqual(
+    zinojumi(repo({ [P]: stringify([ok, ok, { no: SOLIJUMS.id, uz: "jv-nav", iemesls: "x" }]) })),
+    [`${P}: jv-vecais: atkārtojas`, `${P}: ${SOLIJUMS.id}: Solījums ar šo ID ir data/solijumi/ — pārvirzījums nav vajadzīgs`, `${P}: ${SOLIJUMS.id}: uz "jv-nav" nav data/solijumi/`],
+  );
+  assert.match(zinojumi(repo({ [P]: stringify([{ no: "jv-vecais", uz: SOLIJUMS.id }]) }))[0], /shēma: \/0 must have required property 'iemesls'/);
+});

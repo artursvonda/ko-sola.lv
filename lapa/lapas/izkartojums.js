@@ -35,7 +35,8 @@ export function izkartojums({ virsraksts, apraksts, cels, og, saturs, atjaunoti 
 <meta property="og:locale" content="lv_LV">
 <meta property="og:title" content="${nosaukums}">
 <meta property="og:description" content="${apraksts}">
-${cels && html`<meta property="og:url" content="${SAITE}${cels}">`}
+${cels && html`<link rel="canonical" href="${SAITE}${cels}">
+<meta property="og:url" content="${SAITE}${cels}">`}
 ${og && html`<meta property="og:type" content="article">
 <meta property="og:image" content="${SAITE}${og}">
 <meta property="og:image:width" content="1200">

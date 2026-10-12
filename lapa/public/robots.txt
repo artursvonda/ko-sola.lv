@@ -1,0 +1,5 @@
+# Cloudflare pārvaldītais robots.txt (Content Signals) tiek pievienots pirms šī faila.
+User-agent: *
+Allow: /
+
+Sitemap: https://ko-sola.lv/sitemap.xml

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "parvirzijumi.schema.json",
+  "title": "Pārvirzījumi",
+  "description": "Publicēta Solījuma ID, kas vairs nav data/solijumi/, → Solījums, uz kuru tā lapa pārvirza (301).",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["no", "uz", "iemesls"],
+    "additionalProperties": false,
+    "properties": {
+      "no": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+      "uz": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+      "iemesls": { "type": "string", "minLength": 1 }
+    }
+  }
+}
