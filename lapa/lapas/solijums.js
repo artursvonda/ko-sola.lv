@@ -1,7 +1,7 @@
 import { html } from "../html.js";
 import { STATUSI, NESKAIDRA_IESTADE, frakcijasSaraksts, sisSaeimasBalsojums, pirmsVelesanam } from "../dati.js";
-import { izkartojums, statussPill, datums, amatpersonaRindas } from "./izkartojums.js";
-import { parskatsSaite, temaSaite } from "./saites.js";
+import { izkartojums, statussPill, datums, amatpersonaRindas, SAITE } from "./izkartojums.js";
+import { parskatsSaite, temaSaite, kludasSaite } from "./saites.js";
 
 const AVOTI = { cvk: "CVK programma", paplasinata: "Paplašinātā programma" };
 const NOTIKUMA_AVOTI = {
@@ -179,6 +179,8 @@ export function solijums(s, m) {
     ${citi.map((a) => citats(a, "papildu"))}
   </section>`}
 
+  <p class="zinot">Pamanījāt kļūdu citātā, Statusā, Tēmā vai Atbildīgajā? <a href="${kludasSaite(s, SAITE)}">Ziņot par kļūdu</a> <span class="vajs">(GitHub)</span></p>
+
   <section class="sadala" aria-labelledby="laika-ass">
     <h2 id="laika-ass">${s.parbaudams ? "Statusa vēsture un Notikumi" : "Notikumi"}</h2>
     ${laikaAss(s, m.saraksti)}
@@ -194,6 +196,7 @@ export function solijums(s, m) {
 
   return izkartojums({
     cels: `/solijumi/${s.id}/`,
+    atjaunoti: m.atjaunoti,
     virsraksts: `${s.saraksts.saisinajums}: ${s.nosaukums}`,
     apraksts: `${s.saraksts.isais_nosaukums} solīja: „${galvenais.citats}” Statuss: ${STATUSI[s.statuss]}.`,
     og: `/solijumi/${s.id}/og.png`,

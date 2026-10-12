@@ -1,0 +1,29 @@
+# Kļūdu ziņošana no lapas (#104): saite „Ziņot par kļūdu” Solījuma lapā aizpilda virsrakstu un `solijums`
+# (lapa/lapas/saites.js kludasSaite); Metodoloģijas 8. sadaļa (kur ved kājene) — bez aizpildītiem laukiem.
+name: Kļūda Solījumā
+description: Nepareizs citāts, Statuss, Tēma vai Atbildīgais; trūkstošs Solījums vai Notikums.
+title: "Kļūda: "
+labels: ["kluda"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Paldies! Ziņojums un labojums būs publiski. Kā solījumus atlasa un vērtē: https://ko-sola.lv/metodologija/
+  - type: input
+    id: solijums
+    attributes:
+      label: Solījuma saite
+      description: Saite uz Solījuma lapu ko-sola.lv. Ja kļūda nav par vienu Solījumu (piem., trūkst Solījuma), atstājiet tukšu.
+      placeholder: https://ko-sola.lv/solijumi/...
+  - type: textarea
+    id: kas
+    attributes:
+      label: Kas ir nepareizi
+      description: Kas lapā rakstīts un kā, jūsuprāt, ir pareizi.
+    validations:
+      required: true
+  - type: textarea
+    id: avots
+    attributes:
+      label: Avots
+      description: Saite uz dokumentu, kas to pamato — programma, likums, Saeimas vai Ministru kabineta dokuments, oficiāla statistika.

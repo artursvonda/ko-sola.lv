@@ -11,6 +11,7 @@ ko-parskats:not(:defined) .filtri { display: none; }
 .parskats-virsraksts { font-size: 1.125rem; line-height: 1.35; font-weight: 600; margin: 0; text-wrap: balance; }
 .bez-js { margin: 0; font-size: 14px; }
 .parskats-saturs { min-width: 0; }
+.parskats-saturs > .avotu-rinda { margin-bottom: var(--size-4); }
 
 /* Filtri: šaurā ekrānā — viena atverama rinda virs satura; sānos — vienmēr atvērti. */
 .filtri-atvere > summary { display: flex; align-items: baseline; gap: var(--size-3); min-height: 44px; padding: var(--size-2) 0; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--line); cursor: pointer; list-style: none; }

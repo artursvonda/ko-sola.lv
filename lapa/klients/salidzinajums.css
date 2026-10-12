@@ -1,7 +1,8 @@
 /* Salīdzinājums: matrica saraksts × galvenā tēma (rindas — saraksti, kolonnas — tēmas), zem tās tēmas sadaļas. */
 .salidzinajums { display: block; }
 .salidzinajums h1 { font-size: 1.125rem; line-height: 1.35; font-weight: 600; margin: 0 0 var(--size-2); text-wrap: balance; }
-.salidzinajums h1 + p { margin: 0 0 var(--size-4); font-size: 14px; }
+.salidzinajums h1 + .avotu-rinda { margin-bottom: var(--size-1); }
+.salidzinajums .avotu-rinda + p { margin: 0 0 var(--size-4); font-size: 14px; }
 .nav-redzams { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 
 /* Matrica: mono, hairline režģis, centrēta; tēmu galvenes vertikāli, saraksta kolonna paliek redzama ritinot. */

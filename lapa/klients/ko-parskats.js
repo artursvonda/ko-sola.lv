@@ -137,6 +137,8 @@ class KoParskats extends HTMLElement {
         el.hidden = n === 0;
       } else el.querySelector('[data-k="skaits"]').textContent = n;
     }
+    // Avotu rinda — tikai izvēlētajam Sarakstam.
+    for (const el of this.querySelectorAll('[data-k="avoti"]')) el.hidden = el.dataset.saraksts !== filtri.saraksts;
     this.dala("neparbaudami").hidden = p.neparbaudami === 0;
     this.dala("neparbaudami-n").textContent = p.neparbaudami;
 

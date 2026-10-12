@@ -3,6 +3,7 @@
 // Solījuma lapai blakus — og.png (lapa/og.js).
 import { join } from "node:path";
 import { RESURSI } from "./lapas/izkartojums.js";
+import { pedejaIzmaina } from "./atjaunoti.js";
 
 const KLIENTS = "lapa/klients/main.js";
 const SABLONI = ["/lapa/dati.js", "/lapa/lapas/index.js"];
@@ -11,7 +12,7 @@ const OG_FAILS = "og.png";
 
 function modelaOpcijas(sakne) {
   const dati = process.env.KO_DATI;
-  return { sakne, datuSakne: dati ? join(sakne, dati) : sakne };
+  return { sakne, datuSakne: dati ? join(sakne, dati) : sakne, atjaunoti: pedejaIzmaina(sakne, join(dati ?? "", "data")) };
 }
 
 async function renderet(ieladet, sakne) {

@@ -29,7 +29,8 @@
             "neizrakstit": { "$ref": "#/$defs/virsraksti" },
             "izlaist": { "$ref": "#/$defs/virsraksti" },
             "nav_jaizraksta": { "$ref": "#/$defs/virsraksti" },
-            "atbilst_cvk": { "type": "object", "additionalProperties": { "type": "string" } }
+            "atbilst_cvk": { "type": "object", "additionalProperties": { "type": "string" } },
+            "tematiska": { "type": "string", "minLength": 1 }
           }
         }
       }

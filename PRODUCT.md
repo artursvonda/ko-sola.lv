@@ -27,7 +27,7 @@ Launch destination (#1): all Solījumi from CVK and extended programs of the 6 e
 
 ## Positioning
 
-Independent, non-partisan personal project by Arturs Vonda. Differs from neighbouring trackers by covering the full CVK program and extended programs for every elected list, a verbatim cited source for every Solījums, an evidence-linked Statuss history, and an explicit Atbildīgais per promise.
+Independent, non-partisan personal project (privately run, not commissioned by any party, no external funding). The publisher is a member of "Kustība Par!", which cooperated with Progresīvie in the 2026 election; this is disclosed only on `/metodologija/` (intro sentence + section 6), never as a note on PRO Solījumi, and neutrality rests on general mechanisms applied to every list (#104). Differs from neighbouring trackers by covering the full CVK program and extended programs for every elected list, a verbatim cited source for every Solījums, an evidence-linked Statuss history, and an explicit Atbildīgais per promise.
 
 Neighbours: Re:Check "Solīja, bet vai izdarīja?" (status scale is compatible); Re:Baltica already follows the government declaration and action plan, which is out of scope here.
 
@@ -45,7 +45,10 @@ Neighbours: Re:Check "Solīja, bet vai izdarīja?" (status scale is compatible);
 - Solījums page shows all quotes with sources and any Nesakritība (#13, #8); the detail panel shows the Nesakritība too. No per-Saraksts Nesakritība counts or filter: they would reflect source asymmetry, not consistency (#97).
 - Latvian only; no EN version.
 - Out of scope: government declaration tracking, systematic Publisks izteikums collection, public status suggestions, subscriptions/notifications, user profiles (planned later; architecture allows).
-- Undecided: methodology page and neutrality statement; how to present source asymmetry honestly (only JV and PRO have full extended programs, so they will have more Solījumi); tags/collections across Tēmas; launch (deploy, OG).
+- Methodology (#104): one page `/metodologija/` (8 sections, linked from a footer on every page, no header tab) summarising selection, sources, rating, AI role, publisher and conflict of interest, neutrality and error reporting, with links to `docs/ekstrakcija/metode.md` and `docs/statusi/vertesana.md`.
+- Source asymmetry is disclosed, not hidden: only JV and PRO have a full extended program and LPV a thematic one (economy), so Solījumi counts reflect program length, not ambition. Shown as a generated per-list sources table on `/metodologija/`, one sources line on the overview filtered by Saraksts, and one line on `/salidzinajums/`.
+- Error reports only via GitHub issues (form „Kļūda Solījumā”); each Solījums page links to it with the ID prefilled. AI drafts (extraction, Notikumu candidates) are disclosed; every change is editor-approved and public in git.
+- Undecided: launch (indexing, final CVK results, ID stability, OG in production).
 
 ## Brand Commitments
 
@@ -57,7 +60,7 @@ Neighbours: Re:Check "Solīja, bet vai izdarīja?" (status scale is compatible);
 
 - `sources/cvk/`: verbatim CVK program texts for all 6 elected lists from Latvijas Vēstnesis Nr. 176A (14.09.2026), with source URL and HTML SHA-256 in frontmatter.
 - Elected lists (CVK provisional, 04.10.2026): AS 42, LPV 17, Suverēnā vara 15, NA 10, Progresīvie 9, JV 7. Verify final CVK results before publishing.
-- Solījumi not yet extracted (#15–#22). Prototype statuses were invented; never show them as real. At launch every Statuss is "Nav vērtēts".
+- Solījumi of all 6 lists extracted (#17–#22, #96); counts per list are generated on `/metodologija/`. Prototype statuses were invented; never show them as real. At launch every Statuss is "Nav vērtēts".
 - No testimonials, press, partners, or usage numbers exist. Do not fabricate any.
 
 ## Product Principles

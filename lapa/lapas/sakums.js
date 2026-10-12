@@ -1,5 +1,7 @@
 import { html, raw } from "../html.js";
 import { izkartojums, statussPill } from "./izkartojums.js";
+import { avotuApraksts } from "./avoti.js";
+import { METODOLOGIJA } from "./saites.js";
 import { progress, skaiti, datuAtributi, izvelesSaite, STATUSU_SECIBA, BEZ_FILTRIEM } from "../klients/filtri.js";
 
 // Statusu joslas segmenti: bez Nepārbaudāmajiem (tie N neiekļauti).
@@ -83,6 +85,15 @@ function filtri(m, ieraksti) {
 </div>`;
 }
 
+/**
+ * Filtrējot pēc Saraksta — viena rinda ar tā avotiem (#104): Solījumu skaits atkarīgs no avotu apjoma.
+ * Statiskajā HTML visas paslēptas; <ko-parskats> rāda izvēlētā Saraksta rindu.
+ */
+const avotuRindas = (m) =>
+  m.saraksti.map(
+    (s) => html`<p class="avotu-rinda" data-k="avoti" data-saraksts="${s.slug}" hidden>Avoti: ${avotuApraksts(s)} · <a href="${METODOLOGIJA}#avoti">Metodoloģija</a></p>`,
+  );
+
 export function sakums(m) {
   const ieraksti = m.solijumi.map(ieraksts);
   const saturs = m.solijumi.length
@@ -92,6 +103,7 @@ export function sakums(m) {
 <noscript><p class="vajs bez-js">Filtri darbojas tikai ar JavaScript — redzami visi solījumi.</p></noscript>
 ${filtri(m, ieraksti)}
 <div class="parskats-saturs">
+${avotuRindas(m)}
 ${progresaSadala(progress(ieraksti))}
 <div class="parskats-zona" data-k="zona">
 <div class="parskats-tabula">
@@ -106,6 +118,7 @@ ${tabula(m.solijumi)}
 
   return izkartojums({
     cels: "/",
+    atjaunoti: m.atjaunoti,
     apraksts: "15. Saeimā ievēlēto sarakstu priekšvēlēšanu solījumi, to izpilde un atbildīgie.",
     saturs,
   });

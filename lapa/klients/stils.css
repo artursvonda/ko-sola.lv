@@ -192,3 +192,36 @@ main { max-width: 1200px; padding: var(--size-5) var(--size-5) var(--size-10); }
 @media (min-width: 48rem) {
   .josla { grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); }
 }
+
+/* Kājene (#104): hairline augšā; saites muted, datu datums — mono. */
+.kajene { border-top: 1px solid var(--line); padding: var(--size-4) var(--size-5) var(--size-7); display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: var(--size-2) var(--size-6); font-size: 14px; }
+.kajene nav { display: flex; flex-wrap: wrap; gap: var(--size-2) var(--size-5); }
+.kajene a { color: var(--muted); }
+.kajene a:hover { color: var(--ink); }
+.kajene p { margin: 0; font-size: 12px; color: var(--muted); }
+
+/* Avotu rinda (pārskats pēc Saraksta, Salīdzinājums) un „Ziņot par kļūdu” Solījuma lapā. */
+.avotu-rinda { margin: 0; font-size: 14px; color: var(--muted); }
+.zinot { margin: var(--size-5) 0 0; font-size: 14px; color: var(--muted); }
+
+/* Metodoloģija: lasāms teksts 44rem kolonnā (kā Solījuma lapa), sadaļas — kā .sadala. */
+.metodologija { max-width: 44rem; font-size: 16px; }
+.metodologija h1 { font-size: 1.125rem; line-height: 1.35; font-weight: 600; margin: var(--size-2) 0 var(--size-4); text-wrap: balance; }
+.metodologija .sadala { margin-top: var(--size-8); scroll-margin-top: var(--size-4); }
+.metodologija .sadala > :is(p, ul) { margin: var(--size-3) 0 0; }
+.metodologija ul { padding-left: var(--size-5); }
+.metodologija li + li { margin-top: var(--size-2); }
+.metodologija strong { font-weight: 600; }
+.saturs-raditajs ol { margin: 0; padding: var(--size-3) 0 var(--size-3) var(--size-5); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--line); font-size: 14px; }
+.saturs-raditajs li + li { margin-top: var(--size-1); }
+.avotu-tabula { margin-top: var(--size-4); font-size: 14px; }
+.avotu-tabula tbody th, .avotu-tabula tfoot th { text-align: left; font-weight: 500; text-transform: none; letter-spacing: 0; font-size: 14px; color: var(--ink); background: none; }
+.avotu-tabula .sk { text-align: right; }
+.avotu-tabula tfoot :is(th, td) { border-top: 1px solid var(--ink); border-bottom: 0; font-weight: 600; }
+.statusu-skala { margin: var(--size-4) 0 0; border-top: 1px solid var(--line); }
+.statusu-skala > div { display: grid; grid-template-columns: 10rem minmax(0, 1fr); gap: var(--size-3); padding: var(--size-3) 0; border-bottom: 1px solid var(--line); }
+.statusu-skala dt, .statusu-skala dd { margin: 0; }
+.statusu-skala dd { font-size: 15px; line-height: 1.45; }
+@media (max-width: 30rem) {
+  .statusu-skala > div { grid-template-columns: minmax(0, 1fr); gap: var(--size-2); }
+}
