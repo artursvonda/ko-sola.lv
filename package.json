@@ -10,6 +10,7 @@
     "build": "vite build",
     "preview": "npm run build && wrangler dev",
     "parbaude": "node tools/parbaudit.js",
+    "stabilitate": "node tools/stabilitate.js",
     "parskats": "node tools/parskats.js",
     "balsojums": "node tools/balsojums.js",
     "test": "node --test \"tools/test/*.test.js\" \"lapa/test/*.test.js\"",

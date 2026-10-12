@@ -1,0 +1,8 @@
+# Solījumu ID, kas publicēti (bija `main`), bet vairs nav data/solijumi/ — tikai apvienojot dublikātus
+# vai labojot kļūdu. Publicēta Solījuma ID citādi nemainās un nepazūd (`npm run stabilitate`, CI).
+# Build no šī faila izdod `_redirects`: /solijumi/<no>/ → /solijumi/<uz>/ (301).
+#
+# - no: vecais ID
+#   uz: Solījums, kas to aizstāj (jābūt data/solijumi/; ja tas vēlāk pazūd — labot šeit uz jauno)
+#   iemesls: kāpēc ID mainīts
+[]

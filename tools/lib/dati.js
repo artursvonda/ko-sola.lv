@@ -6,6 +6,7 @@ import { sadalitAvotu } from "./avots.js";
 
 export const SOLIJUMI = "data/solijumi";
 export const NOTIKUMI = "data/notikumi";
+export const PARVIRZIJUMI = "data/parvirzijumi.yaml";
 /** Galvenā iestāde, kamēr Atbildīgā iestāde nav noteikta (GLOSSARY.md "Neskaidra Atbildīgā iestāde"). */
 export const NESKAIDRA_IESTADE = "neskaidrs";
 /** Vērtēšanas perioda sākums (GLOSSARY.md): agrāks Notikums ir tikai konteksts, Statusu nemaina. */

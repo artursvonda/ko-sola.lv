@@ -85,7 +85,7 @@ vk (Valsts kanceleja), saeima, am (Aizsardzības), arm (Ārlietu), em (Ekonomika
 
 ## 7. ID
 
-`<saraksts>-<slug>`, slug no nosaukuma: mazie latīņu burti bez diakritikas, ≤ 6 vārdi. Pēc publicēšanas nemainās. Faila vārds `<id>.yaml`.
+`<saraksts>-<slug>`, slug no nosaukuma: mazie latīņu burti bez diakritikas, ≤ 6 vārdi. Pēc publicēšanas (`main`) nemainās — CI `npm run stabilitate`; aizstāšana tikai ar `data/parvirzijumi.yaml` (`docs/lapa.md` „Publicēšana”). Faila vārds `<id>.yaml`.
 
 ## 8. Izvades formāts
 

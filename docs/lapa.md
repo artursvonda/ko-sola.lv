@@ -51,7 +51,15 @@ Filtru stāvoklis — query parametros. Saraksta, Tēmas un Notikuma lapu nav.
 
 ## Izvietošana
 
-Workers Builds (Cloudflare panelī, worker `ko-sola`, #38): build `npm run build`, deploy `npx wrangler deploy` (`main` → https://ko-sola.lv), citi zari — `npx wrangler versions upload` (preview URL `*-ko-sola.arturs-c88.workers.dev`). `workers_dev` izslēgts, `preview_urls` ieslēgts tieši `wrangler.jsonc`. `lapa/public/_headers` pagaidām aizliedz indeksēšanu (`X-Robots-Tag: noindex`) — noņemt palaišanā.
+Workers Builds (Cloudflare panelī, worker `ko-sola`, #38): build `npm run build`, deploy `npx wrangler deploy` (`main` → https://ko-sola.lv), citi zari — `npx wrangler versions upload` (preview URL `*-ko-sola.arturs-c88.workers.dev`). `workers_dev` izslēgts, `preview_urls` ieslēgts tieši `wrangler.jsonc`. `lapa/public/_headers`: preview URL vienmēr `X-Robots-Tag: noindex`; ko-sola.lv — līdz palaišanai (#105).
+
+## Publicēšana un indeksēšana (#105)
+
+- **Publicēts = `main`** (to izvieto uz ko-sola.lv). `main` aizsargā ruleset: tikai caur PR, obligāta CI pārbaude „parbaude” (darbplūsma „Dati”); „up to date” nav obligāts — CI jau pārbauda PR merge commit pret pašreizējo `main`. Administrators var apiet (tikai ārkārtas gadījumā).
+- **ID stabilitāte** — `npm run stabilitate [-- <ref>]` (`tools/lib/stabilitate.js`, CI): salīdzina ar `<ref>` (noklusējums `HEAD^1`; CI — PR pret `main`, push pret iepriekšējo `main`; lokāli `-- origin/main`).
+  - Publicēta Solījuma ID nepazūd un netiek pārdēvēts. Ja tiešām jāaizstāj (dublikātu apvienošana, kļūda) — ieraksts `data/parvirzijumi.yaml` (`no`, `uz`, `iemesls`); build no tā izdod `_redirects` (301 `/solijumi/<no>/` un `og.png` → `<uz>`). `npm run parbaude`: `no` nav Solījums, `uz` ir.
+  - Saraksta un Tēmas slugi (filtru un salīdzinājuma URL) nepazūd vispār — tiem pārvirzījuma nav (query parametrus `_redirects` nepārvirza).
+- **Meklētājiem** — `<link rel="canonical">` katrā lapā (filtru `?…` nav atsevišķas lapas), `sitemap.xml` (build, visas lapas, izņemot 404), `robots.txt` ar `Sitemap:` (Cloudflare pārvaldītais saturs tiek pievienots pirms tā).
 
 ## Nesakritība (#97)
 
