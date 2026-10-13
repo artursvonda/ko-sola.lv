@@ -30,7 +30,9 @@ solijumi:
     virziens: par
     pamatojums: >-
       Izveido Solījumā minēto valsts sporta fondu, taču nenosaka tam nekādu nodokļu ieņēmumu daļu (ne 3%
-      no alkohola, tabakas, izložu un azartspēļu nodokļiem); VKKF finansējumu likums neskar.
+      no alkohola, tabakas, izložu un azartspēļu nodokļiem); VKKF finansējumu likums neskar. Solījuma
+      iznākums ir tieši nodokļu ieņēmumu piesaiste fondam, tāpēc fonda izveide ir priekšnoteikums, ne
+      formāls solis — Statuss nemainās (redaktora lēmums PR #113).
   - id: as-sporta-infrastrukturas-finansesana
     virziens: par
     pamatojums: >-
@@ -50,6 +52,4 @@ solijumi:
 piezimes: >-
   Galīgais lasījums (2.lasījums, steidzams) 14. Saeimā 01.10.2026 — pirms vēlēšanām, atsevišķs Notikums nav
   pievienots. Vēstneša publikācija nav atvērta (Crawl-delay); saturs pēc likumi.lv un Saeimas relīzes.
-jautajums: >-
-  pro-sporta-fonda-nodoklu-ienemumi: vai fonda izveide bez nodokļu ieņēmumu piesaistes ir formāls solis
-  (Procesā), vai tikai priekšnoteikums (Statuss paliek Nav vērtēts)? Melnrakstā Statuss nav mainīts.
+jautajums: ""
