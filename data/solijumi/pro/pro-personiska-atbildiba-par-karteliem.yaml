@@ -17,3 +17,11 @@ avoti:
 nesakritiba: ""
 piezimes: "Atbildīgā: konkurences tiesības — EM; ja kriminālatbildība — TM (papildu)."
 jautajums: ""
+statusa_mainas:
+  - datums: 2026-10-07
+    statuss: daleji-izpildits
+    notikumi: [2026-10-07-kriminallikums-aizliegta-vienosanas-iepirkuma]
+    pamatojums: >-
+      Izsludināts likums (spēkā no 15.10.2026) ievieš personisku kriminālatbildību par aizliegtu
+      vienošanos iepirkumā (Krimināllikuma 211.¹ pants) — daļa no solītā iznākuma: tas aptver tikai
+      karteļus liela apmēra vai publiskos iepirkumos, ne dalību karteļos kopumā (vertesana.md: Daļēji izpildīts).
