@@ -15,3 +15,11 @@ avoti:
 nesakritiba: ""
 piezimes: "Nav dalīts (§1): „-ot” daļa apraksta veidu, kā atbalstu palielināt. Robežgadījums: mērķa skaitļa nav, bet rādītājs konkrēts (valsts finansējums sportam) — pārbaudāms, vai tas pieaudzis. Alternatīva — Nepārbaudāms. Tēma: sports ietilpst valoda-kultura-un-mediji (data/temas.yaml). IZM — sporta politika; iestāde nav pārbaudīta oficiālā avotā."
 jautajums: ""
+statusa_mainas:
+  - datums: 2026-10-09
+    statuss: procesa
+    notikumi: [2026-10-09-valsts-sporta-fonda-likums]
+    pamatojums: >-
+      Izsludinātais Valsts sporta fonda likums uzliek MK, sagatavojot 2027. gada un turpmākos budžetus,
+      plānot vismaz 5 milj. euro gadā sporta fonda mērķiem — formāls solis; valsts atbalsta pieaugums vēl
+      nav iekļauts budžeta likumā, tāpēc Procesā, ne Izpildīts (vertesana.md).
