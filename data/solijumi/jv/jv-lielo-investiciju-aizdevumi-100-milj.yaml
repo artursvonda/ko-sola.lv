@@ -15,3 +15,11 @@ avoti:
 nesakritiba: ""
 piezimes: "Vērtēšanas avots — paplašinātā programma (CVK citāta nav; CVK „Mērķēti atbalstīsim eksportspējīgus uzņēmumus” nav pievienots — punkts attiecas uz lielajiem uzņēmumiem, ne eksportspēju). „tādējādi piedāvājot … atbalstu lielo uzņēmumu straujākai mērogošanai” — mērķis, nav dalīts. Pārbaudāms: 100 miljoni eiro gadā piešķirti šādiem aizdevumiem vai nē. Uzņēmējdarbības atbalsta programmas — EM, FM papildu (budžets; pieņēmums, nav pārbaudīts)."
 jautajums: ""
+statusa_mainas:
+  - datums: 2026-10-09
+    statuss: procesa
+    notikumi: [2026-10-09-mk-altum-aizdevumi-ar-kapitala-atlaidi]
+    pamatojums: >-
+      MK rīkojums Nr. 628 ir datēts formāls solis ceļā uz iznākumu: valdība atbalsta investīciju
+      fonda modeli ar Altum aizdevumiem ar kapitāla atlaidi un uzdod EM to ieviest; finansējums
+      (100 miljoni eiro gadā) vēl nav piešķirts, tāpēc ne Izpildīts (vertesana.md: Procesā).
