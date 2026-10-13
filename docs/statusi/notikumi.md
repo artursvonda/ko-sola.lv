@@ -18,8 +18,15 @@ Claude Code routine reizi nedēļā palaiž `/ai-parskats` (`.claude/skills/ai-p
 | data.gov.lv `saeimas-sedes` | Saeimas lēmumi (`/Lm`) no balsojumu failiem | ~1 dienu pēc sēdes |
 | data.gov.lv `tap-publicetie-tiesibu-akti` | MK projekti, iesniegti logā (TA numurs, tips, progress) | tekošā mēneša fails var kavēties — tad piezīme |
 | `vestnesis.lv/laidiens/YYYY/MM/DD` | "Tiesību akti" (bez pašvaldībām): likumi, MK noteikumi, rīkojumi, protokoli | Crawl-delay 1; RSS `/feed/JL` dod tikai pēdējo laidienu |
+| `lsm.lv/assets/sitemap/news_lv_<nedēļa>.xml` | **norāde**, ne pierādījums: LSM ziņas (`zinas/latvija`, `zinas/ekonomika`) — saite, datums, URL slug | nedēļa sākas svētdienā (`2026W41`); RSS dod tikai ~1 dienu |
 
-CSP un Valsts kase — tikai pēc vajadzības skaitliskam Solījumam. LSM RSS (~1 dienas ziņas) grafikā nelieto — ziņa ir tikai norāde manuālajā režīmā.
+CSP un Valsts kase — tikai pēc vajadzības skaitliskam Solījumam.
+
+**LSM ziņas** (redaktora lēmums 2026-10-13) ir tikai norāde uz faktu, ko oficiālie avoti vēl nerāda vai ko rīks nenoķer (piem., MK lēmums pirms Vēstneša, CSP dati). Notikums vienmēr balstās oficiālā dokumentā; bez tā Notikumu neveido. LSM [lietošanas noteikumi](https://www.lsm.lv/lietosanas-noteikumi/) satura izmantošanu atļauj tikai ar rakstisku atļauju, bet dalīties ar hipersaiti drīkst. Tāpēc:
+
+- automātiski lasa tikai sitemap (robots.txt to norāda); rakstu tekstu rīks neielādē;
+- AI atver tikai atlasītos rakstus (pēc slug), lai atrastu oficiālo dokumentu — kā lasītājs, ne masveidā;
+- repo, PR un kopsavilkumā LSM ir tikai saite (`veids: zinas`); tekstu, citātus un virsrakstus nekopē — `apraksts` raksta pēc oficiālā dokumenta.
 
 ## Notikums
 

@@ -119,3 +119,41 @@ export function atzimetDublikatus(kandidati, notikumi) {
     return n ? { ...k, jau_ir: n.vieta } : k;
   });
 }
+
+// LSM ziņas — tikai norāde uz oficiālo dokumentu, ne pierādījums (docs/statusi/notikumi.md).
+// LSM lietošanas noteikumi (lsm.lv/lietosanas-noteikumi): saturu kopēt nedrīkst, dalīties drīkst ar hipersaiti.
+// Tāpēc rīks lasa tikai sitemap (robots.txt to norāda) un atdod saiti; raksta tekstu neielādē.
+const LSM_SADALAS = ["zinas/latvija", "zinas/ekonomika"];
+
+/** LSM nedēļas sitemap nosaukums dienai: gads + nedēļa, kas sākas svētdienā (strftime %U), piem. "2026W41". */
+export function lsmNedela(datums) {
+  const d = new Date(`${datums}T00:00:00Z`);
+  const gadaDiena = (d - Date.UTC(d.getUTCFullYear(), 0, 1)) / 864e5;
+  return `${d.getUTCFullYear()}W${Math.floor((gadaDiena + 6 - d.getUTCDay()) / 7)}`;
+}
+
+/**
+ * LSM nedēļas sitemap (`lsm.lv/assets/sitemap/news_lv_<nedēļa>.xml`) → raksti no `LSM_SADALAS` logā.
+ * Datums — no URL (publicēšanas diena); `nosaukums` — URL slug (bez diakritikas), tikai atlasei.
+ */
+export function lsmSitemap(xml, logs) {
+  const out = [];
+  for (const [, url] of xml.matchAll(/<loc>(https:\/\/www\.lsm\.lv\/raksts\/[^<]+)<\/loc>/g)) {
+    const m = url.match(/\/raksts\/([\w-]+\/[\w-]+)\/(\d{2}\.\d{2}\.\d{4})-([\w-]+)\.a\d+\/?$/);
+    if (!m || !LSM_SADALAS.includes(m[1])) continue;
+    const datums = isoNoLv(m[2]);
+    if (!logaa(datums, logs)) continue;
+    out.push({
+      avots: "lsm",
+      veids: "zina",
+      datums,
+      nosaukums: m[3].replaceAll("-", " "),
+      url,
+      atslegas: [url],
+      unikals: true,
+      norade: true,
+      sadala: m[1],
+    });
+  }
+  return out;
+}

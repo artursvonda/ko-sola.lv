@@ -1,6 +1,14 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { atzimetDublikatus, saeimasLemumi, saeimasLikumprojekti, tapProjekti, vestnesaLaidiens } from "../lib/kandidati.js";
+import {
+  atzimetDublikatus,
+  lsmNedela,
+  lsmSitemap,
+  saeimasLemumi,
+  saeimasLikumprojekti,
+  tapProjekti,
+  vestnesaLaidiens,
+} from "../lib/kandidati.js";
 
 const LOGS = { no: "2026-10-03", lidz: "2026-10-16" };
 
@@ -137,4 +145,31 @@ test("dublikāti: unikāla atslēga jebkurā Notikumā; likumprojekta numurs —
     atzimetDublikatus(kandidati, notikumi).map((k) => k.jau_ir),
     ["data/notikumi/a.yaml", undefined, "origin/notikums/b:data/notikumi/b.yaml"],
   );
+});
+
+test("LSM nedēļa: sākas svētdienā (kā sitemap failos)", () => {
+  assert.deepEqual(
+    ["2026-10-03", "2026-10-04", "2026-10-10", "2026-10-11", "2026-10-13", "2026-01-03", "2026-01-04"].map(lsmNedela),
+    ["2026W39", "2026W40", "2026W40", "2026W41", "2026W41", "2026W0", "2026W1"],
+  );
+});
+
+test("LSM sitemap: tikai ziņu sadaļas logā; datums no URL; tikai saite, bez satura", () => {
+  const url = (cels) => `<url><loc>https://www.lsm.lv/raksts/${cels}/</loc><lastmod>2026-10-14T10:00:00+03:00</lastmod></url>`;
+  const xml = `<urlset>${[
+    url("zinas/latvija/06.10.2026-valdiba-atbalsta-ieceri.a666375"),
+    url("zinas/ekonomika/12.10.2026-budzeta-projekts.a529999"),
+    url("zinas/arzemes/06.10.2026-cits.a1"),
+    url("kultura/muzika/06.10.2026-koncerts.a2"),
+    url("zinas/latvija/01.10.2026-pirms-loga.a3"),
+  ].join("")}</urlset>`;
+  const k = lsmSitemap(xml, LOGS);
+  assert.deepEqual(
+    k.map((k) => [k.datums, k.sadala, k.nosaukums, k.norade, k.unikals]),
+    [
+      ["2026-10-06", "zinas/latvija", "valdiba atbalsta ieceri", true, true],
+      ["2026-10-12", "zinas/ekonomika", "budzeta projekts", true, true],
+    ],
+  );
+  assert.deepEqual(k[0].atslegas, [k[0].url]);
 });

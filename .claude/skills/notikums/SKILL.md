@@ -19,7 +19,7 @@ Vispirms izlasi: `GLOSSARY.md`, `docs/statusi/vertesana.md` (pierādījuma stand
 - **Nerāpo** (robots.txt): `titania.saeima.lv` (LIVS), `likumi.lv/rss/`, `delfi.lv`, `tvnet.lv`. Šādas saites drīkst ierakstīt `avoti`, bet neatver — lūdz redaktoram oficiālo dokumentu citā vietā (Saeimas atvērtie dati, vestnesis.lv, TAP, mk.gov.lv) vai tekstu.
 - Citam domēnam pirms atvēršanas pārbaudi `robots.txt` un ievēro `Crawl-delay`. Atver tikai doto URL un tieši saistītos oficiālos dokumentus, nevis rāpo vietni. Oficiālā dokumenta atrašanai drīkst lietot WebSearch (likumi.lv meklēšana ir `Disallow`).
 - Dotais URL var nesaturēt pašu faktu (piem., Saeimas balsojumu fails ar 1. lasījumu, bet galīgais ir citas sēdes failā tajā pašā dienā). Atrodi faktu; doto URL `avoti` liec tikai, ja tas to apliecina. URL glabā tādu, uz kādu tas pāradresē (piem., `https://www.vestnesis.lv/…`).
-- Ja URL ir ziņa: atrodi oficiālo dokumentu, uz kuru tā norāda. Ziņa paliek tikai kā `veids: zinas`. **Bez oficiāla avota Notikumu neveido** — pasaki redaktoram, kāpēc.
+- Ja URL ir ziņa: atrodi oficiālo dokumentu, uz kuru tā norāda. Ziņa paliek tikai kā `veids: zinas`. **Bez oficiāla avota Notikumu neveido** — pasaki redaktoram, kāpēc. Ziņu tekstu, citātus un virsrakstus failos un PR nekopē (LSM noteikumi atļauj tikai hipersaiti) — `apraksts` un `pamatojums` pēc oficiālā dokumenta.
 
 ## 3. Fakts
 
