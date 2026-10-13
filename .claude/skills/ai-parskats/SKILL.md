@@ -1,6 +1,6 @@
 ---
 name: ai-parskats
-description: Nedēļas AI pārskats (grafika režīms) — atrod Notikumu kandidātus oficiālajos avotos pēdējās 14 dienās, katram atbilstošajam veido Notikumu pēc /notikums (viens PR uz Notikumu) un ieraksta kopsavilkumu issue „AI pārskatu žurnāls”. Lieto nedēļas Claude Code routine vai, kad redaktors lūdz "/ai-parskats".
+description: Nedēļas AI pārskats (grafika režīms) — atrod Notikumu kandidātus oficiālajos avotos (un LSM ziņās kā norādēs) pēdējās 14 dienās, katram atbilstošajam veido Notikumu pēc /notikums (viens PR uz Notikumu) un ieraksta kopsavilkumu issue „AI pārskatu žurnāls”. Lieto nedēļas Claude Code routine vai, kad redaktors lūdz "/ai-parskats".
 argument-hint: "[--no YYYY-MM-DD] [--lidz YYYY-MM-DD]"
 ---
 
@@ -14,7 +14,7 @@ Vispirms izlasi: `GLOSSARY.md`, `docs/statusi/vertesana.md`, `docs/statusi/notik
 
 - `git switch main && git pull && npm ci`.
 - `npm run --silent kandidati -- $ARGUMENTS > /tmp/kandidati.json` (stderr — kopsavilkums). Logs pēc noklusējuma 14 dienas, ne agrāk par 03.10.2026.
-- `avoti[].ok: false` → avots nav pārskatīts; ieraksti kopsavilkumā, turpini ar pārējiem. Citus avotus (LIVS, likumi.lv, ziņu portālus) **nerāpo**.
+- `avoti[].ok: false` → avots nav pārskatīts; ieraksti kopsavilkumā, turpini ar pārējiem. Citus avotus (LIVS, likumi.lv, citus ziņu portālus) **nerāpo**; LSM — tikai kā zemāk.
 - Kandidāti ar `jau_ir` jau ir Notikumā (`main` vai `notikums/*` zarā) — tikai saskaiti.
 
 ## 2. Atlase
@@ -25,6 +25,10 @@ Katram pārējam kandidātam: vai fakts **tieši** ietekmē kāda Solījuma izn�
 - Notikums ir tikai faktu veidi no `vertesana.md`: Saeimā iesniegšana, galīgais lasījums, noraidīšana; izsludināšana; MK noteikumi, rīkojumi, protokollēmumi; MK projekts TAP. Atmet: iecelšanas amatos, apbalvojumus, īpašumu nodošanu, tehniskus grozījumus, kas neskar nevienu Solījumu.
 - Solījumus meklē visos Sarakstos vienādi: `grep -ril` `data/solijumi/` pēc atslēgvārdiem un sinonīmiem (nosaukuma likums/joma, `temas`, `iestades`). Izlasi kandidātu Solījumus.
 - Ja neviens Solījums neatbilst — atmet ar vienu iemeslu (kopsavilkumam).
+- **LSM ziņas** (`norade: true`) — norāde, ne fakts (`docs/statusi/notikumi.md`, LSM noteikumi):
+  - Atlasi pēc `nosaukums` (URL slug): tikai formāli lēmumi vai dati (valdība/MK, Saeima, ministrija pieņem, apstiprina, iesniedz; CSP, Valsts kase), kas varētu skart Solījumu. Vēlēšanu, koalīcijas sarunu un viedokļu rakstus atmet bez atvēršanas (kopsavilkumā — kopskaitā).
+  - Atver ne vairāk kā **20** rakstu (vismaz 2 s starp tiem); tajos meklē oficiālo dokumentu (Vēstnesis, TAP, mk.gov.lv, Saeimas atvērtie dati, CSP). Atrasts un jau starp kandidātiem → tas pats fakts (ziņa — papildu `zinas` avots). Atrasts citur → kandidāts ar oficiālo URL. Nav atrasts → Notikumu neveido; kopsavilkumā "Ziņas bez oficiāla avota".
+  - LSM tekstu, citātus un virsrakstus nekopē ne failos, ne PR, ne kopsavilkumā — tikai saite.
 
 ## 3. Notikumi
 
@@ -43,11 +47,12 @@ gh api repos/artursvonda/ko-sola.lv/issues/<nr>/comments -F body=@/tmp/kopsavilk
 Saturs (latviski, īsi):
 
 - `## <no>…<lidz>` un avoti: katram ok / kļūda / piezīme (piem., trūkst TAP mēneša faila).
-- Skaitļi: kandidāti / jau Notikumā / atmesti / Notikumi (PR) / neapstrādāti.
+- Skaitļi: kandidāti (no tiem LSM ziņas; atvērtās) / jau Notikumā / atmesti / Notikumi (PR) / neapstrādāti.
 - **PR**: saraksts — nosaukums + saite, Solījumu skaits, Statusa maiņas, atvērtie `jautajums`.
 - **Neizveidoti** (atlasīti, bet Notikums netika izveidots): fakts + iemesls (piem., nav oficiāla avota, balsojuma dati vēl nav).
 - **Neapstrādāti** (limits): saraksts.
-- `<details>` **Atmesti**: viena rinda katram — datums, nosaukums, iemesls.
+- **Ziņas bez oficiāla avota**: LSM saite + ko meklēji (savos vārdos, bez LSM teksta).
+- `<details>` **Atmesti**: viena rinda katram — datums, nosaukums, iemesls. LSM ziņas — tikai skaits pēc iemesla (piem., "212 — vēlēšanas/viedokļi pēc slug") un atvērtās kā saites.
 
 Ja nav ne PR, ne neizveidotu — komentārs tik un tā (žurnāls rāda, ka pārskats notika).
 

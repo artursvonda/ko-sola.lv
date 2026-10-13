@@ -1,6 +1,6 @@
 // npm run --silent kandidati -- [--no YYYY-MM-DD] [--lidz YYYY-MM-DD] [--bez-zariem]
-// → JSON: Notikumu kandidāti no oficiālajiem avotiem (grafika režīms, /ai-parskats). Logs pēc noklusējuma —
-// pēdējās 14 dienas, ne agrāk par Vērtēšanas perioda sākumu. Dublikāti (`jau_ir`) pret data/notikumi/
+// → JSON: Notikumu kandidāti no oficiālajiem avotiem un LSM ziņu norādes (grafika režīms, /ai-parskats).
+// Logs pēc noklusējuma — pēdējās 14 dienas, ne agrāk par Vērtēšanas perioda sākumu. Dublikāti (`jau_ir`) pret data/notikumi/
 // un `notikums/*` zariem (atvērti vai noraidīti PR). Avoti un robots.txt: docs/statusi/notikumi.md.
 import { execFileSync } from "node:child_process";
 import { readFileSync } from "node:fs";
@@ -8,7 +8,15 @@ import { parseArgs } from "node:util";
 import { parse } from "yaml";
 import { parsetBalsojumus } from "./lib/balsojums.js";
 import { NOTIKUMI, VELESANU_DIENA, notikumuFaili } from "./lib/dati.js";
-import { atzimetDublikatus, saeimasLemumi, saeimasLikumprojekti, tapProjekti, vestnesaLaidiens } from "./lib/kandidati.js";
+import {
+  atzimetDublikatus,
+  lsmNedela,
+  lsmSitemap,
+  saeimasLemumi,
+  saeimasLikumprojekti,
+  tapProjekti,
+  vestnesaLaidiens,
+} from "./lib/kandidati.js";
 
 const UA = { "User-Agent": "ko-sola.lv (+https://github.com/artursvonda/ko-sola.lv)" };
 const LOGS_DIENAS = 14;
@@ -17,6 +25,8 @@ const SAEIMAS_SEDES = "https://data.gov.lv/dati/api/3/action/package_show?id=sae
 const TAP = "https://data.gov.lv/dati/api/3/action/package_show?id=tap-publicetie-tiesibu-akti";
 const VESTNESIS = (d) => `https://www.vestnesis.lv/laidiens/${d.replaceAll("-", "/")}`;
 const VESTNESIS_PAUZE_MS = 1500; // robots.txt Crawl-delay: 1
+const LSM_SITEMAP = (nedela) => `https://www.lsm.lv/assets/sitemap/news_lv_${nedela}.xml`;
+const LSM_PAUZE_MS = 1500; // robots.txt Crawl-delay nav; pieklājīgi kā Vēstnesim
 
 const { values: opc } = parseArgs({
   options: { no: { type: "string" }, lidz: { type: "string" }, "bez-zariem": { type: "boolean" } },
@@ -83,6 +93,19 @@ await avots("vestnesis.lv laidieni", async () => {
     if (akti) (laidieni++, kandidati.push(...akti));
   }
   return `${laidieni} laidieni`;
+});
+
+// Ziņas — tikai norāde (`norade: true`); Notikumam vajag oficiālu avotu. Tikai sitemap, rakstus neielādē.
+await avots("lsm.lv sitemap (ziņas)", async () => {
+  const nedelas = [...new Set(dienas.map(lsmNedela))];
+  let raksti = 0;
+  for (const [i, n] of nedelas.entries()) {
+    if (i) await pauze(LSM_PAUZE_MS);
+    const z = lsmSitemap(await lejupieladet(LSM_SITEMAP(n)), logs);
+    raksti += z.length;
+    kandidati.push(...z);
+  }
+  return `${raksti} ziņas (${nedelas.join(", ")})`;
 });
 
 // Esošie Notikumi: darba koks + `notikums/*` zari.
