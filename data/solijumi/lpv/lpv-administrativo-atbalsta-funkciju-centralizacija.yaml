@@ -15,3 +15,13 @@ avoti:
 nesakritiba: ""
 piezimes: "Atdalīts no lpv-valsts-iestazu-funkciju-audits (§1): centralizēšanai ir savs iznākums, kas var notikt vai nenotikt neatkarīgi no audita; daļai nav sava darbības vārda → citēts teikums līdz attiecīgajai daļai (§3). Robežgadījums: funkcijas nav nosauktas → Pārbaudāms kā „vai administratīvās atbalsta funkcijas centralizētas plašāk nekā vēlēšanu dienā”; alternatīva — Nepārbaudāms. Ekstraktors nav pārbaudījis, kas jau centralizēts. Iestāde nav pārbaudīta: VK."
 jautajums: ""
+statusa_mainas:
+  - datums: 2026-10-12
+    statuss: daleji-izpildits
+    notikumi: [2026-10-12-vienotais-pakalpojumu-centrs-personalvadiba-macibas]
+    pamatojums: >-
+      Izsludināti MK noteikumi Nr. 617 (spēkā no 13.10.2026) centralizē tiešās valsts pārvaldes
+      iestāžu cilvēkresursu pārvaldības (Valsts kanceleja, pievienošanās līdz 01.03.2027) un mācību
+      un attīstības (Valsts administrācijas skola, līdz 15.10.2026) atbalsta funkcijas plašāk nekā
+      vēlēšanu dienā; citas administratīvās atbalsta funkcijas (piem., iepirkumi, IT) šie noteikumi
+      neaptver (vertesana.md: Daļēji izpildīts).
