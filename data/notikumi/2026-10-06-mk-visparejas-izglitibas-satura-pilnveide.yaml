@@ -1,0 +1,79 @@
+id: 2026-10-06-mk-visparejas-izglitibas-satura-pilnveide
+datums: 2026-10-06
+nosaukums: MK atbalsta vispārējās izglītības satura pilnveidi un ģimenes vērtību un veselībpratības moduli
+apraksts: >-
+  Ministru kabinets 06.10.2026 sēdē (prot. Nr. 57 48. §, TAP 26-TA-2353) pieņēma zināšanai IZM
+  informatīvo ziņojumu "Vispārējās izglītības satura pilnveide" un atbalstīja satura pilnveidi,
+  ievērojot valsts izglītības standartu struktūru un pamatprincipus (ziņojumā — Valdības rīcības
+  plāna 47.4. pasākums "Uzsākta vispārējās izglītības satura skola2030 pārskatīšana"). VIAA uzdots
+  turpināt Latvijas vēstures satura stiprināšanu, kolektīvās dziedāšanas un ģimenes veselības
+  mācības satura izstrādi un ieviešanu: līdz 30.04.2027, konsultējoties ar VM, izstrādāt ģimenes
+  vērtību un veselībpratības moduļa saturu; no 01.09.2027 aktualizētos sociālo zinību, vēstures un
+  mūzikas programmu paraugus noteikt par valsts noteiktajiem; līdz 30.11.2026 izveidot izglītības
+  satura ekspertu padomes; rosināt vēsturi kā patstāvīgu priekšmetu 4.–6. klasē (priekšlikumi IZM
+  līdz 31.03.2027). IZM uzdots līdz 31.12.2026 izvērtēt obligātus programmu paraugus pamatizglītībā,
+  līdz 31.12.2027 — prasības mācību stundu skaitam, izvērtēt mājas darbu praksi un iesniegt
+  priekšlikumus MK, līdz 31.03.2027 izstrādāt priekšlikumus valsts iesaistei mācību līdzekļu (arī
+  mācību grāmatu) izstrādē un pieejamībā, kā arī aprēķināt papildu finansējumu mācību līdzekļiem;
+  9. un 10. punktu īsteno fiskāli neitrāli IZM budžeta ietvaros.
+avoti:
+  - url: https://tapportals.mk.gov.lv/meetings/protocols/07f85a9a-eb99-4675-a1d6-9895ae854e24
+    veids: mk
+  - url: https://tapportals.mk.gov.lv/legal_acts/956a4471-244a-4992-bbcb-9b0e774ac271
+    veids: mk
+  - url: https://www.lsm.lv/raksts/zinas/latvija/06.10.2026-valdiba-atbalsta-gimenes-vertibu-un-veselibpratibas-satura-izstradi-arodbiedriba-saskata-ideologijas-riskus.a666375/
+    veids: zinas
+solijumi:
+  - id: na-gimenes-veselibas-maciba
+    virziens: par
+    pamatojums: >-
+      MK uzdod VIAA ģimenes veselības mācības satura izstrādi un ieviešanu skolās ar termiņiem
+      (modulis līdz 30.04.2027, ieviešana no 01.09.2027, pilnīga — no 01.09.2028).
+  - id: jv-veselibas-macibas-pilnveide-skolas
+    virziens: par
+    pamatojums: >-
+      MK uzdod izstrādāt veselībpratības saturu skolām, konsultējoties ar VM un veselības nozari;
+      ziņojuma moduļa tematiskie bloki (ģimene, identitāte, attiecības, pubertāte) tieši nenosauc
+      solītās tēmas (uzturs, atkarības, pirmā palīdzība, skrīnings).
+  - id: na-vestures-un-valstiskas-audzinasanas-saturs
+    virziens: par
+    pamatojums: >-
+      MK uzdod turpināt Latvijas vēstures satura stiprināšanu, no 01.09.2027 noteikt aktualizētos
+      vēstures programmu paraugus par valsts noteiktajiem un rosināt vēsturi kā patstāvīgu priekšmetu
+      4.–6. klasē.
+  - id: sv-gimenes-vertibu-popularizesana
+    virziens: par
+    pamatojums: >-
+      MK uzdod izstrādāt ģimenes vērtību un veselībpratības moduli vispārējās izglītības saturā.
+  - id: jv-macibu-lidzekli-un-gramata-katra-prieksmeta
+    virziens: par
+    pamatojums: >-
+      MK uzdod IZM līdz 31.03.2027 izstrādāt priekšlikumus valsts iesaistei mācību līdzekļu, arī
+      mācību grāmatu, izstrādē un pieejamībā, lai katram skolēnam būtu nepieciešamie mācību līdzekļi.
+  - id: lpv-bazes-macibu-lidzekli-visos-prieksmetos
+    virziens: par
+    pamatojums: >-
+      MK uzdod IZM līdz 31.03.2027 izstrādāt priekšlikumus valsts iesaistei mācību līdzekļu, arī
+      mācību grāmatu, izstrādē un pieejamībā, lai katram skolēnam būtu nepieciešamie mācību līdzekļi.
+  - id: sv-pilnvertigi-macibu-materiali
+    virziens: par
+    pamatojums: >-
+      MK uzdod izstrādāt priekšlikumus mācību līdzekļu un metodiskā atbalsta materiālu nodrošināšanai
+      un aprēķināt tiem nepieciešamo papildu finansējumu.
+  - id: as-skola2030-pilnveide
+    virziens: par
+    pamatojums: >-
+      MK atbalsta vispārējās izglītības satura pilnveidi esošo valsts izglītības standartu struktūrā
+      (ziņojumā — "skola2030 pārskatīšana") un aktualizēto programmu paraugu noteikšanu par valsts
+      noteiktajiem no 01.09.2027.
+  - id: sv-skola2030-reformu-atcelsana
+    virziens: pret
+    pamatojums: >-
+      MK izvēlas saturu pilnveidot, ievērojot esošo valsts izglītības standartu struktūru un
+      pamatprincipus, nevis atcelt Skola2030; atcelšanas ceļš paliek atvērts, tāpēc Statuss nemainās.
+piezimes: >-
+  "Latvijas Vēstnesī" 12.10.2026 publicēts Ministru kabineta sēdes protokols (op/2026/196.34), kas,
+  iespējams, ir šis protokols — nav pārbaudīts (vestnesis.lv nav atvērts), tāpēc avotos nav. Ziņojumā
+  ģimenes veselības mācība veidota kā modulis "Ģimenes vērtības un veselībpratība" sociālajās zinībās
+  ar starppriekšmetu saikni, nevis kā atsevišķs priekšmets.
+jautajums: ""

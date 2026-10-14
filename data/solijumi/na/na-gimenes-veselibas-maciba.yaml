@@ -15,3 +15,12 @@ avoti:
 nesakritiba: ""
 piezimes: "„-ot” daļa ar konkrētu darbību un savu iznākumu — atsevišķs Solījums (§1). Pārbaudāms: mācība (priekšmets vai mācību saturs) tiek vai netiek ieviesta; avots nenosaka, vai tas ir atsevišķs priekšmets."
 jautajums: ""
+statusa_mainas:
+  - datums: 2026-10-06
+    statuss: procesa
+    notikumi: [2026-10-06-mk-visparejas-izglitibas-satura-pilnveide]
+    pamatojums: >-
+      MK 06.10.2026 protokollēmums (prot. Nr. 57 48. §) ir datēts formāls solis ceļā uz iznākumu:
+      uzdod VIAA ģimenes veselības mācības satura izstrādi un ieviešanu (moduļa saturs līdz
+      30.04.2027); mācība skolās vēl nav ieviesta (pilnīga ieviešana plānota no 01.09.2028), tāpēc
+      ne Izpildīts (vertesana.md: Procesā).
