@@ -51,7 +51,7 @@ Filtru stāvoklis — query parametros. Saraksta, Tēmas un Notikuma lapu nav.
 
 ## Izvietošana
 
-Workers Builds (Cloudflare panelī, worker `ko-sola`, #38): build `npm run build`, deploy `npx wrangler deploy` (`main` → https://ko-sola.lv), citi zari — `npx wrangler versions upload` (preview URL `*-ko-sola.arturs-c88.workers.dev`). `workers_dev` izslēgts, `preview_urls` ieslēgts tieši `wrangler.jsonc`. `lapa/public/_headers`: preview URL vienmēr `X-Robots-Tag: noindex`; ko-sola.lv — līdz palaišanai (#105).
+Workers Builds (Cloudflare panelī, worker `ko-sola`, #38): build `npm run build`, deploy `npx wrangler deploy` (`main` → https://ko-sola.lv), citi zari — `npx wrangler versions upload` (preview URL `*-ko-sola.arturs-c88.workers.dev`). `workers_dev` izslēgts, `preview_urls` ieslēgts tieši `wrangler.jsonc`. `lapa/public/_headers`: preview URL `X-Robots-Tag: noindex`; ko-sola.lv indeksējama kopš palaišanas (#105).
 
 ## Publicēšana un indeksēšana (#105)
 
