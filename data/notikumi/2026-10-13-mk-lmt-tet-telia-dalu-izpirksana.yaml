@@ -1,0 +1,34 @@
+id: 2026-10-13-mk-lmt-tet-telia-dalu-izpirksana
+datums: 2026-10-13
+nosaukums: MK aicina LMT un "Tet" pašiem izpirkt "Telia Company" daļas, atsakoties no shēmas ar "Latvenergo" un LVRTC kā pircējiem
+apraksts: >-
+  Ministru kabinets 13.10.2026 sēdē aicināja LMT un "Tet" pašiem izvērtēt iespēju izpirkt "Telia
+  Company" piederošās kapitāla daļas; ja uzņēmumi to nespēs nodrošināt, LMT un "Tet" tiks apvienoti.
+  Ar šo lēmumu tiek izbeigta iepriekš plānotā shēma, kurā daļu izpirkšanā kā pircēji bija jāiesaista
+  AS "Latvenergo" un VAS "Latvijas Valsts radio un televīzijas centrs" (LVRTC); ārējo konsultantu
+  iesaiste turpmāk nav paredzēta. LMT un "Tet" valdēm priekšlikumi jāiesniedz līdz 17.11.2026, līdz
+  24.11.2026 "Possessor" tos apkopos un sagatavos padziļinātu izvērtējumu, un Ekonomikas ministrija
+  līdz 01.12.2026 informēs valdību par rezultātiem.
+avoti:
+  - url: https://www.mk.gov.lv/lv/jaunums/valdiba-aicina-lmt-un-tet-izvertet-iespeju-izpirkt-savas-kapitala-dalas-no-telia-company
+    veids: mk
+  - url: https://www.lsm.lv/raksts/zinas/ekonomika/13.10.2026-valdiba-aicina-lmt-un-tet-izvertet-telia-kapitala-dalu-izpirksanu-atsakas-no-arejiem-konsultantiem-uznemumu-apvienosana-precizets.a667384/
+    veids: zinas
+solijumi:
+  - id: lpv-latvenergo-bez-lmt-tet-akciju-pirksanas
+    virziens: par
+    pamatojums: >-
+      MK izbeidz shēmu, kurā "Latvenergo" bija jāiesaista kā LMT un "Tet" kapitāla daļu pircējs, un
+      izpirkšanu uztic pašiem LMT un "Tet" (alternatīva — to apvienošana).
+piezimes: >-
+  Avots ir MK relīze (publicēta 13.10.2026). MK sēdes protokollēmums un TAP dokuments nav atrasti:
+  TAP sēžu sarakstā 13.10.2026 sēdei protokola saites vēl nav, darba kārtības punkts nav atvērts.
+  Pēc relīzes: "Tet" 51% valstij caur "Possessor", 49% — "Telia" meitas uzņēmumam "Tilts
+  Communications"; LMT 49% — "Telia" un "Sonera Holding", 23% — LVRTC, 23% — "Tet", 5% —
+  "Possessor". 2025. gada jūlijā "Telia" ar valsti, "Latvenergo" un LVRTC parakstīja saprašanās
+  memorandu par visu savu Latvijas daļu pārdošanu.
+jautajums: >-
+  Statuss nav mainīts. "Nepieļausim Latvenergo iesaisti" ir neiesaistīšanas Solījums, ko pēc
+  vertesana.md parasti vērtē perioda beigās vai ar Notikumu "pret"; MK lēmums šo iesaisti izbeidz,
+  bet nākamo valdību tas neliedz atjaunot. Vai atstāt Nav vērtēts (ieteikums), vai likt Procesā /
+  Izpildīts? Turklāt: vai gaidīt MK protokollēmumu (TAP) kā avotu, vai pietiek ar MK relīzi?
