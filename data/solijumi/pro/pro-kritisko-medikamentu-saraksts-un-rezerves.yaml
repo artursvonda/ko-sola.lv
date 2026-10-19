@@ -15,3 +15,11 @@ avoti:
 nesakritiba: ""
 piezimes: 'Robežgadījums pārbaudāmībai: "pilnveidosim", bet objekts konkrēts — vērtē, vai saraksts un rezervju kārtība grozīti. Krīžu sadaļas "svarīgāko materiālu rezerves" (pro-medicinas-materialu-rezerves-krizem) — cits objekts, nav apvienots.'
 jautajums: ""
+statusa_mainas:
+  - datums: 2026-10-16
+    statuss: izpildits
+    notikumi: [2026-10-16-mk-kritisko-zalu-rezerves]
+    pamatojums: >-
+      Izsludināti MK noteikumi Nr. 631 (spēkā no 17.10.2026) nosaka kritisko zāļu sarakstu (pielikumā)
+      un šo zāļu rezervju veidošanas, uzturēšanas un izmantošanas kārtību — Solījuma iznākums pilnā
+      mērā: normatīvs pieņemts un izsludināts (vertesana.md).
