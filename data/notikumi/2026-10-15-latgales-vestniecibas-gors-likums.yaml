@@ -1,0 +1,35 @@
+id: 2026-10-15-latgales-vestniecibas-gors-likums
+datums: 2026-10-15
+nosaukums: Saeima galīgajā lasījumā pieņem Latgales vēstniecības GORS likumu (1481/Lp14)
+apraksts: >-
+  14. Saeima 2026. gada 15. oktobrī galīgajā lasījumā pieņēma Latgales vēstniecības GORS likumu. Likums
+  paredz īpaši aizsargāt koncertzāli GORS kā nozīmīgu valsts, reģionālās un pašvaldības nozīmes kultūras
+  centru un nodrošināt tās darbības nepārtrauktību; tās darbības mērķis ir sekmēt Latgales identitātes,
+  kultūrvēsturiskās vides un kultūrtelpas saglabāšanu un ilgtspējīgu attīstību un profesionālās mākslas
+  pieejamību Latgalē. GORS paliek Rēzeknes pašvaldības pārziņā, bet būtiskos pārvaldības jautājumos
+  nepieciešams Kultūras ministrijas saskaņojums; ministrija uzrauga GORS darbību, saskaņo tā stratēģiju,
+  darbības plānu un budžeta projektu un varēs deleģēt pārvaldniekam valsts pārvaldes uzdevumus kultūras
+  jomā, tostarp latgaliešu rakstu valodas un latgaliskās identitātes saglabāšanā. Pašvaldība nedrīkst
+  atsavināt, ieķīlāt vai citādi apgrūtināt GORS ēku un tai nepieciešamo zemi. Likums stāsies spēkā nākamajā
+  dienā pēc izsludināšanas.
+avoti:
+  - url: https://www.saeima.lv/lv/aktualitates/saeimas-zinas/36298-saeima-pienem-likumu-koncertzales-gors-parvaldibai
+    veids: saeima
+  - url: https://titania.saeima.lv/LIVS14/saeimalivs14.nsf/webSasaiste?OpenView&restricttocategory=1481/Lp14
+    veids: saeima
+solijumi:
+  - id: jv-gors-nacionalas-nozimes-kulturas-centrs
+    virziens: par
+    pamatojums: >-
+      Likums nosaka GORS kā aizsargātu valsts, reģionālās un pašvaldības nozīmes kultūras centru Kultūras
+      ministrijas uzraudzībā ar mērķi saglabāt Latgales kultūrtelpu — tieši Solījuma iznākums, bet 14. Saeimas
+      galīgais lasījums Vērtēšanas periodā pirms 03.11.2026 Statusu nemaina (Izpildīts var dot izsludināšana).
+  - id: jv-unikalo-kulturtelpu-stiprinasana
+    virziens: par
+    pamatojums: >-
+      Likumā noteiktais GORS darbības mērķis ir Latgales kultūrvēsturiskās vides un kultūrtelpas saglabāšana
+      un ilgtspējīga attīstība.
+piezimes: >-
+  Saturs pēc Saeimas preses relīzes; LIVS (titania.saeima.lv) nav atvērts (robots.txt). Likums vēl nav
+  izsludināts — izsludināšana būs atsevišķs Notikums.
+jautajums: "Balsojuma dati vēl nav publicēti (npm run --silent balsojums -- 2026-10-15 \"1481/Lp14), 3.lasījums\")"
