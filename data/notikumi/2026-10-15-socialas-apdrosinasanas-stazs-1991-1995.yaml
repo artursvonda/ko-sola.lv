@@ -1,0 +1,32 @@
+id: 2026-10-15-socialas-apdrosinasanas-stazs-1991-1995
+datums: 2026-10-15
+nosaukums: Saeima pieņem grozījumus likumā "Par valsts sociālo apdrošināšanu" par stāžu 1991.–1995. gadā (1568/Lp14)
+apraksts: >-
+  14. Saeima 2026. gada 15. oktobrī galīgajā lasījumā pieņēma steidzamus grozījumus likumā "Par valsts
+  sociālo apdrošināšanu". Tie ļauj brīvprātīgi veikt sociālās apdrošināšanas iemaksas par noteiktiem
+  darba stāžam pielīdzināmiem periodiem no 1991. gada 1. janvāra līdz 1995. gada 31. decembrim, lai tos
+  ieskaitītu pensiju un bezdarba apdrošināšanas stāžā: studijas pēc vidējās izglītības, pēcdiploma
+  izglītība vai kvalifikācijas paaugstināšana; personas ar I grupas invaliditāti, bērna ar invaliditāti
+  līdz 16 gadiem vai 80 gadus sasniegušas personas kopšana; laiks, kurā māte audzinājusi bērnu līdz
+  astoņu gadu vecumam. Periodiem jābūt pierādītiem saskaņā ar likumu "Par valsts pensijām" un tie
+  nedrīkst sakrist ar citiem sociālās apdrošināšanas periodiem. Iemaksa — 1% no attiecīgā gada minimālās
+  mēneša darba algas par katru mēnesi; iemaksas varēs veikt no 2027. gada 1. oktobra.
+avoti:
+  - url: https://www.saeima.lv/lv/aktualitates/saeimas-zinas/36296-socialas-apdrosinasanas-stazu-vares-papildinat-par-laiku-no-1991-lidz-1995-gadam
+    veids: saeima
+  - url: https://titania.saeima.lv/LIVS14/saeimalivs14.nsf/webSasaiste?OpenView&restricttocategory=1568/Lp14
+    veids: saeima
+  - url: https://www.lsm.lv/raksts/zinas/latvija/15.10.2026-socialas-apdrosinasanas-stazu-ar-brivpratigam-iemaksam-vares-papildinat-par-laiku-no-1991-lidz-1995-gadam.a667614/
+    veids: zinas
+solijumi:
+  - id: as-pensiju-sasaiste-ar-bernu-audzinasanu
+    virziens: par
+    pamatojums: >-
+      Ļauj ar brīvprātīgu iemaksu ieskaitīt pensiju apdrošināšanas stāžā laiku, kad māte 1991.–1995. gadā
+      audzinājusi bērnu līdz astoņu gadu vecumam, — paplašina pensiju sistēmas sasaisti ar bērnu
+      audzināšanu, bet tikai šim periodam; galīgais lasījums 14. Saeimā pirms 03.11.2026 Statusu nemaina.
+piezimes: >-
+  Galīgais lasījums (2.lasījums, steidzams) 14. Saeimā pēc vēlēšanām — Statusu nemaina (vertesana.md);
+  Statusu var mainīt izsludināšana (atsevišķs Notikums). LIVS saite ierakstīta, bet nav atvērta (robots.txt);
+  saturs pēc Saeimas preses relīzes.
+jautajums: "Balsojuma dati vēl nav publicēti (npm run --silent balsojums -- 2026-10-15 \"1568/Lp14), 2.lasījums\")"
