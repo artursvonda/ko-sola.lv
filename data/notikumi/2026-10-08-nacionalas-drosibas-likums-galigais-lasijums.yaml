@@ -1,0 +1,34 @@
+id: 2026-10-08-nacionalas-drosibas-likums-galigais-lasijums
+datums: 2026-10-08
+nosaukums: Saeima galīgajā lasījumā pieņem grozījumus Nacionālās drošības likumā (1372/Lp14)
+apraksts: >-
+  14. Saeima 2026. gada 8. oktobrī trešajā (galīgajā) lasījumā pieņēma Ministru kabineta 22.05.2026
+  iesniegto likumprojektu "Grozījumi Nacionālās drošības likumā" (1372/Lp14). Pēc Saeimas likumprojekta
+  apraksta tas pilnveido kritiskās infrastruktūras un nacionālajai drošībai nozīmīgu komercsabiedrību,
+  biedrību un nodibinājumu apdraudējuma izvērtēšanas un novēršanas mehānismu, nosaka īpašus ierobežojumus
+  D kategorijas kritiskās infrastruktūras subjektiem, lai novērstu Krievijai vai Baltkrievijai piederīgu
+  personu apdraudošu ietekmi, izsmeļošāk definē patiesā labuma guvēja statusu (10 % līdzdalības slieksnis)
+  un atceļ iespēju saņemt Ministru kabineta atļauju ar noklusējumu. Likums vēl nav izsludināts.
+avoti:
+  - url: https://titania.saeima.lv/LIVS14/saeimalivs14.nsf/webSasaiste?OpenView&restricttocategory=1372/Lp14
+    veids: saeima
+  - url: https://www.lsm.lv/raksts/zinas/latvija/08.10.2026-aizliedz-agresorvalstu-pilsoniem-iegut-butisku-lidzdalibu-vai-izskirosu-ietekmi-kritiskaja-infrastruktura.a666684/
+    veids: zinas
+solijumi:
+  - id: as-kritiskas-infrastrukturas-noturiba
+    virziens: par
+    pamatojums: >-
+      Stiprina kritiskās infrastruktūras noturību, ierobežojot Krievijai vai Baltkrievijai piederīgu personu
+      ietekmi kritiskās infrastruktūras subjektos un atceļot Ministru kabineta atļauju ar noklusējumu.
+  - id: as-noturiba-pret-agresiju-un-hibriduzbrukumiem
+    virziens: par
+    pamatojums: >-
+      Likumprojekta mērķis ir novērst Krievijai vai Baltkrievijai piederīgu personu apdraudošu ietekmi
+      kritiskajā infrastruktūrā un nacionālajai drošībai nozīmīgās organizācijās, kas tieši stiprina
+      noturību pret Krievijas hibrīdietekmi.
+piezimes: >-
+  Galīgais lasījums 14. Saeimā Vērtēšanas periodā Statusu nemaina (vertesana.md); abi Solījumi ir
+  Nepārbaudāmi. Saturs pēc saeima.lv/lawdata.json likumprojekta apraksta (statuss 13.10.2026: "Nodots
+  Juridiskā biroja vadītājam", izsludināšanas datuma nav); likumi.lv Nacionālās drošības likuma
+  konsolidētajā tekstā 13.10.2026 jaunākie grozījumi ir 03.09.2026 likums. Izsludināšana — atsevišķs Notikums.
+jautajums: "Balsojuma dati vēl nav publicēti (npm run --silent balsojums -- 2026-10-08 \"1372/Lp14), 3.lasījums\")."
