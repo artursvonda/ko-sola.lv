@@ -1,0 +1,33 @@
+id: 2026-10-15-kriminallikums-nelikumiga-migracija-galigais-lasijums
+datums: 2026-10-15
+nosaukums: Saeima pieņem steidzamus grozījumus Krimināllikumā par bargākiem sodiem par nelikumīgu migrāciju (1530/Lp14)
+apraksts: >-
+  14. Saeima 2026. gada 15. oktobrī pieņēma par steidzamiem atzītos grozījumus Krimināllikumā
+  (1530/Lp14). Pēc Saeimas preses dienesta paziņojuma par personu nelikumīgu pārvietošanu pāri valsts
+  robežai smagākajos gadījumos maksimālais brīvības atņemšanas sods palielināts no 10 līdz 12 gadiem;
+  grozījumi skar arī nelikumīgas uzturēšanās organizēšanu un citus ar nelikumīgu migrāciju saistītus
+  noziedzīgus nodarījumus. Likumprojekta autori šos nodarījumus vērtē kā tiešu apdraudējumu valsts
+  robežas neaizskaramībai un būtisku nacionālās drošības risku. Likums vēl nav izsludināts.
+avoti:
+  - url: https://www.saeima.lv/lv/aktualitates/saeimas-zinas/36303-saeima-atbalsta-bargakus-sodus-par-nelikumigas-migracijas-organizesanu
+    veids: saeima
+  - url: https://titania.saeima.lv/LIVS14/saeimalivs14.nsf/webSasaiste?OpenView&restricttocategory=1530/Lp14
+    veids: saeima
+solijumi:
+  - id: lpv-cina-ar-nelegalo-migraciju
+    virziens: par
+    pamatojums: >-
+      Bargāki kriminālsodi par personu nelikumīgu pārvietošanu pāri robežai un nelikumīgas uzturēšanās
+      organizēšanu ir tieši vērsti pret nelegālo migrāciju.
+  - id: pro-pret-cilvektirdzniecibu-un-instrumentalizaciju
+    virziens: par
+    pamatojums: >-
+      Grozījumi pastiprina kriminālatbildību par nelikumīgas migrācijas organizēšanu, ko autori saista
+      ar apdraudējumu valsts robežai un nacionālajai drošībai — vēršanās pret organizēto noziedzību un
+      migrācijas instrumentalizāciju.
+piezimes: >-
+  Galīgais lasījums (steidzams likumprojekts) 14. Saeimā Vērtēšanas periodā Statusu nemaina
+  (vertesana.md); abi Solījumi ir Nepārbaudāmi. Saturs pēc Saeimas preses paziņojuma: panti un
+  iepriekšējās sankcijas nelikumīgas uzturēšanās organizēšanai tajā nav norādīti; likumprojekta numurs —
+  no paziņojuma saites (LIVS nav atvērts). Izsludināšana — atsevišķs Notikums.
+jautajums: "Balsojuma dati nav pieejami routine vidē (npm run --silent balsojums -- 2026-10-15 \"1530/Lp14), 2.lasījums\")."
