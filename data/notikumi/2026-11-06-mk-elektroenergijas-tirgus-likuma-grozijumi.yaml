@@ -1,0 +1,54 @@
+id: 2026-11-06-mk-elektroenergijas-tirgus-likuma-grozijumi
+datums: 2026-11-06
+nosaukums: MK apstiprina grozījumus Elektroenerģijas tirgus likumā un nodod tos Saeimai
+apraksts: >-
+  Ministru kabinets 06.11.2026 apstiprināja Klimata un enerģētikas ministrijas sagatavotos grozījumus
+  Elektroenerģijas tirgus likumā un nodeva tos Saeimai. Elektroenerģijas tirgotāja maiņa
+  galalietotājiem kļūst bezmaksas; fiksētas cenas līgumos pirmstermiņa laušanas maksa var palikt,
+  bet tirgotājiem ar vairāk nekā 200 000 galalietotāju mājsaimniecībām un maziem un vidējiem
+  uzņēmumiem jāpiedāvā vismaz viens fiksētas cenas līgums bez šādas maksas; fiksētas cenas līguma
+  termiņš — ne īsāks par 12 mēnešiem. Ražošanas un uzkrāšanas iekārtām, ko pieslēdz pārvades tīklam,
+  noteiktas stingrākas kiberdrošības un nacionālās drošības prasības: kiberdrošības prasības nosaka
+  AS "Augstsprieguma tīkls", iekārtu un vadības sistēmu ražotājiem jābūt reģistrētiem ES, NATO vai
+  EBTA valstī vai noteiktā NATO Indijas–Klusā okeāna reģiona partnervalstī, ierobežojumi attiecas
+  arī uz pieslēdzamo komersantu īpašniekiem un vadību, un pieslēgumu var atteikt drošības risku dēļ.
+  Sadales sistēmas operatoriem jāpublicē pieejamās jaudas aprēķina kritēriji jauniem pieslēgumiem.
+avoti:
+  - url: https://www.mk.gov.lv/lv/jaunums/pilnveido-elektroenergijas-tirgus-regulejumu-stiprinot-valsts-drosibu-un-aizsargajot-lietotaju-intereses
+    veids: mk
+solijumi:
+  - id: jv-energetiska-drosiba
+    virziens: par
+    pamatojums: >-
+      Likumprojekts nosaka stingrākas kiberdrošības un nacionālās drošības prasības pārvades tīklam
+      pieslēdzamām ražošanas un uzkrāšanas iekārtām un pienākumu lielajiem tirgotājiem piedāvāt
+      fiksētas cenas līgumu bez pirmstermiņa laušanas maksas — tas attiecas uz drošu un prognozējamu
+      enerģiju un valsts enerģētisko drošību.
+  - id: na-energetiska-drosiba-un-neatkariba
+    virziens: par
+    pamatojums: >-
+      Likumprojekts pārvades tīklam pieslēdzamām iekārtām nosaka nacionālās drošības prasības
+      (ražotāji no ES, NATO, EBTA vai NATO partnervalstīm, īpašnieku un vadības pārbaudes, tiesības
+      atteikt riskantu pieslēgumu), kas tieši stiprina enerģētisko drošību.
+  - id: pro-kritiskas-infrastrukturas-drosiba
+    virziens: par
+    pamatojums: >-
+      Likumprojekts paredz, ka pārvades sistēmas operators nosaka kiberdrošības prasības pārvades
+      tīklam pieslēdzamām ražošanas un uzkrāšanas iekārtām un to vadības sistēmām, stiprinot
+      enerģētikas infrastruktūras digitālo drošību.
+  - id: jv-energijas-tiklu-parvaldiba
+    virziens: par
+    pamatojums: >-
+      Likumprojekts maina tīklu pieslēgumu pārvaldību: pārvades sistēmas operators var atteikt
+      drošības riskus radošus pieslēgumus, un sadales sistēmas operatoriem jāpublicē pieejamās jaudas
+      aprēķina kritēriji.
+piezimes: >-
+  Avots ir MK relīze (06.11.2026); relīze nemin TAP numuru un Saeimas likumprojekta numuru.
+  TAP portālā projektam ar tādu pašu nosaukumu un saturu (bezmaksas tirgotāja maiņa, fiksētas cenas
+  līgums bez pirmstermiņa laušanas maksas tirgotājiem ar vairāk nekā 200 000 galalietotāju,
+  pārvades tīkla pieslēgumu drošības ierobežojumi) ir numurs 25-TA-409 (izziņa:
+  https://tapportals.mk.gov.lv/attachments/legal_acts/additional_documents/b82c1756-deda-4902-8e88-03d454134056/download,
+  stāvoklis uz 07.05.2026); ka MK 06.11.2026 apstiprinātā redakcija ir tieši šī projekta galīgā
+  versija, no relīzes nav pārbaudīts. Visi iekļautie Solījumi ir Nepārbaudāmi — Statusa maiņu nav.
+  Saeimā iesniegšana būs atsevišķs Notikums.
+jautajums: ""
