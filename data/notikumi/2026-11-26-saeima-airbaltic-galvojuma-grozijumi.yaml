@@ -1,0 +1,36 @@
+id: 2026-11-26-saeima-airbaltic-galvojuma-grozijumi
+datums: 2026-11-26
+nosaukums: Saeima pieņem grozījumus airBaltic finanšu stabilizācijas likumā par valsts galvojumu līdz 175 milj. eiro
+apraksts: >-
+  Saeima 26.11.2026 pieņēma grozījumus "Air Baltic Corporation AS" finanšu stabilizācijas pasākumu
+  likumā, kas paredz valsts galvojumu uzņēmuma saistībām līdz 175 000 000 eiro darbības
+  nepārtrauktības nodrošināšanai restrukturizācijas laikā. Galvojumu valsts vārdā sniedz finanšu
+  ministrs, ja Satiksmes ministrija Ministru kabinetā iesniegusi finansiālo un juridisko pamatojumu,
+  galvojums kalpo tikai otrās finansējuma tranšes nosacījumiem, no tā izrietošās saistības attiecina
+  uz fiskālo rezervi un Saeima to apstiprinājusi ar atsevišķu lēmumu. Likums izsludināts 27.11.2026
+  (Latvijas Vēstnesis Nr. 229B) un stājas spēkā nākamajā dienā pēc izsludināšanas.
+avoti:
+  - url: https://www.vestnesis.lv/op/2026/229B.1
+    veids: vestnesis
+  - url: https://www.saeima.lv/lv/aktualitates/saeima-atbalsta-grozijumus-valsts-galvojuma-nodrosinasanai-airbaltic/
+    veids: saeima
+  - url: https://www.likumi.lv/ta/id/372579
+    veids: likumi
+  - url: https://www.lsm.lv/raksts/zinas/ekonomika/26.11.2026-saeima-atbalsta-175-miljonu-eiro-valsts-galvojuma-sniegsanu-airbaltic.a673538/
+    veids: zinas
+solijumi:
+  - id: sv-airbaltic-finansesanas-partrauksana
+    virziens: pret
+    pamatojums: >-
+      Saeima pieņem likumu, kas paredz valsts galvojumu airBaltic saistībām līdz 175 milj. eiro, —
+      jaunu valsts atbalsta instrumentu, nevis valsts finansējuma pārtraukšanu.
+piezimes: >-
+  Vēstnesī (OP 2026/229B.1): "Likums Saeimā pieņemts 2026. gada 26. novembrī", parakstīts Rīgā
+  27.11.2026, stājas spēkā nākamajā dienā pēc izsludināšanas; tātad 26.11 bija galīgais lasījums
+  (steidzams). Likumprojekta numurs Vēstnesī nav minēts (LIVS nerāpo). Izsludināšana nav atsevišķs
+  Notikums, jo Statusu nemaina (vertesana.md). Statuss nemainās: galvojuma izsniegšanai vajadzīgs
+  atsevišķs Saeimas lēmums un finanšu ministra rīcība; Solījums "pārtraukt finansēt" nav galīgi
+  padarīts nereāls. likumi.lv saite nav atvērta (robots.txt). Saistīts: MK 24.11.2026 konceptuālais
+  atbalsts galvojumam. Norāde — LSM ziņa (tikai saite).
+jautajums: >-
+  Balsojuma dati nav pieejami routine vidē (npm run balsojums -- 2026-11-26 "Air Baltic").
