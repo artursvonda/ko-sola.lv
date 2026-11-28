@@ -1,0 +1,29 @@
+id: 2026-10-29-ivn-likums-veja-parku-nosacijumi
+datums: 2026-10-29
+nosaukums: Saeima galīgajā lasījumā pieņem grozījumus Ietekmes uz vidi novērtējuma likumā ar nosacījumiem vēja parku noraidīšanai
+apraksts: >-
+  14. Saeima 2026. gada 29. oktobrī trešajā, galīgajā lasījumā pieņēma grozījumus Ietekmes uz vidi
+  novērtējuma likumā. Saskaņā ar Saeimas preses relīzi Valsts vides dienests nepieņems ierosinājumu, ja
+  konkrētajā pašvaldībā jau būs izbūvētas vai apstiprinātas vēja elektrostacijas ar kopējo jaudu vismaz
+  150 MW un kumulatīvās ietekmes novērtējums liecinās, ka jauna iekārta var būtiski negatīvi ietekmēt vidi,
+  ainavu vai iedzīvotāju dzīves kvalitāti. Vēja parku projektiem bez galīgā lēmuma būs nepieciešams
+  pašvaldības atzinums par atbilstību teritorijas plānojumam; par plānoto darbību informē īpašumu
+  īpašniekus līdz 2 km no izpētes teritorijas. Vēja parkiem no 35 MW mazāk apdzīvotos lauku pagastos paredzēta
+  vienkāršota novērtējuma kārtība. Grozījumi stāsies spēkā 2027. gada 1. janvārī. Likums vēl nav izsludināts.
+avoti:
+  - url: https://www.saeima.lv/lv/aktualitates/saeima-pilnveido-ietekmes-uz-vidi-novertejuma-procesu/
+    veids: saeima
+  - url: https://www.lsm.lv/raksts/zinas/ekonomika/29.10.2026-nosaka-jaudas-slieksni-un-vel-citus-nosacijumus-veja-parku-projektu-noraidisanai.a669774/
+    veids: zinas
+solijumi:
+  - id: pro-ietekmes-uz-sabiedribu-novertejums-projektiem
+    virziens: par
+    pamatojums: >-
+      Vēja parku ierosinājumu noraidīšanu likums sasaista ar kumulatīvās ietekmes novērtējumu arī uz ainavu
+      un iedzīvotāju dzīves kvalitāti — tieši Solījumā prasītais novērtējuma tvērums vēja parkiem; 14.
+      Saeimas galīgais lasījums pirms 03.11.2026 Statusu nemaina (vertesana.md).
+piezimes: >-
+  Saturs pēc Saeimas preses relīzes (29.10.2026); likumprojekta numurs relīzē nav nosaukts. Pēc
+  izsludināšanas jāvērtē, vai tas atbilst pro-ietekmes-uz-sabiedribu-novertejums-projektiem iznākumam
+  (relīze apraksta tikai vēja parkus, ne visus lielos infrastruktūras projektus). LSM ziņa bija norāde.
+jautajums: "Balsojuma dati nav pieejami routine vidē (npm run --silent balsojums -- 2026-10-29 \"Ietekmes uz vidi novērtējuma likumā\": getaddrinfo ENOTFOUND data.gov.lv)"
