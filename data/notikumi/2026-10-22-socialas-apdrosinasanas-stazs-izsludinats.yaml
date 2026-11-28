@@ -1,0 +1,44 @@
+id: 2026-10-22-socialas-apdrosinasanas-stazs-izsludinats
+datums: 2026-10-22
+nosaukums: Izsludināti grozījumi likumā "Par valsts sociālo apdrošināšanu" — brīvprātīgas iemaksas par stāžu 1991.–1995. gadā
+apraksts: >-
+  "Latvijas Vēstnesī" 22.10.2026 (Nr. 204) izsludināti 14. Saeimas 15.10.2026 pieņemtie grozījumi likumā
+  "Par valsts sociālo apdrošināšanu". Jaunā 5. panta 3.5 daļa ļauj brīvprātīgi pievienoties pensiju un
+  bezdarba apdrošināšanai par Latvijā uzkrātiem darba stāžam pielīdzināmiem periodiem no 01.01.1991 līdz
+  31.12.1995, ja tie pierādīti saskaņā ar likumu "Par valsts pensijām" un nesakrīt ar citiem sociālās
+  apdrošināšanas periodiem: studijas Latvijas augstskolā vai citā pēcvidusskolas izglītības iestādē,
+  pēcdiploma izglītība un kvalifikācijas paaugstināšana, I grupas personas ar invaliditāti, bērna ar
+  invaliditāti līdz 16 gadiem vai 80 gadus sasniegušas personas kopšana un laiks, kurā māte Latvijā
+  audzinājusi bērnu līdz astoņu gadu vecumam. Iemaksa — 1% no attiecīgajā gadā spēkā esošās minimālās
+  mēneša darba algas par katru periodu mēnesi (pārejas noteikumu 107. p.); iemaksas var veikt no
+  01.10.2027 (109. p.), kārtību MK nosaka līdz 30.06.2027 (108. p.). Likums stājas spēkā 01.04.2027,
+  5. panta grozījumi — 01.07.2027. Likums arī izslēdz iesācēju mikrouzņēmumu nodokļa maksātājus no
+  1. panta 3. punkta "m" apakšpunkta tvēruma.
+avoti:
+  - url: https://www.vestnesis.lv/op/2026/204.6
+    veids: vestnesis
+  - url: https://likumi.lv/ta/id/371795
+    veids: likumi
+solijumi:
+  - id: as-pensiju-sasaiste-ar-bernu-audzinasanu
+    virziens: par
+    pamatojums: >-
+      Likums ļauj ar brīvprātīgu iemaksu ieskaitīt pensiju apdrošināšanas stāžā laiku, kurā māte
+      1991.–1995. gadā audzinājusi bērnu līdz astoņu gadu vecumam, — paplašina pensiju sistēmas sasaisti ar
+      bērnu audzināšanu, bet tikai šim periodam un par personas iemaksu.
+  - id: lpv-berna-kopsanas-atvalinajums-darba-staza
+    virziens: par
+    pamatojums: >-
+      Likums ļauj ieskaitīt sociālās apdrošināšanas stāžā 1991.–1995. gada periodu, kurā māte audzinājusi
+      bērnu līdz astoņu gadu vecumam (ar brīvprātīgu iemaksu), — daļa no bērna kopšanas laika ieskaitīšanas
+      stāžā, ko Solījums paredz.
+piezimes: >-
+  Notikuma datums — izsludināšana (22.10.2026), Vērtēšanas periodā. Galīgā lasījuma Notikums (1568/Lp14,
+  15.10.2026) ir zarā notikums/2026-10-15-socialas-apdrosinasanas-stazs-1991-1995 (nav apvienots main).
+  Sākumstāvoklis (kā bērna kopšanas periodi jau tiek ieskaitīti stāžā pēc likuma "Par valsts pensijām")
+  šajā Notikumā nav pārbaudīts. Saturs pēc Vēstneša publikācijas.
+jautajums: >-
+  Statuss nav mainīts. as-pensiju-sasaiste-ar-bernu-audzinasanu un lpv-berna-kopsanas-atvalinajums-darba-staza:
+  vai izsludinātais likums ir "Daļēji izpildīts" (daļējs iznākums, kas stājas spēkā 01.07.2027 — tikai
+  1991.–1995. gads, tikai par brīvprātīgu iemaksu), vai tikai solis bez Statusa maiņas, jo nav skaidrs, cik
+  lielā mērā bērna kopšanas periodi stāžā jau ieskaitīti pirms tam? Lūdzu izvēlēties.
