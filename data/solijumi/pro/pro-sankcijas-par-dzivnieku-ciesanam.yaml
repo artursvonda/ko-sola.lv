@@ -16,3 +16,13 @@ avoti:
 nesakritiba: ""
 piezimes: "Citēts viss teikums. Vērtē, vai normatīvos noteiktas vai pastiprinātas sankcijas. Atbildīgā: ZM (sankcijas var būt arī Krimināllikumā — TM; nav pārbaudīts)."
 jautajums: ""
+statusa_mainas:
+  - datums: 2026-11-11
+    statuss: daleji-izpildits
+    notikumi: [2026-11-11-kriminallikums-naida-motivs-cietsirdiba-pret-dzivniekiem]
+    pamatojums: >-
+      Izsludināts likums (spēkā no 25.11.2026) pastiprina Krimināllikuma 230. panta sankcijas par
+      cietsirdīgu izturešanos pret dzīvnieku (1. daļā brīvības atņemšana līdz četriem gadiem iepriekšējo
+      trīs vietā) — daļa no solītā iznākuma: tas aptver smagus nodarījumus (sakropļošana, spīdzināšana,
+      nāve), ne sankcijas par citu nevajadzīgu ciešanu radīšanu mājlopiem, piem., pārvadāšanā un kautuvēs
+      (vertesana.md: Daļēji izpildīts).
