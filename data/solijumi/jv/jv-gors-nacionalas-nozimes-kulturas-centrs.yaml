@@ -15,3 +15,11 @@ avoti:
 nesakritiba: ""
 piezimes: "Tikai paplašinātā programma. Robežgadījums pārbaudāmībai: avots nenosauc mehānismu (statuss, finansējums), bet objekts konkrēts — Pārbaudāms pēc tā, vai GORS noteikts par nacionālas nozīmes kultūras centru. KM."
 jautajums: ""
+statusa_mainas:
+  - datums: 2026-11-04
+    statuss: izpildits
+    notikumi: [2026-11-04-izsludinats-latgales-vestniecibas-gors-likums]
+    pamatojums: >-
+      Izsludināts Latgales vēstniecības GORS likums (spēkā no 05.11.2026) nosaka GORS par valsts,
+      reģionālās un pašvaldības nozīmes kultūras centru — normatīvs pieņemts un izsludināts, iznākums
+      pilnā mērā (vertesana.md: Izpildīts).
