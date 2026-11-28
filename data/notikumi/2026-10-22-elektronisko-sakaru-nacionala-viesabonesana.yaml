@@ -1,0 +1,26 @@
+id: 2026-10-22-elektronisko-sakaru-nacionala-viesabonesana
+datums: 2026-10-22
+nosaukums: Saeima galīgajā lasījumā pieņem grozījumus Elektronisko sakaru likumā par nacionālo viesabonēšanu krīzēs (1565/Lp14)
+apraksts: >-
+  14. Saeima 2026. gada 22. oktobrī galīgajā lasījumā pieņēma steidzamus grozījumus Elektronisko sakaru likumā,
+  kas ievieš nacionālo viesabonēšanu mobilajiem sakariem: ja kāda operatora tīkls ilgstoši nav pieejams, cits
+  operators pārņem tā klientu zvanus un īsziņas. Nacionālo viesabonēšanu aktivizē pēc krīzes vadības
+  institūcijas lēmuma; ierīces automātiski pieslēdzas tīklam ar pārklājumu, saglabājot balss zvanus un SMS.
+  Mobilo sakaru operatoriem tā jāievieš līdz 2027. gada 1. jūlijam. Likums vēl nav izsludināts.
+avoti:
+  - url: https://www.saeima.lv/aktualitates/saeimas-zinas/36333-ieviesis-nacionalo-viesabonesanu-krizes-situacijas
+    veids: saeima
+  - url: https://www.saeima.lv/lv/aktualitates/36330-saeima-lems-par-nacionalas-viesabonesanas-ieviesanu-krizes-situacijas/
+    veids: saeima
+  - url: https://www.lsm.lv/raksts/zinas/latvija/22.10.2026-krizes-vares-izmantot-cita-mobila-operatora-tiklu-nosaka-prasibas-ari-degvielas-uzpildes-staciju-darbibas-nepartrauktibai.a668615/
+    veids: zinas
+solijumi:
+  - id: pro-sakaru-tiklu-noturiba-krizes
+    virziens: par
+    pamatojums: >-
+      Nacionālā viesabonēšana tieši nodrošina mobilo sakaru darbības nepārtrauktību iedzīvotājiem krīzes
+      situācijās, kad kāda operatora tīkls nav pieejams (Nepārbaudāms — Statusu nevērtē).
+piezimes: >-
+  Likumprojekta numurs 1565/Lp14 — pēc Saeimas 22.10 sēdes darba kārtības relīzes (36330). Izsludināšana būtu
+  atsevišķs Notikums tikai, ja tā mainītu Statusu (Solījums ir Nepārbaudāms).
+jautajums: "Balsojuma dati nav pieejami routine vidē (npm run balsojums -- 2026-10-22 \"1565/Lp14), 2.lasījums, steidzams\")"
