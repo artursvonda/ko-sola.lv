@@ -1,0 +1,41 @@
+id: 2026-11-24-mk-valsts-budzeta-maksajumu-publiskosana
+datums: 2026-11-24
+nosaukums: MK atbalsta valsts budžeta maksājumu datu publiskošanu atsevišķu maksājumu līmenī
+apraksts: >-
+  Ministru kabinets 24.11.2026 sēdē atbalstīja Finanšu ministrijas priekšlikumu, kas iekļauts
+  informatīvajā ziņojumā "Par 2027.–2030. gada budžeta bāzi un izdevumu pārskatīšanas rezultātiem",
+  publiskot valsts budžeta maksājumu datus atsevišķu maksājumu līmenī, arī Eiropas Savienības fondu
+  maksājumus, nodrošinot personas datu un citas ar likumu aizsargātas informācijas aizsardzību.
+  Valsts kase nodrošinātu centralizētu maksājumu datu publicēšanu atvērto datu veidā mašīnlasāmā
+  formātā; par datu kvalitāti un maksājuma mērķi atbild budžeta izpildītājs. Ministrijām līdz
+  09.12.2026 jāiesniedz FM priekšlikumi par savā kompetencē esošo maksājumu datu publiskošanas
+  apjomu, arī nosacījumi personas datu un nacionālās drošības aizsardzībai; FM jāizstrādā grozījumi
+  Likumā par budžetu un finanšu vadību un tie jāiesniedz 2027. gada valsts budžeta likumprojektu
+  paketē. Publicēšanas kārtību, datu apjomu un izņēmumus noteiks MK; publicēšanas sākums vēl nav
+  noteikts.
+avoti:
+  - url: https://www.mk.gov.lv/lv/jaunums/budzets2027-valdiba-atbalsta-valsts-budzeta-maksajumu-publiskosanu-laujot-sabiedribai-detalizetak-sekot-naudas-izlietojumam
+    veids: mk
+  - url: https://www.mk.gov.lv/lv/jaunums/budzets2027-valdiba-izskata-zinojumu-par-2027-2030-gada-budzeta-bazi-un-izdevumu-parskatisanas-rezultatiem
+    veids: mk
+solijumi:
+  - id: as-budzeta-dati-lidz-rekinu-limenim
+    virziens: par
+    pamatojums: >-
+      MK atbalstīja valsts budžeta maksājumu datu publiskošanu atsevišķu maksājumu līmenī un uzdeva
+      FM sagatavot grozījumus Likumā par budžetu un finanšu vadību — solis ceļā uz publiski
+      pieejamiem budžeta datiem līdz rēķinu līmenim.
+  - id: na-valsts-budzeta-izdevumu-caurspidiba
+    virziens: par
+    pamatojums: >-
+      Plānotā valsts budžeta maksājumu datu publiskošana atsevišķu maksājumu līmenī tieši palielina
+      valsts budžeta izdevumu caurspīdību.
+piezimes: >-
+  Avots ir MK relīze (24.11.2026); MK sēdes protokollēmums un TAP dokuments nav skatīti
+  (tapportals.mk.gov.lv netiek atvērts — robots.txt). Relīze runā par "atsevišķu maksājumu līmeni",
+  ne par rēķiniem; vai tas atbilst as-budzeta-dati-lidz-rekinu-limenim mēram "līdz rēķinu līmenim" un
+  tvērumam (pašvaldības, kapitālsabiedrības), vērtējams, kad grozījumi un MK noteikumi būs pieņemti.
+  Statusa maiņas nav: MK atbalsts priekšlikumam un uzdevums sagatavot grozījumus nav ne likumprojekts
+  Saeimā, ne TAP publicēts projekts (vertesana.md, Procesā). na-valsts-budzeta-izdevumu-caurspidiba
+  ir Nepārbaudāms.
+jautajums: ""
