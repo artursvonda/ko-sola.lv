@@ -1,0 +1,29 @@
+id: 2026-10-29-valsts-kontrole-saeimas-finansu-revizija
+datums: 2026-10-29
+nosaukums: Saeima galīgajā lasījumā pieņem grozījumus Valsts kontroles likumā par finanšu revīziju Saeimā
+apraksts: >-
+  14. Saeima 2026. gada 29. oktobrī galīgajā lasījumā pieņēma grozījumus Valsts kontroles likumā. Saskaņā
+  ar Saeimas preses relīzi Valsts kontrole Saeimā būs tiesīga veikt finanšu revīziju par parlamenta
+  sagatavotā gada pārskata pareizību; revīzija aptvers arī valsts konsolidētajā gada pārskatā iekļauto
+  Saeimas finanšu informāciju. Revīzijas plāno pēc Valsts kontroles riska novērtējuma un būtiskuma
+  pieejas, tāpēc tās nav obligātas katru gadu. Lietderības vai atbilstības revīzijas Saeimā Valsts
+  kontrolei veikt nav tiesību. Likums vēl nav izsludināts.
+avoti:
+  - url: https://www.saeima.lv/lv/aktualitates/saeimas-finansu-parskatu-turpmak-vares-revidet-valsts-kontrole/
+    veids: saeima
+  - url: https://www.lsm.lv/raksts/zinas/latvija/29.10.2026-gadiem-ilgais-jautajums-atrisinats-daleji-valsts-kontrole-ar-ierobezojumiem-vares-revidet-saeimas-finanses.a669578/
+    veids: zinas
+solijumi:
+  - id: sv-valsts-kontroles-revizija-saeimas-budzetam
+    virziens: par
+    pamatojums: >-
+      Grozījumi dod Valsts kontrolei tiesības revidēt Saeimas gada pārskatu (finanšu revīzija), kas tieši
+      tuvina Solījuma iznākumu — Valsts kontroles revīziju Saeimas budžetam; lietderības un atbilstības
+      revīzijas izslēgtas. 14. Saeimas galīgais lasījums pirms 03.11.2026 Statusu nemaina (vertesana.md);
+      Statusu var mainīt izsludināšana.
+piezimes: >-
+  Saturs pēc Saeimas preses relīzes (29.10.2026); likumprojekta numurs relīzē nav nosaukts (relīzes saitē
+  uz LIVS — 1555/Lp14, nav pārbaudīts; LIVS nav atvērts, robots.txt). Spēkā stāšanās datums relīzē nav
+  norādīts. Pēc izsludināšanas jāvērtē, vai finanšu revīzija bez lietderības un atbilstības revīzijām ir
+  Izpildīts vai Daļēji izpildīts. LSM ziņa bija norāde.
+jautajums: "Balsojuma dati nav pieejami routine vidē (npm run --silent balsojums -- 2026-10-29 \"Valsts kontroles likumā\": getaddrinfo ENOTFOUND data.gov.lv)"
