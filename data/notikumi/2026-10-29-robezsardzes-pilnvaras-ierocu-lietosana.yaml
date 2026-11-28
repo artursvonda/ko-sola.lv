@@ -1,0 +1,31 @@
+id: 2026-10-29-robezsardzes-pilnvaras-ierocu-lietosana
+datums: 2026-10-29
+nosaukums: Saeima galīgajā lasījumā paplašina robežsargu pilnvaras valsts robežas aizsardzībai
+apraksts: >-
+  14. Saeima 2026. gada 29. oktobrī steidzamības kārtā galīgajā lasījumā pieņēma grozījumus Valsts
+  robežsardzes likumā un Kriminālprocesa likumā. Saskaņā ar Saeimas preses relīzi robežsargi iegūst
+  tiešas tiesības lietot fizisko spēku, speciālos cīņas paņēmienus, speciālos līdzekļus, ieročus un
+  dienesta suni, lai atvairītu uzbrukumu apsargājamai personai vai valsts robežas infrastruktūras
+  objektam; ieroci drīkst lietot bez brīdinājuma, ja konkrētajā situācijā brīdināt nav iespējams. Ja
+  ieroča lietošanā persona ievainota vai gājusi bojā, Valsts robežsardze nekavējoties, ne vēlāk kā 24
+  stundu laikā, informē prokuratūru. Kriminālprocesa likuma grozījumi nosaka, ka robežsarga noziedzīgus
+  nodarījumus, kas izdarīti, pildot pienākumus pastiprinātas robežapsardzības sistēmas darbības režīmā,
+  izmeklēs pilnvarotas Valsts robežsardzes amatpersonas. Likumi vēl nav izsludināti.
+avoti:
+  - url: https://www.saeima.lv/lv/aktualitates/saeima-paplasina-robezsargu-pilnvaras-valsts-robezas-aizsardzibai/
+    veids: saeima
+  - url: https://www.lsm.lv/raksts/zinas/latvija/29.10.2026-robezsargi-vares-izmantot-ieroci-ari-infrastrukturas-aizsardziba.a669636/
+    veids: zinas
+solijumi:
+  - id: jv-austrumu-robezas-stiprinasana
+    virziens: par
+    pamatojums: >-
+      Grozījumi dod Valsts robežsardzei tiešas tiesības ar spēku un ieročiem atvairīt uzbrukumus valsts
+      robežas infrastruktūrai — robežas aizsardzības stiprināšana un Valsts robežsardzes spēju attīstība,
+      ko Solījums paredz.
+piezimes: >-
+  Saturs pēc Saeimas preses relīzes (29.10.2026); likumprojektu numuri relīzē nav nosaukti (saitēs uz
+  LIVS — 1593/Lp14 un 1594/Lp14, nav pārbaudīts; LIVS nav atvērts, robots.txt). Spēkā stāšanās datums
+  relīzē nav norādīts. Solījums ir Nepārbaudāms — Statusa maiņas nav. Relīzē kā motivācija minēts
+  hibrīdkarš un hibrīduzbrukumi robežas infrastruktūrai; migrācija un robežpārkāpēji nav minēti.
+jautajums: "Balsojuma dati nav pieejami routine vidē (npm run balsojums -- 2026-10-29 \"Valsts robežsardzes likumā\")"
